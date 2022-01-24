@@ -3,95 +3,69 @@
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice" *)
 (* top =  1  *)
 (* generator = "Amaranth" *)
-module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp, ulpi__nxt__i, ulpi__dir__i, ulpi__rst, pdmout__data__o, pdmout__clk__o, pdmout__cs__o, clk_sync, clk_usb, rst_sync, usb_holdoff, audio_clk, audio_rst, ulpi__data__i);
-  reg \$auto$verilog_backend.cc:2082:dump_module$482  = 0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:565" *)
-  wire [16:0] \$11 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:565" *)
-  wire [16:0] \$12 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:577" *)
-  wire \$14 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:568" *)
-  wire [5:0] \$16 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:568" *)
-  wire [5:0] \$17 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:577" *)
-  wire \$19 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *)
+module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp, ulpi__nxt__i, ulpi__dir__i, ulpi__rst, pdmin__data__i, pdmin__clk__o, pdmout__data__o, pdmout__clk__o, clk_sync, clk_usb, rst_sync, usb_holdoff, audio_clk, audio_rst, ulpi__data__i);
+  reg \$auto$verilog_backend.cc:2082:dump_module$597  = 0;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:416" *)
+  wire [16:0] \$10 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
+  wire \$12 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:419" *)
+  wire [5:0] \$14 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:419" *)
+  wire [5:0] \$15 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
+  wire \$17 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *)
+  wire [31:0] \$19 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
   wire \$2 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:579" *)
-  wire [31:0] \$21 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:579" *)
-  wire [16:0] \$22 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:579" *)
-  wire [19:0] \$24 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:584" *)
-  wire [14:0] \$27 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:584" *)
-  wire [14:0] \$28 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *)
-  wire [31:0] \$30 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *)
+  wire [16:0] \$20 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *)
+  wire [19:0] \$22 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:435" *)
+  wire [14:0] \$25 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:435" *)
+  wire [14:0] \$26 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *)
+  wire [31:0] \$28 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *)
+  wire [31:0] \$29 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *)
   wire [31:0] \$31 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *)
-  wire [31:0] \$33 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:454" *)
+  wire [23:0] \$33 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:454" *)
+  wire [23:0] \$34 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
-  wire [8:0] \$35 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
-  wire \$37 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
+  wire [8:0] \$36 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
   wire \$39 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:525" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:375" *)
   wire [9:0] \$4 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
   wire \$41 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:640" *)
-  wire [30:0] \$43 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:640" *)
-  wire [30:0] \$44 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-  wire \$47 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:666" *)
-  wire [16:0] \$49 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:525" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
+  wire \$43 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:531" *)
+  wire [30:0] \$45 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:531" *)
+  wire [30:0] \$46 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:375" *)
   wire [9:0] \$5 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:666" *)
-  wire [16:0] \$50 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:672" *)
-  wire [4:0] \$52 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:672" *)
-  wire [4:0] \$53 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-  wire \$55 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:667" *)
-  wire [4:0] \$57 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:667" *)
-  wire [4:0] \$58 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:661" *)
-  wire \$60 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-  wire \$62 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-  wire \$64 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
-  wire \$66 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-  wire \$68 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
   wire \$7 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
-  wire \$70 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:520" *)
-  wire [11:0] \$9 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:416" *)
+  wire [16:0] \$9 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:552" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:403" *)
   reg [15:0] audio_clock_counter = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:552" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:403" *)
   reg [15:0] \audio_clock_counter$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:558" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:409" *)
   reg audio_clock_tick = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:558" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:409" *)
   reg \audio_clock_tick$next ;
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:16" *)
   reg audio_clock_usb_pulse_edge_in = 1'h0;
@@ -99,52 +73,58 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   reg \audio_clock_usb_pulse_edge_in$next ;
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:17" *)
   wire audio_clock_usb_pulse_pulse_out;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:555" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:406" *)
   wire audio_clock_usb_sync_audio_clock_usb;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:520" *)
-  reg [8:0] audio_in_frame_bytes = 9'h010;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:520" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:370" *)
+  reg [8:0] audio_in_frame_bytes = 9'h00c;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:370" *)
   reg [8:0] \audio_in_frame_bytes$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:521" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:371" *)
   reg audio_in_frame_bytes_counting = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:521" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:371" *)
   reg \audio_in_frame_bytes_counting$next ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:645" *)
-  reg [3:0] bcount = 4'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:645" *)
-  reg [3:0] \bcount$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:545" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:450" *)
+  reg [7:0] b8 = 8'h00;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:450" *)
+  reg [7:0] \b8$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:396" *)
   wire [4:0] bitPos;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  wire clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:440" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:284" *)
   input clk_sync;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:441" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:285" *)
   input clk_usb;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:469" *)
-  reg cout = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:469" *)
-  reg \cout$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:470" *)
-  reg csout = 1'h1;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:470" *)
-  reg \csout$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:600" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:495" *)
   wire fbit;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:544" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:395" *)
   reg [31:0] feedbackValue = 32'd393216;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:544" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:395" *)
   reg [31:0] \feedbackValue$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
-  reg [1:0] fsm_state = 2'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-  reg \fsm_state$46  = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-  reg \fsm_state$46$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
-  reg [1:0] \fsm_state$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
+  reg [2:0] fsm_state = 3'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
+  reg [1:0] \fsm_state$38  = 2'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
+  reg [1:0] \fsm_state$38$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
+  reg [2:0] \fsm_state$next ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
+  wire [7:0] in_fifo_r_data;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
+  wire in_fifo_r_en;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:84" *)
+  wire in_fifo_r_rdy;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
+  wire [7:0] in_fifo_w_data;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:80" *)
+  reg in_fifo_w_en = 1'h0;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:80" *)
+  reg \in_fifo_w_en$next ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
+  wire in_fifo_w_rdy;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:449" *)
+  wire [15:0] le16;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
   wire [8:0] out_fifo_r_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
@@ -159,59 +139,61 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   wire out_fifo_w_en;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
   wire out_fifo_w_rdy;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:75" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:448" *)
+  reg [23:0] pcm24 = 24'h000000;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:448" *)
+  reg [23:0] \pcm24$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:74" *)
+  wire [23:0] pdm_receiver_pcm_data_out;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:73" *)
+  wire pdm_receiver_pcm_strobe_out;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:71" *)
+  wire pdm_receiver_pdm_clock_out;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:72" *)
+  wire pdm_receiver_pdm_data_in;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:74" *)
   wire [27:0] pdm_transmitter_pcm_data_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:74" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:73" *)
   wire pdm_transmitter_pcm_strobe_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:71" *)
   wire pdm_transmitter_pdm_clock_out;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:73" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:72" *)
   wire pdm_transmitter_pdm_data_out;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:432" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:270" *)
+  output pdmin__clk__o;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:270" *)
+  input pdmin__data__i;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:277" *)
   output pdmout__clk__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:432" *)
-  input pdmout__cs__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:432" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:277" *)
   output pdmout__data__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  wire rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:442" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:286" *)
   input rst_sync;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:599" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:494" *)
   wire [7:0] sample;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:644" *)
-  reg [3:0] scount = 4'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:644" *)
-  reg [3:0] \scount$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:598" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:493" *)
   reg [15:0] se16 = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:598" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:493" *)
   reg [15:0] \se16$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:553" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:404" *)
   reg [4:0] sof_counter = 5'h00;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:553" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:404" *)
   reg [4:0] \sof_counter$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:468" *)
-  wire sout;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:643" *)
-  reg [15:0] spi = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:643" *)
-  reg [15:0] \spi$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__clk__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output [7:0] ulpi__data__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__data__oe;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__stp;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:73" *)
   wire [11:0] usb0_address;
@@ -233,52 +215,47 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   wire usb0_isochronous_endpoint1__ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   wire usb0_isochronous_endpoint1__valid;
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  wire [7:0] usb0_isochronous_endpoint2__payload;
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  wire usb0_isochronous_endpoint2__ready;
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  wire usb0_isochronous_endpoint2__valid;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:140" *)
   wire usb0_sof_detected;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:75" *)
   wire [7:0] usb0_value;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   wire usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:444" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:288" *)
   output usb_holdoff;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
+  wire usb_reset_clk;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:49" *)
   wire usb_reset_phy_reset;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:50" *)
   wire usb_reset_phy_stop;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
+  wire usb_reset_rst;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   wire usb_rst;
-  assign \$9  = + (* src = "/home/kkojima/luna-uac2/build_verilog.py:520" *) audio_in_frame_bytes;
-  assign \$12  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2/build_verilog.py:565" *) 1'h1;
-  assign \$14  = ! (* src = "/home/kkojima/luna-uac2/build_verilog.py:577" *) sof_counter;
-  assign \$17  = sof_counter + (* src = "/home/kkojima/luna-uac2/build_verilog.py:568" *) 1'h1;
-  assign \$19  = ! (* src = "/home/kkojima/luna-uac2/build_verilog.py:577" *) sof_counter;
-  assign \$22  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2/build_verilog.py:579" *) 1'h1;
-  assign \$21  = + (* src = "/home/kkojima/luna-uac2/build_verilog.py:579" *) \$24 ;
-  assign \$2  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *) usb0_isochronous_endpoint1__ready;
-  assign \$31  = feedbackValue >>> (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *) bitPos;
-  assign \$33  = 8'hff & (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *) \$31 ;
-  assign \$35  = + (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *) usb0_isochronous_endpoint1__payload;
-  assign \$37  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *) out_fifo_r_rdy;
-  assign \$39  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *) out_fifo_r_rdy;
-  assign \$41  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *) out_fifo_r_rdy;
-  assign \$47  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
-  assign \$53  = scount + (* src = "/home/kkojima/luna-uac2/build_verilog.py:672" *) 1'h1;
-  assign \$55  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
-  assign \$58  = bcount + (* src = "/home/kkojima/luna-uac2/build_verilog.py:667" *) 1'h1;
-  assign \$5  = audio_in_frame_bytes + (* src = "/home/kkojima/luna-uac2/build_verilog.py:525" *) 1'h1;
-  assign \$60  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:661" *) 3'h7;
-  assign \$62  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
-  assign \$64  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
-  assign \$66  = bcount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *) 4'hf;
-  assign \$68  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
-  assign \$70  = bcount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *) 4'hf;
-  assign \$7  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *) usb0_isochronous_endpoint1__ready;
-  always @(posedge clk)
-    \fsm_state$46  <= \fsm_state$46$next ;
+  assign \$10  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:416" *) 1'h1;
+  assign \$12  = ! (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *) sof_counter;
+  assign \$15  = sof_counter + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:419" *) 1'h1;
+  assign \$17  = ! (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *) sof_counter;
+  assign \$20  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *) 1'h1;
+  assign \$19  = + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *) \$22 ;
+  assign \$2  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *) usb0_isochronous_endpoint1__ready;
+  assign \$29  = feedbackValue >>> (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *) bitPos;
+  assign \$31  = 8'hff & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *) \$29 ;
+  assign \$36  = + (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *) usb0_isochronous_endpoint1__payload;
+  assign \$39  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *) out_fifo_r_rdy;
+  assign \$41  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *) out_fifo_r_rdy;
+  assign \$43  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *) out_fifo_r_rdy;
+  assign \$5  = audio_in_frame_bytes + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:375" *) 1'h1;
+  assign \$7  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *) usb0_isochronous_endpoint1__ready;
   always @(posedge usb_clk)
-    feedbackValue <= \feedbackValue$next ;
-  always @(posedge usb_clk)
-    sof_counter <= \sof_counter$next ;
+    \fsm_state$38  <= \fsm_state$38$next ;
   always @(posedge usb_clk)
     audio_clock_counter <= \audio_clock_counter$next ;
   always @(posedge usb_clk)
@@ -289,22 +266,22 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     audio_in_frame_bytes_counting <= \audio_in_frame_bytes_counting$next ;
   always @(posedge usb_clk)
     audio_in_frame_bytes <= \audio_in_frame_bytes$next ;
-  always @(posedge clk)
-    csout <= \csout$next ;
-  always @(posedge clk)
-    cout <= \cout$next ;
-  always @(posedge clk)
-    bcount <= \bcount$next ;
-  always @(posedge clk)
-    scount <= \scount$next ;
-  always @(posedge clk)
-    spi <= \spi$next ;
-  always @(posedge clk)
-    fsm_state <= \fsm_state$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     se16 <= \se16$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     out_fifo_r_en <= \out_fifo_r_en$next ;
+  always @(posedge usb_clk)
+    b8 <= \b8$next ;
+  always @(posedge usb_clk)
+    fsm_state <= \fsm_state$next ;
+  always @(posedge usb_clk)
+    in_fifo_w_en <= \in_fifo_w_en$next ;
+  always @(posedge usb_clk)
+    pcm24 <= \pcm24$next ;
+  always @(posedge usb_clk)
+    feedbackValue <= \feedbackValue$next ;
+  always @(posedge usb_clk)
+    sof_counter <= \sof_counter$next ;
   audio_clock_usb_pulse audio_clock_usb_pulse (
     .edge_in(audio_clock_usb_pulse_edge_in),
     .pulse_out(audio_clock_usb_pulse_pulse_out),
@@ -317,34 +294,46 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     .usb_clk(usb_clk),
     .usb_rst(usb_rst)
   );
-  channels_to_usb_stream channels_to_usb_stream (
+  in_fifo in_fifo (
+    .r_data(in_fifo_r_data),
+    .r_en(in_fifo_r_en),
+    .r_rdy(in_fifo_r_rdy),
     .usb_clk(usb_clk),
-    .usb_rst(usb_rst)
+    .usb_rst(usb_rst),
+    .w_data(in_fifo_w_data),
+    .w_en(in_fifo_w_en),
+    .w_rdy(in_fifo_w_rdy)
   );
-  \out_fifo$7  out_fifo (
-    .clk(clk),
+  out_fifo out_fifo (
     .r_data(out_fifo_r_data),
     .r_en(out_fifo_r_en),
     .r_rdy(out_fifo_r_rdy),
-    .rst(rst),
     .usb_clk(usb_clk),
     .usb_rst(usb_rst),
     .w_data(out_fifo_w_data),
     .w_en(out_fifo_w_en),
     .w_rdy(out_fifo_w_rdy)
   );
+  pdm_receiver pdm_receiver (
+    .pcm_data_out(pdm_receiver_pcm_data_out),
+    .pcm_strobe_out(pdm_receiver_pcm_strobe_out),
+    .pdm_clock_out(pdm_receiver_pdm_clock_out),
+    .pdm_data_in(pdm_receiver_pdm_data_in),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
+  );
   pdm_transmitter pdm_transmitter (
-    .clk(clk),
     .pcm_data_in(pdm_transmitter_pcm_data_in),
     .pcm_strobe_in(pdm_transmitter_pcm_strobe_in),
     .pdm_clock_out(pdm_transmitter_pdm_clock_out),
     .pdm_data_out(pdm_transmitter_pdm_data_out),
-    .rst(rst)
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
   );
   usb0 usb0 (
     .address(usb0_address),
     .bytes_in_frame(12'h002),
-    .\bytes_in_frame$1 (\usb0_bytes_in_frame$1 ),
+    .\bytes_in_frame$1 (12'h00c),
     .connect(1'h1),
     .full_speed_only(1'h0),
     .isochronous_endpoint1__first(usb0_isochronous_endpoint1__first),
@@ -352,6 +341,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     .isochronous_endpoint1__payload(usb0_isochronous_endpoint1__payload),
     .isochronous_endpoint1__ready(usb0_isochronous_endpoint1__ready),
     .isochronous_endpoint1__valid(usb0_isochronous_endpoint1__valid),
+    .isochronous_endpoint2__payload(usb0_isochronous_endpoint2__payload),
+    .isochronous_endpoint2__ready(usb0_isochronous_endpoint2__ready),
+    .isochronous_endpoint2__valid(usb0_isochronous_endpoint2__valid),
     .sof_detected(usb0_sof_detected),
     .ulpi__clk__o(ulpi__clk__o),
     .ulpi__data__i(ulpi__data__i),
@@ -366,17 +358,36 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     .value(usb0_value)
   );
   usb_reset usb_reset (
-    .clk(clk),
+    .clk(usb_reset_clk),
     .phy_reset(usb_reset_phy_reset),
     .phy_stop(usb_reset_phy_stop),
-    .rst(rst)
-  );
-  usb_to_channel_stream usb_to_channel_stream (
-    .usb_clk(usb_clk),
-    .usb_rst(usb_rst)
+    .rst(usb_reset_rst)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \audio_in_frame_bytes_counting$next  = audio_in_frame_bytes_counting;
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
+    casez (\$7 )
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" */
+      1'h1:
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" *)
+          casez ({ usb0_isochronous_endpoint1__last, usb0_isochronous_endpoint1__first })
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" */
+            2'b?1:
+                \audio_in_frame_bytes_counting$next  = 1'h1;
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:382" */
+            2'b1?:
+                \audio_in_frame_bytes_counting$next  = 1'h0;
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \audio_in_frame_bytes_counting$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_clock_usb_pulse_edge_in$next  = audio_clock_usb_sync_audio_clock_usb;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -385,7 +396,7 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_clock_tick$next  = audio_clock_usb_pulse_pulse_out;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -394,21 +405,21 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_clock_counter$next  = audio_clock_counter;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:564" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:415" *)
     casez (audio_clock_tick)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:564" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:415" */
       1'h1:
-          \audio_clock_counter$next  = \$12 [15:0];
+          \audio_clock_counter$next  = \$10 [15:0];
     endcase
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:567" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" *)
     casez (usb0_sof_detected)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:567" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:577" *)
-          casez (\$14 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:577" */
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
+          casez (\$12 )
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" */
             1'h1:
                 \audio_clock_counter$next  = 16'h0000;
           endcase
@@ -420,13 +431,13 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \sof_counter$next  = sof_counter;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:567" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" *)
     casez (usb0_sof_detected)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:567" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" */
       1'h1:
-          \sof_counter$next  = \$17 [4:0];
+          \sof_counter$next  = \$15 [4:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -435,17 +446,17 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \feedbackValue$next  = feedbackValue;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:567" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" *)
     casez (usb0_sof_detected)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:567" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:577" *)
-          casez (\$19 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:577" */
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
+          casez (\$17 )
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" */
             1'h1:
-                \feedbackValue$next  = \$21 ;
+                \feedbackValue$next  = \$19 ;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -455,355 +466,302 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \out_fifo_r_en$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \pcm24$next  = pcm24;
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:451" *)
+    casez (pdm_receiver_pcm_strobe_out)
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:451" */
+      1'h1:
+          \pcm24$next  = pdm_receiver_pcm_data_out;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \pcm24$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \in_fifo_w_en$next  = 1'h0;
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
     casez (fsm_state)
+      /* \amaranth.decoding  = "WAIT/0" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:459" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "LO/1" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:462" */
+      3'h1:
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" *)
+          casez (in_fifo_w_rdy)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" */
+            1'h1:
+                \in_fifo_w_en$next  = 1'h1;
+          endcase
+      /* \amaranth.decoding  = "LOACK/2" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:471" */
+      3'h2:
+          /* empty */;
+      /* \amaranth.decoding  = "HI/3" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:473" */
+      3'h3:
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" *)
+          casez (in_fifo_w_rdy)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" */
+            1'h1:
+                \in_fifo_w_en$next  = 1'h1;
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \in_fifo_w_en$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \fsm_state$next  = fsm_state;
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "WAIT/0" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:459" */
+      3'h0:
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:460" *)
+          casez (pdm_receiver_pcm_strobe_out)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:460" */
+            1'h1:
+                \fsm_state$next  = 3'h1;
+          endcase
+      /* \amaranth.decoding  = "LO/1" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:462" */
+      3'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" *)
+          casez (in_fifo_w_rdy)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" */
+            1'h1:
+                \fsm_state$next  = 3'h2;
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:469" */
+            default:
+                \fsm_state$next  = 3'h0;
+          endcase
+      /* \amaranth.decoding  = "LOACK/2" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:471" */
+      3'h2:
+          \fsm_state$next  = 3'h3;
+      /* \amaranth.decoding  = "HI/3" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:473" */
+      3'h3:
+          (* full_case = 32'd1 *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" *)
+          casez (in_fifo_w_rdy)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" */
+            1'h1:
+                \fsm_state$next  = 3'h4;
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:480" */
+            default:
+                \fsm_state$next  = 3'h0;
+          endcase
+      /* \amaranth.decoding  = "HIACK/4" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:482" */
+      3'h4:
+          \fsm_state$next  = 3'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \fsm_state$next  = 3'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \b8$next  = b8;
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "WAIT/0" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:459" */
+      3'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "LO/1" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:462" */
+      3'h1:
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" *)
+          casez (in_fifo_w_rdy)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" */
+            1'h1:
+                \b8$next  = le16[7:0];
+          endcase
+      /* \amaranth.decoding  = "LOACK/2" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:471" */
+      3'h2:
+          /* empty */;
+      /* \amaranth.decoding  = "HI/3" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:473" */
+      3'h3:
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" *)
+          casez (in_fifo_w_rdy)
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" */
+            1'h1:
+                \b8$next  = le16[15:8];
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \b8$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \out_fifo_r_en$next  = 1'h0;
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
+    casez (\fsm_state$38 )
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:607" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:502" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
-          casez (\$37 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:608" */
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
+          casez (\$39 )
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" */
             1'h1:
                 \out_fifo_r_en$next  = 1'h1;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:614" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:509" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:616" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:511" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:617" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:617" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:618" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" *)
                 casez (fbit)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:618" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" */
                   1'h1:
                       \out_fifo_r_en$next  = 1'h1;
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:625" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:520" */
                   default:
                       \out_fifo_r_en$next  = 1'h1;
                 endcase
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \out_fifo_r_en$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \se16$next  = se16;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
-    casez (fsm_state)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
+    casez (\fsm_state$38 )
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:607" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:502" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
-          casez (\$39 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:608" */
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
+          casez (\$41 )
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" */
             1'h1:
                 \se16$next [7:0] = sample;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:614" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:509" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:616" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:511" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:617" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:617" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:618" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" *)
                 casez (fbit)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:618" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" */
                   1'h1:
                       \se16$next [7:0] = sample;
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:625" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:520" */
                   default:
                       \se16$next [15:8] = sample;
                 endcase
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \se16$next  = 16'h0000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \fsm_state$next  = fsm_state;
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
+    \fsm_state$38$next  = \fsm_state$38 ;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
-    casez (fsm_state)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
+    casez (\fsm_state$38 )
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:607" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:502" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
-          casez (\$41 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:608" */
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
+          casez (\$43 )
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" */
             1'h1:
-                \fsm_state$next  = 2'h1;
+                \fsm_state$38$next  = 2'h1;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:614" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:509" */
       2'h1:
-          \fsm_state$next  = 2'h2;
+          \fsm_state$38$next  = 2'h2;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:616" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:511" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:617" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:617" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:618" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" *)
                 casez (fbit)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:618" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" */
                   1'h1:
-                      \fsm_state$next  = 2'h1;
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:625" */
+                      \fsm_state$38$next  = 2'h1;
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:520" */
                   default:
-                      \fsm_state$next  = 2'h3;
+                      \fsm_state$38$next  = 2'h3;
                 endcase
           endcase
       /* \amaranth.decoding  = "B1ACK/3" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:631" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:526" */
       2'h3:
-          \fsm_state$next  = 2'h0;
+          \fsm_state$38$next  = 2'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
-          \fsm_state$next  = 2'h0;
+          \fsm_state$38$next  = 2'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \spi$next  = spi;
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-    casez (\fsm_state$46 )
-      /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
-      1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
-            1'h1:
-                \spi$next  = se16;
-          endcase
-      /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-          casez (\$47 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
-            1'h1:
-                \spi$next  = \$50 [15:0];
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \spi$next  = 16'h0000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \scount$next  = scount;
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-    casez (\fsm_state$46 )
-      /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
-      1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
-            1'h1:
-                \scount$next  = 4'h0;
-          endcase
-      /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
-      1'h1:
-          \scount$next  = \$53 [3:0];
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \scount$next  = 4'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \bcount$next  = bcount;
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-    casez (\fsm_state$46 )
-      /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
-      1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
-            1'h1:
-                \bcount$next  = 4'h0;
-          endcase
-      /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-          casez (\$55 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
-            1'h1:
-                \bcount$next  = \$58 [3:0];
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \bcount$next  = 4'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \cout$next  = cout;
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-    casez (\fsm_state$46 )
-      /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
-      1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
-            1'h1:
-                \cout$next  = 1'h0;
-          endcase
-      /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
-      1'h1:
-        begin
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:661" *)
-          casez (\$60 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:661" */
-            1'h1:
-                \cout$next  = 1'h1;
-          endcase
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-          casez (\$62 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
-            1'h1:
-                \cout$next  = 1'h0;
-          endcase
-        end
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \cout$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \csout$next  = csout;
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-    casez (\fsm_state$46 )
-      /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
-      1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
-            1'h1:
-                \csout$next  = 1'h0;
-          endcase
-      /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-          casez (\$64 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
-            1'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
-                casez (\$66 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:669" */
-                  1'h1:
-                      \csout$next  = 1'h1;
-                endcase
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \csout$next  = 1'h1;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \fsm_state$46$next  = \fsm_state$46 ;
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
-    casez (\fsm_state$46 )
-      /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
-      1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
-            1'h1:
-                \fsm_state$46$next  = 1'h1;
-          endcase
-      /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
-          casez (\$68 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
-            1'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
-                casez (\$70 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:669" */
-                  1'h1:
-                      \fsm_state$46$next  = 1'h0;
-                endcase
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \fsm_state$46$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_in_frame_bytes$next  = audio_in_frame_bytes;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
     casez (\$2 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:523" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" */
       1'h1:
         begin
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:524" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:374" *)
           casez (audio_in_frame_bytes_counting)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:524" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:374" */
             1'h1:
                 \audio_in_frame_bytes$next  = \$5 [8:0];
           endcase
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:527" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" *)
           casez ({ usb0_isochronous_endpoint1__last, usb0_isochronous_endpoint1__first })
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:527" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" */
             2'b?1:
                 \audio_in_frame_bytes$next  = 9'h001;
           endcase
@@ -812,79 +770,60 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
       1'h1:
-          \audio_in_frame_bytes$next  = 9'h010;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \audio_in_frame_bytes_counting$next  = audio_in_frame_bytes_counting;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *)
-    casez (\$7 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:523" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:527" *)
-          casez ({ usb0_isochronous_endpoint1__last, usb0_isochronous_endpoint1__first })
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:527" */
-            2'b?1:
-                \audio_in_frame_bytes_counting$next  = 1'h1;
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:532" */
-            2'b1?:
-                \audio_in_frame_bytes_counting$next  = 1'h0;
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \audio_in_frame_bytes_counting$next  = 1'h0;
+          \audio_in_frame_bytes$next  = 9'h00c;
     endcase
   end
   assign \$4  = \$5 ;
-  assign \$11  = \$12 ;
-  assign \$16  = \$17 ;
-  assign \$27  = \$28 ;
-  assign \$30  = \$33 ;
-  assign \$43  = \$44 ;
-  assign \$49  = \$50 ;
-  assign \$52  = \$53 ;
-  assign \$57  = \$58 ;
-  assign sout = spi[15];
-  assign pdm_transmitter_pcm_data_in = \$44 [27:0];
+  assign \$9  = \$10 ;
+  assign \$14  = \$15 ;
+  assign \$25  = \$26 ;
+  assign \$28  = \$31 ;
+  assign \$33  = \$34 ;
+  assign \$45  = \$46 ;
+  assign pdm_transmitter_pcm_data_in = \$46 [27:0];
   assign fbit = out_fifo_r_data[8];
   assign sample = out_fifo_r_data[7:0];
   assign out_fifo_w_data[8] = usb0_isochronous_endpoint1__first;
-  assign out_fifo_w_data[7:0] = \$35 [7:0];
+  assign out_fifo_w_data[7:0] = \$36 [7:0];
   assign usb0_isochronous_endpoint1__ready = out_fifo_w_rdy;
   assign out_fifo_w_en = usb0_isochronous_endpoint1__valid;
-  assign usb0_value = \$33 [7:0];
-  assign bitPos = \$28 [4:0];
+  assign in_fifo_w_data = b8;
+  assign le16 = \$34 [15:0];
+  assign usb0_isochronous_endpoint2__payload = in_fifo_r_data;
+  assign in_fifo_r_en = usb0_isochronous_endpoint2__ready;
+  assign usb0_isochronous_endpoint2__valid = in_fifo_r_rdy;
+  assign usb0_value = \$31 [7:0];
+  assign bitPos = \$26 [4:0];
   assign usb0_full_speed_only = 1'h0;
   assign usb0_connect = 1'h1;
-  assign \usb0_bytes_in_frame$1  = \$9 ;
+  assign \usb0_bytes_in_frame$1  = 12'h00c;
   assign usb0_bytes_in_frame = 12'h002;
   assign pdmout__clk__o = pdm_transmitter_pdm_clock_out;
   assign pdmout__data__o = pdm_transmitter_pdm_data_out;
-  assign rst = rst_sync;
+  assign pdmin__clk__o = pdm_receiver_pdm_clock_out;
+  assign pdm_receiver_pdm_data_in = pdmin__data__i;
+  assign usb_reset_rst = rst_sync;
   assign usb_clk = clk_usb;
-  assign clk = clk_sync;
+  assign usb_reset_clk = clk_sync;
   assign usb_holdoff = usb_reset_phy_stop;
   assign usb_rst = usb_reset_phy_reset;
-  assign \$24  = { \$22 , 3'h0 };
-  assign \$28  = { usb0_address, 3'h0 };
-  assign \$44  = { se16[15], se16[15], se16[15], se16[15], se16[15], se16[15], se16, 9'h000 };
-  assign \$50  = { spi, 1'h0 };
+  assign \$22  = { \$20 , 3'h0 };
+  assign \$26  = { usb0_address, 3'h0 };
+  assign \$34  = { pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23:8] };
+  assign \$46  = { se16[15], se16[15], se16[15], se16[15], se16[15], se16[15], se16, 9'h000 };
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.StallOnlyRequestHandler" *)
 (* generator = "Amaranth" *)
 module StallOnlyRequestHandler(data_requested, status_requested, stall, \type );
-  reg \$auto$verilog_backend.cc:2082:dump_module$483  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$598  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:541" *)
   wire \$1 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:500" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *)
   wire \$3 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:501" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:351" *)
   wire \$5 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:500" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *)
   wire \$7 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:66" *)
   input data_requested;
@@ -896,11 +835,11 @@ module StallOnlyRequestHandler(data_requested, status_requested, stall, \type );
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [1:0] \type ;
   assign \$1  = data_requested | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:541" *) status_requested;
-  assign \$3  = \type  == (* src = "/home/kkojima/luna-uac2/build_verilog.py:500" *) 2'h2;
-  assign \$5  = \type  == (* src = "/home/kkojima/luna-uac2/build_verilog.py:501" *) 2'h3;
-  assign \$7  = \$3  | (* src = "/home/kkojima/luna-uac2/build_verilog.py:500" *) \$5 ;
+  assign \$3  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *) 2'h2;
+  assign \$5  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:351" *) 2'h3;
+  assign \$7  = \$3  | (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *) \$5 ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$483 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$598 ) begin end
     stall = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:541" *)
     casez (\$1 )
@@ -920,7 +859,7 @@ endmodule
 (* generator = "Amaranth" *)
 module StandardRequestHandler(usb_clk, \type , request, value, length, received, data_requested, status_requested, ack, active_config, address_changed, new_address, config_changed, new_config, valid, tx_data_pid, \ack$1 , stall, payload, first, last
 , ready, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$484  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$599  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:223" *)
   wire \$11 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:236" *)
@@ -929,13 +868,13 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
   wire \$15 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:168" *)
   wire \$17 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:489" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *)
   wire \$18 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
   wire \$2 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:490" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:340" *)
   wire \$20 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:489" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *)
   wire \$22 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:167" *)
   wire \$24 ;
@@ -1087,9 +1026,9 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
   reg \tx_data_pid$next ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [1:0] \type ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -1100,9 +1039,9 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
   assign \$11  = ack & (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:223" *) expecting_ack;
   assign \$13  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:236" *) tx_data_pid;
   assign \$15  = ! (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *) \type ;
-  assign \$18  = ! (* src = "/home/kkojima/luna-uac2/build_verilog.py:489" *) \type ;
-  assign \$20  = request == (* src = "/home/kkojima/luna-uac2/build_verilog.py:490" *) 4'hb;
-  assign \$22  = \$18  & (* src = "/home/kkojima/luna-uac2/build_verilog.py:489" *) \$20 ;
+  assign \$18  = ! (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *) \type ;
+  assign \$20  = request == (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:340" *) 4'hb;
+  assign \$22  = \$18  & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *) \$20 ;
   assign \$17  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:168" *) \$24 ;
   assign \$27  = data_requested | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:258" *) status_requested;
   assign \$2  = ! (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *) \type ;
@@ -1150,7 +1089,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     .valid(get_descriptor_valid),
     .value(get_descriptor_value)
   );
-  \transmitter$4  transmitter (
+  \transmitter$7  transmitter (
     .datum_0(transmitter_datum_0),
     .datum_1(transmitter_datum_1),
     .first(transmitter_first),
@@ -1164,7 +1103,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     .valid(transmitter_valid)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     transmitter_datum_0 = 8'h00;
     transmitter_datum_1 = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
@@ -1201,7 +1140,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     transmitter_max_length = 2'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$41 )
@@ -1237,7 +1176,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     transmitter_start = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$43 )
@@ -1283,7 +1222,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     \ack$1  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$45 )
@@ -1334,7 +1273,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     stall = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$47 )
@@ -1379,7 +1318,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     address_changed = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$51 )
@@ -1408,7 +1347,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     new_address = 7'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$53 )
@@ -1437,7 +1376,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     config_changed = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$55 )
@@ -1470,7 +1409,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     new_config = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$57 )
@@ -1503,7 +1442,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     \get_descriptor_start_position$next  = get_descriptor_start_position;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$2 )
@@ -1545,7 +1484,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     get_descriptor_ready = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$61 )
@@ -1577,7 +1516,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     get_descriptor_start = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$63 )
@@ -1614,7 +1553,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     \expecting_ack$next  = expecting_ack;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$65 )
@@ -1664,7 +1603,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     \tx_data_pid$next  = tx_data_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$9 )
@@ -1706,7 +1645,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$15 )
@@ -1812,7 +1751,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     valid = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$29 )
@@ -1858,7 +1797,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     first = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$31 )
@@ -1894,7 +1833,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     last = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$33 )
@@ -1940,7 +1879,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$35 )
@@ -1976,7 +1915,7 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$484 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$599 ) begin end
     transmitter_ready = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
     casez (\$37 )
@@ -2020,144 +1959,144 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.UAC2RequestHandlers" *)
 (* generator = "Amaranth" *)
 module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, length, data_requested, status_requested, rx_ready_for_response, valid, ack, stall, payload, first, last, ready, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$485  = 0;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  reg \$auto$verilog_backend.cc:2082:dump_module$600  = 0;
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$1 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$101 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$103 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$105 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$107 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
   wire \$109 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$11 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
   wire \$111 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$113 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$115 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$117 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$119 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$121 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$123 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$125 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$127 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
   wire \$129 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$13 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
   wire \$131 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:107" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:107" *)
   wire \$133 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$135 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$137 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$15 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *)
   wire \$17 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$19 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$21 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$23 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$25 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *)
   wire \$27 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$29 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$3 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$31 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$33 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$35 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *)
   wire \$37 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$39 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$41 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$43 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$45 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *)
   wire \$47 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$49 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$5 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$51 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$53 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$55 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *)
   wire \$57 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$59 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$61 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$63 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$65 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$67 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$69 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *)
   wire \$7 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$71 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$73 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$75 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$77 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$79 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$81 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$83 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$85 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$87 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
   wire \$89 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
   wire \$9 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
   wire \$91 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
   wire \$93 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *)
   wire \$95 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$97 ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *)
   wire \$99 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:55" *)
   output ack;
@@ -2169,22 +2108,22 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
   reg first;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [15:0] index;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:15" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:15" *)
   reg [2:0] input_interface_altsetting_nr = 3'h0;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:15" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:15" *)
   reg [2:0] \input_interface_altsetting_nr$next ;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:16" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:16" *)
   reg interface_settings_changed = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:16" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:16" *)
   reg \interface_settings_changed$next ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output last;
   reg last;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [15:0] length;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:14" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:14" *)
   reg [2:0] output_interface_altsetting_nr = 3'h0;
-  (* src = "/home/kkojima/luna-uac2/requesthandlers.py:14" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:14" *)
   reg [2:0] \output_interface_altsetting_nr$next ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output [7:0] payload;
@@ -2246,91 +2185,91 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
   wire transmitter_valid;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [1:0] \type ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
   reg valid;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [15:0] value;
-  assign \$9  = \$5  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) \$7 ;
-  assign \$99  = index == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$101  = \$97  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) \$99 ;
-  assign \$103  = value == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$105  = index == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$107  = \$103  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) \$105 ;
-  assign \$109  = length == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *) 3'h4;
-  assign \$111  = \$107  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *) \$109 ;
-  assign \$113  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$115  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$117  = value == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$11  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$119  = index == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$121  = \$117  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) \$119 ;
-  assign \$123  = value == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$125  = index == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$127  = \$123  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) \$125 ;
-  assign \$129  = length == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *) 3'h4;
-  assign \$131  = \$127  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *) \$129 ;
-  assign \$133  = status_requested | (* src = "/home/kkojima/luna-uac2/requesthandlers.py:107" *) data_requested;
-  assign \$135  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$137  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$13  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$15  = recipient == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) 1'h1;
-  assign \$17  = request == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *) 4'hb;
-  assign \$1  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$19  = \$15  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) \$17 ;
-  assign \$21  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$23  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$25  = recipient == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) 1'h1;
-  assign \$27  = request == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *) 4'hb;
-  assign \$29  = \$25  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) \$27 ;
-  assign \$31  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$33  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$35  = recipient == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) 1'h1;
-  assign \$37  = request == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *) 4'hb;
-  assign \$3  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$39  = \$35  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) \$37 ;
-  assign \$41  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$43  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$45  = recipient == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) 1'h1;
-  assign \$47  = request == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *) 4'hb;
-  assign \$49  = \$45  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) \$47 ;
-  assign \$51  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$53  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$55  = recipient == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) 1'h1;
-  assign \$57  = request == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *) 4'hb;
-  assign \$5  = recipient == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) 1'h1;
-  assign \$59  = \$55  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *) \$57 ;
-  assign \$61  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$63  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$65  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$67  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$69  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$71  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$73  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$75  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$77  = value == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$7  = request == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:34" *) 4'hb;
-  assign \$79  = index == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$81  = \$77  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) \$79 ;
-  assign \$83  = value == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$85  = index == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
-  assign \$87  = \$83  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) \$85 ;
-  assign \$89  = length == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *) 3'h4;
-  assign \$91  = \$87  & (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *) \$89 ;
-  assign \$93  = ! (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *) \type ;
-  assign \$95  = \type  == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" *) 1'h1;
-  assign \$97  = value == (* src = "/home/kkojima/luna-uac2/requesthandlers.py:59" *) 9'h100;
+  assign \$9  = \$5  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) \$7 ;
+  assign \$99  = index == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$101  = \$97  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) \$99 ;
+  assign \$103  = value == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$105  = index == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$107  = \$103  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) \$105 ;
+  assign \$109  = length == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *) 3'h4;
+  assign \$111  = \$107  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *) \$109 ;
+  assign \$113  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$115  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$117  = value == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$11  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$119  = index == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$121  = \$117  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) \$119 ;
+  assign \$123  = value == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$125  = index == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$127  = \$123  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) \$125 ;
+  assign \$129  = length == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *) 3'h4;
+  assign \$131  = \$127  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *) \$129 ;
+  assign \$133  = status_requested | (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:107" *) data_requested;
+  assign \$135  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$137  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$13  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$15  = recipient == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) 1'h1;
+  assign \$17  = request == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *) 4'hb;
+  assign \$1  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$19  = \$15  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) \$17 ;
+  assign \$21  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$23  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$25  = recipient == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) 1'h1;
+  assign \$27  = request == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *) 4'hb;
+  assign \$29  = \$25  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) \$27 ;
+  assign \$31  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$33  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$35  = recipient == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) 1'h1;
+  assign \$37  = request == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *) 4'hb;
+  assign \$3  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$39  = \$35  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) \$37 ;
+  assign \$41  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$43  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$45  = recipient == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) 1'h1;
+  assign \$47  = request == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *) 4'hb;
+  assign \$49  = \$45  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) \$47 ;
+  assign \$51  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$53  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$55  = recipient == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) 1'h1;
+  assign \$57  = request == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *) 4'hb;
+  assign \$5  = recipient == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) 1'h1;
+  assign \$59  = \$55  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *) \$57 ;
+  assign \$61  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$63  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$65  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$67  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$69  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$71  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$73  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$75  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$77  = value == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$7  = request == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:34" *) 4'hb;
+  assign \$79  = index == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$81  = \$77  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) \$79 ;
+  assign \$83  = value == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$85  = index == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
+  assign \$87  = \$83  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) \$85 ;
+  assign \$89  = length == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *) 3'h4;
+  assign \$91  = \$87  & (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *) \$89 ;
+  assign \$93  = ! (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *) \type ;
+  assign \$95  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" *) 1'h1;
+  assign \$97  = value == (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:59" *) 9'h100;
   always @(posedge usb_clk)
     input_interface_altsetting_nr <= \input_interface_altsetting_nr$next ;
   always @(posedge usb_clk)
     output_interface_altsetting_nr <= \output_interface_altsetting_nr$next ;
   always @(posedge usb_clk)
     interface_settings_changed <= \interface_settings_changed$next ;
-  \transmitter$5  transmitter (
+  \transmitter$8  transmitter (
     .datum_0(transmitter_datum_0),
     .datum_1(transmitter_datum_1),
     .datum_10(transmitter_datum_10),
@@ -2356,15 +2295,15 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     .valid(transmitter_valid)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     \interface_settings_changed$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$3 , \$1  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
           casez (\$9 )
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" */
             1'h1:
                 \interface_settings_changed$next  = 1'h1;
           endcase
@@ -2376,21 +2315,21 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     \output_interface_altsetting_nr$next  = output_interface_altsetting_nr;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$13 , \$11  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
           casez (\$19 )
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" */
             1'h1:
               begin
                 \output_interface_altsetting_nr$next  = 3'h0;
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:45" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:45" *)
                 casez (index)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:46" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:46" */
                   16'h0001:
                       \output_interface_altsetting_nr$next  = value[2:0];
                 endcase
@@ -2404,24 +2343,24 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     \input_interface_altsetting_nr$next  = input_interface_altsetting_nr;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$23 , \$21  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
           casez (\$29 )
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" */
             1'h1:
               begin
                 \input_interface_altsetting_nr$next  = 3'h0;
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:45" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:45" *)
                 casez (index)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:46" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:46" */
                   16'h0001:
                       /* empty */;
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:48" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:48" */
                   16'h0002:
                       \input_interface_altsetting_nr$next  = value[2:0];
                 endcase
@@ -2435,30 +2374,30 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     transmitter_max_length = 14'h0000;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$95 , \$93  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:65" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:65" *)
                 casez (\$101 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:65" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:65" */
                   1'h1:
                       transmitter_max_length = length[13:0];
                 endcase
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
                 casez (\$111 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" */
                   1'h1:
                       transmitter_max_length = 14'h0004;
                 endcase
@@ -2466,47 +2405,47 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     stall = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$115 , \$113  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:65" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:65" *)
                 casez (\$121 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:65" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:65" */
                   1'h1:
                       /* empty */;
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:74" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:74" */
                   default:
                       stall = 1'h1;
                 endcase
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
                 casez (\$131 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" */
                   1'h1:
                       /* empty */;
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:92" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:92" */
                   default:
                       stall = 1'h1;
                 endcase
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:103" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:103" */
             default:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:107" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:107" *)
                 casez (\$133 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:107" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:107" */
                   1'h1:
                       stall = 1'h1;
                 endcase
@@ -2514,30 +2453,30 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     transmitter_start = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$137 , \$135  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:78" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:78" *)
                 casez (data_requested)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:78" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:78" */
                   1'h1:
                       transmitter_start = 1'h1;
                 endcase
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:96" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:96" *)
                 casez (data_requested)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:96" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:96" */
                   1'h1:
                       transmitter_start = 1'h1;
                 endcase
@@ -2545,40 +2484,40 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     ack = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$33 , \$31  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
           casez (\$39 )
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" */
             1'h1:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:52" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:52" *)
                 casez (rx_ready_for_response)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:52" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:52" */
                   1'h1:
                       ack = 1'h1;
                 endcase
           endcase
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:82" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:82" *)
                 casez (status_requested)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:82" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:82" */
                   1'h1:
                       ack = 1'h1;
                 endcase
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:100" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:100" *)
                 casez (status_requested)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:100" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:100" */
                   1'h1:
                       ack = 1'h1;
                 endcase
@@ -2586,132 +2525,132 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     valid = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$43 , \$41  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
           casez (\$49 )
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" */
             1'h1:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:56" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:56" *)
                 casez (status_requested)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:56" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:56" */
                   1'h1:
                       valid = 1'h1;
                 endcase
           endcase
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
                 valid = transmitter_valid;
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
                 valid = transmitter_valid;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     last = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$53 , \$51  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" *)
           casez (\$59 )
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:33" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:33" */
             1'h1:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:56" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:56" *)
                 casez (status_requested)
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:56" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:56" */
                   1'h1:
                       last = 1'h1;
                 endcase
           endcase
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
                 last = transmitter_last;
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
                 last = transmitter_last;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     first = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$63 , \$61  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
                 first = transmitter_first;
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
                 first = transmitter_first;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     payload = 8'h00;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$67 , \$65  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
                 payload = transmitter_payload;
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
                 payload = transmitter_payload;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     transmitter_ready = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$71 , \$69  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
                 transmitter_ready = ready;
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
                 transmitter_ready = ready;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$485 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$600 ) begin end
     transmitter_datum_0 = 8'h00;
     transmitter_datum_1 = 8'h00;
     transmitter_datum_2 = 8'h00;
@@ -2726,28 +2665,28 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
     transmitter_datum_11 = 8'h00;
     transmitter_datum_12 = 8'h00;
     transmitter_datum_13 = 8'h00;
-    (* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" *)
     casez ({ \$75 , \$73  })
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:32" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:32" */
       2'b?1:
           /* empty */;
-      /* src = "/home/kkojima/luna-uac2/requesthandlers.py:60" */
+      /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:60" */
       2'b1?:
-          (* src = "/home/kkojima/luna-uac2/requesthandlers.py:61" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:61" *)
           casez (request)
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:62" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:62" */
             8'h02:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:65" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:65" *)
                 casez (\$81 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:65" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:65" */
                   1'h1:
                       { transmitter_datum_13, transmitter_datum_12, transmitter_datum_11, transmitter_datum_10, transmitter_datum_9, transmitter_datum_8, transmitter_datum_7, transmitter_datum_6, transmitter_datum_5, transmitter_datum_4, transmitter_datum_3, transmitter_datum_2, transmitter_datum_1, transmitter_datum_0 } = 112'h000000000000bb800000bb800001;
                 endcase
-            /* src = "/home/kkojima/luna-uac2/requesthandlers.py:85" */
+            /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:85" */
             8'h01:
-                (* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" *)
                 casez (\$91 )
-                  /* src = "/home/kkojima/luna-uac2/requesthandlers.py:87" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/requesthandlers.py:87" */
                   1'h1:
                       { transmitter_datum_3, transmitter_datum_2, transmitter_datum_1, transmitter_datum_0 } = 32'd48000;
                 endcase
@@ -2761,7 +2700,7 @@ endmodule
 module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed, tx_timeout, rx_timeout, ack, nak, stall, nyet, pid, address, endpoint, new_token, ready_for_response, frame, new_frame, is_in, is_out
 , is_setup, is_ping, valid, next, payload, rx_ready_for_response, speed, active_config, address_changed, new_address, config_changed, new_config, \ack$1 , \nak$2 , \stall$3 , start, \start$4 , \valid$5 , tx_pid_toggle, \payload$6 , first
 , last, ready, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$486  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$601  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:211" *)
   wire \$101 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:260" *)
@@ -3134,9 +3073,9 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
   input tx_timeout;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:152" *)
   wire \tx_timeout$63 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -3337,7 +3276,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     .value(setup_decoder_value)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3428,7 +3367,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     request_mux_data_requested = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3448,7 +3387,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     \request_mux_valid$11  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3472,7 +3411,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     request_mux_next = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3496,7 +3435,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     \request_mux_payload$12  = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3520,7 +3459,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     request_mux_rx_ready_for_response = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3544,7 +3483,7 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$486 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$601 ) begin end
     request_mux_status_requested = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/control.py:212" *)
     casez (fsm_state)
@@ -3640,7 +3579,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBIsochronousInMemoryEndpoint" *)
 (* generator = "Amaranth" *)
 module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, endpoint, ready_for_response, new_frame, is_in, valid, tx_pid_toggle, payload, first, last, ready, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$487  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$602  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:185" *)
   wire [12:0] \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:162" *)
@@ -3748,9 +3687,9 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
   input ready_for_response;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:101" *)
   output [1:0] tx_pid_toggle;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -3796,7 +3735,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
   always @(posedge usb_clk)
     bytes_left_in_frame <= \bytes_left_in_frame$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     \bytes_left_in_frame$next  = bytes_left_in_frame;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:96" *)
     casez (new_frame)
@@ -3827,7 +3766,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     \bytes_left_in_packet$next  = bytes_left_in_packet;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:96" *)
     casez (new_frame)
@@ -3866,7 +3805,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     last = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:133" *)
     casez (fsm_state)
@@ -3885,7 +3824,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     \next_data_pid$next  = next_data_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:96" *)
     casez (new_frame)
@@ -3933,7 +3872,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     \address$next  = address;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:133" *)
     casez (fsm_state)
@@ -3953,7 +3892,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     \first$next  = first;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:133" *)
     casez (fsm_state)
@@ -3991,7 +3930,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     next_address = 12'h000;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:133" *)
     casez (fsm_state)
@@ -4014,7 +3953,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:133" *)
     casez (fsm_state)
@@ -4062,7 +4001,7 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$487 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$602 ) begin end
     valid = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:133" *)
     casez (fsm_state)
@@ -4090,8 +4029,8 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBIsochronousInStreamEndpoint" *)
 (* generator = "Amaranth" *)
-module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_for_response, new_frame, is_in, valid, tx_pid_toggle, payload, first, last, ready, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$488  = 0;
+module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, isochronous_endpoint2__valid, isochronous_endpoint2__ready, isochronous_endpoint2__payload, endpoint, ready_for_response, new_frame, is_in, valid, tx_pid_toggle, payload, first, last, ready, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$603  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:390" *)
   wire [12:0] \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:357" *)
@@ -4198,11 +4137,12 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
   reg [1:0] \iso_stream_ep_in_fsm_state$next ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
-  wire [7:0] isochronous_endpoint2__payload;
+  input [7:0] isochronous_endpoint2__payload;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  output isochronous_endpoint2__ready;
   reg isochronous_endpoint2__ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
-  wire isochronous_endpoint2__valid;
+  input isochronous_endpoint2__valid;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output last;
   reg last;
@@ -4223,9 +4163,9 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
   input ready_for_response;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:101" *)
   output [1:0] tx_pid_toggle;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -4277,7 +4217,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
   always @(posedge usb_clk)
     bytes_left_in_frame <= \bytes_left_in_frame$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \bytes_left_in_frame$next  = bytes_left_in_frame;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:297" *)
     casez (new_frame)
@@ -4308,7 +4248,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \bytes_left_in_packet$next  = bytes_left_in_packet;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:297" *)
     casez (new_frame)
@@ -4347,7 +4287,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \iso_stream_ep_in_fsm_state$next  = iso_stream_ep_in_fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4395,7 +4335,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     valid = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4414,7 +4354,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     last = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4433,7 +4373,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     isochronous_endpoint2__ready = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4456,7 +4396,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \next_data_pid$next  = next_data_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:297" *)
     casez (new_frame)
@@ -4504,7 +4444,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4519,12 +4459,12 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
           casez (isochronous_endpoint2__valid)
             /* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:373" */
             1'h1:
-                payload = 8'h00;
+                payload = isochronous_endpoint2__payload;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \frame_finished$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4544,7 +4484,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \byte_pos$next  = byte_pos;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4564,7 +4504,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     \first$next  = first;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4602,7 +4542,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     next_byte_pos = 12'h000;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4625,7 +4565,7 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$488 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$603 ) begin end
     data_requested = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:327" *)
     casez (iso_stream_ep_in_fsm_state)
@@ -4644,15 +4584,13 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, endpoint, ready_f
   assign \$4  = \$5 ;
   assign \$23  = \$24 ;
   assign \$40  = \$41 ;
-  assign isochronous_endpoint2__valid = 1'h0;
-  assign isochronous_endpoint2__payload = 8'h00;
   assign tx_pid_toggle = next_data_pid;
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBIsochronousOutStreamEndpoint" *)
 (* generator = "Amaranth" *)
 module USBIsochronousOutStreamEndpoint(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready, isochronous_endpoint1__first, isochronous_endpoint1__last, isochronous_endpoint1__payload, endpoint, is_out, valid, next, payload, rx_complete, rx_invalid, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$489  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$604  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:515" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:516" *)
@@ -4749,9 +4687,9 @@ module USBIsochronousOutStreamEndpoint(usb_clk, isochronous_endpoint1__valid, is
   input rx_complete;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:97" *)
   input rx_invalid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -4801,7 +4739,7 @@ module USBIsochronousOutStreamEndpoint(usb_clk, isochronous_endpoint1__valid, is
     .write_en(fifo_write_en)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$489 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$604 ) begin end
     \is_first_byte$next  = is_first_byte;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:506" *)
     casez (\$4 )
@@ -4837,7 +4775,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.audio_clock_usb_pulse" *)
 (* generator = "Amaranth" *)
 module audio_clock_usb_pulse(usb_clk, edge_in, pulse_out, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$490  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$605  = 0;
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *)
@@ -4851,16 +4789,16 @@ module audio_clock_usb_pulse(usb_clk, edge_in, pulse_out, usb_rst);
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:17" *)
   output pulse_out;
   reg pulse_out;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$1  = ~ (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *) edge_last;
   assign \$3  = edge_in & (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *) \$1 ;
   always @(posedge usb_clk)
     edge_last <= \edge_last$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$490 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$605 ) begin end
     \edge_last$next  = edge_in;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -4869,7 +4807,7 @@ module audio_clock_usb_pulse(usb_clk, edge_in, pulse_out, usb_rst);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$490 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$605 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *)
     casez (\$3 )
@@ -4888,7 +4826,7 @@ endmodule
 module audio_clock_usb_sync(usb_clk, audio_clock_usb, audio_clk, usb_rst);
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:555" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:406" *)
   output audio_clock_usb;
   (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
   reg stage0 = 1'h0;
@@ -4898,9 +4836,9 @@ module audio_clock_usb_sync(usb_clk, audio_clock_usb, audio_clk, usb_rst);
   reg stage1 = 1'h0;
   (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
   wire \stage1$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   always @(posedge usb_clk)
     stage1 <= stage0;
@@ -4914,7 +4852,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBIsochronousOutStreamEndpoint.boundary_detector" *)
 (* generator = "Amaranth" *)
 module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in, \payload$1 , last, first, \next$2 , \valid$3 , complete_out, invalid_out, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$491  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$606  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:215" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:231" *)
@@ -5003,9 +4941,9 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
   reg [7:0] \payload$1  = 8'h00;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   reg [7:0] \payload$1$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -5054,7 +4992,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
   always @(posedge usb_clk)
     \valid$3  <= \valid$3$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \valid$3$next  = \valid$3 ;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5074,7 +5012,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \first$next  = first;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5111,7 +5049,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5145,7 +5083,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \payload$1$next  = \payload$1 ;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5178,7 +5116,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \last$next  = last;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5207,7 +5145,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \next$2$next  = \next$2 ;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5245,7 +5183,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \buffered_complete$next  = buffered_complete;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5265,7 +5203,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \buffered_invalid$next  = buffered_invalid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5285,7 +5223,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \complete_out$next  = complete_out;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5309,7 +5247,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \invalid_out$next  = invalid_out;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5333,7 +5271,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \buffered_byte$next  = buffered_byte;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5363,7 +5301,7 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$491 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$606 ) begin end
     \is_first_byte$next  = is_first_byte;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:170" *)
     casez (fsm_state)
@@ -5394,528 +5332,671 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
   end
 endmodule
 
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.channels_to_usb_stream" *)
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_receiver.cic" *)
 (* generator = "Amaranth" *)
-module channels_to_usb_stream(usb_clk, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$492  = 0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-  wire \$1 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:98" *)
-  wire [15:0] \$10 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-  wire \$12 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$14 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$15 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:107" *)
-  wire \$17 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:108" *)
-  wire [16:0] \$19 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:108" *)
-  wire [16:0] \$20 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:120" *)
-  wire [16:0] \$22 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:120" *)
-  wire [16:0] \$23 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-  wire \$25 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
+module cic(usb_clk, signal_in, strobe_in, strobe_out, signal_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$607  = 0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:77" *)
+  wire [27:0] \$1 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$10 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$11 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$13 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$14 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$16 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$17 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$19 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:77" *)
+  wire [27:0] \$2 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$20 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" *)
+  wire \$22 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:80" *)
+  wire [4:0] \$24 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:80" *)
+  wire [4:0] \$25 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" *)
   wire \$27 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-  wire \$29 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-  wire \$3 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$31 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$32 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$34 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$35 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:132" *)
-  wire \$37 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:133" *)
-  wire [1:0] \$39 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:133" *)
-  wire [1:0] \$40 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-  wire \$42 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-  wire \$44 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-  wire \$46 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$48 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *)
-  wire [1:0] \$49 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-  wire \$5 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:107" *)
-  wire \$51 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:132" *)
-  wire \$53 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:134" *)
-  wire \$55 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:97" *)
-  wire [1:0] \$57 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:97" *)
-  wire [1:0] \$58 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:130" *)
-  wire [1:0] \$60 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:130" *)
-  wire [1:0] \$61 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:86" *)
-  wire [16:0] \$7 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:86" *)
-  wire [16:0] \$8 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:56" *)
-  wire [15:0] channel_payload;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:58" *)
-  reg channel_ready;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:57" *)
-  wire channel_valid;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire channels_stream_in__channel_no;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire [15:0] channels_stream_in__payload;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire channels_stream_in__ready;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire channels_stream_in__valid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:69" *)
-  reg current_byte = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:69" *)
-  reg \current_byte$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:68" *)
-  reg current_channel = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:68" *)
-  reg \current_channel$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:67" *)
-  reg [15:0] current_sample = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:67" *)
-  reg [15:0] \current_sample$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-  reg [1:0] fsm_state = 2'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-  reg [1:0] \fsm_state$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
-  wire [7:0] out_fifo_r_data;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
-  wire out_fifo_r_en;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:84" *)
-  wire out_fifo_r_rdy;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
-  reg [7:0] out_fifo_w_data;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:80" *)
-  reg out_fifo_w_en;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
-  wire out_fifo_w_rdy;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire [7:0] payload;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire ready;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:87" *)
+  wire [27:0] \$29 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:87" *)
+  wire [27:0] \$30 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$32 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$33 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$35 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$36 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$38 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$39 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$4 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$41 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$42 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$44 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$45 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$47 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *)
+  wire [27:0] \$48 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$5 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:89" *)
+  wire [26:0] \$50 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:89" *)
+  wire [26:0] \$51 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$7 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *)
+  wire [27:0] \$8 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:62" *)
+  reg comb_edge = 1'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:62" *)
+  reg \comb_edge$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:63" *)
+  reg [3:0] decimate_counter = 4'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:63" *)
+  reg [3:0] \decimate_counter$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy0 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy0$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy1 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy1$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy2 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy2$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy3 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy3$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy4 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy4$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy5 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy5$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] dy6 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:72" *)
+  reg [26:0] \dy6$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:45" *)
+  input [23:0] signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:46" *)
+  output [23:0] signal_out;
+  reg [23:0] signal_out = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:46" *)
+  reg [23:0] \signal_out$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:43" *)
+  input strobe_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:44" *)
+  output strobe_out;
+  reg strobe_out = 1'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:44" *)
+  reg \strobe_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire valid;
-  assign \$15  = current_channel + (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *) 1'h1;
-  assign \$17  = ~ (* src = "/home/kkojima/luna-uac2/build_verilog.py:107" *) \$14 [0];
-  assign \$32  = current_channel + (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *) 1'h1;
-  assign \$35  = current_channel + (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *) 1'h1;
-  assign \$40  = current_channel + (* src = "/home/kkojima/luna-uac2/build_verilog.py:133" *) 1'h1;
-  assign \$49  = current_channel + (* src = "/home/kkojima/luna-uac2/build_verilog.py:79" *) 1'h1;
-  assign \$51  = ~ (* src = "/home/kkojima/luna-uac2/build_verilog.py:107" *) \$48 [0];
-  assign \$55  = ~ (* src = "/home/kkojima/luna-uac2/build_verilog.py:134" *) current_channel;
-  assign \$58  = current_byte + (* src = "/home/kkojima/luna-uac2/build_verilog.py:97" *) 1'h1;
-  assign \$61  = current_byte + (* src = "/home/kkojima/luna-uac2/build_verilog.py:130" *) 1'h1;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x0 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x0$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x1 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x1$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x2 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x2$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x3 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x3$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x4 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x4$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x5 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x5$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] x6 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
+  reg [26:0] \x6$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y0 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y0$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y1 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y1$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y2 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y2$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y3 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y3$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y4 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y4$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y5 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y5$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] y6 = 27'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:71" *)
+  reg [26:0] \y6$next ;
+  assign \$11  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *) $signed(x3);
+  assign \$14  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *) $signed(x4);
+  assign \$17  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *) $signed(x5);
+  assign \$20  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *) $signed(x6);
+  assign \$22  = decimate_counter < (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" *) 4'hb;
+  assign \$25  = decimate_counter + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:80" *) 1'h1;
+  assign \$27  = decimate_counter < (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" *) 4'hb;
+  assign \$2  = $signed(signal_in) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:77" *) $signed(x0);
+  assign \$30  = $signed(x6) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:87" *) $signed(dy0);
+  assign \$33  = $signed(y0) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *) $signed(dy1);
+  assign \$36  = $signed(y1) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *) $signed(dy2);
+  assign \$39  = $signed(y2) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *) $signed(dy3);
+  assign \$42  = $signed(y3) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *) $signed(dy4);
+  assign \$45  = $signed(y4) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *) $signed(dy5);
+  assign \$48  = $signed(y5) - (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:88" *) $signed(dy6);
+  assign \$5  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *) $signed(x1);
+  assign \$8  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:78" *) $signed(x2);
   always @(posedge usb_clk)
-    current_byte <= \current_byte$next ;
+    dy6 <= \dy6$next ;
   always @(posedge usb_clk)
-    fsm_state <= \fsm_state$next ;
+    dy5 <= \dy5$next ;
   always @(posedge usb_clk)
-    current_channel <= \current_channel$next ;
+    dy4 <= \dy4$next ;
   always @(posedge usb_clk)
-    current_sample <= \current_sample$next ;
-  out_fifo out_fifo (
-    .r_data(out_fifo_r_data),
-    .r_en(1'h0),
-    .r_rdy(out_fifo_r_rdy),
-    .usb_clk(usb_clk),
-    .usb_rst(usb_rst),
-    .w_data(out_fifo_w_data),
-    .w_en(out_fifo_w_en),
-    .w_rdy(out_fifo_w_rdy)
-  );
+    dy3 <= \dy3$next ;
+  always @(posedge usb_clk)
+    dy2 <= \dy2$next ;
+  always @(posedge usb_clk)
+    dy1 <= \dy1$next ;
+  always @(posedge usb_clk)
+    dy0 <= \dy0$next ;
+  always @(posedge usb_clk)
+    signal_out <= \signal_out$next ;
+  always @(posedge usb_clk)
+    y6 <= \y6$next ;
+  always @(posedge usb_clk)
+    y5 <= \y5$next ;
+  always @(posedge usb_clk)
+    y4 <= \y4$next ;
+  always @(posedge usb_clk)
+    y3 <= \y3$next ;
+  always @(posedge usb_clk)
+    y2 <= \y2$next ;
+  always @(posedge usb_clk)
+    y1 <= \y1$next ;
+  always @(posedge usb_clk)
+    y0 <= \y0$next ;
+  always @(posedge usb_clk)
+    comb_edge <= \comb_edge$next ;
+  always @(posedge usb_clk)
+    decimate_counter <= \decimate_counter$next ;
+  always @(posedge usb_clk)
+    x6 <= \x6$next ;
+  always @(posedge usb_clk)
+    x5 <= \x5$next ;
+  always @(posedge usb_clk)
+    x4 <= \x4$next ;
+  always @(posedge usb_clk)
+    x3 <= \x3$next ;
+  always @(posedge usb_clk)
+    x2 <= \x2$next ;
+  always @(posedge usb_clk)
+    x1 <= \x1$next ;
+  always @(posedge usb_clk)
+    x0 <= \x0$next ;
+  always @(posedge usb_clk)
+    strobe_out <= \strobe_out$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    out_fifo_w_data = 8'h00;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \strobe_out$next  = comb_edge;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
       1'h1:
-          (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-                out_fifo_w_data = current_sample[7:0];
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                /* empty */;
-            /* \amaranth.decoding  = "FILL-ZEROS/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:125" */
-            2'h2:
-                out_fifo_w_data = 8'h00;
-          endcase
+          \strobe_out$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    out_fifo_w_en = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x0$next  = x0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
       1'h1:
-          (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-                out_fifo_w_en = 1'h1;
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                /* empty */;
-            /* \amaranth.decoding  = "FILL-ZEROS/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:125" */
-            2'h2:
-                out_fifo_w_en = 1'h1;
-          endcase
+          \x0$next  = \$2 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x0$next  = 27'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    \current_byte$next  = current_byte;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y0$next  = y0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y0$next  = \$30 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y0$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y1$next  = y1;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y1$next  = \$33 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y1$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y2$next  = y2;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y2$next  = \$36 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y2$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y3$next  = y3;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y3$next  = \$39 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y3$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y4$next  = y4;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y4$next  = \$42 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y4$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y5$next  = y5;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y5$next  = \$45 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y5$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \y6$next  = y6;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \y6$next  = \$48 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \y6$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \signal_out$next  = signal_out;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \signal_out$next  = \$51 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \signal_out$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy0$next  = dy0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy0$next  = x6;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy0$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy1$next  = dy1;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy1$next  = y0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy1$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x1$next  = x1;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
+      1'h1:
+          \x1$next  = \$5 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x1$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy2$next  = dy2;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy2$next  = y1;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy2$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy3$next  = dy3;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy3$next  = y2;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy3$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy4$next  = dy4;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy4$next  = y3;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy4$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy5$next  = dy5;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy5$next  = y4;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy5$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \dy6$next  = dy6;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \dy6$next  = y5;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \dy6$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x2$next  = x2;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
+      1'h1:
+          \x2$next  = \$8 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x2$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x3$next  = x3;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
+      1'h1:
+          \x3$next  = \$11 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x3$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x4$next  = x4;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
+      1'h1:
+          \x4$next  = \$14 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x4$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x5$next  = x5;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
+      1'h1:
+          \x5$next  = \$17 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x5$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \x6$next  = x6;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
+      1'h1:
+          \x6$next  = \$20 [26:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x6$next  = 27'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \decimate_counter$next  = decimate_counter;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-                \current_byte$next  = \$58 [0];
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                /* empty */;
-            /* \amaranth.decoding  = "FILL-ZEROS/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:125" */
-            2'h2:
-                \current_byte$next  = \$61 [0];
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" *)
+          casez (\$22 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" */
+            1'h1:
+                \decimate_counter$next  = \$25 [3:0];
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:82" */
+            default:
+                \decimate_counter$next  = 4'h0;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
       1'h1:
-          \current_byte$next  = 1'h0;
+          \decimate_counter$next  = 4'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    channel_ready = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                channel_ready = 1'h1;
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-                casez (\$1 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:101" */
-                  1'h1:
-                      (* src = "/home/kkojima/luna-uac2/build_verilog.py:102" *)
-                      casez (channel_valid)
-                        /* src = "/home/kkojima/luna-uac2/build_verilog.py:102" */
-                        1'h1:
-                            channel_ready = 1'h1;
-                      endcase
-                endcase
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:117" *)
-                casez (channel_valid)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:117" */
-                  1'h1:
-                      channel_ready = 1'h1;
-                endcase
-          endcase
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    \current_sample$next  = current_sample;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-                casez (\$5 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:84" */
-                  1'h1:
-                      \current_sample$next  = \$8 [15:0];
-                endcase
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-              begin
-                \current_sample$next  = \$10 ;
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-                casez (\$12 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:101" */
-                  1'h1:
-                      (* src = "/home/kkojima/luna-uac2/build_verilog.py:102" *)
-                      casez (channel_valid)
-                        /* src = "/home/kkojima/luna-uac2/build_verilog.py:102" */
-                        1'h1:
-                            (* src = "/home/kkojima/luna-uac2/build_verilog.py:107" *)
-                            casez (\$17 )
-                              /* src = "/home/kkojima/luna-uac2/build_verilog.py:107" */
-                              1'h1:
-                                  \current_sample$next  = \$20 [15:0];
-                            endcase
-                      endcase
-                endcase
-              end
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:117" *)
-                casez (channel_valid)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:117" */
-                  1'h1:
-                      \current_sample$next  = \$23 [15:0];
-                endcase
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \current_sample$next  = 16'h0000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    \current_channel$next  = current_channel;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
+    if (\$auto$verilog_backend.cc:2082:dump_module$607 ) begin end
+    \comb_edge$next  = comb_edge;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:76" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-                casez (\$27 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:84" */
-                  1'h1:
-                      \current_channel$next  = 1'h0;
-                endcase
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-                casez (\$29 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:101" */
-                  1'h1:
-                      (* src = "/home/kkojima/luna-uac2/build_verilog.py:102" *)
-                      casez (channel_valid)
-                        /* src = "/home/kkojima/luna-uac2/build_verilog.py:102" */
-                        1'h1:
-                            \current_channel$next  = \$32 [0];
-                      endcase
-                endcase
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:117" *)
-                casez (channel_valid)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:117" */
-                  1'h1:
-                      \current_channel$next  = \$35 [0];
-                endcase
-            /* \amaranth.decoding  = "FILL-ZEROS/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:125" */
-            2'h2:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:132" *)
-                casez (\$37 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:132" */
-                  1'h1:
-                      \current_channel$next  = \$40 [0];
-                endcase
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" *)
+          casez (\$27 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:79" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:82" */
+            default:
+                \comb_edge$next  = 1'h1;
           endcase
+    endcase
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" *)
+    casez (comb_edge)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:86" */
+      1'h1:
+          \comb_edge$next  = 1'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
       1'h1:
-          \current_channel$next  = 1'h0;
+          \comb_edge$next  = 1'h0;
     endcase
   end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$492 ) begin end
-    \fsm_state$next  = fsm_state;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:77" *)
-    casez (out_fifo_w_rdy)
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:77" */
-      1'h1:
-          (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:78" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "WAIT-FIRST/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:81" */
-            2'h0:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:84" *)
-                casez (\$44 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:84" */
-                  1'h1:
-                      \fsm_state$next  = 2'h1;
-                endcase
-            /* \amaranth.decoding  = "SEND/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:91" */
-            2'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:101" *)
-                casez (\$46 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:101" */
-                  1'h1:
-                      (* full_case = 32'd1 *)
-                      (* src = "/home/kkojima/luna-uac2/build_verilog.py:102" *)
-                      casez (channel_valid)
-                        /* src = "/home/kkojima/luna-uac2/build_verilog.py:102" */
-                        1'h1:
-                            (* full_case = 32'd1 *)
-                            (* src = "/home/kkojima/luna-uac2/build_verilog.py:107" *)
-                            casez (\$51 )
-                              /* src = "/home/kkojima/luna-uac2/build_verilog.py:107" */
-                              1'h1:
-                                  \fsm_state$next  = 2'h1;
-                              /* src = "/home/kkojima/luna-uac2/build_verilog.py:110" */
-                              default:
-                                  \fsm_state$next  = 2'h2;
-                            endcase
-                        /* src = "/home/kkojima/luna-uac2/build_verilog.py:113" */
-                        default:
-                            \fsm_state$next  = 2'h3;
-                      endcase
-                endcase
-            /* \amaranth.decoding  = "WAIT/3" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:116" */
-            2'h3:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:117" *)
-                casez (channel_valid)
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:117" */
-                  1'h1:
-                      \fsm_state$next  = 2'h1;
-                endcase
-            /* \amaranth.decoding  = "FILL-ZEROS/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:125" */
-            2'h2:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:132" *)
-                casez (\$53 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:132" */
-                  1'h1:
-                      (* src = "/home/kkojima/luna-uac2/build_verilog.py:134" *)
-                      casez (\$55 )
-                        /* src = "/home/kkojima/luna-uac2/build_verilog.py:134" */
-                        1'h1:
-                            \fsm_state$next  = 2'h0;
-                      endcase
-                endcase
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \fsm_state$next  = 2'h0;
-    endcase
-  end
+  assign \$1  = \$2 ;
+  assign \$4  = \$5 ;
   assign \$7  = \$8 ;
-  assign \$14  = \$15 ;
+  assign \$10  = \$11 ;
+  assign \$13  = \$14 ;
+  assign \$16  = \$17 ;
   assign \$19  = \$20 ;
-  assign \$22  = \$23 ;
-  assign \$31  = \$32 ;
-  assign \$34  = \$35 ;
-  assign \$39  = \$40 ;
-  assign \$48  = \$49 ;
-  assign \$57  = \$58 ;
-  assign \$60  = \$61 ;
-  assign ready = 1'h0;
-  assign channels_stream_in__payload = 16'h0000;
-  assign channels_stream_in__valid = 1'h0;
-  assign channels_stream_in__channel_no = 1'h0;
-  assign channels_stream_in__ready = channel_ready;
-  assign channel_valid = 1'h0;
-  assign channel_payload = 16'h0000;
-  assign payload = out_fifo_r_data;
-  assign out_fifo_r_en = 1'h0;
-  assign valid = out_fifo_r_rdy;
-  assign \$1  = 1'h0;
-  assign \$5  = 1'h0;
-  assign \$8  = 17'h00000;
-  assign \$10  = { 8'h00, current_sample[15:8] };
-  assign \$12  = 1'h0;
-  assign \$20  = 17'h00000;
-  assign \$23  = 17'h00000;
-  assign \$27  = 1'h0;
-  assign \$29  = 1'h0;
-  assign \$37  = 1'h0;
-  assign \$44  = 1'h0;
-  assign \$46  = 1'h0;
-  assign \$53  = 1'h0;
-  assign \$3  = 1'h1;
-  assign \$25  = 1'h1;
-  assign \$42  = 1'h1;
+  assign \$24  = \$25 ;
+  assign \$29  = \$30 ;
+  assign \$32  = \$33 ;
+  assign \$35  = \$36 ;
+  assign \$38  = \$39 ;
+  assign \$41  = \$42 ;
+  assign \$44  = \$45 ;
+  assign \$47  = \$48 ;
+  assign \$50  = \$51 ;
+  assign \$51  = { y6[26], y6[26], y6[26], y6[26:3] };
 endmodule
 
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_transmitter.clk_divider" *)
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_receiver.clk_divider" *)
 (* generator = "Amaranth" *)
-module clk_divider(rst, clock_enable_in, clock_out, clk);
-  reg \$auto$verilog_backend.cc:2082:dump_module$493  = 0;
+module clk_divider(usb_clk, clock_enable_in, clock_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$608  = 0;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *)
@@ -5926,31 +6007,31 @@ module clk_divider(rst, clock_enable_in, clock_out, clk);
   wire [4:0] \$7 ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:29" *)
   wire [4:0] \$8 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:18" *)
   reg [3:0] clock_counter = 4'h0;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:18" *)
   reg [3:0] \clock_counter$next ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:12" *)
   input clock_enable_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:100" *)
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
   output clock_out;
   reg clock_out = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:100" *)
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
   reg \clock_out$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
-  assign \$1  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hd;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  assign \$1  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hc;
   assign \$3  = ~ (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *) clock_out;
-  assign \$5  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hd;
+  assign \$5  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hc;
   assign \$8  = clock_counter + (* src = "/home/git/amlib/amlib/utils/clockdivider.py:29" *) 1'h1;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     clock_counter <= \clock_counter$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     clock_out <= \clock_out$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$493 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$608 ) begin end
     \clock_out$next  = clock_out;
     (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
     casez (\$1 )
@@ -5968,13 +6049,13 @@ module clk_divider(rst, clock_enable_in, clock_out, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \clock_out$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$493 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$608 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
     casez (\$5 )
@@ -5986,7 +6067,7 @@ module clk_divider(rst, clock_enable_in, clock_out, clk);
           \clock_counter$next  = \$8 [3:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \clock_counter$next  = 4'h0;
     endcase
@@ -5994,97 +6075,92 @@ module clk_divider(rst, clock_enable_in, clock_out, clk);
   assign \$7  = \$8 ;
 endmodule
 
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.consume_cdc" *)
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_transmitter.clk_divider" *)
 (* generator = "Amaranth" *)
-module consume_cdc(usb_clk, consume_r_gry, consume_w_gry, usb_rst);
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:353" *)
-  input [9:0] consume_r_gry;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:354" *)
-  output [9:0] consume_w_gry;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  reg [9:0] stage0 = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  wire [9:0] \stage0$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  reg [9:0] stage1 = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  wire [9:0] \stage1$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
-  input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
-  input usb_rst;
-  always @(posedge usb_clk)
-    stage1 <= stage0;
-  always @(posedge usb_clk)
-    stage0 <= consume_r_gry;
-  assign consume_w_gry = stage1;
-  assign \stage1$next  = stage0;
-  assign \stage0$next  = consume_r_gry;
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.consume_dec" *)
-(* generator = "Amaranth" *)
-module consume_dec(o, i);
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
+module \clk_divider$1 (usb_clk, clock_enable_in, clock_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$609  = 0;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
   wire \$1 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$11 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$13 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$15 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$17 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *)
   wire \$3 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
   wire \$5 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$7 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$9 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:176" *)
-  input [9:0] i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:177" *)
-  output [9:0] o;
-  assign \$9  = o[5] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[4];
-  assign \$11  = o[4] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[3];
-  assign \$13  = o[3] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[2];
-  assign \$15  = o[2] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[1];
-  assign \$17  = o[1] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[0];
-  assign \$1  = o[9] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[8];
-  assign \$3  = o[8] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[7];
-  assign \$5  = o[7] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[6];
-  assign \$7  = o[6] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[5];
-  assign o[0] = \$17 ;
-  assign o[1] = \$15 ;
-  assign o[2] = \$13 ;
-  assign o[3] = \$11 ;
-  assign o[4] = \$9 ;
-  assign o[5] = \$7 ;
-  assign o[6] = \$5 ;
-  assign o[7] = \$3 ;
-  assign o[8] = \$1 ;
-  assign o[9] = i[9];
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.consume_enc" *)
-(* generator = "Amaranth" *)
-module consume_enc(o, i);
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:154" *)
-  wire [9:0] \$1 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:149" *)
-  input [9:0] i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:150" *)
-  output [9:0] o;
-  assign \$1  = i ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:154" *) i[9:1];
-  assign o = \$1 ;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:29" *)
+  wire [4:0] \$7 ;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:29" *)
+  wire [4:0] \$8 ;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:18" *)
+  reg [3:0] clock_counter = 4'h0;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:18" *)
+  reg [3:0] \clock_counter$next ;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:12" *)
+  input clock_enable_in;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
+  output clock_out;
+  reg clock_out = 1'h0;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
+  reg \clock_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  assign \$1  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hc;
+  assign \$3  = ~ (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *) clock_out;
+  assign \$5  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hc;
+  assign \$8  = clock_counter + (* src = "/home/git/amlib/amlib/utils/clockdivider.py:29" *) 1'h1;
+  always @(posedge usb_clk)
+    clock_counter <= \clock_counter$next ;
+  always @(posedge usb_clk)
+    clock_out <= \clock_out$next ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$609 ) begin end
+    \clock_out$next  = clock_out;
+    (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
+    casez (\$1 )
+      /* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" */
+      1'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/utils/clockdivider.py:21" *)
+          casez (clock_enable_in)
+            /* src = "/home/git/amlib/amlib/utils/clockdivider.py:21" */
+            1'h1:
+                \clock_out$next  = \$3 ;
+            /* src = "/home/git/amlib/amlib/utils/clockdivider.py:23" */
+            default:
+                \clock_out$next  = 1'h0;
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \clock_out$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$609 ) begin end
+    (* full_case = 32'd1 *)
+    (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *)
+    casez (\$5 )
+      /* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" */
+      1'h1:
+          \clock_counter$next  = 4'h0;
+      /* src = "/home/git/amlib/amlib/utils/clockdivider.py:28" */
+      default:
+          \clock_counter$next  = \$8 [3:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \clock_counter$next  = 4'h0;
+    endcase
+  end
+  assign \$7  = \$8 ;
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.translator.control_translator" *)
 (* generator = "Amaranth" *)
 module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_select, op_mode, suspend, id_pullup, dm_pulldown, dp_pulldown, chrg_vbus, dischrg_vbus, use_external_vbus_indicator, done, address, write_data, read_request, write_request, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$494  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$610  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:689" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:680" *)
@@ -6167,9 +6243,9 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
   input suspend;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:627" *)
   input term_select;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:641" *)
   input use_external_vbus_indicator;
@@ -6229,7 +6305,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
   always @(posedge usb_clk)
     current_register_value_04 <= \current_register_value_04$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     \current_register_value_04$next  = current_register_value_04;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:675" *)
     casez (write_done_04)
@@ -6244,7 +6320,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:718" *)
     casez ({ write_requested_0a, write_requested_04 })
@@ -6265,7 +6341,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     write_done_0a = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:718" *)
     casez ({ write_requested_0a, write_requested_04 })
@@ -6278,7 +6354,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     \write_value_04$next  = write_value_04;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:681" *)
     casez (\$8 )
@@ -6293,7 +6369,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     \current_register_value_0a$next  = current_register_value_0a;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:675" *)
     casez (write_done_0a)
@@ -6308,7 +6384,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     \write_value_0a$next  = write_value_0a;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:681" *)
     casez (\$14 )
@@ -6323,7 +6399,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     write_done_04 = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:718" *)
     casez ({ write_requested_0a, write_requested_04 })
@@ -6333,7 +6409,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     address = 6'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:718" *)
     casez ({ write_requested_0a, write_requested_04 })
@@ -6346,7 +6422,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     write_data = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:718" *)
     casez ({ write_requested_0a, write_requested_04 })
@@ -6359,7 +6435,7 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$494 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$610 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:718" *)
     casez ({ write_requested_0a, write_requested_04 })
@@ -6382,7 +6458,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.data_crc" *)
 (* generator = "Amaranth" *)
 module data_crc(usb_clk, rx_data, rx_valid, tx_valid, tx_data, start, crc, \start$1 , \crc$2 , \start$3 , \crc$4 , usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$495  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$611  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:726" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:737" *)
@@ -6687,9 +6763,9 @@ module data_crc(usb_clk, rx_data, rx_valid, tx_valid, tx_data, start, crc, \star
   input [7:0] tx_data;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:702" *)
   input tx_valid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$100  = \$96  ^ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:737" *) \$98 ;
   assign \$102  = rx_data[0] ^ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:726" *) rx_data[1];
@@ -6833,7 +6909,7 @@ module data_crc(usb_clk, rx_data, rx_valid, tx_valid, tx_data, start, crc, \star
   always @(posedge usb_clk)
     \crc$5  <= \crc$5$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$495 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$611 ) begin end
     \crc$5$next  = \crc$5 ;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:765" *)
     casez ({ tx_valid, rx_valid, \$8  })
@@ -6862,7 +6938,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.setup_decoder.data_handler" *)
 (* generator = "Amaranth" *)
 module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packet, length, packet_0, packet_1, packet_2, packet_3, packet_4, packet_5, packet_6, packet_7, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$496  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$612  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1277" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1277" *)
@@ -7092,9 +7168,9 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:76" *)
   output start;
   reg start;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$9  = rx_data[3:0] == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1239" *) \$7 ;
   assign \$100  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1277" *) rx_active;
@@ -7145,6 +7221,30 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
   assign \$96  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1277" *) rx_active;
   assign \$98  = last_word_crc == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1279" *) last_word;
   always @(posedge usb_clk)
+    \$signal$49  <= \$signal$49$next ;
+  always @(posedge usb_clk)
+    \$signal$50  <= \$signal$50$next ;
+  always @(posedge usb_clk)
+    \$signal$51  <= \$signal$51$next ;
+  always @(posedge usb_clk)
+    \$signal$52  <= \$signal$52$next ;
+  always @(posedge usb_clk)
+    \$signal$53  <= \$signal$53$next ;
+  always @(posedge usb_clk)
+    \$signal$54  <= \$signal$54$next ;
+  always @(posedge usb_clk)
+    \$signal$55  <= \$signal$55$next ;
+  always @(posedge usb_clk)
+    \$signal$56  <= \$signal$56$next ;
+  always @(posedge usb_clk)
+    position_in_packet <= \position_in_packet$next ;
+  always @(posedge usb_clk)
+    active_pid <= \active_pid$next ;
+  always @(posedge usb_clk)
+    fsm_state <= \fsm_state$next ;
+  always @(posedge usb_clk)
+    new_packet <= \new_packet$next ;
+  always @(posedge usb_clk)
     packet_7 <= \packet_7$next ;
   always @(posedge usb_clk)
     packet_6 <= \packet_6$next ;
@@ -7174,32 +7274,8 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     \$signal  <= \$signal$next ;
   always @(posedge usb_clk)
     \$signal$48  <= \$signal$48$next ;
-  always @(posedge usb_clk)
-    \$signal$49  <= \$signal$49$next ;
-  always @(posedge usb_clk)
-    \$signal$50  <= \$signal$50$next ;
-  always @(posedge usb_clk)
-    \$signal$51  <= \$signal$51$next ;
-  always @(posedge usb_clk)
-    \$signal$52  <= \$signal$52$next ;
-  always @(posedge usb_clk)
-    \$signal$53  <= \$signal$53$next ;
-  always @(posedge usb_clk)
-    \$signal$54  <= \$signal$54$next ;
-  always @(posedge usb_clk)
-    \$signal$55  <= \$signal$55$next ;
-  always @(posedge usb_clk)
-    \$signal$56  <= \$signal$56$next ;
-  always @(posedge usb_clk)
-    position_in_packet <= \position_in_packet$next ;
-  always @(posedge usb_clk)
-    active_pid <= \active_pid$next ;
-  always @(posedge usb_clk)
-    fsm_state <= \fsm_state$next ;
-  always @(posedge usb_clk)
-    new_packet <= \new_packet$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \new_packet$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7233,7 +7309,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     start = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7248,7 +7324,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \last_word$next  = last_word;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7286,7 +7362,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \last_word_crc$next  = last_word_crc;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7324,7 +7400,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \last_byte_crc$next  = last_byte_crc;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7362,7 +7438,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_id$next  = packet_id;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7396,7 +7472,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \length$next  = length;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7430,7 +7506,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \fsm_state$next  = fsm_state;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
@@ -7509,7 +7585,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_0$next  = packet_0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7543,7 +7619,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_1$next  = packet_1;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7577,7 +7653,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_2$next  = packet_2;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7611,7 +7687,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_3$next  = packet_3;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7645,7 +7721,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_4$next  = packet_4;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7679,7 +7755,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_5$next  = packet_5;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7713,7 +7789,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_6$next  = packet_6;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7747,7 +7823,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \packet_7$next  = packet_7;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7781,7 +7857,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \active_pid$next  = active_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7814,7 +7890,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \position_in_packet$next  = position_in_packet;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1221" *)
     casez (fsm_state)
@@ -7865,7 +7941,7 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$496 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$612 ) begin end
     \$signal$next  = \$signal ;
     \$signal$48$next  = \$signal$48 ;
     \$signal$49$next  = \$signal$49 ;
@@ -7951,532 +8027,532 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_transmitter.ds" *)
 (* generator = "Amaranth" *)
-module ds(rst, signal_in, strobe_in, signal_out, clk);
-  reg \$auto$verilog_backend.cc:2082:dump_module$497  = 0;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:93" *)
+module ds(usb_clk, signal_in, strobe_in, signal_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$613  = 0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:93" *)
   wire [57:0] \$1 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:104" *)
   wire [28:0] \$10 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
   wire \$12 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
   wire \$14 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *)
   wire [28:0] \$16 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *)
   wire [28:0] \$17 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *)
   wire [28:0] \$19 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:93" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:93" *)
   wire [57:0] \$2 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *)
   wire [28:0] \$20 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *)
   wire [28:0] \$22 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *)
   wire [28:0] \$23 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:115" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:115" *)
   wire [28:0] \$25 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:115" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:115" *)
   wire [28:0] \$26 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
   wire \$28 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:141" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:141" *)
   wire [3:0] \$30 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:141" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:141" *)
   wire [3:0] \$31 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
   wire \$33 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:153" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:153" *)
   wire [3:0] \$35 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:153" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:153" *)
   wire [3:0] \$36 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
   wire \$38 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:93" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:93" *)
   wire [57:0] \$4 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:139" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:139" *)
   wire [3:0] \$40 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
   wire \$42 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:151" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:151" *)
   wire [3:0] \$44 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   wire [28:0] \$46 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
   wire \$48 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:77" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:77" *)
   wire [28:0] \$50 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [28:0] \$52 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [4:0] \$53 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [5:0] \$55 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [28:0] \$57 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [28:0] \$59 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:104" *)
   wire [28:0] \$6 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [28:0] \$61 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [28:0] \$63 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
   wire [28:0] \$65 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
   wire \$67 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
   wire \$69 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:104" *)
   wire [28:0] \$7 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [30:0] \$71 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [28:0] \$72 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [29:0] \$74 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [30:0] \$76 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [30:0] \$78 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [28:0] \$79 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [29:0] \$81 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *)
   wire [30:0] \$83 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *)
   wire [28:0] \$85 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *)
   wire \$87 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *)
   wire [28:0] \$89 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:104" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:104" *)
   wire [28:0] \$9 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *)
   wire \$91 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:81" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:81" *)
   reg [27:0] dac;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:70" *)
   reg [27:0] dx0 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:70" *)
   reg [27:0] \dx0$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:70" *)
   reg [27:0] dx2 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:70" *)
   reg [27:0] \dx2$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:70" *)
   reg [27:0] dx4 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:70" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:70" *)
   reg [27:0] \dx4$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:85" *)
   reg [27:0] fb0 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:85" *)
   reg [27:0] \fb0$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:85" *)
   reg [27:0] fb1 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:85" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:85" *)
   reg [27:0] \fb1$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
   reg [2:0] fsm_state = 3'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
   reg [2:0] \fsm_state$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:89" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:89" *)
   reg [2:0] ix = 3'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:89" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:89" *)
   reg [2:0] \ix$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:90" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:90" *)
   reg [28:0] ma = 29'h00000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:90" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:90" *)
   reg [28:0] \ma$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:91" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:91" *)
   reg [28:0] mb = 29'h00000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:91" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:91" *)
   reg [28:0] \mb$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:92" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:92" *)
   wire [28:0] mz;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:77" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:77" *)
   reg [27:0] s = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:77" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:77" *)
   reg [27:0] \s$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:27" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:27" *)
   input [27:0] signal_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:28" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:28" *)
   output signal_out;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:29" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:29" *)
   input strobe_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:79" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:79" *)
   reg [27:0] v;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] ws0 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] \ws0$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] ws1 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] \ws1$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] ws2 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] \ws2$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] ws3 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] \ws3$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] ws4 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:84" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:84" *)
   reg [27:0] \ws4$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] x0 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] \x0$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] x1 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] \x1$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] x2 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] \x2$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] x3 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] \x3$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] x4 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *)
   reg [27:0] \x4$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] xd0 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] \xd0$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] xd1 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] \xd1$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] xd2 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] \xd2$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] xd3 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] \xd3$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] xd4 = 28'h0000000;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:72" *)
   reg [27:0] \xd4$next ;
-  assign \$10  = $signed(x3) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:104" *) $signed(ws4);
-  assign \$12  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *) 1'h1;
-  assign \$14  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *) 3'h4;
-  assign \$17  = $signed(xd0) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *) $signed(dx0);
-  assign \$20  = $signed(xd2) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *) $signed(dx2);
-  assign \$23  = $signed(xd4) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:110" *) $signed(dx4);
-  assign \$26  = $signed(signal_in) - (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:115" *) $signed(dac);
-  assign \$28  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *) 1'h1;
-  assign \$2  = $signed(ma) * (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:93" *) $signed(mb);
-  assign \$31  = ix + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:141" *) 1'h1;
-  assign \$33  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *) 3'h4;
-  assign \$36  = ix + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:153" *) 1'h1;
-  assign \$38  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *) 1'h1;
-  assign \$40  = ix + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:139" *) 1'h1;
-  assign \$42  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *) 3'h4;
-  assign \$44  = ix + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:151" *) 1'h1;
-  assign \$46  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:68" *) $signed(x2);
-  assign \$48  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *) 1'h1;
-  assign \$50  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:77" *) $signed(s);
-  assign \$53  = 2'h2 * (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) ix;
-  assign \$55  = \$53  + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) 3'h4;
-  assign \$57  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) $signed(x0);
-  assign \$59  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) $signed(x1);
-  assign \$61  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) $signed(x2);
-  assign \$63  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) $signed(x3);
-  assign \$65  = + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *) $signed(x4);
-  assign \$67  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *) 1'h1;
-  assign \$69  = ix == (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *) 3'h4;
-  assign \$72  = $signed(xd1) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *) $signed(x0);
-  assign \$74  = $signed(\$72 ) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *) $signed(ws1);
-  assign \$76  = $signed(\$74 ) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *) $signed(fb0);
-  assign \$7  = $signed(x1) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:104" *) $signed(ws2);
-  assign \$79  = $signed(xd3) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *) $signed(x2);
-  assign \$81  = $signed(\$79 ) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *) $signed(ws3);
-  assign \$83  = $signed(\$81 ) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:167" *) $signed(fb1);
-  assign \$85  = $signed(signal_in) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *) $signed(x4);
-  assign \$87  = $signed(\$85 ) >= (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *) $signed(29'h00000000);
-  assign \$89  = $signed(signal_in) + (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *) $signed(x4);
-  assign \$91  = $signed(\$89 ) >= (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *) $signed(29'h00000000);
-  always @(posedge clk)
+  assign \$10  = $signed(x3) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:104" *) $signed(ws4);
+  assign \$12  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *) 1'h1;
+  assign \$14  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *) 3'h4;
+  assign \$17  = $signed(xd0) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *) $signed(dx0);
+  assign \$20  = $signed(xd2) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *) $signed(dx2);
+  assign \$23  = $signed(xd4) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:110" *) $signed(dx4);
+  assign \$26  = $signed(signal_in) - (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:115" *) $signed(dac);
+  assign \$28  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *) 1'h1;
+  assign \$2  = $signed(ma) * (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:93" *) $signed(mb);
+  assign \$31  = ix + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:141" *) 1'h1;
+  assign \$33  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *) 3'h4;
+  assign \$36  = ix + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:153" *) 1'h1;
+  assign \$38  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *) 1'h1;
+  assign \$40  = ix + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:139" *) 1'h1;
+  assign \$42  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *) 3'h4;
+  assign \$44  = ix + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:151" *) 1'h1;
+  assign \$46  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:68" *) $signed(x2);
+  assign \$48  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *) 1'h1;
+  assign \$50  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:77" *) $signed(s);
+  assign \$53  = 2'h2 * (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) ix;
+  assign \$55  = \$53  + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) 3'h4;
+  assign \$57  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) $signed(x0);
+  assign \$59  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) $signed(x1);
+  assign \$61  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) $signed(x2);
+  assign \$63  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) $signed(x3);
+  assign \$65  = + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *) $signed(x4);
+  assign \$67  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *) 1'h1;
+  assign \$69  = ix == (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *) 3'h4;
+  assign \$72  = $signed(xd1) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *) $signed(x0);
+  assign \$74  = $signed(\$72 ) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *) $signed(ws1);
+  assign \$76  = $signed(\$74 ) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *) $signed(fb0);
+  assign \$7  = $signed(x1) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:104" *) $signed(ws2);
+  assign \$79  = $signed(xd3) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *) $signed(x2);
+  assign \$81  = $signed(\$79 ) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *) $signed(ws3);
+  assign \$83  = $signed(\$81 ) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:167" *) $signed(fb1);
+  assign \$85  = $signed(signal_in) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *) $signed(x4);
+  assign \$87  = $signed(\$85 ) >= (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *) $signed(29'h00000000);
+  assign \$89  = $signed(signal_in) + (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *) $signed(x4);
+  assign \$91  = $signed(\$89 ) >= (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *) $signed(29'h00000000);
+  always @(posedge usb_clk)
     x3 <= \x3$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x1 <= \x1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ws0 <= \ws0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ws1 <= \ws1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ws2 <= \ws2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ws3 <= \ws3$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ws4 <= \ws4$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     fb0 <= \fb0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     fb1 <= \fb1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     mb <= \mb$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ma <= \ma$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ix <= \ix$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     s <= \s$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x4 <= \x4$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x2 <= \x2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x0 <= \x0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     fsm_state <= \fsm_state$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     dx4 <= \dx4$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     dx2 <= \dx2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     dx0 <= \dx0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     xd4 <= \xd4$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     xd3 <= \xd3$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     xd2 <= \xd2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     xd1 <= \xd1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     xd0 <= \xd0$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \fsm_state$next  = fsm_state;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \fsm_state$next  = 3'h1;
           endcase
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           \fsm_state$next  = 3'h2;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           \fsm_state$next  = 3'h3;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
           casez (\$12 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" */
             1'h1:
                 \fsm_state$next  = 3'h4;
           endcase
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:144" */
       3'h4:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
           casez (\$14 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" */
             1'h1:
                 \fsm_state$next  = 3'h5;
           endcase
       /* \amaranth.decoding  = "ODD/5" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:164" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:164" */
       3'h5:
           \fsm_state$next  = 3'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \fsm_state$next  = 3'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \x0$next  = x0;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           \x0$next  = \$17 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x0$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \x2$next  = x2;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           \x2$next  = \$20 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x2$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \x4$next  = x4;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           \x4$next  = \$23 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x4$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \s$next  = s;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           \s$next  = \$26 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \s$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \ix$next  = ix;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           \ix$next  = 3'h0;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
           casez (\$28 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" */
             1'h1:
                 \ix$next  = 3'h0;
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:136" */
             default:
                 \ix$next  = \$31 [2:0];
           endcase
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:144" */
       3'h4:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
           casez (\$33 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" */
             1'h1:
                 /* empty */;
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:148" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:148" */
             default:
                 \ix$next  = \$36 [2:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \ix$next  = 3'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \ma$next  = ma;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           \ma$next  = 29'h1ffae9c1;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
           casez (\$38 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" */
             1'h1:
                 \ma$next  = 29'h0002b89e;
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:136" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:139" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:139" *)
                 casez (\$40 )
                   4'h0:
                       \ma$next  = 29'h1ffae9c1;
@@ -8485,18 +8561,18 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
                 endcase
           endcase
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:144" */
       3'h4:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
           casez (\$42 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" */
             1'h1:
                 /* empty */;
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:148" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:148" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:151" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:151" *)
                 casez (\$44 )
                   4'h0:
                       \ma$next  = 29'h0002b89e;
@@ -8514,41 +8590,41 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \ma$next  = 29'h00000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \mb$next  = mb;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           \mb$next  = \$46 ;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
           casez (\$48 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" */
             1'h1:
                 \mb$next  = \$50 ;
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:136" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:140" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:140" *)
                 casez (\$55 )
                   6'h00:
                       \mb$next  = \$57 ;
@@ -8564,49 +8640,49 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \mb$next  = 29'h00000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \fb0$next  = fb0;
     \fb1$next  = fb1;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" *)
           casez (\$67 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:128" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:128" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:130" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:130" *)
                 casez (ix)
                   3'h0:
                       \fb0$next  = mz[27:0];
                   3'h?:
                       \fb1$next  = mz[27:0];
                 endcase
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:136" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:136" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:138" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:138" *)
                 casez (ix)
                   3'h0:
                       \fb0$next  = mz[27:0];
@@ -8616,7 +8692,7 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
         begin
           \fb0$next  = 28'h0000000;
@@ -8625,61 +8701,61 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \xd0$next  = xd0;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \xd0$next  = x0;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \xd0$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \ws0$next  = ws0;
     \ws1$next  = ws1;
     \ws2$next  = ws2;
     \ws3$next  = ws3;
     \ws4$next  = ws4;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           /* empty */;
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:144" */
       3'h4:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" *)
           casez (\$69 )
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:145" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:145" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:146" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:146" *)
                 casez (ix)
                   3'h0:
                       \ws0$next  = mz[27:0];
@@ -8692,10 +8768,10 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
                   3'h?:
                       \ws4$next  = mz[27:0];
                 endcase
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:148" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:148" */
             default:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:150" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:150" *)
                 casez (ix)
                   3'h0:
                       \ws0$next  = mz[27:0];
@@ -8711,7 +8787,7 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
         begin
           \ws0$next  = 28'h0000000;
@@ -8723,246 +8799,246 @@ module ds(rst, signal_in, strobe_in, signal_out, clk);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \x1$next  = x1;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           /* empty */;
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:144" */
       3'h4:
           /* empty */;
       /* \amaranth.decoding  = "ODD/5" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:164" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:164" */
       3'h5:
           \x1$next  = \$76 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x1$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \x3$next  = x3;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "EVEN/1" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:107" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:107" */
       3'h1:
           /* empty */;
       /* \amaranth.decoding  = "DACK/2" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:113" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:113" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "MULT_FB/3" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:127" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:127" */
       3'h3:
           /* empty */;
       /* \amaranth.decoding  = "MULT_WS/4" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:144" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:144" */
       3'h4:
           /* empty */;
       /* \amaranth.decoding  = "ODD/5" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:164" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:164" */
       3'h5:
           \x3$next  = \$83 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x3$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *)
     casez (\$87 )
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" */
       1'h1:
           dac = 28'h3ffffff;
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:173" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:173" */
       default:
           dac = 28'hc000001;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" *)
     casez (\$91 )
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:170" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:170" */
       1'h1:
           v = 28'h0000001;
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:173" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:173" */
       default:
           v = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \xd1$next  = xd1;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \xd1$next  = x1;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \xd1$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \xd2$next  = xd2;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \xd2$next  = x2;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \xd2$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \xd3$next  = xd3;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \xd3$next  = x3;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \xd3$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \xd4$next  = xd4;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \xd4$next  = x4;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \xd4$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \dx0$next  = dx0;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \dx0$next  = ws0;
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \dx0$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \dx2$next  = dx2;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \dx2$next  = \$7 [27:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \dx2$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$497 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$613 ) begin end
     \dx4$next  = dx4;
-    (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:97" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:97" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:98" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:98" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" *)
           casez (strobe_in)
-            /* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:99" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:99" */
             1'h1:
                 \dx4$next  = \$10 [27:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \dx4$next  = 28'h0000000;
     endcase
@@ -8986,7 +9062,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.endpoint_mux.tx_mux.encoder" *)
 (* generator = "Amaranth" *)
 module encoder(o, i);
-  reg \$auto$verilog_backend.cc:2082:dump_module$498  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$614  = 0;
   (* src = "/home/git/amaranth/amaranth/lib/coding.py:34" *)
   input [3:0] i;
   (* src = "/home/git/amaranth/amaranth/lib/coding.py:36" *)
@@ -8995,7 +9071,7 @@ module encoder(o, i);
   output [1:0] o;
   reg [1:0] o;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$498 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$614 ) begin end
     o = 2'h0;
     (* src = "/home/git/amaranth/amaranth/lib/coding.py:40" *)
     casez (i)
@@ -9014,7 +9090,7 @@ module encoder(o, i);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$498 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$614 ) begin end
     n = 1'h0;
     (* full_case = 32'd1 *)
     (* src = "/home/git/amaranth/amaranth/lib/coding.py:40" *)
@@ -9040,8 +9116,8 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.request_mux.tx_mux.encoder" *)
 (* generator = "Amaranth" *)
-module \encoder$3 (o, i);
-  reg \$auto$verilog_backend.cc:2082:dump_module$499  = 0;
+module \encoder$6 (o, i);
+  reg \$auto$verilog_backend.cc:2082:dump_module$615  = 0;
   (* src = "/home/git/amaranth/amaranth/lib/coding.py:34" *)
   input [2:0] i;
   (* src = "/home/git/amaranth/amaranth/lib/coding.py:36" *)
@@ -9050,7 +9126,7 @@ module \encoder$3 (o, i);
   output [1:0] o;
   reg [1:0] o;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$499 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$615 ) begin end
     o = 2'h0;
     (* src = "/home/git/amaranth/amaranth/lib/coding.py:40" *)
     casez (i)
@@ -9066,7 +9142,7 @@ module \encoder$3 (o, i);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$499 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$615 ) begin end
     n = 1'h0;
     (* full_case = 32'd1 *)
     (* src = "/home/git/amaranth/amaranth/lib/coding.py:40" *)
@@ -9089,8 +9165,8 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.tx_multiplexer.encoder" *)
 (* generator = "Amaranth" *)
-module \encoder$6 (o, i);
-  reg \$auto$verilog_backend.cc:2082:dump_module$500  = 0;
+module \encoder$9 (o, i);
+  reg \$auto$verilog_backend.cc:2082:dump_module$616  = 0;
   (* src = "/home/git/amaranth/amaranth/lib/coding.py:34" *)
   input [2:0] i;
   (* src = "/home/git/amaranth/amaranth/lib/coding.py:36" *)
@@ -9099,7 +9175,7 @@ module \encoder$6 (o, i);
   output [1:0] o;
   reg [1:0] o;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$500 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$616 ) begin end
     o = 2'h0;
     (* src = "/home/git/amaranth/amaranth/lib/coding.py:40" *)
     casez (i)
@@ -9115,7 +9191,7 @@ module \encoder$6 (o, i);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$500 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$616 ) begin end
     n = 1'h0;
     (* full_case = 32'd1 *)
     (* src = "/home/git/amaranth/amaranth/lib/coding.py:40" *)
@@ -9144,7 +9220,7 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
 , \is_ping$25 , \valid$26 , \next$27 , \payload$28 , \rx_ready_for_response$29 , \speed$30 , \active_config$31 , \endpoint$32 , \is_out$33 , \valid$34 , \next$35 , \payload$36 , \rx_complete$37 , \rx_invalid$38 , \endpoint$39 , \ready_for_response$40 , \new_frame$41 , \is_in$42 , \endpoint$43 , \ready_for_response$44 , \new_frame$45 
 , \is_in$46 , \address_changed$47 , \new_address$48 , \config_changed$49 , \new_config$50 , \ack$51 , \nak$52 , \stall$53 , \start$54 , \start$55 , \valid$56 , \valid$57 , \valid$58 , \tx_pid_toggle$59 , \tx_pid_toggle$60 , \tx_pid_toggle$61 , \payload$62 , \payload$63 , \payload$64 , \first$65 , \first$66 
 , \first$67 , \last$68 , \last$69 , \last$70 , \ready$71 , \ready$72 , \ready$73 , usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$501  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$617  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:191" *)
   wire \$163 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:191" *)
@@ -9642,9 +9718,9 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
   wire \tx_timeout$81 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:152" *)
   output \tx_timeout$9 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -9699,7 +9775,7 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
     .\valid$4 (\valid$58 )
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$501 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$617 ) begin end
     address_changed = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:170" *)
     casez ({ \address_changed$153 , \address_changed$152 , \address_changed$151 , \address_changed$47  })
@@ -9718,7 +9794,7 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$501 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$617 ) begin end
     new_address = 7'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:170" *)
     casez ({ \address_changed$153 , \address_changed$152 , \address_changed$151 , \address_changed$47  })
@@ -9737,7 +9813,7 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$501 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$617 ) begin end
     config_changed = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:170" *)
     casez ({ \config_changed$159 , \config_changed$158 , \config_changed$157 , \config_changed$49  })
@@ -9756,7 +9832,7 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$501 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$617 ) begin end
     new_config = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:170" *)
     casez ({ \config_changed$159 , \config_changed$158 , \config_changed$157 , \config_changed$49  })
@@ -9775,7 +9851,7 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$501 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$617 ) begin end
     tx_pid_toggle = 2'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:268" *)
     casez ({ \$227 , \$224 , \$221 , \$218  })
@@ -9952,8 +10028,6 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
   assign \tx_timeout$9  = tx_timeout;
   assign \tx_allowed$8  = tx_allowed;
   assign \crc$7  = crc;
-  assign \$185  = \stall$53 ;
-  assign \$188  = \stall$53 ;
   assign \$163  = \ack$51 ;
   assign \$166  = \ack$51 ;
   assign \$169  = \ack$51 ;
@@ -9962,9 +10036,11 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
   assign \$177  = \nak$52 ;
   assign \$180  = \nak$52 ;
   assign \$183  = \nak$52 ;
+  assign \$185  = \stall$53 ;
+  assign \$188  = \stall$53 ;
   assign \$191  = \stall$53 ;
-  assign \$194  = \stall$53 ;
   assign \$196  = \start$54 ;
+  assign \$194  = \stall$53 ;
   assign \$199  = \start$54 ;
   assign \$202  = \start$54 ;
   assign \$205  = \start$54 ;
@@ -9978,7 +10054,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBIsochronousOutStreamEndpoint.fifo" *)
 (* generator = "Amaranth" *)
 module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_discard, empty, read_data, read_en, read_commit, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$502  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$618  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:149" *)
   wire \$11 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:149" *)
@@ -10070,9 +10146,9 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:104" *)
   output [10:0] space_available;
   reg [10:0] space_available;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:100" *)
   input write_commit;
@@ -11147,7 +11223,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
   always @(posedge usb_clk)
     current_write_pointer <= \current_write_pointer$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     \committed_read_pointer$next  = committed_read_pointer;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:194" *)
     casez (read_commit)
@@ -11162,7 +11238,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:213" *)
     casez ({ \$30 , full })
@@ -11178,7 +11254,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:142" *)
     casez (\$6 )
@@ -11191,7 +11267,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     \current_write_pointer$next  = current_write_pointer;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:149" *)
     casez (\$13 )
@@ -11212,7 +11288,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     \committed_write_pointer$next  = committed_write_pointer;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:153" *)
     casez (write_commit)
@@ -11227,7 +11303,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:174" *)
     casez (\$15 )
@@ -11240,7 +11316,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:183" *)
     casez (\$22 )
@@ -11253,7 +11329,7 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$502 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$618 ) begin end
     \current_read_pointer$next  = current_read_pointer;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:190" *)
     casez (\$26 )
@@ -11286,10 +11362,1870 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
   assign read_data = rx_fifo_r_data;
 endmodule
 
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_receiver.fir" *)
+(* generator = "Amaranth" *)
+module fir(usb_clk, enable_in, signal_in, signal_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$619  = 0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+  wire \$1 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$10 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$100 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$101 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$102 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$103 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$104 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$105 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$106 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$107 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$108 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$109 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$11 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$110 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$111 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$112 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$113 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [48:0] \$114 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [47:0] \$115 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [47:0] \$117 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *)
+  wire [48:0] \$119 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$12 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+  wire \$121 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *)
+  wire [47:0] \$123 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$13 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$14 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$15 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$16 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$17 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$18 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$19 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$20 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$21 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$22 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$23 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$24 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$25 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$26 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$27 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$28 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$29 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *)
+  wire [6:0] \$3 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$30 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$31 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$32 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$33 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$34 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$35 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$36 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$37 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$38 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$39 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *)
+  wire [6:0] \$4 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$40 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$41 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$42 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$43 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$44 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$45 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$46 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$47 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$48 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$49 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$50 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$51 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$52 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$53 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$54 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$55 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$56 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$57 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$58 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$59 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+  wire \$6 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+  wire \$60 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$62 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$63 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$64 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$65 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$66 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$67 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$68 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$69 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$70 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$71 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$72 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$73 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$74 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$75 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$76 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$77 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$78 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$79 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$8 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$80 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$81 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$82 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$83 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$84 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$85 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$86 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$87 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$88 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$89 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+  wire [47:0] \$9 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$90 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$91 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$92 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$93 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$94 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$95 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$96 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$97 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$98 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+  wire [47:0] \$99 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:88" *)
+  reg [23:0] a = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:88" *)
+  reg [23:0] \a$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:89" *)
+  reg [23:0] b = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:89" *)
+  reg [23:0] \b$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
+  input enable_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+  reg [1:0] fsm_state = 2'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+  reg [1:0] \fsm_state$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:86" *)
+  reg [5:0] ix = 6'h00;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:86" *)
+  reg [5:0] \ix$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:87" *)
+  reg [23:0] madd = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:87" *)
+  reg [23:0] \madd$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *)
+  input [23:0] signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
+  output [23:0] signal_out;
+  reg [23:0] signal_out = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
+  reg [23:0] \signal_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x0 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x0$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x1 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x1$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x10 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x10$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x11 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x11$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x12 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x12$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x13 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x13$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x14 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x14$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x15 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x15$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x16 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x16$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x17 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x17$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x18 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x18$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x19 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x19$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x2 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x2$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x20 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x20$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x21 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x21$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x22 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x22$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x23 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x23$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x24 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x24$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x25 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x25$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x26 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x26$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x27 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x27$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x28 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x28$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x29 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x29$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x3 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x3$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x30 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x30$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x31 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x31$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x32 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x32$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x33 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x33$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x34 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x34$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x35 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x35$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x36 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x36$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x37 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x37$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x38 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x38$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x39 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x39$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x4 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x4$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x40 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x40$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x41 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x41$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x42 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x42$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x43 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x43$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x44 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x44$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x45 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x45$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x46 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x46$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x47 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x47$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x48 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x48$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x49 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x49$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x5 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x5$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x50 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x50$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x6 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x6$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x7 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x7$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x8 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x8$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] x9 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
+  reg [47:0] \x9$next ;
+  assign \$115  = $signed(a) * (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *) $signed(b);
+  assign \$119  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:103" *) $signed(\$117 );
+  assign \$121  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
+  assign \$123  = + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *) $signed(signal_in);
+  assign \$1  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
+  assign \$4  = ix + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *) 1'h1;
+  assign \$60  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
+  assign \$6  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 6'h33;
+  always @(posedge usb_clk)
+    x0 <= \x0$next ;
+  always @(posedge usb_clk)
+    x50 <= \x50$next ;
+  always @(posedge usb_clk)
+    x49 <= \x49$next ;
+  always @(posedge usb_clk)
+    x48 <= \x48$next ;
+  always @(posedge usb_clk)
+    x47 <= \x47$next ;
+  always @(posedge usb_clk)
+    x46 <= \x46$next ;
+  always @(posedge usb_clk)
+    x45 <= \x45$next ;
+  always @(posedge usb_clk)
+    x44 <= \x44$next ;
+  always @(posedge usb_clk)
+    x43 <= \x43$next ;
+  always @(posedge usb_clk)
+    x42 <= \x42$next ;
+  always @(posedge usb_clk)
+    x41 <= \x41$next ;
+  always @(posedge usb_clk)
+    x40 <= \x40$next ;
+  always @(posedge usb_clk)
+    x39 <= \x39$next ;
+  always @(posedge usb_clk)
+    x38 <= \x38$next ;
+  always @(posedge usb_clk)
+    x37 <= \x37$next ;
+  always @(posedge usb_clk)
+    x36 <= \x36$next ;
+  always @(posedge usb_clk)
+    x35 <= \x35$next ;
+  always @(posedge usb_clk)
+    x34 <= \x34$next ;
+  always @(posedge usb_clk)
+    x33 <= \x33$next ;
+  always @(posedge usb_clk)
+    x32 <= \x32$next ;
+  always @(posedge usb_clk)
+    x31 <= \x31$next ;
+  always @(posedge usb_clk)
+    x30 <= \x30$next ;
+  always @(posedge usb_clk)
+    x29 <= \x29$next ;
+  always @(posedge usb_clk)
+    x28 <= \x28$next ;
+  always @(posedge usb_clk)
+    x27 <= \x27$next ;
+  always @(posedge usb_clk)
+    x26 <= \x26$next ;
+  always @(posedge usb_clk)
+    x25 <= \x25$next ;
+  always @(posedge usb_clk)
+    x24 <= \x24$next ;
+  always @(posedge usb_clk)
+    x23 <= \x23$next ;
+  always @(posedge usb_clk)
+    x22 <= \x22$next ;
+  always @(posedge usb_clk)
+    x21 <= \x21$next ;
+  always @(posedge usb_clk)
+    x20 <= \x20$next ;
+  always @(posedge usb_clk)
+    x19 <= \x19$next ;
+  always @(posedge usb_clk)
+    x18 <= \x18$next ;
+  always @(posedge usb_clk)
+    x17 <= \x17$next ;
+  always @(posedge usb_clk)
+    x16 <= \x16$next ;
+  always @(posedge usb_clk)
+    x15 <= \x15$next ;
+  always @(posedge usb_clk)
+    x14 <= \x14$next ;
+  always @(posedge usb_clk)
+    x13 <= \x13$next ;
+  always @(posedge usb_clk)
+    x12 <= \x12$next ;
+  always @(posedge usb_clk)
+    x11 <= \x11$next ;
+  always @(posedge usb_clk)
+    x10 <= \x10$next ;
+  always @(posedge usb_clk)
+    x9 <= \x9$next ;
+  always @(posedge usb_clk)
+    x8 <= \x8$next ;
+  always @(posedge usb_clk)
+    x7 <= \x7$next ;
+  always @(posedge usb_clk)
+    x6 <= \x6$next ;
+  always @(posedge usb_clk)
+    x5 <= \x5$next ;
+  always @(posedge usb_clk)
+    x4 <= \x4$next ;
+  always @(posedge usb_clk)
+    x3 <= \x3$next ;
+  always @(posedge usb_clk)
+    x2 <= \x2$next ;
+  always @(posedge usb_clk)
+    x1 <= \x1$next ;
+  always @(posedge usb_clk)
+    signal_out <= \signal_out$next ;
+  always @(posedge usb_clk)
+    fsm_state <= \fsm_state$next ;
+  always @(posedge usb_clk)
+    madd <= \madd$next ;
+  always @(posedge usb_clk)
+    b <= \b$next ;
+  always @(posedge usb_clk)
+    a <= \a$next ;
+  always @(posedge usb_clk)
+    ix <= \ix$next ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \ix$next  = ix;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:92" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" *)
+          casez (enable_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
+            1'h1:
+                \ix$next  = 6'h01;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+          casez (\$1 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:106" */
+            default:
+                \ix$next  = \$4 [5:0];
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \ix$next  = 6'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \a$next  = a;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:92" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" *)
+          casez (enable_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
+            1'h1:
+                \a$next  = x0[23:0];
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+          casez (\$6 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:106" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
+                casez (ix)
+                  6'h00:
+                      \a$next  = x0[23:0];
+                  6'h01:
+                      \a$next  = x1[23:0];
+                  6'h02:
+                      \a$next  = x2[23:0];
+                  6'h03:
+                      \a$next  = x3[23:0];
+                  6'h04:
+                      \a$next  = x4[23:0];
+                  6'h05:
+                      \a$next  = x5[23:0];
+                  6'h06:
+                      \a$next  = x6[23:0];
+                  6'h07:
+                      \a$next  = x7[23:0];
+                  6'h08:
+                      \a$next  = x8[23:0];
+                  6'h09:
+                      \a$next  = x9[23:0];
+                  6'h0a:
+                      \a$next  = x10[23:0];
+                  6'h0b:
+                      \a$next  = x11[23:0];
+                  6'h0c:
+                      \a$next  = x12[23:0];
+                  6'h0d:
+                      \a$next  = x13[23:0];
+                  6'h0e:
+                      \a$next  = x14[23:0];
+                  6'h0f:
+                      \a$next  = x15[23:0];
+                  6'h10:
+                      \a$next  = x16[23:0];
+                  6'h11:
+                      \a$next  = x17[23:0];
+                  6'h12:
+                      \a$next  = x18[23:0];
+                  6'h13:
+                      \a$next  = x19[23:0];
+                  6'h14:
+                      \a$next  = x20[23:0];
+                  6'h15:
+                      \a$next  = x21[23:0];
+                  6'h16:
+                      \a$next  = x22[23:0];
+                  6'h17:
+                      \a$next  = x23[23:0];
+                  6'h18:
+                      \a$next  = x24[23:0];
+                  6'h19:
+                      \a$next  = x25[23:0];
+                  6'h1a:
+                      \a$next  = x26[23:0];
+                  6'h1b:
+                      \a$next  = x27[23:0];
+                  6'h1c:
+                      \a$next  = x28[23:0];
+                  6'h1d:
+                      \a$next  = x29[23:0];
+                  6'h1e:
+                      \a$next  = x30[23:0];
+                  6'h1f:
+                      \a$next  = x31[23:0];
+                  6'h20:
+                      \a$next  = x32[23:0];
+                  6'h21:
+                      \a$next  = x33[23:0];
+                  6'h22:
+                      \a$next  = x34[23:0];
+                  6'h23:
+                      \a$next  = x35[23:0];
+                  6'h24:
+                      \a$next  = x36[23:0];
+                  6'h25:
+                      \a$next  = x37[23:0];
+                  6'h26:
+                      \a$next  = x38[23:0];
+                  6'h27:
+                      \a$next  = x39[23:0];
+                  6'h28:
+                      \a$next  = x40[23:0];
+                  6'h29:
+                      \a$next  = x41[23:0];
+                  6'h2a:
+                      \a$next  = x42[23:0];
+                  6'h2b:
+                      \a$next  = x43[23:0];
+                  6'h2c:
+                      \a$next  = x44[23:0];
+                  6'h2d:
+                      \a$next  = x45[23:0];
+                  6'h2e:
+                      \a$next  = x46[23:0];
+                  6'h2f:
+                      \a$next  = x47[23:0];
+                  6'h30:
+                      \a$next  = x48[23:0];
+                  6'h31:
+                      \a$next  = x49[23:0];
+                  6'h??:
+                      \a$next  = x50[23:0];
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \a$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x5$next  = x5;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x5$next  = x4;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x5$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x6$next  = x6;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x6$next  = x5;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x6$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x7$next  = x7;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x7$next  = x6;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x7$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x8$next  = x8;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x8$next  = x7;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x8$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x9$next  = x9;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x9$next  = x8;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x9$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x10$next  = x10;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x10$next  = x9;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x10$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x11$next  = x11;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x11$next  = x10;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x11$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x12$next  = x12;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x12$next  = x11;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x12$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x13$next  = x13;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x13$next  = x12;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x13$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x14$next  = x14;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x14$next  = x13;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x14$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \b$next  = b;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:92" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" *)
+          casez (enable_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
+            1'h1:
+                \b$next  = 24'h0008fc;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+          casez (\$60 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:106" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:109" *)
+                casez (ix)
+                  6'h00:
+                      \b$next  = 24'h0008fc;
+                  6'h01:
+                      \b$next  = 24'hfff115;
+                  6'h02:
+                      \b$next  = 24'hffd854;
+                  6'h03:
+                      \b$next  = 24'h001349;
+                  6'h04:
+                      \b$next  = 24'h00521e;
+                  6'h05:
+                      \b$next  = 24'hffddfa;
+                  6'h06:
+                      \b$next  = 24'hff622d;
+                  6'h07:
+                      \b$next  = 24'h003396;
+                  6'h08:
+                      \b$next  = 24'h011313;
+                  6'h09:
+                      \b$next  = 24'hffb6f2;
+                  6'h0a:
+                      \b$next  = 24'hfe3eb0;
+                  6'h0b:
+                      \b$next  = 24'h006194;
+                  6'h0c:
+                      \b$next  = 24'h02bcb5;
+                  6'h0d:
+                      \b$next  = 24'hff83fb;
+                  6'h0e:
+                      \b$next  = 24'hfbdc50;
+                  6'h0f:
+                      \b$next  = 24'h0096d4;
+                  6'h10:
+                      \b$next  = 24'h062b22;
+                  6'h11:
+                      \b$next  = 24'hff4fc1;
+                  6'h12:
+                      \b$next  = 24'hf6beff;
+                  6'h13:
+                      \b$next  = 24'h00c672;
+                  6'h14:
+                      \b$next  = 24'h0e82cc;
+                  6'h15:
+                      \b$next  = 24'hff2848;
+                  6'h16:
+                      \b$next  = 24'he5f18e;
+                  6'h17:
+                      \b$next  = 24'h00e2b3;
+                  6'h18:
+                      \b$next  = 24'h511ce3;
+                  6'h19:
+                      \b$next  = 24'h7f198c;
+                  6'h1a:
+                      \b$next  = 24'h511ce3;
+                  6'h1b:
+                      \b$next  = 24'h00e2b3;
+                  6'h1c:
+                      \b$next  = 24'he5f18e;
+                  6'h1d:
+                      \b$next  = 24'hff2848;
+                  6'h1e:
+                      \b$next  = 24'h0e82cc;
+                  6'h1f:
+                      \b$next  = 24'h00c672;
+                  6'h20:
+                      \b$next  = 24'hf6beff;
+                  6'h21:
+                      \b$next  = 24'hff4fc1;
+                  6'h22:
+                      \b$next  = 24'h062b22;
+                  6'h23:
+                      \b$next  = 24'h0096d4;
+                  6'h24:
+                      \b$next  = 24'hfbdc50;
+                  6'h25:
+                      \b$next  = 24'hff83fb;
+                  6'h26:
+                      \b$next  = 24'h02bcb5;
+                  6'h27:
+                      \b$next  = 24'h006194;
+                  6'h28:
+                      \b$next  = 24'hfe3eb0;
+                  6'h29:
+                      \b$next  = 24'hffb6f2;
+                  6'h2a:
+                      \b$next  = 24'h011313;
+                  6'h2b:
+                      \b$next  = 24'h003396;
+                  6'h2c:
+                      \b$next  = 24'hff622d;
+                  6'h2d:
+                      \b$next  = 24'hffddfa;
+                  6'h2e:
+                      \b$next  = 24'h00521e;
+                  6'h2f:
+                      \b$next  = 24'h001349;
+                  6'h30:
+                      \b$next  = 24'hffd854;
+                  6'h31:
+                      \b$next  = 24'hfff115;
+                  6'h??:
+                      \b$next  = 24'h0008fc;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \b$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x15$next  = x15;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x15$next  = x14;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x15$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x16$next  = x16;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x16$next  = x15;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x16$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x17$next  = x17;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x17$next  = x16;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x17$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x18$next  = x18;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x18$next  = x17;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x18$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x19$next  = x19;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x19$next  = x18;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x19$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x20$next  = x20;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x20$next  = x19;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x20$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x21$next  = x21;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x21$next  = x20;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x21$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x22$next  = x22;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x22$next  = x21;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x22$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x23$next  = x23;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x23$next  = x22;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x23$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x24$next  = x24;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x24$next  = x23;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x24$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \madd$next  = madd;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:92" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" *)
+          casez (enable_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
+            1'h1:
+                \madd$next  = 24'h000000;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
+      2'h1:
+          \madd$next  = \$119 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \madd$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x25$next  = x25;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x25$next  = x24;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x25$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x26$next  = x26;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x26$next  = x25;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x26$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x27$next  = x27;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x27$next  = x26;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x27$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x28$next  = x28;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x28$next  = x27;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x28$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x29$next  = x29;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x29$next  = x28;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x29$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x30$next  = x30;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x30$next  = x29;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x30$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x31$next  = x31;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x31$next  = x30;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x31$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x32$next  = x32;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x32$next  = x31;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x32$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x33$next  = x33;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x33$next  = x32;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x33$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x34$next  = x34;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x34$next  = x33;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x34$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \fsm_state$next  = fsm_state;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:92" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" *)
+          casez (enable_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:93" */
+            1'h1:
+                \fsm_state$next  = 2'h1;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
+      2'h1:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
+          casez (\$121 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" */
+            1'h1:
+                \fsm_state$next  = 2'h2;
+          endcase
+      /* \amaranth.decoding  = "OUTPUT/2" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:113" */
+      2'h2:
+          \fsm_state$next  = 2'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \fsm_state$next  = 2'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x35$next  = x35;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x35$next  = x34;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x35$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x36$next  = x36;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x36$next  = x35;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x36$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x37$next  = x37;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x37$next  = x36;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x37$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x38$next  = x38;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x38$next  = x37;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x38$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x39$next  = x39;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x39$next  = x38;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x39$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x40$next  = x40;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x40$next  = x39;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x40$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x41$next  = x41;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x41$next  = x40;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x41$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x42$next  = x42;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x42$next  = x41;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x42$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x43$next  = x43;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x43$next  = x42;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x43$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x44$next  = x44;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x44$next  = x43;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x44$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \signal_out$next  = signal_out;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:92" */
+      2'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:102" */
+      2'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "OUTPUT/2" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:113" */
+      2'h2:
+          \signal_out$next  = madd;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \signal_out$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x45$next  = x45;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x45$next  = x44;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x45$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x46$next  = x46;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x46$next  = x45;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x46$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x47$next  = x47;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x47$next  = x46;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x47$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x48$next  = x48;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x48$next  = x47;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x48$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x49$next  = x49;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x49$next  = x48;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x49$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x50$next  = x50;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x50$next  = x49;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x50$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x0$next  = x0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x0$next  = \$123 ;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x0$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x1$next  = x1;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x1$next  = x0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x1$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x2$next  = x2;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x2$next  = x1;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x2$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x3$next  = x3;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x3$next  = x2;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x3$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$619 ) begin end
+    \x4$next  = x4;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
+    casez (enable_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" */
+      1'h1:
+          \x4$next  = x3;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x4$next  = 48'h000000000000;
+    endcase
+  end
+  assign \$3  = \$4 ;
+  assign \$9  = x0;
+  assign \$10  = x1;
+  assign \$11  = x2;
+  assign \$12  = x3;
+  assign \$13  = x4;
+  assign \$14  = x5;
+  assign \$15  = x6;
+  assign \$16  = x7;
+  assign \$17  = x8;
+  assign \$18  = x9;
+  assign \$19  = x10;
+  assign \$20  = x11;
+  assign \$21  = x12;
+  assign \$22  = x13;
+  assign \$23  = x14;
+  assign \$24  = x15;
+  assign \$25  = x16;
+  assign \$26  = x17;
+  assign \$27  = x18;
+  assign \$28  = x19;
+  assign \$29  = x20;
+  assign \$30  = x21;
+  assign \$31  = x22;
+  assign \$32  = x23;
+  assign \$33  = x24;
+  assign \$34  = x25;
+  assign \$35  = x26;
+  assign \$36  = x27;
+  assign \$37  = x28;
+  assign \$38  = x29;
+  assign \$39  = x30;
+  assign \$40  = x31;
+  assign \$41  = x32;
+  assign \$42  = x33;
+  assign \$43  = x34;
+  assign \$44  = x35;
+  assign \$45  = x36;
+  assign \$46  = x37;
+  assign \$47  = x38;
+  assign \$48  = x39;
+  assign \$49  = x40;
+  assign \$50  = x41;
+  assign \$51  = x42;
+  assign \$52  = x43;
+  assign \$53  = x44;
+  assign \$54  = x45;
+  assign \$55  = x46;
+  assign \$56  = x47;
+  assign \$57  = x48;
+  assign \$58  = x49;
+  assign \$59  = x50;
+  assign \$63  = 48'h0000000008fc;
+  assign \$64  = 48'hfffffffff115;
+  assign \$65  = 48'hffffffffd854;
+  assign \$66  = 48'h000000001349;
+  assign \$67  = 48'h00000000521e;
+  assign \$68  = 48'hffffffffddfa;
+  assign \$69  = 48'hffffffff622d;
+  assign \$70  = 48'h000000003396;
+  assign \$71  = 48'h000000011313;
+  assign \$72  = 48'hffffffffb6f2;
+  assign \$73  = 48'hfffffffe3eb0;
+  assign \$74  = 48'h000000006194;
+  assign \$75  = 48'h00000002bcb5;
+  assign \$76  = 48'hffffffff83fb;
+  assign \$77  = 48'hfffffffbdc50;
+  assign \$78  = 48'h0000000096d4;
+  assign \$79  = 48'h000000062b22;
+  assign \$80  = 48'hffffffff4fc1;
+  assign \$81  = 48'hfffffff6beff;
+  assign \$82  = 48'h00000000c672;
+  assign \$83  = 48'h0000000e82cc;
+  assign \$84  = 48'hffffffff2848;
+  assign \$85  = 48'hffffffe5f18e;
+  assign \$86  = 48'h00000000e2b3;
+  assign \$87  = 48'h000000511ce3;
+  assign \$88  = 48'h0000007f198c;
+  assign \$89  = 48'h000000511ce3;
+  assign \$90  = 48'h00000000e2b3;
+  assign \$91  = 48'hffffffe5f18e;
+  assign \$92  = 48'hffffffff2848;
+  assign \$93  = 48'h0000000e82cc;
+  assign \$94  = 48'h00000000c672;
+  assign \$95  = 48'hfffffff6beff;
+  assign \$96  = 48'hffffffff4fc1;
+  assign \$97  = 48'h000000062b22;
+  assign \$98  = 48'h0000000096d4;
+  assign \$99  = 48'hfffffffbdc50;
+  assign \$100  = 48'hffffffff83fb;
+  assign \$101  = 48'h00000002bcb5;
+  assign \$102  = 48'h000000006194;
+  assign \$103  = 48'hfffffffe3eb0;
+  assign \$104  = 48'hffffffffb6f2;
+  assign \$105  = 48'h000000011313;
+  assign \$106  = 48'h000000003396;
+  assign \$107  = 48'hffffffff622d;
+  assign \$108  = 48'hffffffffddfa;
+  assign \$109  = 48'h00000000521e;
+  assign \$110  = 48'h000000001349;
+  assign \$111  = 48'hffffffffd854;
+  assign \$112  = 48'hfffffffff115;
+  assign \$113  = 48'h0000000008fc;
+  assign \$114  = \$119 ;
+  assign \$117  = { \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47], \$115 [47:24] };
+endmodule
+
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_transmitter.fir" *)
 (* generator = "Amaranth" *)
-module fir(rst, signal_in, signal_out, enable_in, clk);
-  reg \$auto$verilog_backend.cc:2082:dump_module$503  = 0;
+module \fir$2 (usb_clk, signal_in, signal_out, enable_in, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$620  = 0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:108" *)
@@ -12040,8 +13976,6 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
   reg [27:0] b = 28'h0000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:89" *)
   reg [27:0] \b$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
   input enable_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
@@ -12056,8 +13990,6 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
   reg [27:0] madd = 28'h0000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:87" *)
   reg [27:0] \madd$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *)
   input [27:0] signal_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
@@ -12065,6 +13997,10 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
   reg [27:0] signal_out = 28'h0000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
   reg [27:0] \signal_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [55:0] x0 = 56'h00000000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
@@ -12789,378 +14725,378 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
   assign \$379  = + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *) $signed(signal_in);
   assign \$4  = ix + (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:110" *) 1'h1;
   assign \$6  = ix == (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:104" *) 8'hb3;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x0 <= \x0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x178 <= \x178$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x177 <= \x177$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x176 <= \x176$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x175 <= \x175$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x174 <= \x174$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x173 <= \x173$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x172 <= \x172$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x171 <= \x171$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x170 <= \x170$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x169 <= \x169$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x168 <= \x168$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x167 <= \x167$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x166 <= \x166$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x165 <= \x165$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x164 <= \x164$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x163 <= \x163$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x162 <= \x162$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x161 <= \x161$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x160 <= \x160$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x159 <= \x159$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x158 <= \x158$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x157 <= \x157$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x156 <= \x156$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x155 <= \x155$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x154 <= \x154$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x153 <= \x153$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x152 <= \x152$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x151 <= \x151$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x150 <= \x150$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x149 <= \x149$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x148 <= \x148$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x147 <= \x147$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x146 <= \x146$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x145 <= \x145$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x144 <= \x144$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x143 <= \x143$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x142 <= \x142$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x141 <= \x141$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x140 <= \x140$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x139 <= \x139$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x138 <= \x138$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x137 <= \x137$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x136 <= \x136$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x135 <= \x135$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x134 <= \x134$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x133 <= \x133$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x132 <= \x132$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x131 <= \x131$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x130 <= \x130$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x129 <= \x129$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x128 <= \x128$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x127 <= \x127$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x126 <= \x126$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x125 <= \x125$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x124 <= \x124$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x123 <= \x123$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x122 <= \x122$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x121 <= \x121$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x120 <= \x120$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x119 <= \x119$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x118 <= \x118$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x117 <= \x117$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x116 <= \x116$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x115 <= \x115$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x114 <= \x114$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x113 <= \x113$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x112 <= \x112$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x111 <= \x111$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x110 <= \x110$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x109 <= \x109$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x108 <= \x108$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x107 <= \x107$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x106 <= \x106$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x105 <= \x105$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x104 <= \x104$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x103 <= \x103$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x102 <= \x102$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x101 <= \x101$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x100 <= \x100$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x99 <= \x99$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x98 <= \x98$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x97 <= \x97$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x96 <= \x96$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x95 <= \x95$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x94 <= \x94$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x93 <= \x93$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x92 <= \x92$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x91 <= \x91$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x90 <= \x90$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x89 <= \x89$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x88 <= \x88$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x87 <= \x87$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x86 <= \x86$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x85 <= \x85$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x84 <= \x84$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x83 <= \x83$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x82 <= \x82$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x81 <= \x81$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x80 <= \x80$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x79 <= \x79$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x78 <= \x78$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x77 <= \x77$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x76 <= \x76$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x75 <= \x75$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x74 <= \x74$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x73 <= \x73$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x72 <= \x72$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x71 <= \x71$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x70 <= \x70$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x69 <= \x69$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x68 <= \x68$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x67 <= \x67$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x66 <= \x66$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x65 <= \x65$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x64 <= \x64$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x63 <= \x63$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x62 <= \x62$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x61 <= \x61$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x60 <= \x60$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x59 <= \x59$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x58 <= \x58$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x57 <= \x57$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x56 <= \x56$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x55 <= \x55$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x54 <= \x54$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x53 <= \x53$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x52 <= \x52$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x51 <= \x51$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x50 <= \x50$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x49 <= \x49$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x48 <= \x48$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x47 <= \x47$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x46 <= \x46$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x45 <= \x45$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x44 <= \x44$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x43 <= \x43$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x42 <= \x42$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x41 <= \x41$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x40 <= \x40$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x39 <= \x39$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x38 <= \x38$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x37 <= \x37$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x36 <= \x36$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x35 <= \x35$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x34 <= \x34$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x33 <= \x33$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x32 <= \x32$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x31 <= \x31$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x30 <= \x30$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x29 <= \x29$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x28 <= \x28$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x27 <= \x27$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x26 <= \x26$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x25 <= \x25$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x24 <= \x24$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x23 <= \x23$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x22 <= \x22$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x21 <= \x21$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x20 <= \x20$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x19 <= \x19$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x18 <= \x18$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x17 <= \x17$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x16 <= \x16$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x15 <= \x15$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x14 <= \x14$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x13 <= \x13$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x12 <= \x12$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x11 <= \x11$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x10 <= \x10$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x9 <= \x9$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x8 <= \x8$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x7 <= \x7$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x6 <= \x6$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x5 <= \x5$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x4 <= \x4$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x3 <= \x3$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x2 <= \x2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x1 <= \x1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     signal_out <= \signal_out$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     fsm_state <= \fsm_state$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     madd <= \madd$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     b <= \b$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     a <= \a$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ix <= \ix$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \ix$next  = ix;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -13188,13 +15124,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \ix$next  = 8'h00;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \a$next  = a;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -13583,13 +15519,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \a$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x5$next  = x5;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13598,13 +15534,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x5$next  = x4;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x5$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x95$next  = x95;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13613,13 +15549,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x95$next  = x94;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x95$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x96$next  = x96;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13628,13 +15564,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x96$next  = x95;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x96$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x97$next  = x97;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13643,13 +15579,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x97$next  = x96;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x97$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x98$next  = x98;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13658,13 +15594,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x98$next  = x97;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x98$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x99$next  = x99;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13673,13 +15609,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x99$next  = x98;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x99$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x100$next  = x100;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13688,13 +15624,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x100$next  = x99;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x100$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x101$next  = x101;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13703,13 +15639,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x101$next  = x100;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x101$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x102$next  = x102;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13718,13 +15654,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x102$next  = x101;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x102$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x103$next  = x103;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13733,13 +15669,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x103$next  = x102;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x103$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x104$next  = x104;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13748,13 +15684,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x104$next  = x103;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x104$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x6$next  = x6;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13763,13 +15699,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x6$next  = x5;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x6$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x105$next  = x105;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13778,13 +15714,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x105$next  = x104;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x105$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x106$next  = x106;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13793,13 +15729,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x106$next  = x105;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x106$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x107$next  = x107;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13808,13 +15744,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x107$next  = x106;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x107$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x108$next  = x108;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13823,13 +15759,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x108$next  = x107;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x108$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x109$next  = x109;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13838,13 +15774,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x109$next  = x108;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x109$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x110$next  = x110;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13853,13 +15789,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x110$next  = x109;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x110$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x111$next  = x111;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13868,13 +15804,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x111$next  = x110;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x111$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x112$next  = x112;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13883,13 +15819,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x112$next  = x111;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x112$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x113$next  = x113;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13898,13 +15834,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x113$next  = x112;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x113$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x114$next  = x114;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13913,13 +15849,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x114$next  = x113;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x114$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x7$next  = x7;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13928,13 +15864,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x7$next  = x6;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x7$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x115$next  = x115;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13943,13 +15879,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x115$next  = x114;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x115$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x116$next  = x116;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13958,13 +15894,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x116$next  = x115;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x116$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x117$next  = x117;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13973,13 +15909,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x117$next  = x116;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x117$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x118$next  = x118;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -13988,13 +15924,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x118$next  = x117;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x118$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x119$next  = x119;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14003,13 +15939,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x119$next  = x118;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x119$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x120$next  = x120;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14018,13 +15954,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x120$next  = x119;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x120$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x121$next  = x121;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14033,13 +15969,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x121$next  = x120;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x121$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x122$next  = x122;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14048,13 +15984,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x122$next  = x121;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x122$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x123$next  = x123;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14063,13 +15999,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x123$next  = x122;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x123$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x124$next  = x124;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14078,13 +16014,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x124$next  = x123;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x124$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x8$next  = x8;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14093,13 +16029,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x8$next  = x7;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x8$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x125$next  = x125;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14108,13 +16044,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x125$next  = x124;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x125$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x126$next  = x126;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14123,13 +16059,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x126$next  = x125;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x126$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x127$next  = x127;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14138,13 +16074,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x127$next  = x126;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x127$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x128$next  = x128;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14153,13 +16089,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x128$next  = x127;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x128$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x129$next  = x129;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14168,13 +16104,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x129$next  = x128;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x129$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x130$next  = x130;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14183,13 +16119,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x130$next  = x129;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x130$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x131$next  = x131;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14198,13 +16134,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x131$next  = x130;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x131$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x132$next  = x132;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14213,13 +16149,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x132$next  = x131;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x132$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x133$next  = x133;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14228,13 +16164,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x133$next  = x132;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x133$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x134$next  = x134;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14243,13 +16179,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x134$next  = x133;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x134$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x9$next  = x9;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14258,13 +16194,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x9$next  = x8;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x9$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x135$next  = x135;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14273,13 +16209,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x135$next  = x134;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x135$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x136$next  = x136;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14288,13 +16224,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x136$next  = x135;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x136$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x137$next  = x137;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14303,13 +16239,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x137$next  = x136;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x137$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x138$next  = x138;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14318,13 +16254,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x138$next  = x137;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x138$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x139$next  = x139;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14333,13 +16269,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x139$next  = x138;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x139$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x140$next  = x140;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14348,13 +16284,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x140$next  = x139;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x140$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x141$next  = x141;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14363,13 +16299,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x141$next  = x140;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x141$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x142$next  = x142;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14378,13 +16314,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x142$next  = x141;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x142$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x143$next  = x143;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14393,13 +16329,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x143$next  = x142;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x143$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x144$next  = x144;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14408,13 +16344,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x144$next  = x143;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x144$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x10$next  = x10;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14423,13 +16359,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x10$next  = x9;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x10$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x145$next  = x145;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14438,13 +16374,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x145$next  = x144;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x145$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x146$next  = x146;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14453,13 +16389,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x146$next  = x145;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x146$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x147$next  = x147;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14468,13 +16404,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x147$next  = x146;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x147$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x148$next  = x148;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14483,13 +16419,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x148$next  = x147;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x148$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x149$next  = x149;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14498,13 +16434,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x149$next  = x148;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x149$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x150$next  = x150;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14513,13 +16449,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x150$next  = x149;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x150$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x151$next  = x151;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14528,13 +16464,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x151$next  = x150;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x151$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x152$next  = x152;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14543,13 +16479,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x152$next  = x151;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x152$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x153$next  = x153;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14558,13 +16494,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x153$next  = x152;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x153$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x154$next  = x154;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14573,13 +16509,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x154$next  = x153;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x154$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x11$next  = x11;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14588,13 +16524,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x11$next  = x10;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x11$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x155$next  = x155;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14603,13 +16539,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x155$next  = x154;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x155$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x156$next  = x156;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14618,13 +16554,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x156$next  = x155;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x156$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x157$next  = x157;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14633,13 +16569,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x157$next  = x156;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x157$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x158$next  = x158;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14648,13 +16584,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x158$next  = x157;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x158$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x159$next  = x159;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14663,13 +16599,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x159$next  = x158;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x159$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x160$next  = x160;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14678,13 +16614,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x160$next  = x159;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x160$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x161$next  = x161;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14693,13 +16629,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x161$next  = x160;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x161$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x162$next  = x162;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14708,13 +16644,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x162$next  = x161;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x162$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x163$next  = x163;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14723,13 +16659,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x163$next  = x162;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x163$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x164$next  = x164;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14738,13 +16674,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x164$next  = x163;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x164$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x12$next  = x12;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14753,13 +16689,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x12$next  = x11;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x12$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x165$next  = x165;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14768,13 +16704,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x165$next  = x164;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x165$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x166$next  = x166;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14783,13 +16719,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x166$next  = x165;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x166$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x167$next  = x167;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14798,13 +16734,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x167$next  = x166;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x167$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x168$next  = x168;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14813,13 +16749,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x168$next  = x167;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x168$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x169$next  = x169;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14828,13 +16764,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x169$next  = x168;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x169$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x170$next  = x170;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14843,13 +16779,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x170$next  = x169;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x170$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x171$next  = x171;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14858,13 +16794,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x171$next  = x170;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x171$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x172$next  = x172;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14873,13 +16809,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x172$next  = x171;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x172$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x173$next  = x173;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14888,13 +16824,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x173$next  = x172;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x173$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x174$next  = x174;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14903,13 +16839,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x174$next  = x173;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x174$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x13$next  = x13;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14918,13 +16854,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x13$next  = x12;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x13$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x175$next  = x175;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14933,13 +16869,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x175$next  = x174;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x175$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x176$next  = x176;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14948,13 +16884,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x176$next  = x175;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x176$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x177$next  = x177;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14963,13 +16899,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x177$next  = x176;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x177$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x178$next  = x178;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14978,13 +16914,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x178$next  = x177;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x178$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x0$next  = x0;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -14993,13 +16929,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x0$next  = \$379 ;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x0$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x14$next  = x14;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15008,13 +16944,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x14$next  = x13;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x14$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \b$next  = b;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -15403,13 +17339,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \b$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x15$next  = x15;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15418,13 +17354,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x15$next  = x14;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x15$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x16$next  = x16;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15433,13 +17369,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x16$next  = x15;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x16$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x17$next  = x17;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15448,13 +17384,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x17$next  = x16;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x17$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x18$next  = x18;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15463,13 +17399,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x18$next  = x17;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x18$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x19$next  = x19;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15478,13 +17414,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x19$next  = x18;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x19$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x20$next  = x20;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15493,13 +17429,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x20$next  = x19;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x20$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x21$next  = x21;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15508,13 +17444,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x21$next  = x20;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x21$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x22$next  = x22;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15523,13 +17459,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x22$next  = x21;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x22$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x23$next  = x23;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15538,13 +17474,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x23$next  = x22;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x23$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x24$next  = x24;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15553,13 +17489,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x24$next  = x23;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x24$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \madd$next  = madd;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -15578,13 +17514,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \madd$next  = \$375 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \madd$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x25$next  = x25;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15593,13 +17529,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x25$next  = x24;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x25$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x26$next  = x26;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15608,13 +17544,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x26$next  = x25;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x26$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x27$next  = x27;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15623,13 +17559,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x27$next  = x26;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x27$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x28$next  = x28;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15638,13 +17574,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x28$next  = x27;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x28$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x29$next  = x29;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15653,13 +17589,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x29$next  = x28;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x29$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x30$next  = x30;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15668,13 +17604,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x30$next  = x29;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x30$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x31$next  = x31;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15683,13 +17619,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x31$next  = x30;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x31$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x32$next  = x32;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15698,13 +17634,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x32$next  = x31;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x32$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x33$next  = x33;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15713,13 +17649,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x33$next  = x32;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x33$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x34$next  = x34;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15728,13 +17664,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x34$next  = x33;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x34$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -15762,13 +17698,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \fsm_state$next  = 2'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \fsm_state$next  = 2'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x35$next  = x35;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15777,13 +17713,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x35$next  = x34;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x35$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x36$next  = x36;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15792,13 +17728,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x36$next  = x35;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x36$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x37$next  = x37;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15807,13 +17743,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x37$next  = x36;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x37$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x38$next  = x38;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15822,13 +17758,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x38$next  = x37;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x38$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x39$next  = x39;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15837,13 +17773,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x39$next  = x38;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x39$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x40$next  = x40;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15852,13 +17788,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x40$next  = x39;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x40$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x41$next  = x41;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15867,13 +17803,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x41$next  = x40;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x41$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x42$next  = x42;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15882,13 +17818,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x42$next  = x41;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x42$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x43$next  = x43;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15897,13 +17833,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x43$next  = x42;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x43$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x44$next  = x44;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15912,13 +17848,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x44$next  = x43;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x44$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \signal_out$next  = signal_out;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:91" *)
     casez (fsm_state)
@@ -15936,13 +17872,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \signal_out$next  = madd;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \signal_out$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x45$next  = x45;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15951,13 +17887,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x45$next  = x44;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x45$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x46$next  = x46;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15966,13 +17902,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x46$next  = x45;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x46$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x47$next  = x47;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15981,13 +17917,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x47$next  = x46;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x47$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x48$next  = x48;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -15996,13 +17932,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x48$next  = x47;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x48$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x49$next  = x49;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16011,13 +17947,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x49$next  = x48;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x49$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x50$next  = x50;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16026,13 +17962,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x50$next  = x49;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x50$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x51$next  = x51;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16041,13 +17977,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x51$next  = x50;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x51$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x52$next  = x52;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16056,13 +17992,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x52$next  = x51;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x52$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x53$next  = x53;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16071,13 +18007,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x53$next  = x52;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x53$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x54$next  = x54;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16086,13 +18022,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x54$next  = x53;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x54$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x1$next  = x1;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16101,13 +18037,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x1$next  = x0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x1$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x55$next  = x55;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16116,13 +18052,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x55$next  = x54;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x55$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x56$next  = x56;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16131,13 +18067,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x56$next  = x55;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x56$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x57$next  = x57;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16146,13 +18082,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x57$next  = x56;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x57$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x58$next  = x58;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16161,13 +18097,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x58$next  = x57;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x58$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x59$next  = x59;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16176,13 +18112,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x59$next  = x58;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x59$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x60$next  = x60;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16191,13 +18127,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x60$next  = x59;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x60$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x61$next  = x61;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16206,13 +18142,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x61$next  = x60;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x61$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x62$next  = x62;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16221,13 +18157,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x62$next  = x61;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x62$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x63$next  = x63;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16236,13 +18172,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x63$next  = x62;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x63$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x64$next  = x64;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16251,13 +18187,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x64$next  = x63;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x64$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x2$next  = x2;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16266,13 +18202,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x2$next  = x1;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x2$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x65$next  = x65;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16281,13 +18217,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x65$next  = x64;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x65$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x66$next  = x66;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16296,13 +18232,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x66$next  = x65;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x66$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x67$next  = x67;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16311,13 +18247,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x67$next  = x66;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x67$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x68$next  = x68;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16326,13 +18262,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x68$next  = x67;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x68$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x69$next  = x69;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16341,13 +18277,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x69$next  = x68;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x69$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x70$next  = x70;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16356,13 +18292,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x70$next  = x69;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x70$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x71$next  = x71;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16371,13 +18307,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x71$next  = x70;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x71$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x72$next  = x72;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16386,13 +18322,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x72$next  = x71;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x72$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x73$next  = x73;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16401,13 +18337,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x73$next  = x72;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x73$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x74$next  = x74;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16416,13 +18352,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x74$next  = x73;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x74$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x3$next  = x3;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16431,13 +18367,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x3$next  = x2;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x3$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x75$next  = x75;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16446,13 +18382,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x75$next  = x74;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x75$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x76$next  = x76;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16461,13 +18397,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x76$next  = x75;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x76$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x77$next  = x77;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16476,13 +18412,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x77$next  = x76;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x77$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x78$next  = x78;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16491,13 +18427,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x78$next  = x77;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x78$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x79$next  = x79;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16506,13 +18442,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x79$next  = x78;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x79$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x80$next  = x80;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16521,13 +18457,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x80$next  = x79;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x80$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x81$next  = x81;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16536,13 +18472,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x81$next  = x80;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x81$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x82$next  = x82;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16551,13 +18487,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x82$next  = x81;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x82$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x83$next  = x83;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16566,13 +18502,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x83$next  = x82;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x83$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x84$next  = x84;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16581,13 +18517,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x84$next  = x83;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x84$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x4$next  = x4;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16596,13 +18532,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x4$next  = x3;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x4$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x85$next  = x85;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16611,13 +18547,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x85$next  = x84;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x85$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x86$next  = x86;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16626,13 +18562,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x86$next  = x85;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x86$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x87$next  = x87;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16641,13 +18577,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x87$next  = x86;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x87$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x88$next  = x88;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16656,13 +18592,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x88$next  = x87;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x88$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x89$next  = x89;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16671,13 +18607,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x89$next  = x88;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x89$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x90$next  = x90;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16686,13 +18622,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x90$next  = x89;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x90$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x91$next  = x91;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16701,13 +18637,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x91$next  = x90;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x91$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x92$next  = x92;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16716,13 +18652,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x92$next  = x91;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x92$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x93$next  = x93;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16731,13 +18667,13 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x93$next  = x92;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x93$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$503 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$620 ) begin end
     \x94$next  = x94;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:121" *)
     casez (enable_in)
@@ -16746,7 +18682,7 @@ module fir(rst, signal_in, signal_out, enable_in, clk);
           \x94$next  = x93;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x94$next  = 56'h00000000000000;
     endcase
@@ -17117,7 +19053,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.StandardRequestHandler.get_descriptor" *)
 (* generator = "Amaranth" *)
 module get_descriptor(usb_clk, value, length, start_position, valid, first, last, payload, ready, stall, start, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$504  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$621  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:516" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:412" *)
@@ -17314,9 +19250,9 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
   input [10:0] start_position;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:357" *)
   wire [7:0] type_number;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -17388,9 +19324,9 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     rom[60] = 32'd1057793;
     rom[61] = 32'd83886337;
     rom[62] = 32'd1;
-    rom[63] = 32'd50331648;
+    rom[63] = 32'd67108864;
     rom[64] = 32'd402434;
-    rom[65] = 32'd17043463;
+    rom[65] = 32'd16912391;
     rom[66] = 32'd92407040;
     rom[67] = 32'd33622053;
     rom[68] = 32'd16777216;
@@ -17494,7 +19430,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
   always @(posedge usb_clk)
     \length$2  <= \length$2$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     valid = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17525,7 +19461,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17552,7 +19488,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     first = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17579,7 +19515,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     last = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17610,7 +19546,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:395" *)
     casez (\$5 )
@@ -17628,7 +19564,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     \bytes_sent$next  = bytes_sent;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17670,7 +19606,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     rom_r_addr = 7'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17719,7 +19655,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17801,7 +19737,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     \position_in_stream$next  = position_in_stream;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17843,7 +19779,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     stall = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17876,7 +19812,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     \descriptor_data_base_address$next  = descriptor_data_base_address;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17922,7 +19858,7 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$504 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$621 ) begin end
     \descriptor_length$next  = descriptor_length;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:418" *)
     casez (fsm_state)
@@ -17985,7 +19921,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.handshake_detector" *)
 (* generator = "Amaranth" *)
 module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_active, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$505  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$622  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:610" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:614" *)
@@ -18052,9 +19988,9 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
   reg stall = 1'h0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:55" *)
   reg \stall$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$9  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:610" *) rx_active;
   assign \$11  = active_pid == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:614" *) 4'he;
@@ -18085,7 +20021,7 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
   always @(posedge usb_clk)
     ack <= \ack$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$505 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$622 ) begin end
     \ack$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:577" *)
     casez (fsm_state)
@@ -18114,7 +20050,7 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$505 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$622 ) begin end
     \nak$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:577" *)
     casez (fsm_state)
@@ -18143,7 +20079,7 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$505 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$622 ) begin end
     \stall$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:577" *)
     casez (fsm_state)
@@ -18172,7 +20108,7 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$505 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$622 ) begin end
     \nyet$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:577" *)
     casez (fsm_state)
@@ -18201,7 +20137,7 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$505 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$622 ) begin end
     \fsm_state$next  = fsm_state;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:577" *)
@@ -18265,7 +20201,7 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$505 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$622 ) begin end
     \active_pid$next  = active_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:577" *)
     casez (fsm_state)
@@ -18302,7 +20238,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.handshake_generator" *)
 (* generator = "Amaranth" *)
 module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, data, ready, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$506  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$623  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   output [7:0] data;
   reg [7:0] data = 8'h00;
@@ -18320,9 +20256,9 @@ module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, da
   input issue_stall;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   input ready;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   output valid;
@@ -18332,7 +20268,7 @@ module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, da
   always @(posedge usb_clk)
     data <= \data$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$506 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$623 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1703" *)
     casez (fsm_state)
@@ -18347,7 +20283,7 @@ module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$506 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$623 ) begin end
     \data$next  = data;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1703" *)
     casez (fsm_state)
@@ -18382,7 +20318,7 @@ module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$506 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$623 ) begin end
     \fsm_state$next  = fsm_state;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1703" *)
@@ -18428,10 +20364,1747 @@ module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, da
   end
 endmodule
 
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_receiver.hb1" *)
+(* generator = "Amaranth" *)
+module hb1(usb_clk, strobe_in, strobe_out, signal_in, signal_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$624  = 0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$1 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$100 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$102 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$103 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$105 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$106 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$108 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$109 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$11 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$111 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$112 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$114 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$115 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$117 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$118 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$12 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$120 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$121 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$123 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$124 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$126 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$127 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$129 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$13 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$130 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$132 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$133 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$135 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$136 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$138 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$139 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$141 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$142 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$144 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$145 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$147 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$148 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$15 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$150 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$151 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$153 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$154 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$156 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$157 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$159 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$16 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$160 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$162 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$163 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$165 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$166 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$168 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$169 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$171 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$172 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$174 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$175 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$177 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$178 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$18 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$180 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$181 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$183 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$184 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$186 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$187 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$189 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$19 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$190 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$192 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$193 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$195 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$196 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$198 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$199 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$201 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$202 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$204 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$205 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$207 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$208 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$21 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$210 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$211 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$213 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$214 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$216 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$217 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$219 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$22 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$220 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$222 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$223 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$225 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$226 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$228 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$229 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$231 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$232 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$234 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$235 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$237 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$238 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$24 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$240 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$241 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$243 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$244 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$246 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$247 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$249 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$25 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$250 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$252 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$253 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$255 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$256 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$258 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$259 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$261 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$262 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$264 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$265 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$267 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$268 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$27 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$270 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$271 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$273 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$274 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$276 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$277 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$279 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$28 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$280 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$282 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$283 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$285 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$286 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$288 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$289 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$291 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$292 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$294 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$295 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$297 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$298 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:99" *)
+  wire [4:0] \$3 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$30 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$300 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$301 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$303 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$304 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$306 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$307 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$309 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$31 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$310 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$312 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$313 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$315 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$316 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$318 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$319 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$321 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$322 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$324 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$325 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$327 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$328 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$33 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$330 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$331 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$333 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$334 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$336 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$337 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$339 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$34 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$340 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$342 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$343 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$345 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$346 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$348 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$349 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$351 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$352 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$354 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$355 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$357 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$358 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$36 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$360 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$361 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$363 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$364 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$366 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$367 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$369 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$37 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$370 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$372 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$373 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$375 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$376 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$378 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$379 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$381 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$382 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$384 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$385 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$387 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$388 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$39 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$390 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$391 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$393 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$394 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$396 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$397 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$399 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:99" *)
+  wire [4:0] \$4 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$40 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$400 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$402 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$403 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$405 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$406 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$408 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$410 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$411 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$412 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$413 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$414 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$415 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$416 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$417 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$418 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$419 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$42 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$420 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$421 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [49:0] \$422 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [48:0] \$423 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [48:0] \$425 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [49:0] \$427 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$429 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$43 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *)
+  wire [48:0] \$431 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *)
+  wire [47:0] \$432 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *)
+  wire [48:0] \$434 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
+  wire [47:0] \$436 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+  wire \$438 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:114" *)
+  wire [1:0] \$440 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:114" *)
+  wire [1:0] \$441 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+  wire \$443 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$45 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$46 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$48 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$49 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$51 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$52 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$54 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$55 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$57 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$58 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:85" *)
+  wire [48:0] \$6 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$60 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$61 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$63 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$64 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$66 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$67 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$69 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:85" *)
+  wire [48:0] \$7 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$70 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$72 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$73 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$75 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$76 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$78 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$79 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$81 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$82 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$84 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [4:0] \$85 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$87 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$88 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$9 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$90 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$91 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$93 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$94 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$96 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$97 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$99 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:77" *)
+  reg [24:0] a = 25'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:77" *)
+  reg [24:0] \a$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:78" *)
+  reg [23:0] b = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:78" *)
+  reg [23:0] \b$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:66" *)
+  reg decimate_counter = 1'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:66" *)
+  reg \decimate_counter$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+  reg [1:0] fsm_state = 2'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+  reg [1:0] \fsm_state$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:75" *)
+  reg [3:0] ix = 4'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:75" *)
+  reg [3:0] \ix$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:76" *)
+  reg [24:0] madd = 25'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:76" *)
+  reg [24:0] \madd$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
+  input [23:0] signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
+  output [23:0] signal_out;
+  reg [23:0] signal_out = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
+  reg [23:0] \signal_out$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:21" *)
+  input strobe_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
+  output strobe_out;
+  reg strobe_out = 1'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
+  reg \strobe_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x0 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x0$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x1 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x1$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x10 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x10$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x2 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x2$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x3 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x3$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x4 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x4$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x5 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x5$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x6 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x6$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x7 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x7$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x8 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x8$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x9 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x9$next ;
+  assign \$9  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 3'h5;
+  assign \$100  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$103  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$106  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$109  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$112  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$115  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$118  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$124  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$127  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$130  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$133  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$136  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$139  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$142  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$145  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$148  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$151  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$154  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$160  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$163  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$166  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$16  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$169  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$172  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$175  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$178  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$181  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$184  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$187  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$190  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$196  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$1  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 3'h5;
+  assign \$19  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$199  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$202  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$205  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$208  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$211  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$214  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$217  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$220  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$223  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$226  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$22  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$232  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$235  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$238  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$241  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$244  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$247  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$250  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$253  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$256  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$25  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$259  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$262  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$268  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$271  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$274  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$277  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$280  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$283  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$286  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$28  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$289  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$292  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$295  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$298  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$304  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$307  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$310  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$313  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$316  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$31  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$319  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$322  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$325  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$328  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$331  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$334  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$340  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$343  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$346  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$34  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$349  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$352  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$355  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$358  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$361  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$364  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$367  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$370  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$376  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$37  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$379  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$382  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$385  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$388  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$391  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$394  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$397  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$400  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$403  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$406  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$408  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 3'h5;
+  assign \$40  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$423  = $signed(a) * (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *) $signed(b);
+  assign \$427  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *) $signed(\$425 );
+  assign \$429  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 3'h5;
+  assign \$434  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *) $signed(\$432 );
+  assign \$436  = + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *) $signed(signal_in);
+  assign \$438  = decimate_counter < (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *) 1'h1;
+  assign \$43  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$441  = decimate_counter + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:114" *) 1'h1;
+  assign \$443  = decimate_counter < (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *) 1'h1;
+  assign \$46  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$4  = ix + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:99" *) 2'h2;
+  assign \$52  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$55  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$58  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$61  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$64  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$67  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$70  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$73  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$76  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$7  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:85" *) $signed(x10);
+  assign \$79  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$82  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$88  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$91  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$94  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$97  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  always @(posedge usb_clk)
+    strobe_out <= \strobe_out$next ;
+  always @(posedge usb_clk)
+    decimate_counter <= \decimate_counter$next ;
+  always @(posedge usb_clk)
+    x10 <= \x10$next ;
+  always @(posedge usb_clk)
+    x9 <= \x9$next ;
+  always @(posedge usb_clk)
+    x8 <= \x8$next ;
+  always @(posedge usb_clk)
+    x7 <= \x7$next ;
+  always @(posedge usb_clk)
+    x6 <= \x6$next ;
+  always @(posedge usb_clk)
+    x5 <= \x5$next ;
+  always @(posedge usb_clk)
+    x4 <= \x4$next ;
+  always @(posedge usb_clk)
+    x3 <= \x3$next ;
+  always @(posedge usb_clk)
+    x2 <= \x2$next ;
+  always @(posedge usb_clk)
+    x1 <= \x1$next ;
+  always @(posedge usb_clk)
+    x0 <= \x0$next ;
+  always @(posedge usb_clk)
+    signal_out <= \signal_out$next ;
+  always @(posedge usb_clk)
+    fsm_state <= \fsm_state$next ;
+  always @(posedge usb_clk)
+    madd <= \madd$next ;
+  always @(posedge usb_clk)
+    b <= \b$next ;
+  always @(posedge usb_clk)
+    a <= \a$next ;
+  always @(posedge usb_clk)
+    ix <= \ix$next ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \ix$next  = ix;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \ix$next  = 4'h2;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$1 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:95" */
+            default:
+                \ix$next  = \$4 [3:0];
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \ix$next  = 4'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \a$next  = a;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \a$next  = \$7 [24:0];
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$9 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:95" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                casez (ix)
+                  4'h0:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$13 )
+                        5'h00:
+                            \a$next  = \$16 [24:0];
+                        5'h01:
+                            \a$next  = \$19 [24:0];
+                        5'h02:
+                            \a$next  = \$22 [24:0];
+                        5'h03:
+                            \a$next  = \$25 [24:0];
+                        5'h04:
+                            \a$next  = \$28 [24:0];
+                        5'h05:
+                            \a$next  = \$31 [24:0];
+                        5'h06:
+                            \a$next  = \$34 [24:0];
+                        5'h07:
+                            \a$next  = \$37 [24:0];
+                        5'h08:
+                            \a$next  = \$40 [24:0];
+                        5'h09:
+                            \a$next  = \$43 [24:0];
+                        5'h??:
+                            \a$next  = \$46 [24:0];
+                      endcase
+                  4'h1:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$49 )
+                        5'h00:
+                            \a$next  = \$52 [24:0];
+                        5'h01:
+                            \a$next  = \$55 [24:0];
+                        5'h02:
+                            \a$next  = \$58 [24:0];
+                        5'h03:
+                            \a$next  = \$61 [24:0];
+                        5'h04:
+                            \a$next  = \$64 [24:0];
+                        5'h05:
+                            \a$next  = \$67 [24:0];
+                        5'h06:
+                            \a$next  = \$70 [24:0];
+                        5'h07:
+                            \a$next  = \$73 [24:0];
+                        5'h08:
+                            \a$next  = \$76 [24:0];
+                        5'h09:
+                            \a$next  = \$79 [24:0];
+                        5'h??:
+                            \a$next  = \$82 [24:0];
+                      endcase
+                  4'h2:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$85 )
+                        5'h00:
+                            \a$next  = \$88 [24:0];
+                        5'h01:
+                            \a$next  = \$91 [24:0];
+                        5'h02:
+                            \a$next  = \$94 [24:0];
+                        5'h03:
+                            \a$next  = \$97 [24:0];
+                        5'h04:
+                            \a$next  = \$100 [24:0];
+                        5'h05:
+                            \a$next  = \$103 [24:0];
+                        5'h06:
+                            \a$next  = \$106 [24:0];
+                        5'h07:
+                            \a$next  = \$109 [24:0];
+                        5'h08:
+                            \a$next  = \$112 [24:0];
+                        5'h09:
+                            \a$next  = \$115 [24:0];
+                        5'h??:
+                            \a$next  = \$118 [24:0];
+                      endcase
+                  4'h3:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$121 )
+                        5'h00:
+                            \a$next  = \$124 [24:0];
+                        5'h01:
+                            \a$next  = \$127 [24:0];
+                        5'h02:
+                            \a$next  = \$130 [24:0];
+                        5'h03:
+                            \a$next  = \$133 [24:0];
+                        5'h04:
+                            \a$next  = \$136 [24:0];
+                        5'h05:
+                            \a$next  = \$139 [24:0];
+                        5'h06:
+                            \a$next  = \$142 [24:0];
+                        5'h07:
+                            \a$next  = \$145 [24:0];
+                        5'h08:
+                            \a$next  = \$148 [24:0];
+                        5'h09:
+                            \a$next  = \$151 [24:0];
+                        5'h??:
+                            \a$next  = \$154 [24:0];
+                      endcase
+                  4'h4:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$157 )
+                        5'h00:
+                            \a$next  = \$160 [24:0];
+                        5'h01:
+                            \a$next  = \$163 [24:0];
+                        5'h02:
+                            \a$next  = \$166 [24:0];
+                        5'h03:
+                            \a$next  = \$169 [24:0];
+                        5'h04:
+                            \a$next  = \$172 [24:0];
+                        5'h05:
+                            \a$next  = \$175 [24:0];
+                        5'h06:
+                            \a$next  = \$178 [24:0];
+                        5'h07:
+                            \a$next  = \$181 [24:0];
+                        5'h08:
+                            \a$next  = \$184 [24:0];
+                        5'h09:
+                            \a$next  = \$187 [24:0];
+                        5'h??:
+                            \a$next  = \$190 [24:0];
+                      endcase
+                  4'h5:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$193 )
+                        5'h00:
+                            \a$next  = \$196 [24:0];
+                        5'h01:
+                            \a$next  = \$199 [24:0];
+                        5'h02:
+                            \a$next  = \$202 [24:0];
+                        5'h03:
+                            \a$next  = \$205 [24:0];
+                        5'h04:
+                            \a$next  = \$208 [24:0];
+                        5'h05:
+                            \a$next  = \$211 [24:0];
+                        5'h06:
+                            \a$next  = \$214 [24:0];
+                        5'h07:
+                            \a$next  = \$217 [24:0];
+                        5'h08:
+                            \a$next  = \$220 [24:0];
+                        5'h09:
+                            \a$next  = \$223 [24:0];
+                        5'h??:
+                            \a$next  = \$226 [24:0];
+                      endcase
+                  4'h6:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$229 )
+                        5'h00:
+                            \a$next  = \$232 [24:0];
+                        5'h01:
+                            \a$next  = \$235 [24:0];
+                        5'h02:
+                            \a$next  = \$238 [24:0];
+                        5'h03:
+                            \a$next  = \$241 [24:0];
+                        5'h04:
+                            \a$next  = \$244 [24:0];
+                        5'h05:
+                            \a$next  = \$247 [24:0];
+                        5'h06:
+                            \a$next  = \$250 [24:0];
+                        5'h07:
+                            \a$next  = \$253 [24:0];
+                        5'h08:
+                            \a$next  = \$256 [24:0];
+                        5'h09:
+                            \a$next  = \$259 [24:0];
+                        5'h??:
+                            \a$next  = \$262 [24:0];
+                      endcase
+                  4'h7:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$265 )
+                        5'h00:
+                            \a$next  = \$268 [24:0];
+                        5'h01:
+                            \a$next  = \$271 [24:0];
+                        5'h02:
+                            \a$next  = \$274 [24:0];
+                        5'h03:
+                            \a$next  = \$277 [24:0];
+                        5'h04:
+                            \a$next  = \$280 [24:0];
+                        5'h05:
+                            \a$next  = \$283 [24:0];
+                        5'h06:
+                            \a$next  = \$286 [24:0];
+                        5'h07:
+                            \a$next  = \$289 [24:0];
+                        5'h08:
+                            \a$next  = \$292 [24:0];
+                        5'h09:
+                            \a$next  = \$295 [24:0];
+                        5'h??:
+                            \a$next  = \$298 [24:0];
+                      endcase
+                  4'h8:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$301 )
+                        5'h00:
+                            \a$next  = \$304 [24:0];
+                        5'h01:
+                            \a$next  = \$307 [24:0];
+                        5'h02:
+                            \a$next  = \$310 [24:0];
+                        5'h03:
+                            \a$next  = \$313 [24:0];
+                        5'h04:
+                            \a$next  = \$316 [24:0];
+                        5'h05:
+                            \a$next  = \$319 [24:0];
+                        5'h06:
+                            \a$next  = \$322 [24:0];
+                        5'h07:
+                            \a$next  = \$325 [24:0];
+                        5'h08:
+                            \a$next  = \$328 [24:0];
+                        5'h09:
+                            \a$next  = \$331 [24:0];
+                        5'h??:
+                            \a$next  = \$334 [24:0];
+                      endcase
+                  4'h9:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$337 )
+                        5'h00:
+                            \a$next  = \$340 [24:0];
+                        5'h01:
+                            \a$next  = \$343 [24:0];
+                        5'h02:
+                            \a$next  = \$346 [24:0];
+                        5'h03:
+                            \a$next  = \$349 [24:0];
+                        5'h04:
+                            \a$next  = \$352 [24:0];
+                        5'h05:
+                            \a$next  = \$355 [24:0];
+                        5'h06:
+                            \a$next  = \$358 [24:0];
+                        5'h07:
+                            \a$next  = \$361 [24:0];
+                        5'h08:
+                            \a$next  = \$364 [24:0];
+                        5'h09:
+                            \a$next  = \$367 [24:0];
+                        5'h??:
+                            \a$next  = \$370 [24:0];
+                      endcase
+                  4'h?:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$373 )
+                        5'h00:
+                            \a$next  = \$376 [24:0];
+                        5'h01:
+                            \a$next  = \$379 [24:0];
+                        5'h02:
+                            \a$next  = \$382 [24:0];
+                        5'h03:
+                            \a$next  = \$385 [24:0];
+                        5'h04:
+                            \a$next  = \$388 [24:0];
+                        5'h05:
+                            \a$next  = \$391 [24:0];
+                        5'h06:
+                            \a$next  = \$394 [24:0];
+                        5'h07:
+                            \a$next  = \$397 [24:0];
+                        5'h08:
+                            \a$next  = \$400 [24:0];
+                        5'h09:
+                            \a$next  = \$403 [24:0];
+                        5'h??:
+                            \a$next  = \$406 [24:0];
+                      endcase
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \a$next  = 25'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x4$next  = x4;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x4$next  = x3;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x4$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x5$next  = x5;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x5$next  = x4;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x5$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x6$next  = x6;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x6$next  = x5;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x6$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x7$next  = x7;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x7$next  = x6;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x7$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x8$next  = x8;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x8$next  = x7;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x8$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x9$next  = x9;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x9$next  = x8;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x9$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x10$next  = x10;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x10$next  = x9;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x10$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \decimate_counter$next  = decimate_counter;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+          casez (\$438 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" */
+            1'h1:
+                \decimate_counter$next  = \$441 [0];
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:115" */
+            default:
+                \decimate_counter$next  = 1'h0;
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \decimate_counter$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \strobe_out$next  = strobe_out;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+          casez (\$443 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:115" */
+            default:
+                \strobe_out$next  = 1'h1;
+          endcase
+    endcase
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:119" *)
+    casez (strobe_out)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:119" */
+      1'h1:
+          \strobe_out$next  = 1'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \strobe_out$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \b$next  = b;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \b$next  = 24'h1837e4;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$408 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:95" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+                casez (ix)
+                  4'h0:
+                      \b$next  = 24'h1837e4;
+                  4'h1:
+                      \b$next  = 24'h000215;
+                  4'h2:
+                      \b$next  = 24'he6267a;
+                  4'h3:
+                      \b$next  = 24'hfffeb7;
+                  4'h4:
+                      \b$next  = 24'h51006e;
+                  4'h5:
+                      \b$next  = 24'h7ffa92;
+                  4'h6:
+                      \b$next  = 24'h51006e;
+                  4'h7:
+                      \b$next  = 24'hfffeb7;
+                  4'h8:
+                      \b$next  = 24'he6267a;
+                  4'h9:
+                      \b$next  = 24'h000215;
+                  4'h?:
+                      \b$next  = 24'h1837e4;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \b$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \madd$next  = madd;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \madd$next  = 25'h0000000;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          \madd$next  = \$427 [24:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \madd$next  = 25'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \fsm_state$next  = fsm_state;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \fsm_state$next  = 2'h1;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$429 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                \fsm_state$next  = 2'h2;
+          endcase
+      /* \amaranth.decoding  = "OUTPUT/2" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:102" */
+      2'h2:
+          \fsm_state$next  = 2'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \fsm_state$next  = 2'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \signal_out$next  = signal_out;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "OUTPUT/2" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:102" */
+      2'h2:
+          \signal_out$next  = \$434 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \signal_out$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x0$next  = x0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x0$next  = \$436 ;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x0$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x1$next  = x1;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x1$next  = x0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x1$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x2$next  = x2;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x2$next  = x1;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x2$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$624 ) begin end
+    \x3$next  = x3;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x3$next  = x2;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x3$next  = 48'h000000000000;
+    endcase
+  end
+  assign \$3  = \$4 ;
+  assign \$6  = \$7 ;
+  assign \$15  = \$16 ;
+  assign \$18  = \$19 ;
+  assign \$21  = \$22 ;
+  assign \$24  = \$25 ;
+  assign \$27  = \$28 ;
+  assign \$30  = \$31 ;
+  assign \$33  = \$34 ;
+  assign \$36  = \$37 ;
+  assign \$39  = \$40 ;
+  assign \$42  = \$43 ;
+  assign \$45  = \$46 ;
+  assign \$51  = \$52 ;
+  assign \$54  = \$55 ;
+  assign \$57  = \$58 ;
+  assign \$60  = \$61 ;
+  assign \$63  = \$64 ;
+  assign \$66  = \$67 ;
+  assign \$69  = \$70 ;
+  assign \$72  = \$73 ;
+  assign \$75  = \$76 ;
+  assign \$78  = \$79 ;
+  assign \$81  = \$82 ;
+  assign \$87  = \$88 ;
+  assign \$90  = \$91 ;
+  assign \$93  = \$94 ;
+  assign \$96  = \$97 ;
+  assign \$99  = \$100 ;
+  assign \$102  = \$103 ;
+  assign \$105  = \$106 ;
+  assign \$108  = \$109 ;
+  assign \$111  = \$112 ;
+  assign \$114  = \$115 ;
+  assign \$117  = \$118 ;
+  assign \$123  = \$124 ;
+  assign \$126  = \$127 ;
+  assign \$129  = \$130 ;
+  assign \$132  = \$133 ;
+  assign \$135  = \$136 ;
+  assign \$138  = \$139 ;
+  assign \$141  = \$142 ;
+  assign \$144  = \$145 ;
+  assign \$147  = \$148 ;
+  assign \$150  = \$151 ;
+  assign \$153  = \$154 ;
+  assign \$159  = \$160 ;
+  assign \$162  = \$163 ;
+  assign \$165  = \$166 ;
+  assign \$168  = \$169 ;
+  assign \$171  = \$172 ;
+  assign \$174  = \$175 ;
+  assign \$177  = \$178 ;
+  assign \$180  = \$181 ;
+  assign \$183  = \$184 ;
+  assign \$186  = \$187 ;
+  assign \$189  = \$190 ;
+  assign \$195  = \$196 ;
+  assign \$198  = \$199 ;
+  assign \$201  = \$202 ;
+  assign \$204  = \$205 ;
+  assign \$207  = \$208 ;
+  assign \$210  = \$211 ;
+  assign \$213  = \$214 ;
+  assign \$216  = \$217 ;
+  assign \$219  = \$220 ;
+  assign \$222  = \$223 ;
+  assign \$225  = \$226 ;
+  assign \$231  = \$232 ;
+  assign \$234  = \$235 ;
+  assign \$237  = \$238 ;
+  assign \$240  = \$241 ;
+  assign \$243  = \$244 ;
+  assign \$246  = \$247 ;
+  assign \$249  = \$250 ;
+  assign \$252  = \$253 ;
+  assign \$255  = \$256 ;
+  assign \$258  = \$259 ;
+  assign \$261  = \$262 ;
+  assign \$267  = \$268 ;
+  assign \$270  = \$271 ;
+  assign \$273  = \$274 ;
+  assign \$276  = \$277 ;
+  assign \$279  = \$280 ;
+  assign \$282  = \$283 ;
+  assign \$285  = \$286 ;
+  assign \$288  = \$289 ;
+  assign \$291  = \$292 ;
+  assign \$294  = \$295 ;
+  assign \$297  = \$298 ;
+  assign \$303  = \$304 ;
+  assign \$306  = \$307 ;
+  assign \$309  = \$310 ;
+  assign \$312  = \$313 ;
+  assign \$315  = \$316 ;
+  assign \$318  = \$319 ;
+  assign \$321  = \$322 ;
+  assign \$324  = \$325 ;
+  assign \$327  = \$328 ;
+  assign \$330  = \$331 ;
+  assign \$333  = \$334 ;
+  assign \$339  = \$340 ;
+  assign \$342  = \$343 ;
+  assign \$345  = \$346 ;
+  assign \$348  = \$349 ;
+  assign \$351  = \$352 ;
+  assign \$354  = \$355 ;
+  assign \$357  = \$358 ;
+  assign \$360  = \$361 ;
+  assign \$363  = \$364 ;
+  assign \$366  = \$367 ;
+  assign \$369  = \$370 ;
+  assign \$375  = \$376 ;
+  assign \$378  = \$379 ;
+  assign \$381  = \$382 ;
+  assign \$384  = \$385 ;
+  assign \$387  = \$388 ;
+  assign \$390  = \$391 ;
+  assign \$393  = \$394 ;
+  assign \$396  = \$397 ;
+  assign \$399  = \$400 ;
+  assign \$402  = \$403 ;
+  assign \$405  = \$406 ;
+  assign \$411  = 48'h0000001837e4;
+  assign \$412  = 48'h000000000215;
+  assign \$413  = 48'hffffffe6267a;
+  assign \$414  = 48'hfffffffffeb7;
+  assign \$415  = 48'h00000051006e;
+  assign \$416  = 48'h0000007ffa92;
+  assign \$417  = 48'h00000051006e;
+  assign \$418  = 48'hfffffffffeb7;
+  assign \$419  = 48'hffffffe6267a;
+  assign \$420  = 48'h000000000215;
+  assign \$421  = 48'h0000001837e4;
+  assign \$422  = \$427 ;
+  assign \$431  = \$434 ;
+  assign \$440  = \$441 ;
+  assign \$13  = 5'h0a;
+  assign \$49  = 5'h09;
+  assign \$85  = 5'h08;
+  assign \$121  = 5'h07;
+  assign \$157  = 5'h06;
+  assign \$193  = 5'h05;
+  assign \$229  = 5'h04;
+  assign \$265  = 5'h03;
+  assign \$301  = 5'h02;
+  assign \$337  = 5'h01;
+  assign \$373  = 5'h00;
+  assign \$425  = { \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48], \$423 [48:24] };
+  assign \$432  = { x5[47], x5[47:1] };
+endmodule
+
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_transmitter.hb1" *)
 (* generator = "Amaranth" *)
-module hb1(rst, signal_in, signal_out, strobe_in, clk);
-  reg \$auto$verilog_backend.cc:2082:dump_module$507  = 0;
+module \hb1$3 (usb_clk, signal_in, signal_out, strobe_in, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$625  = 0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
   wire \$1 ;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
@@ -29194,8 +32867,6 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
   reg [27:0] b = 28'h0000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:78" *)
   reg [27:0] \b$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:66" *)
   reg decimate_counter = 1'h0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:66" *)
@@ -29212,8 +32883,6 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
   reg [28:0] madd = 29'h00000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:76" *)
   reg [28:0] \madd$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
   input [27:0] signal_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
@@ -29227,6 +32896,10 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
   reg strobe_out = 1'h0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
   reg \strobe_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
   reg [55:0] x0 = 56'h00000000000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
@@ -32045,126 +35718,126 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
   assign \$991  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
   assign \$994  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
   assign \$997  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
-  always @(posedge clk)
+  always @(posedge usb_clk)
     strobe_out <= \strobe_out$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     decimate_counter <= \decimate_counter$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x50 <= \x50$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x49 <= \x49$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x48 <= \x48$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x47 <= \x47$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x46 <= \x46$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x45 <= \x45$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x44 <= \x44$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x43 <= \x43$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x42 <= \x42$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x41 <= \x41$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x40 <= \x40$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x39 <= \x39$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x38 <= \x38$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x37 <= \x37$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x36 <= \x36$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x35 <= \x35$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x34 <= \x34$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x33 <= \x33$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x32 <= \x32$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x31 <= \x31$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x30 <= \x30$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x29 <= \x29$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x28 <= \x28$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x27 <= \x27$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x26 <= \x26$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x25 <= \x25$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x24 <= \x24$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x23 <= \x23$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x22 <= \x22$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x21 <= \x21$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x20 <= \x20$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x19 <= \x19$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x18 <= \x18$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x17 <= \x17$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x16 <= \x16$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x15 <= \x15$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x14 <= \x14$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x13 <= \x13$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x12 <= \x12$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x11 <= \x11$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x10 <= \x10$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x9 <= \x9$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x8 <= \x8$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x7 <= \x7$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x6 <= \x6$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x5 <= \x5$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x4 <= \x4$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x3 <= \x3$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x2 <= \x2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x1 <= \x1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     x0 <= \x0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     signal_out <= \signal_out$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     fsm_state <= \fsm_state$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     madd <= \madd$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     b <= \b$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     a <= \a$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     ix <= \ix$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \ix$next  = ix;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
     casez (fsm_state)
@@ -32192,13 +35865,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \ix$next  = 6'h00;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \a$next  = a;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
     casez (fsm_state)
@@ -37686,13 +41359,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \a$next  = 29'h00000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x4$next  = x4;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37701,13 +41374,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x4$next  = x3;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x4$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x5$next  = x5;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37716,13 +41389,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x5$next  = x4;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x5$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x6$next  = x6;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37731,13 +41404,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x6$next  = x5;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x6$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x7$next  = x7;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37746,13 +41419,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x7$next  = x6;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x7$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x8$next  = x8;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37761,13 +41434,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x8$next  = x7;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x8$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x9$next  = x9;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37776,13 +41449,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x9$next  = x8;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x9$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x10$next  = x10;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37791,13 +41464,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x10$next  = x9;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x10$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x11$next  = x11;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37806,13 +41479,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x11$next  = x10;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x11$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x12$next  = x12;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37821,13 +41494,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x12$next  = x11;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x12$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x13$next  = x13;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37836,13 +41509,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x13$next  = x12;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x13$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \b$next  = b;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
     casez (fsm_state)
@@ -37975,13 +41648,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \b$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x14$next  = x14;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -37990,13 +41663,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x14$next  = x13;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x14$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x15$next  = x15;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38005,13 +41678,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x15$next  = x14;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x15$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x16$next  = x16;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38020,13 +41693,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x16$next  = x15;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x16$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x17$next  = x17;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38035,13 +41708,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x17$next  = x16;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x17$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x18$next  = x18;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38050,13 +41723,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x18$next  = x17;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x18$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x19$next  = x19;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38065,13 +41738,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x19$next  = x18;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x19$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x20$next  = x20;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38080,13 +41753,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x20$next  = x19;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x20$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x21$next  = x21;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38095,13 +41768,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x21$next  = x20;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x21$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x22$next  = x22;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38110,13 +41783,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x22$next  = x21;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x22$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x23$next  = x23;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38125,13 +41798,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x23$next  = x22;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x23$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \madd$next  = madd;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
     casez (fsm_state)
@@ -38150,13 +41823,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \madd$next  = \$8027 [28:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \madd$next  = 29'h00000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x24$next  = x24;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38165,13 +41838,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x24$next  = x23;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x24$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x25$next  = x25;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38180,13 +41853,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x25$next  = x24;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x25$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x26$next  = x26;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38195,13 +41868,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x26$next  = x25;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x26$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x27$next  = x27;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38210,13 +41883,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x27$next  = x26;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x27$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x28$next  = x28;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38225,13 +41898,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x28$next  = x27;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x28$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x29$next  = x29;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38240,13 +41913,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x29$next  = x28;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x29$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x30$next  = x30;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38255,13 +41928,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x30$next  = x29;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x30$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x31$next  = x31;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38270,13 +41943,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x31$next  = x30;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x31$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x32$next  = x32;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38285,13 +41958,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x32$next  = x31;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x32$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x33$next  = x33;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38300,13 +41973,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x33$next  = x32;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x33$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
     casez (fsm_state)
@@ -38334,13 +42007,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \fsm_state$next  = 2'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \fsm_state$next  = 2'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x34$next  = x34;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38349,13 +42022,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x34$next  = x33;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x34$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x35$next  = x35;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38364,13 +42037,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x35$next  = x34;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x35$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x36$next  = x36;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38379,13 +42052,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x36$next  = x35;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x36$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x37$next  = x37;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38394,13 +42067,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x37$next  = x36;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x37$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x38$next  = x38;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38409,13 +42082,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x38$next  = x37;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x38$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x39$next  = x39;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38424,13 +42097,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x39$next  = x38;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x39$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x40$next  = x40;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38439,13 +42112,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x40$next  = x39;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x40$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x41$next  = x41;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38454,13 +42127,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x41$next  = x40;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x41$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x42$next  = x42;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38469,13 +42142,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x42$next  = x41;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x42$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x43$next  = x43;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38484,13 +42157,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x43$next  = x42;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x43$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \signal_out$next  = signal_out;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
     casez (fsm_state)
@@ -38508,13 +42181,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \signal_out$next  = \$8034 [27:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \signal_out$next  = 28'h0000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x44$next  = x44;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38523,13 +42196,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x44$next  = x43;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x44$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x45$next  = x45;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38538,13 +42211,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x45$next  = x44;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x45$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x46$next  = x46;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38553,13 +42226,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x46$next  = x45;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x46$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x47$next  = x47;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38568,13 +42241,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x47$next  = x46;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x47$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x48$next  = x48;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38583,13 +42256,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x48$next  = x47;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x48$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x49$next  = x49;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38598,13 +42271,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x49$next  = x48;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x49$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x50$next  = x50;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38613,13 +42286,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x50$next  = x49;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x50$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \decimate_counter$next  = decimate_counter;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38637,13 +42310,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \decimate_counter$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \strobe_out$next  = strobe_out;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38667,13 +42340,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \strobe_out$next  = 1'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \strobe_out$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x0$next  = x0;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38682,13 +42355,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x0$next  = \$8036 ;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x0$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x1$next  = x1;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38697,13 +42370,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x1$next  = x0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x1$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x2$next  = x2;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38712,13 +42385,13 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x2$next  = x1;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x2$next  = 56'h00000000000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$507 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$625 ) begin end
     \x3$next  = x3;
     (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
     casez (strobe_in)
@@ -38727,7 +42400,7 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
           \x3$next  = x2;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \x3$next  = 56'h00000000000000;
     endcase
@@ -41444,10 +45117,3955 @@ module hb1(rst, signal_in, signal_out, strobe_in, clk);
   assign \$8032  = { x25[55], x25[55:1] };
 endmodule
 
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.channels_to_usb_stream.out_fifo" *)
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_receiver.hb2" *)
 (* generator = "Amaranth" *)
-module out_fifo(usb_clk, r_rdy, r_en, r_data, w_rdy, w_data, w_en, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$508  = 0;
+module hb2(usb_clk, strobe_in, strobe_out, signal_in, signal_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$626  = 0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$1 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$100 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1000 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1002 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1003 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1005 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1006 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1008 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1009 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1011 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1012 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1014 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1015 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1017 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1018 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$102 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1020 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1021 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1023 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1024 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1026 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1027 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1029 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$103 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1030 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1032 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$1033 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1035 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1036 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1038 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1039 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1041 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1042 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1044 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1045 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1047 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1048 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$105 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1050 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1051 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1053 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1054 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1056 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1057 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1059 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$106 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1060 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1062 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1063 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1065 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1066 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1068 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1069 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1071 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1072 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1074 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1075 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1077 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1078 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$108 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1080 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1081 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1083 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1084 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1086 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1087 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1089 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$109 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1090 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1092 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$1093 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1095 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1096 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1098 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1099 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$11 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1101 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1102 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1104 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1105 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1107 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1108 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$111 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1110 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1111 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1113 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1114 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1116 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1117 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1119 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$112 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1120 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1122 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1123 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1125 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1126 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1128 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1129 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1131 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1132 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1134 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1135 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1137 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1138 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$114 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1140 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1141 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1143 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1144 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1146 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1147 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1149 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$115 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$1150 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$1152 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1154 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1155 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1156 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1157 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1158 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1159 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1160 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1161 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1162 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1163 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1164 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1165 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1166 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1167 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1168 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1169 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$117 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1170 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1171 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1172 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+  wire [47:0] \$1173 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [49:0] \$1174 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [48:0] \$1175 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [48:0] \$1177 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *)
+  wire [49:0] \$1179 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$118 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$1181 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *)
+  wire [48:0] \$1183 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *)
+  wire [47:0] \$1184 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *)
+  wire [48:0] \$1186 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
+  wire [47:0] \$1188 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+  wire \$1190 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:114" *)
+  wire [1:0] \$1192 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:114" *)
+  wire [1:0] \$1193 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+  wire \$1195 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$12 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$120 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$121 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$123 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$124 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$126 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$127 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$129 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$13 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$130 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$132 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$133 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$135 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$136 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$138 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$139 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$141 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$142 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$144 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$145 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$147 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$148 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$15 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$150 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$151 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$153 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$154 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$156 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$157 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$159 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$16 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$160 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$162 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$163 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$165 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$166 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$168 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$169 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$171 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$172 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$174 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$175 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$177 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$178 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$18 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$180 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$181 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$183 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$184 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$186 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$187 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$189 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$19 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$190 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$192 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$193 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$195 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$196 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$198 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$199 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$201 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$202 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$204 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$205 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$207 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$208 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$21 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$210 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$211 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$213 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$214 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$216 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$217 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$219 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$22 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$220 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$222 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$223 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$225 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$226 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$228 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$229 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$231 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$232 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$234 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$235 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$237 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$238 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$24 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$240 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$241 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$243 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$244 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$246 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$247 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$249 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$25 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$250 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$252 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$253 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$255 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$256 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$258 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$259 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$261 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$262 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$264 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$265 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$267 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$268 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$27 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$270 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$271 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$273 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$274 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$276 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$277 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$279 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$28 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$280 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$282 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$283 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$285 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$286 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$288 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$289 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$291 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$292 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$294 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$295 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$297 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$298 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:99" *)
+  wire [5:0] \$3 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$30 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$300 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$301 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$303 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$304 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$306 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$307 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$309 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$31 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$310 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$312 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$313 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$315 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$316 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$318 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$319 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$321 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$322 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$324 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$325 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$327 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$328 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$33 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$330 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$331 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$333 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$334 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$336 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$337 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$339 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$34 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$340 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$342 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$343 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$345 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$346 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$348 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$349 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$351 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$352 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$354 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$355 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$357 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$358 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$36 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$360 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$361 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$363 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$364 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$366 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$367 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$369 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$37 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$370 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$372 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$373 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$375 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$376 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$378 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$379 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$381 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$382 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$384 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$385 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$387 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$388 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$39 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$390 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$391 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$393 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$394 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$396 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$397 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$399 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:99" *)
+  wire [5:0] \$4 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$40 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$400 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$402 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$403 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$405 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$406 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$408 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$409 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$411 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$412 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$414 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$415 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$417 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$418 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$42 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$420 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$421 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$423 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$424 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$426 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$427 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$429 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$43 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$430 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$432 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$433 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$435 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$436 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$438 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$439 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$441 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$442 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$444 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$445 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$447 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$448 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$45 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$450 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$451 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$453 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$454 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$456 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$457 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$459 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$46 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$460 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$462 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$463 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$465 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$466 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$468 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$469 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$471 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$472 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$474 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$475 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$477 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$478 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$48 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$480 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$481 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$483 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$484 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$486 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$487 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$489 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$49 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$490 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$492 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$493 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$495 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$496 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$498 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$499 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$501 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$502 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$504 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$505 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$507 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$508 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$51 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$510 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$511 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$513 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$514 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$516 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$517 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$519 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$52 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$520 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$522 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$523 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$525 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$526 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$528 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$529 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$531 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$532 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$534 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$535 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$537 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$538 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$54 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$540 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$541 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$543 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$544 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$546 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$547 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$549 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$55 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$550 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$552 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$553 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$555 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$556 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$558 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$559 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$561 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$562 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$564 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$565 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$567 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$568 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$57 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$570 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$571 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$573 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$574 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$576 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$577 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$579 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$58 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$580 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$582 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$583 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$585 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$586 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$588 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$589 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$591 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$592 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$594 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$595 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$597 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$598 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:85" *)
+  wire [48:0] \$6 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$60 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$600 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$601 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$603 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$604 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$606 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$607 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$609 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$61 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$610 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$612 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$613 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$615 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$616 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$618 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$619 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$621 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$622 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$624 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$625 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$627 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$628 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$63 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$630 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$631 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$633 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$634 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$636 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$637 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$639 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$64 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$640 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$642 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$643 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$645 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$646 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$648 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$649 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$651 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$652 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$654 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$655 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$657 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$658 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$66 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$660 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$661 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$663 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$664 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$666 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$667 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$669 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$67 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$670 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$672 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$673 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$675 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$676 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$678 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$679 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$681 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$682 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$684 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$685 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$687 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$688 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$69 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$690 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$691 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$693 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$694 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$696 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$697 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$699 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:85" *)
+  wire [48:0] \$7 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$70 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$700 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$702 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$703 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$705 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$706 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$708 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$709 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$711 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$712 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$714 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$715 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$717 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$718 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$72 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$720 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$721 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$723 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$724 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$726 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$727 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$729 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$73 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$730 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$732 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$733 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$735 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$736 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$738 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$739 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$741 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$742 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$744 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$745 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$747 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$748 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$75 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$750 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$751 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$753 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$754 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$756 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$757 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$759 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$76 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$760 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$762 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$763 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$765 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$766 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$768 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$769 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$771 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$772 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$774 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$775 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$777 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$778 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$78 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$780 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$781 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$783 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$784 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$786 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$787 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$789 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$79 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$790 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$792 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$793 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$795 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$796 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$798 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$799 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$801 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$802 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$804 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$805 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$807 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$808 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$81 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$810 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$811 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$813 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$814 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$816 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$817 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$819 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$82 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$820 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$822 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$823 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$825 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$826 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$828 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$829 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$831 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$832 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$834 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$835 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$837 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$838 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$84 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$840 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$841 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$843 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$844 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$846 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$847 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$849 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$85 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$850 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$852 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$853 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$855 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$856 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$858 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$859 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$861 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$862 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$864 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$865 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$867 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$868 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$87 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$870 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$871 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$873 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$874 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$876 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$877 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$879 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$88 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$880 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$882 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$883 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$885 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$886 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$888 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$889 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$891 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$892 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$894 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$895 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$897 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$898 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+  wire \$9 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$90 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$900 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$901 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$903 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$904 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$906 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$907 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$909 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$91 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$910 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$912 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$913 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$915 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$916 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$918 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$919 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$921 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$922 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$924 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$925 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$927 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$928 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$93 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$930 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$931 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$933 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$934 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$936 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$937 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$939 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$94 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$940 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$942 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$943 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$945 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$946 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$948 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$949 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$951 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$952 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$954 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$955 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$957 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$958 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$96 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$960 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$961 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$963 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$964 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$966 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$967 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$969 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$97 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$970 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$972 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [5:0] \$973 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$975 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$976 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$978 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$979 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$981 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$982 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$984 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$985 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$987 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$988 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$99 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$990 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$991 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$993 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$994 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$996 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$997 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+  wire [48:0] \$999 ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:77" *)
+  reg [24:0] a = 25'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:77" *)
+  reg [24:0] \a$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:78" *)
+  reg [23:0] b = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:78" *)
+  reg [23:0] \b$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:66" *)
+  reg decimate_counter = 1'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:66" *)
+  reg \decimate_counter$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+  reg [1:0] fsm_state = 2'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+  reg [1:0] \fsm_state$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:75" *)
+  reg [4:0] ix = 5'h00;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:75" *)
+  reg [4:0] \ix$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:76" *)
+  reg [24:0] madd = 25'h0000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:76" *)
+  reg [24:0] \madd$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
+  input [23:0] signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
+  output [23:0] signal_out;
+  reg [23:0] signal_out = 24'h000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
+  reg [23:0] \signal_out$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:21" *)
+  input strobe_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
+  output strobe_out;
+  reg strobe_out = 1'h0;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
+  reg \strobe_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x0 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x0$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x1 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x1$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x10 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x10$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x11 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x11$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x12 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x12$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x13 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x13$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x14 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x14$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x15 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x15$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x16 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x16$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x17 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x17$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x18 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x18$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x2 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x2$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x3 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x3$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x4 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x4$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x5 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x5$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x6 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x6$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x7 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x7$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x8 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x8$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] x9 = 48'h000000000000;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
+  reg [47:0] \x9$next ;
+  assign \$9  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 4'h9;
+  assign \$1000  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$1003  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$1006  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$100  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$1009  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$1012  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$1015  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$1018  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$1021  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$1024  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$1027  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$1030  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$1036  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$103  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$1039  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$1042  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$1045  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$1048  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$1051  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$1054  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$1057  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$1060  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$1063  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$1066  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$106  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$1069  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$1072  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$1075  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$1078  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$1081  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$1084  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$1087  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$1090  = $signed(x17) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$1096  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$109  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$1099  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$1102  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$1105  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$1108  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$1111  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$1114  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$1117  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$1120  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$1123  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$1126  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$112  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$1129  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$1132  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$1135  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$1138  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$1141  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$1144  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$1147  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$1150  = $signed(x18) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$1152  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 4'h9;
+  assign \$115  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$1175  = $signed(a) * (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *) $signed(b);
+  assign \$1179  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:92" *) $signed(\$1177 );
+  assign \$1181  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 4'h9;
+  assign \$1186  = $signed(madd) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:103" *) $signed(\$1184 );
+  assign \$1188  = + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *) $signed(signal_in);
+  assign \$118  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$1190  = decimate_counter < (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *) 1'h1;
+  assign \$1193  = decimate_counter + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:114" *) 1'h1;
+  assign \$1195  = decimate_counter < (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *) 1'h1;
+  assign \$121  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$124  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$127  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$130  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$136  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$139  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$142  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$145  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$148  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$151  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$154  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$157  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$160  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$163  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$166  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$16  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$169  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$172  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$175  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$178  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$181  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$184  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$187  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$190  = $signed(x2) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$196  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$1  = ix > (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *) 4'h9;
+  assign \$19  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$199  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$202  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$205  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$208  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$211  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$214  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$217  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$220  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$223  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$226  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$22  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$229  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$232  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$235  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$238  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$241  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$244  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$247  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$250  = $signed(x3) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$256  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$25  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$259  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$262  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$265  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$268  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$271  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$274  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$277  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$280  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$283  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$286  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$28  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$289  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$292  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$295  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$298  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$301  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$304  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$307  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$310  = $signed(x4) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$316  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$31  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$319  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$322  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$325  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$328  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$331  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$334  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$337  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$340  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$343  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$346  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$34  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$349  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$352  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$355  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$358  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$361  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$364  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$367  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$370  = $signed(x5) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$376  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$37  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$379  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$382  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$385  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$388  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$391  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$394  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$397  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$400  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$403  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$406  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$40  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$409  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$412  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$415  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$418  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$421  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$424  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$427  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$430  = $signed(x6) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$436  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$43  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$439  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$442  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$445  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$448  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$451  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$454  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$457  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$460  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$463  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$466  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$46  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$469  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$472  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$475  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$478  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$481  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$484  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$487  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$490  = $signed(x7) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$496  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$4  = ix + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:99" *) 2'h2;
+  assign \$49  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$499  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$502  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$505  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$508  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$511  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$514  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$517  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$520  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$523  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$526  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$52  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$529  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$532  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$535  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$538  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$541  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$544  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$547  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$550  = $signed(x8) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$556  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$55  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$559  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$562  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$565  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$568  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$571  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$574  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$577  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$580  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$583  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$586  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$58  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$589  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$592  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$595  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$598  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$601  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$604  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$607  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$610  = $signed(x9) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$616  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$61  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$619  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$622  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$625  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$628  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$631  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$634  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$637  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$640  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$643  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$646  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$64  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$649  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$652  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$655  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$658  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$661  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$664  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$667  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$670  = $signed(x10) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$676  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$67  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$679  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$682  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$685  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$688  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$691  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$694  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$697  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$700  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$703  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$706  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$70  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$709  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$712  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$715  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$718  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$721  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$724  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$727  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$730  = $signed(x11) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$736  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$739  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$742  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$745  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$748  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$751  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$754  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$757  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$760  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$763  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$766  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$76  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$769  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$772  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$775  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$778  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$781  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$784  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$787  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$790  = $signed(x12) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$796  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$7  = $signed(x0) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:85" *) $signed(x18);
+  assign \$79  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$799  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$802  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$805  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$808  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$811  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$814  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$817  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$820  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$823  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$826  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$82  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$829  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$832  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$835  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$838  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$841  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$844  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$847  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$850  = $signed(x13) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$856  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$85  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$859  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$862  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$865  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$868  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$871  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$874  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$877  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$880  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$883  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$886  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$88  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$889  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$892  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$895  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$898  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$901  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$904  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$907  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$910  = $signed(x14) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$916  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$91  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$919  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$922  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$925  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$928  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$931  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$934  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$937  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$940  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x8);
+  assign \$943  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x9);
+  assign \$946  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x10);
+  assign \$94  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$949  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x11);
+  assign \$952  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x12);
+  assign \$955  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x13);
+  assign \$958  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x14);
+  assign \$961  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x15);
+  assign \$964  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x16);
+  assign \$967  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x17);
+  assign \$970  = $signed(x15) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x18);
+  assign \$976  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x0);
+  assign \$97  = $signed(x1) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  assign \$979  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x1);
+  assign \$982  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x2);
+  assign \$985  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x3);
+  assign \$988  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x4);
+  assign \$991  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x5);
+  assign \$994  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x6);
+  assign \$997  = $signed(x16) + (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *) $signed(x7);
+  always @(posedge usb_clk)
+    strobe_out <= \strobe_out$next ;
+  always @(posedge usb_clk)
+    decimate_counter <= \decimate_counter$next ;
+  always @(posedge usb_clk)
+    x18 <= \x18$next ;
+  always @(posedge usb_clk)
+    x17 <= \x17$next ;
+  always @(posedge usb_clk)
+    x16 <= \x16$next ;
+  always @(posedge usb_clk)
+    x15 <= \x15$next ;
+  always @(posedge usb_clk)
+    x14 <= \x14$next ;
+  always @(posedge usb_clk)
+    x13 <= \x13$next ;
+  always @(posedge usb_clk)
+    x12 <= \x12$next ;
+  always @(posedge usb_clk)
+    x11 <= \x11$next ;
+  always @(posedge usb_clk)
+    x10 <= \x10$next ;
+  always @(posedge usb_clk)
+    x9 <= \x9$next ;
+  always @(posedge usb_clk)
+    x8 <= \x8$next ;
+  always @(posedge usb_clk)
+    x7 <= \x7$next ;
+  always @(posedge usb_clk)
+    x6 <= \x6$next ;
+  always @(posedge usb_clk)
+    x5 <= \x5$next ;
+  always @(posedge usb_clk)
+    x4 <= \x4$next ;
+  always @(posedge usb_clk)
+    x3 <= \x3$next ;
+  always @(posedge usb_clk)
+    x2 <= \x2$next ;
+  always @(posedge usb_clk)
+    x1 <= \x1$next ;
+  always @(posedge usb_clk)
+    x0 <= \x0$next ;
+  always @(posedge usb_clk)
+    signal_out <= \signal_out$next ;
+  always @(posedge usb_clk)
+    fsm_state <= \fsm_state$next ;
+  always @(posedge usb_clk)
+    madd <= \madd$next ;
+  always @(posedge usb_clk)
+    b <= \b$next ;
+  always @(posedge usb_clk)
+    a <= \a$next ;
+  always @(posedge usb_clk)
+    ix <= \ix$next ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \ix$next  = ix;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \ix$next  = 5'h02;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$1 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:95" */
+            default:
+                \ix$next  = \$4 [4:0];
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \ix$next  = 5'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \a$next  = a;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \a$next  = \$7 [24:0];
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$9 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:95" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                casez (ix)
+                  5'h00:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$13 )
+                        6'h00:
+                            \a$next  = \$16 [24:0];
+                        6'h01:
+                            \a$next  = \$19 [24:0];
+                        6'h02:
+                            \a$next  = \$22 [24:0];
+                        6'h03:
+                            \a$next  = \$25 [24:0];
+                        6'h04:
+                            \a$next  = \$28 [24:0];
+                        6'h05:
+                            \a$next  = \$31 [24:0];
+                        6'h06:
+                            \a$next  = \$34 [24:0];
+                        6'h07:
+                            \a$next  = \$37 [24:0];
+                        6'h08:
+                            \a$next  = \$40 [24:0];
+                        6'h09:
+                            \a$next  = \$43 [24:0];
+                        6'h0a:
+                            \a$next  = \$46 [24:0];
+                        6'h0b:
+                            \a$next  = \$49 [24:0];
+                        6'h0c:
+                            \a$next  = \$52 [24:0];
+                        6'h0d:
+                            \a$next  = \$55 [24:0];
+                        6'h0e:
+                            \a$next  = \$58 [24:0];
+                        6'h0f:
+                            \a$next  = \$61 [24:0];
+                        6'h10:
+                            \a$next  = \$64 [24:0];
+                        6'h11:
+                            \a$next  = \$67 [24:0];
+                        6'h??:
+                            \a$next  = \$70 [24:0];
+                      endcase
+                  5'h01:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$73 )
+                        6'h00:
+                            \a$next  = \$76 [24:0];
+                        6'h01:
+                            \a$next  = \$79 [24:0];
+                        6'h02:
+                            \a$next  = \$82 [24:0];
+                        6'h03:
+                            \a$next  = \$85 [24:0];
+                        6'h04:
+                            \a$next  = \$88 [24:0];
+                        6'h05:
+                            \a$next  = \$91 [24:0];
+                        6'h06:
+                            \a$next  = \$94 [24:0];
+                        6'h07:
+                            \a$next  = \$97 [24:0];
+                        6'h08:
+                            \a$next  = \$100 [24:0];
+                        6'h09:
+                            \a$next  = \$103 [24:0];
+                        6'h0a:
+                            \a$next  = \$106 [24:0];
+                        6'h0b:
+                            \a$next  = \$109 [24:0];
+                        6'h0c:
+                            \a$next  = \$112 [24:0];
+                        6'h0d:
+                            \a$next  = \$115 [24:0];
+                        6'h0e:
+                            \a$next  = \$118 [24:0];
+                        6'h0f:
+                            \a$next  = \$121 [24:0];
+                        6'h10:
+                            \a$next  = \$124 [24:0];
+                        6'h11:
+                            \a$next  = \$127 [24:0];
+                        6'h??:
+                            \a$next  = \$130 [24:0];
+                      endcase
+                  5'h02:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$133 )
+                        6'h00:
+                            \a$next  = \$136 [24:0];
+                        6'h01:
+                            \a$next  = \$139 [24:0];
+                        6'h02:
+                            \a$next  = \$142 [24:0];
+                        6'h03:
+                            \a$next  = \$145 [24:0];
+                        6'h04:
+                            \a$next  = \$148 [24:0];
+                        6'h05:
+                            \a$next  = \$151 [24:0];
+                        6'h06:
+                            \a$next  = \$154 [24:0];
+                        6'h07:
+                            \a$next  = \$157 [24:0];
+                        6'h08:
+                            \a$next  = \$160 [24:0];
+                        6'h09:
+                            \a$next  = \$163 [24:0];
+                        6'h0a:
+                            \a$next  = \$166 [24:0];
+                        6'h0b:
+                            \a$next  = \$169 [24:0];
+                        6'h0c:
+                            \a$next  = \$172 [24:0];
+                        6'h0d:
+                            \a$next  = \$175 [24:0];
+                        6'h0e:
+                            \a$next  = \$178 [24:0];
+                        6'h0f:
+                            \a$next  = \$181 [24:0];
+                        6'h10:
+                            \a$next  = \$184 [24:0];
+                        6'h11:
+                            \a$next  = \$187 [24:0];
+                        6'h??:
+                            \a$next  = \$190 [24:0];
+                      endcase
+                  5'h03:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$193 )
+                        6'h00:
+                            \a$next  = \$196 [24:0];
+                        6'h01:
+                            \a$next  = \$199 [24:0];
+                        6'h02:
+                            \a$next  = \$202 [24:0];
+                        6'h03:
+                            \a$next  = \$205 [24:0];
+                        6'h04:
+                            \a$next  = \$208 [24:0];
+                        6'h05:
+                            \a$next  = \$211 [24:0];
+                        6'h06:
+                            \a$next  = \$214 [24:0];
+                        6'h07:
+                            \a$next  = \$217 [24:0];
+                        6'h08:
+                            \a$next  = \$220 [24:0];
+                        6'h09:
+                            \a$next  = \$223 [24:0];
+                        6'h0a:
+                            \a$next  = \$226 [24:0];
+                        6'h0b:
+                            \a$next  = \$229 [24:0];
+                        6'h0c:
+                            \a$next  = \$232 [24:0];
+                        6'h0d:
+                            \a$next  = \$235 [24:0];
+                        6'h0e:
+                            \a$next  = \$238 [24:0];
+                        6'h0f:
+                            \a$next  = \$241 [24:0];
+                        6'h10:
+                            \a$next  = \$244 [24:0];
+                        6'h11:
+                            \a$next  = \$247 [24:0];
+                        6'h??:
+                            \a$next  = \$250 [24:0];
+                      endcase
+                  5'h04:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$253 )
+                        6'h00:
+                            \a$next  = \$256 [24:0];
+                        6'h01:
+                            \a$next  = \$259 [24:0];
+                        6'h02:
+                            \a$next  = \$262 [24:0];
+                        6'h03:
+                            \a$next  = \$265 [24:0];
+                        6'h04:
+                            \a$next  = \$268 [24:0];
+                        6'h05:
+                            \a$next  = \$271 [24:0];
+                        6'h06:
+                            \a$next  = \$274 [24:0];
+                        6'h07:
+                            \a$next  = \$277 [24:0];
+                        6'h08:
+                            \a$next  = \$280 [24:0];
+                        6'h09:
+                            \a$next  = \$283 [24:0];
+                        6'h0a:
+                            \a$next  = \$286 [24:0];
+                        6'h0b:
+                            \a$next  = \$289 [24:0];
+                        6'h0c:
+                            \a$next  = \$292 [24:0];
+                        6'h0d:
+                            \a$next  = \$295 [24:0];
+                        6'h0e:
+                            \a$next  = \$298 [24:0];
+                        6'h0f:
+                            \a$next  = \$301 [24:0];
+                        6'h10:
+                            \a$next  = \$304 [24:0];
+                        6'h11:
+                            \a$next  = \$307 [24:0];
+                        6'h??:
+                            \a$next  = \$310 [24:0];
+                      endcase
+                  5'h05:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$313 )
+                        6'h00:
+                            \a$next  = \$316 [24:0];
+                        6'h01:
+                            \a$next  = \$319 [24:0];
+                        6'h02:
+                            \a$next  = \$322 [24:0];
+                        6'h03:
+                            \a$next  = \$325 [24:0];
+                        6'h04:
+                            \a$next  = \$328 [24:0];
+                        6'h05:
+                            \a$next  = \$331 [24:0];
+                        6'h06:
+                            \a$next  = \$334 [24:0];
+                        6'h07:
+                            \a$next  = \$337 [24:0];
+                        6'h08:
+                            \a$next  = \$340 [24:0];
+                        6'h09:
+                            \a$next  = \$343 [24:0];
+                        6'h0a:
+                            \a$next  = \$346 [24:0];
+                        6'h0b:
+                            \a$next  = \$349 [24:0];
+                        6'h0c:
+                            \a$next  = \$352 [24:0];
+                        6'h0d:
+                            \a$next  = \$355 [24:0];
+                        6'h0e:
+                            \a$next  = \$358 [24:0];
+                        6'h0f:
+                            \a$next  = \$361 [24:0];
+                        6'h10:
+                            \a$next  = \$364 [24:0];
+                        6'h11:
+                            \a$next  = \$367 [24:0];
+                        6'h??:
+                            \a$next  = \$370 [24:0];
+                      endcase
+                  5'h06:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$373 )
+                        6'h00:
+                            \a$next  = \$376 [24:0];
+                        6'h01:
+                            \a$next  = \$379 [24:0];
+                        6'h02:
+                            \a$next  = \$382 [24:0];
+                        6'h03:
+                            \a$next  = \$385 [24:0];
+                        6'h04:
+                            \a$next  = \$388 [24:0];
+                        6'h05:
+                            \a$next  = \$391 [24:0];
+                        6'h06:
+                            \a$next  = \$394 [24:0];
+                        6'h07:
+                            \a$next  = \$397 [24:0];
+                        6'h08:
+                            \a$next  = \$400 [24:0];
+                        6'h09:
+                            \a$next  = \$403 [24:0];
+                        6'h0a:
+                            \a$next  = \$406 [24:0];
+                        6'h0b:
+                            \a$next  = \$409 [24:0];
+                        6'h0c:
+                            \a$next  = \$412 [24:0];
+                        6'h0d:
+                            \a$next  = \$415 [24:0];
+                        6'h0e:
+                            \a$next  = \$418 [24:0];
+                        6'h0f:
+                            \a$next  = \$421 [24:0];
+                        6'h10:
+                            \a$next  = \$424 [24:0];
+                        6'h11:
+                            \a$next  = \$427 [24:0];
+                        6'h??:
+                            \a$next  = \$430 [24:0];
+                      endcase
+                  5'h07:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$433 )
+                        6'h00:
+                            \a$next  = \$436 [24:0];
+                        6'h01:
+                            \a$next  = \$439 [24:0];
+                        6'h02:
+                            \a$next  = \$442 [24:0];
+                        6'h03:
+                            \a$next  = \$445 [24:0];
+                        6'h04:
+                            \a$next  = \$448 [24:0];
+                        6'h05:
+                            \a$next  = \$451 [24:0];
+                        6'h06:
+                            \a$next  = \$454 [24:0];
+                        6'h07:
+                            \a$next  = \$457 [24:0];
+                        6'h08:
+                            \a$next  = \$460 [24:0];
+                        6'h09:
+                            \a$next  = \$463 [24:0];
+                        6'h0a:
+                            \a$next  = \$466 [24:0];
+                        6'h0b:
+                            \a$next  = \$469 [24:0];
+                        6'h0c:
+                            \a$next  = \$472 [24:0];
+                        6'h0d:
+                            \a$next  = \$475 [24:0];
+                        6'h0e:
+                            \a$next  = \$478 [24:0];
+                        6'h0f:
+                            \a$next  = \$481 [24:0];
+                        6'h10:
+                            \a$next  = \$484 [24:0];
+                        6'h11:
+                            \a$next  = \$487 [24:0];
+                        6'h??:
+                            \a$next  = \$490 [24:0];
+                      endcase
+                  5'h08:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$493 )
+                        6'h00:
+                            \a$next  = \$496 [24:0];
+                        6'h01:
+                            \a$next  = \$499 [24:0];
+                        6'h02:
+                            \a$next  = \$502 [24:0];
+                        6'h03:
+                            \a$next  = \$505 [24:0];
+                        6'h04:
+                            \a$next  = \$508 [24:0];
+                        6'h05:
+                            \a$next  = \$511 [24:0];
+                        6'h06:
+                            \a$next  = \$514 [24:0];
+                        6'h07:
+                            \a$next  = \$517 [24:0];
+                        6'h08:
+                            \a$next  = \$520 [24:0];
+                        6'h09:
+                            \a$next  = \$523 [24:0];
+                        6'h0a:
+                            \a$next  = \$526 [24:0];
+                        6'h0b:
+                            \a$next  = \$529 [24:0];
+                        6'h0c:
+                            \a$next  = \$532 [24:0];
+                        6'h0d:
+                            \a$next  = \$535 [24:0];
+                        6'h0e:
+                            \a$next  = \$538 [24:0];
+                        6'h0f:
+                            \a$next  = \$541 [24:0];
+                        6'h10:
+                            \a$next  = \$544 [24:0];
+                        6'h11:
+                            \a$next  = \$547 [24:0];
+                        6'h??:
+                            \a$next  = \$550 [24:0];
+                      endcase
+                  5'h09:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$553 )
+                        6'h00:
+                            \a$next  = \$556 [24:0];
+                        6'h01:
+                            \a$next  = \$559 [24:0];
+                        6'h02:
+                            \a$next  = \$562 [24:0];
+                        6'h03:
+                            \a$next  = \$565 [24:0];
+                        6'h04:
+                            \a$next  = \$568 [24:0];
+                        6'h05:
+                            \a$next  = \$571 [24:0];
+                        6'h06:
+                            \a$next  = \$574 [24:0];
+                        6'h07:
+                            \a$next  = \$577 [24:0];
+                        6'h08:
+                            \a$next  = \$580 [24:0];
+                        6'h09:
+                            \a$next  = \$583 [24:0];
+                        6'h0a:
+                            \a$next  = \$586 [24:0];
+                        6'h0b:
+                            \a$next  = \$589 [24:0];
+                        6'h0c:
+                            \a$next  = \$592 [24:0];
+                        6'h0d:
+                            \a$next  = \$595 [24:0];
+                        6'h0e:
+                            \a$next  = \$598 [24:0];
+                        6'h0f:
+                            \a$next  = \$601 [24:0];
+                        6'h10:
+                            \a$next  = \$604 [24:0];
+                        6'h11:
+                            \a$next  = \$607 [24:0];
+                        6'h??:
+                            \a$next  = \$610 [24:0];
+                      endcase
+                  5'h0a:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$613 )
+                        6'h00:
+                            \a$next  = \$616 [24:0];
+                        6'h01:
+                            \a$next  = \$619 [24:0];
+                        6'h02:
+                            \a$next  = \$622 [24:0];
+                        6'h03:
+                            \a$next  = \$625 [24:0];
+                        6'h04:
+                            \a$next  = \$628 [24:0];
+                        6'h05:
+                            \a$next  = \$631 [24:0];
+                        6'h06:
+                            \a$next  = \$634 [24:0];
+                        6'h07:
+                            \a$next  = \$637 [24:0];
+                        6'h08:
+                            \a$next  = \$640 [24:0];
+                        6'h09:
+                            \a$next  = \$643 [24:0];
+                        6'h0a:
+                            \a$next  = \$646 [24:0];
+                        6'h0b:
+                            \a$next  = \$649 [24:0];
+                        6'h0c:
+                            \a$next  = \$652 [24:0];
+                        6'h0d:
+                            \a$next  = \$655 [24:0];
+                        6'h0e:
+                            \a$next  = \$658 [24:0];
+                        6'h0f:
+                            \a$next  = \$661 [24:0];
+                        6'h10:
+                            \a$next  = \$664 [24:0];
+                        6'h11:
+                            \a$next  = \$667 [24:0];
+                        6'h??:
+                            \a$next  = \$670 [24:0];
+                      endcase
+                  5'h0b:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$673 )
+                        6'h00:
+                            \a$next  = \$676 [24:0];
+                        6'h01:
+                            \a$next  = \$679 [24:0];
+                        6'h02:
+                            \a$next  = \$682 [24:0];
+                        6'h03:
+                            \a$next  = \$685 [24:0];
+                        6'h04:
+                            \a$next  = \$688 [24:0];
+                        6'h05:
+                            \a$next  = \$691 [24:0];
+                        6'h06:
+                            \a$next  = \$694 [24:0];
+                        6'h07:
+                            \a$next  = \$697 [24:0];
+                        6'h08:
+                            \a$next  = \$700 [24:0];
+                        6'h09:
+                            \a$next  = \$703 [24:0];
+                        6'h0a:
+                            \a$next  = \$706 [24:0];
+                        6'h0b:
+                            \a$next  = \$709 [24:0];
+                        6'h0c:
+                            \a$next  = \$712 [24:0];
+                        6'h0d:
+                            \a$next  = \$715 [24:0];
+                        6'h0e:
+                            \a$next  = \$718 [24:0];
+                        6'h0f:
+                            \a$next  = \$721 [24:0];
+                        6'h10:
+                            \a$next  = \$724 [24:0];
+                        6'h11:
+                            \a$next  = \$727 [24:0];
+                        6'h??:
+                            \a$next  = \$730 [24:0];
+                      endcase
+                  5'h0c:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$733 )
+                        6'h00:
+                            \a$next  = \$736 [24:0];
+                        6'h01:
+                            \a$next  = \$739 [24:0];
+                        6'h02:
+                            \a$next  = \$742 [24:0];
+                        6'h03:
+                            \a$next  = \$745 [24:0];
+                        6'h04:
+                            \a$next  = \$748 [24:0];
+                        6'h05:
+                            \a$next  = \$751 [24:0];
+                        6'h06:
+                            \a$next  = \$754 [24:0];
+                        6'h07:
+                            \a$next  = \$757 [24:0];
+                        6'h08:
+                            \a$next  = \$760 [24:0];
+                        6'h09:
+                            \a$next  = \$763 [24:0];
+                        6'h0a:
+                            \a$next  = \$766 [24:0];
+                        6'h0b:
+                            \a$next  = \$769 [24:0];
+                        6'h0c:
+                            \a$next  = \$772 [24:0];
+                        6'h0d:
+                            \a$next  = \$775 [24:0];
+                        6'h0e:
+                            \a$next  = \$778 [24:0];
+                        6'h0f:
+                            \a$next  = \$781 [24:0];
+                        6'h10:
+                            \a$next  = \$784 [24:0];
+                        6'h11:
+                            \a$next  = \$787 [24:0];
+                        6'h??:
+                            \a$next  = \$790 [24:0];
+                      endcase
+                  5'h0d:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$793 )
+                        6'h00:
+                            \a$next  = \$796 [24:0];
+                        6'h01:
+                            \a$next  = \$799 [24:0];
+                        6'h02:
+                            \a$next  = \$802 [24:0];
+                        6'h03:
+                            \a$next  = \$805 [24:0];
+                        6'h04:
+                            \a$next  = \$808 [24:0];
+                        6'h05:
+                            \a$next  = \$811 [24:0];
+                        6'h06:
+                            \a$next  = \$814 [24:0];
+                        6'h07:
+                            \a$next  = \$817 [24:0];
+                        6'h08:
+                            \a$next  = \$820 [24:0];
+                        6'h09:
+                            \a$next  = \$823 [24:0];
+                        6'h0a:
+                            \a$next  = \$826 [24:0];
+                        6'h0b:
+                            \a$next  = \$829 [24:0];
+                        6'h0c:
+                            \a$next  = \$832 [24:0];
+                        6'h0d:
+                            \a$next  = \$835 [24:0];
+                        6'h0e:
+                            \a$next  = \$838 [24:0];
+                        6'h0f:
+                            \a$next  = \$841 [24:0];
+                        6'h10:
+                            \a$next  = \$844 [24:0];
+                        6'h11:
+                            \a$next  = \$847 [24:0];
+                        6'h??:
+                            \a$next  = \$850 [24:0];
+                      endcase
+                  5'h0e:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$853 )
+                        6'h00:
+                            \a$next  = \$856 [24:0];
+                        6'h01:
+                            \a$next  = \$859 [24:0];
+                        6'h02:
+                            \a$next  = \$862 [24:0];
+                        6'h03:
+                            \a$next  = \$865 [24:0];
+                        6'h04:
+                            \a$next  = \$868 [24:0];
+                        6'h05:
+                            \a$next  = \$871 [24:0];
+                        6'h06:
+                            \a$next  = \$874 [24:0];
+                        6'h07:
+                            \a$next  = \$877 [24:0];
+                        6'h08:
+                            \a$next  = \$880 [24:0];
+                        6'h09:
+                            \a$next  = \$883 [24:0];
+                        6'h0a:
+                            \a$next  = \$886 [24:0];
+                        6'h0b:
+                            \a$next  = \$889 [24:0];
+                        6'h0c:
+                            \a$next  = \$892 [24:0];
+                        6'h0d:
+                            \a$next  = \$895 [24:0];
+                        6'h0e:
+                            \a$next  = \$898 [24:0];
+                        6'h0f:
+                            \a$next  = \$901 [24:0];
+                        6'h10:
+                            \a$next  = \$904 [24:0];
+                        6'h11:
+                            \a$next  = \$907 [24:0];
+                        6'h??:
+                            \a$next  = \$910 [24:0];
+                      endcase
+                  5'h0f:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$913 )
+                        6'h00:
+                            \a$next  = \$916 [24:0];
+                        6'h01:
+                            \a$next  = \$919 [24:0];
+                        6'h02:
+                            \a$next  = \$922 [24:0];
+                        6'h03:
+                            \a$next  = \$925 [24:0];
+                        6'h04:
+                            \a$next  = \$928 [24:0];
+                        6'h05:
+                            \a$next  = \$931 [24:0];
+                        6'h06:
+                            \a$next  = \$934 [24:0];
+                        6'h07:
+                            \a$next  = \$937 [24:0];
+                        6'h08:
+                            \a$next  = \$940 [24:0];
+                        6'h09:
+                            \a$next  = \$943 [24:0];
+                        6'h0a:
+                            \a$next  = \$946 [24:0];
+                        6'h0b:
+                            \a$next  = \$949 [24:0];
+                        6'h0c:
+                            \a$next  = \$952 [24:0];
+                        6'h0d:
+                            \a$next  = \$955 [24:0];
+                        6'h0e:
+                            \a$next  = \$958 [24:0];
+                        6'h0f:
+                            \a$next  = \$961 [24:0];
+                        6'h10:
+                            \a$next  = \$964 [24:0];
+                        6'h11:
+                            \a$next  = \$967 [24:0];
+                        6'h??:
+                            \a$next  = \$970 [24:0];
+                      endcase
+                  5'h10:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$973 )
+                        6'h00:
+                            \a$next  = \$976 [24:0];
+                        6'h01:
+                            \a$next  = \$979 [24:0];
+                        6'h02:
+                            \a$next  = \$982 [24:0];
+                        6'h03:
+                            \a$next  = \$985 [24:0];
+                        6'h04:
+                            \a$next  = \$988 [24:0];
+                        6'h05:
+                            \a$next  = \$991 [24:0];
+                        6'h06:
+                            \a$next  = \$994 [24:0];
+                        6'h07:
+                            \a$next  = \$997 [24:0];
+                        6'h08:
+                            \a$next  = \$1000 [24:0];
+                        6'h09:
+                            \a$next  = \$1003 [24:0];
+                        6'h0a:
+                            \a$next  = \$1006 [24:0];
+                        6'h0b:
+                            \a$next  = \$1009 [24:0];
+                        6'h0c:
+                            \a$next  = \$1012 [24:0];
+                        6'h0d:
+                            \a$next  = \$1015 [24:0];
+                        6'h0e:
+                            \a$next  = \$1018 [24:0];
+                        6'h0f:
+                            \a$next  = \$1021 [24:0];
+                        6'h10:
+                            \a$next  = \$1024 [24:0];
+                        6'h11:
+                            \a$next  = \$1027 [24:0];
+                        6'h??:
+                            \a$next  = \$1030 [24:0];
+                      endcase
+                  5'h11:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$1033 )
+                        6'h00:
+                            \a$next  = \$1036 [24:0];
+                        6'h01:
+                            \a$next  = \$1039 [24:0];
+                        6'h02:
+                            \a$next  = \$1042 [24:0];
+                        6'h03:
+                            \a$next  = \$1045 [24:0];
+                        6'h04:
+                            \a$next  = \$1048 [24:0];
+                        6'h05:
+                            \a$next  = \$1051 [24:0];
+                        6'h06:
+                            \a$next  = \$1054 [24:0];
+                        6'h07:
+                            \a$next  = \$1057 [24:0];
+                        6'h08:
+                            \a$next  = \$1060 [24:0];
+                        6'h09:
+                            \a$next  = \$1063 [24:0];
+                        6'h0a:
+                            \a$next  = \$1066 [24:0];
+                        6'h0b:
+                            \a$next  = \$1069 [24:0];
+                        6'h0c:
+                            \a$next  = \$1072 [24:0];
+                        6'h0d:
+                            \a$next  = \$1075 [24:0];
+                        6'h0e:
+                            \a$next  = \$1078 [24:0];
+                        6'h0f:
+                            \a$next  = \$1081 [24:0];
+                        6'h10:
+                            \a$next  = \$1084 [24:0];
+                        6'h11:
+                            \a$next  = \$1087 [24:0];
+                        6'h??:
+                            \a$next  = \$1090 [24:0];
+                      endcase
+                  5'h??:
+                      (* full_case = 32'd1 *)
+                      (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:97" *)
+                      casez (\$1093 )
+                        6'h00:
+                            \a$next  = \$1096 [24:0];
+                        6'h01:
+                            \a$next  = \$1099 [24:0];
+                        6'h02:
+                            \a$next  = \$1102 [24:0];
+                        6'h03:
+                            \a$next  = \$1105 [24:0];
+                        6'h04:
+                            \a$next  = \$1108 [24:0];
+                        6'h05:
+                            \a$next  = \$1111 [24:0];
+                        6'h06:
+                            \a$next  = \$1114 [24:0];
+                        6'h07:
+                            \a$next  = \$1117 [24:0];
+                        6'h08:
+                            \a$next  = \$1120 [24:0];
+                        6'h09:
+                            \a$next  = \$1123 [24:0];
+                        6'h0a:
+                            \a$next  = \$1126 [24:0];
+                        6'h0b:
+                            \a$next  = \$1129 [24:0];
+                        6'h0c:
+                            \a$next  = \$1132 [24:0];
+                        6'h0d:
+                            \a$next  = \$1135 [24:0];
+                        6'h0e:
+                            \a$next  = \$1138 [24:0];
+                        6'h0f:
+                            \a$next  = \$1141 [24:0];
+                        6'h10:
+                            \a$next  = \$1144 [24:0];
+                        6'h11:
+                            \a$next  = \$1147 [24:0];
+                        6'h??:
+                            \a$next  = \$1150 [24:0];
+                      endcase
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \a$next  = 25'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x4$next  = x4;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x4$next  = x3;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x4$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x5$next  = x5;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x5$next  = x4;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x5$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x6$next  = x6;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x6$next  = x5;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x6$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x7$next  = x7;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x7$next  = x6;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x7$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x8$next  = x8;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x8$next  = x7;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x8$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x9$next  = x9;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x9$next  = x8;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x9$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x10$next  = x10;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x10$next  = x9;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x10$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x11$next  = x11;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x11$next  = x10;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x11$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x12$next  = x12;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x12$next  = x11;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x12$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x13$next  = x13;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x13$next  = x12;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x13$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \b$next  = b;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \b$next  = 24'h095070;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$1152 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:95" */
+            default:
+                (* full_case = 32'd1 *)
+                (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:98" *)
+                casez (ix)
+                  5'h00:
+                      \b$next  = 24'h095070;
+                  5'h01:
+                      \b$next  = 24'hfffe79;
+                  5'h02:
+                      \b$next  = 24'hf74ad4;
+                  5'h03:
+                      \b$next  = 24'hfffe99;
+                  5'h04:
+                      \b$next  = 24'h0e1673;
+                  5'h05:
+                      \b$next  = 24'hffff62;
+                  5'h06:
+                      \b$next  = 24'he6333c;
+                  5'h07:
+                      \b$next  = 24'h0000c2;
+                  5'h08:
+                      \b$next  = 24'h5104f9;
+                  5'h09:
+                      \b$next  = 24'h80014f;
+                  5'h0a:
+                      \b$next  = 24'h5104f9;
+                  5'h0b:
+                      \b$next  = 24'h0000c2;
+                  5'h0c:
+                      \b$next  = 24'he6333c;
+                  5'h0d:
+                      \b$next  = 24'hffff62;
+                  5'h0e:
+                      \b$next  = 24'h0e1673;
+                  5'h0f:
+                      \b$next  = 24'hfffe99;
+                  5'h10:
+                      \b$next  = 24'hf74ad4;
+                  5'h11:
+                      \b$next  = 24'hfffe79;
+                  5'h??:
+                      \b$next  = 24'h095070;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \b$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x14$next  = x14;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x14$next  = x13;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x14$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x15$next  = x15;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x15$next  = x14;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x15$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x16$next  = x16;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x16$next  = x15;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x16$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x17$next  = x17;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x17$next  = x16;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x17$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x18$next  = x18;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x18$next  = x17;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x18$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \decimate_counter$next  = decimate_counter;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+          casez (\$1190 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" */
+            1'h1:
+                \decimate_counter$next  = \$1193 [0];
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:115" */
+            default:
+                \decimate_counter$next  = 1'h0;
+          endcase
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \decimate_counter$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \strobe_out$next  = strobe_out;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          (* full_case = 32'd1 *)
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" *)
+          casez (\$1195 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:113" */
+            1'h1:
+                /* empty */;
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:115" */
+            default:
+                \strobe_out$next  = 1'h1;
+          endcase
+    endcase
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:119" *)
+    casez (strobe_out)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:119" */
+      1'h1:
+          \strobe_out$next  = 1'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \strobe_out$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \madd$next  = madd;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \madd$next  = 25'h0000000;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          \madd$next  = \$1179 [24:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \madd$next  = 25'h0000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \fsm_state$next  = fsm_state;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" *)
+          casez (strobe_in)
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:82" */
+            1'h1:
+                \fsm_state$next  = 2'h1;
+          endcase
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" *)
+          casez (\$1181 )
+            /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:93" */
+            1'h1:
+                \fsm_state$next  = 2'h2;
+          endcase
+      /* \amaranth.decoding  = "OUTPUT/2" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:102" */
+      2'h2:
+          \fsm_state$next  = 2'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \fsm_state$next  = 2'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \signal_out$next  = signal_out;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:80" *)
+    casez (fsm_state)
+      /* \amaranth.decoding  = "IDLE/0" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:81" */
+      2'h0:
+          /* empty */;
+      /* \amaranth.decoding  = "MAC/1" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:91" */
+      2'h1:
+          /* empty */;
+      /* \amaranth.decoding  = "OUTPUT/2" */
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:102" */
+      2'h2:
+          \signal_out$next  = \$1186 [23:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \signal_out$next  = 24'h000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x0$next  = x0;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x0$next  = \$1188 ;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x0$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x1$next  = x1;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x1$next  = x0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x1$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x2$next  = x2;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x2$next  = x1;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x2$next  = 48'h000000000000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$626 ) begin end
+    \x3$next  = x3;
+    (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" *)
+    casez (strobe_in)
+      /* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:110" */
+      1'h1:
+          \x3$next  = x2;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \x3$next  = 48'h000000000000;
+    endcase
+  end
+  assign \$3  = \$4 ;
+  assign \$6  = \$7 ;
+  assign \$15  = \$16 ;
+  assign \$18  = \$19 ;
+  assign \$21  = \$22 ;
+  assign \$24  = \$25 ;
+  assign \$27  = \$28 ;
+  assign \$30  = \$31 ;
+  assign \$33  = \$34 ;
+  assign \$36  = \$37 ;
+  assign \$39  = \$40 ;
+  assign \$42  = \$43 ;
+  assign \$45  = \$46 ;
+  assign \$48  = \$49 ;
+  assign \$51  = \$52 ;
+  assign \$54  = \$55 ;
+  assign \$57  = \$58 ;
+  assign \$60  = \$61 ;
+  assign \$63  = \$64 ;
+  assign \$66  = \$67 ;
+  assign \$69  = \$70 ;
+  assign \$75  = \$76 ;
+  assign \$78  = \$79 ;
+  assign \$81  = \$82 ;
+  assign \$84  = \$85 ;
+  assign \$87  = \$88 ;
+  assign \$90  = \$91 ;
+  assign \$93  = \$94 ;
+  assign \$96  = \$97 ;
+  assign \$99  = \$100 ;
+  assign \$102  = \$103 ;
+  assign \$105  = \$106 ;
+  assign \$108  = \$109 ;
+  assign \$111  = \$112 ;
+  assign \$114  = \$115 ;
+  assign \$117  = \$118 ;
+  assign \$120  = \$121 ;
+  assign \$123  = \$124 ;
+  assign \$126  = \$127 ;
+  assign \$129  = \$130 ;
+  assign \$135  = \$136 ;
+  assign \$138  = \$139 ;
+  assign \$141  = \$142 ;
+  assign \$144  = \$145 ;
+  assign \$147  = \$148 ;
+  assign \$150  = \$151 ;
+  assign \$153  = \$154 ;
+  assign \$156  = \$157 ;
+  assign \$159  = \$160 ;
+  assign \$162  = \$163 ;
+  assign \$165  = \$166 ;
+  assign \$168  = \$169 ;
+  assign \$171  = \$172 ;
+  assign \$174  = \$175 ;
+  assign \$177  = \$178 ;
+  assign \$180  = \$181 ;
+  assign \$183  = \$184 ;
+  assign \$186  = \$187 ;
+  assign \$189  = \$190 ;
+  assign \$195  = \$196 ;
+  assign \$198  = \$199 ;
+  assign \$201  = \$202 ;
+  assign \$204  = \$205 ;
+  assign \$207  = \$208 ;
+  assign \$210  = \$211 ;
+  assign \$213  = \$214 ;
+  assign \$216  = \$217 ;
+  assign \$219  = \$220 ;
+  assign \$222  = \$223 ;
+  assign \$225  = \$226 ;
+  assign \$228  = \$229 ;
+  assign \$231  = \$232 ;
+  assign \$234  = \$235 ;
+  assign \$237  = \$238 ;
+  assign \$240  = \$241 ;
+  assign \$243  = \$244 ;
+  assign \$246  = \$247 ;
+  assign \$249  = \$250 ;
+  assign \$255  = \$256 ;
+  assign \$258  = \$259 ;
+  assign \$261  = \$262 ;
+  assign \$264  = \$265 ;
+  assign \$267  = \$268 ;
+  assign \$270  = \$271 ;
+  assign \$273  = \$274 ;
+  assign \$276  = \$277 ;
+  assign \$279  = \$280 ;
+  assign \$282  = \$283 ;
+  assign \$285  = \$286 ;
+  assign \$288  = \$289 ;
+  assign \$291  = \$292 ;
+  assign \$294  = \$295 ;
+  assign \$297  = \$298 ;
+  assign \$300  = \$301 ;
+  assign \$303  = \$304 ;
+  assign \$306  = \$307 ;
+  assign \$309  = \$310 ;
+  assign \$315  = \$316 ;
+  assign \$318  = \$319 ;
+  assign \$321  = \$322 ;
+  assign \$324  = \$325 ;
+  assign \$327  = \$328 ;
+  assign \$330  = \$331 ;
+  assign \$333  = \$334 ;
+  assign \$336  = \$337 ;
+  assign \$339  = \$340 ;
+  assign \$342  = \$343 ;
+  assign \$345  = \$346 ;
+  assign \$348  = \$349 ;
+  assign \$351  = \$352 ;
+  assign \$354  = \$355 ;
+  assign \$357  = \$358 ;
+  assign \$360  = \$361 ;
+  assign \$363  = \$364 ;
+  assign \$366  = \$367 ;
+  assign \$369  = \$370 ;
+  assign \$375  = \$376 ;
+  assign \$378  = \$379 ;
+  assign \$381  = \$382 ;
+  assign \$384  = \$385 ;
+  assign \$387  = \$388 ;
+  assign \$390  = \$391 ;
+  assign \$393  = \$394 ;
+  assign \$396  = \$397 ;
+  assign \$399  = \$400 ;
+  assign \$402  = \$403 ;
+  assign \$405  = \$406 ;
+  assign \$408  = \$409 ;
+  assign \$411  = \$412 ;
+  assign \$414  = \$415 ;
+  assign \$417  = \$418 ;
+  assign \$420  = \$421 ;
+  assign \$423  = \$424 ;
+  assign \$426  = \$427 ;
+  assign \$429  = \$430 ;
+  assign \$435  = \$436 ;
+  assign \$438  = \$439 ;
+  assign \$441  = \$442 ;
+  assign \$444  = \$445 ;
+  assign \$447  = \$448 ;
+  assign \$450  = \$451 ;
+  assign \$453  = \$454 ;
+  assign \$456  = \$457 ;
+  assign \$459  = \$460 ;
+  assign \$462  = \$463 ;
+  assign \$465  = \$466 ;
+  assign \$468  = \$469 ;
+  assign \$471  = \$472 ;
+  assign \$474  = \$475 ;
+  assign \$477  = \$478 ;
+  assign \$480  = \$481 ;
+  assign \$483  = \$484 ;
+  assign \$486  = \$487 ;
+  assign \$489  = \$490 ;
+  assign \$495  = \$496 ;
+  assign \$498  = \$499 ;
+  assign \$501  = \$502 ;
+  assign \$504  = \$505 ;
+  assign \$507  = \$508 ;
+  assign \$510  = \$511 ;
+  assign \$513  = \$514 ;
+  assign \$516  = \$517 ;
+  assign \$519  = \$520 ;
+  assign \$522  = \$523 ;
+  assign \$525  = \$526 ;
+  assign \$528  = \$529 ;
+  assign \$531  = \$532 ;
+  assign \$534  = \$535 ;
+  assign \$537  = \$538 ;
+  assign \$540  = \$541 ;
+  assign \$543  = \$544 ;
+  assign \$546  = \$547 ;
+  assign \$549  = \$550 ;
+  assign \$555  = \$556 ;
+  assign \$558  = \$559 ;
+  assign \$561  = \$562 ;
+  assign \$564  = \$565 ;
+  assign \$567  = \$568 ;
+  assign \$570  = \$571 ;
+  assign \$573  = \$574 ;
+  assign \$576  = \$577 ;
+  assign \$579  = \$580 ;
+  assign \$582  = \$583 ;
+  assign \$585  = \$586 ;
+  assign \$588  = \$589 ;
+  assign \$591  = \$592 ;
+  assign \$594  = \$595 ;
+  assign \$597  = \$598 ;
+  assign \$600  = \$601 ;
+  assign \$603  = \$604 ;
+  assign \$606  = \$607 ;
+  assign \$609  = \$610 ;
+  assign \$615  = \$616 ;
+  assign \$618  = \$619 ;
+  assign \$621  = \$622 ;
+  assign \$624  = \$625 ;
+  assign \$627  = \$628 ;
+  assign \$630  = \$631 ;
+  assign \$633  = \$634 ;
+  assign \$636  = \$637 ;
+  assign \$639  = \$640 ;
+  assign \$642  = \$643 ;
+  assign \$645  = \$646 ;
+  assign \$648  = \$649 ;
+  assign \$651  = \$652 ;
+  assign \$654  = \$655 ;
+  assign \$657  = \$658 ;
+  assign \$660  = \$661 ;
+  assign \$663  = \$664 ;
+  assign \$666  = \$667 ;
+  assign \$669  = \$670 ;
+  assign \$675  = \$676 ;
+  assign \$678  = \$679 ;
+  assign \$681  = \$682 ;
+  assign \$684  = \$685 ;
+  assign \$687  = \$688 ;
+  assign \$690  = \$691 ;
+  assign \$693  = \$694 ;
+  assign \$696  = \$697 ;
+  assign \$699  = \$700 ;
+  assign \$702  = \$703 ;
+  assign \$705  = \$706 ;
+  assign \$708  = \$709 ;
+  assign \$711  = \$712 ;
+  assign \$714  = \$715 ;
+  assign \$717  = \$718 ;
+  assign \$720  = \$721 ;
+  assign \$723  = \$724 ;
+  assign \$726  = \$727 ;
+  assign \$729  = \$730 ;
+  assign \$735  = \$736 ;
+  assign \$738  = \$739 ;
+  assign \$741  = \$742 ;
+  assign \$744  = \$745 ;
+  assign \$747  = \$748 ;
+  assign \$750  = \$751 ;
+  assign \$753  = \$754 ;
+  assign \$756  = \$757 ;
+  assign \$759  = \$760 ;
+  assign \$762  = \$763 ;
+  assign \$765  = \$766 ;
+  assign \$768  = \$769 ;
+  assign \$771  = \$772 ;
+  assign \$774  = \$775 ;
+  assign \$777  = \$778 ;
+  assign \$780  = \$781 ;
+  assign \$783  = \$784 ;
+  assign \$786  = \$787 ;
+  assign \$789  = \$790 ;
+  assign \$795  = \$796 ;
+  assign \$798  = \$799 ;
+  assign \$801  = \$802 ;
+  assign \$804  = \$805 ;
+  assign \$807  = \$808 ;
+  assign \$810  = \$811 ;
+  assign \$813  = \$814 ;
+  assign \$816  = \$817 ;
+  assign \$819  = \$820 ;
+  assign \$822  = \$823 ;
+  assign \$825  = \$826 ;
+  assign \$828  = \$829 ;
+  assign \$831  = \$832 ;
+  assign \$834  = \$835 ;
+  assign \$837  = \$838 ;
+  assign \$840  = \$841 ;
+  assign \$843  = \$844 ;
+  assign \$846  = \$847 ;
+  assign \$849  = \$850 ;
+  assign \$855  = \$856 ;
+  assign \$858  = \$859 ;
+  assign \$861  = \$862 ;
+  assign \$864  = \$865 ;
+  assign \$867  = \$868 ;
+  assign \$870  = \$871 ;
+  assign \$873  = \$874 ;
+  assign \$876  = \$877 ;
+  assign \$879  = \$880 ;
+  assign \$882  = \$883 ;
+  assign \$885  = \$886 ;
+  assign \$888  = \$889 ;
+  assign \$891  = \$892 ;
+  assign \$894  = \$895 ;
+  assign \$897  = \$898 ;
+  assign \$900  = \$901 ;
+  assign \$903  = \$904 ;
+  assign \$906  = \$907 ;
+  assign \$909  = \$910 ;
+  assign \$915  = \$916 ;
+  assign \$918  = \$919 ;
+  assign \$921  = \$922 ;
+  assign \$924  = \$925 ;
+  assign \$927  = \$928 ;
+  assign \$930  = \$931 ;
+  assign \$933  = \$934 ;
+  assign \$936  = \$937 ;
+  assign \$939  = \$940 ;
+  assign \$942  = \$943 ;
+  assign \$945  = \$946 ;
+  assign \$948  = \$949 ;
+  assign \$951  = \$952 ;
+  assign \$954  = \$955 ;
+  assign \$957  = \$958 ;
+  assign \$960  = \$961 ;
+  assign \$963  = \$964 ;
+  assign \$966  = \$967 ;
+  assign \$969  = \$970 ;
+  assign \$975  = \$976 ;
+  assign \$978  = \$979 ;
+  assign \$981  = \$982 ;
+  assign \$984  = \$985 ;
+  assign \$987  = \$988 ;
+  assign \$990  = \$991 ;
+  assign \$993  = \$994 ;
+  assign \$996  = \$997 ;
+  assign \$999  = \$1000 ;
+  assign \$1002  = \$1003 ;
+  assign \$1005  = \$1006 ;
+  assign \$1008  = \$1009 ;
+  assign \$1011  = \$1012 ;
+  assign \$1014  = \$1015 ;
+  assign \$1017  = \$1018 ;
+  assign \$1020  = \$1021 ;
+  assign \$1023  = \$1024 ;
+  assign \$1026  = \$1027 ;
+  assign \$1029  = \$1030 ;
+  assign \$1035  = \$1036 ;
+  assign \$1038  = \$1039 ;
+  assign \$1041  = \$1042 ;
+  assign \$1044  = \$1045 ;
+  assign \$1047  = \$1048 ;
+  assign \$1050  = \$1051 ;
+  assign \$1053  = \$1054 ;
+  assign \$1056  = \$1057 ;
+  assign \$1059  = \$1060 ;
+  assign \$1062  = \$1063 ;
+  assign \$1065  = \$1066 ;
+  assign \$1068  = \$1069 ;
+  assign \$1071  = \$1072 ;
+  assign \$1074  = \$1075 ;
+  assign \$1077  = \$1078 ;
+  assign \$1080  = \$1081 ;
+  assign \$1083  = \$1084 ;
+  assign \$1086  = \$1087 ;
+  assign \$1089  = \$1090 ;
+  assign \$1095  = \$1096 ;
+  assign \$1098  = \$1099 ;
+  assign \$1101  = \$1102 ;
+  assign \$1104  = \$1105 ;
+  assign \$1107  = \$1108 ;
+  assign \$1110  = \$1111 ;
+  assign \$1113  = \$1114 ;
+  assign \$1116  = \$1117 ;
+  assign \$1119  = \$1120 ;
+  assign \$1122  = \$1123 ;
+  assign \$1125  = \$1126 ;
+  assign \$1128  = \$1129 ;
+  assign \$1131  = \$1132 ;
+  assign \$1134  = \$1135 ;
+  assign \$1137  = \$1138 ;
+  assign \$1140  = \$1141 ;
+  assign \$1143  = \$1144 ;
+  assign \$1146  = \$1147 ;
+  assign \$1149  = \$1150 ;
+  assign \$1155  = 48'h000000095070;
+  assign \$1156  = 48'hfffffffffe79;
+  assign \$1157  = 48'hfffffff74ad4;
+  assign \$1158  = 48'hfffffffffe99;
+  assign \$1159  = 48'h0000000e1673;
+  assign \$1160  = 48'hffffffffff62;
+  assign \$1161  = 48'hffffffe6333c;
+  assign \$1162  = 48'h0000000000c2;
+  assign \$1163  = 48'h0000005104f9;
+  assign \$1164  = 48'h00000080014f;
+  assign \$1165  = 48'h0000005104f9;
+  assign \$1166  = 48'h0000000000c2;
+  assign \$1167  = 48'hffffffe6333c;
+  assign \$1168  = 48'hffffffffff62;
+  assign \$1169  = 48'h0000000e1673;
+  assign \$1170  = 48'hfffffffffe99;
+  assign \$1171  = 48'hfffffff74ad4;
+  assign \$1172  = 48'hfffffffffe79;
+  assign \$1173  = 48'h000000095070;
+  assign \$1174  = \$1179 ;
+  assign \$1183  = \$1186 ;
+  assign \$1192  = \$1193 ;
+  assign \$13  = 6'h12;
+  assign \$73  = 6'h11;
+  assign \$133  = 6'h10;
+  assign \$193  = 6'h0f;
+  assign \$253  = 6'h0e;
+  assign \$313  = 6'h0d;
+  assign \$373  = 6'h0c;
+  assign \$433  = 6'h0b;
+  assign \$493  = 6'h0a;
+  assign \$553  = 6'h09;
+  assign \$613  = 6'h08;
+  assign \$673  = 6'h07;
+  assign \$733  = 6'h06;
+  assign \$793  = 6'h05;
+  assign \$853  = 6'h04;
+  assign \$913  = 6'h03;
+  assign \$973  = 6'h02;
+  assign \$1033  = 6'h01;
+  assign \$1093  = 6'h00;
+  assign \$1177  = { \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48], \$1175 [48:24] };
+  assign \$1184  = { x9[47], x9[47:1] };
+endmodule
+
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.in_fifo" *)
+(* generator = "Amaranth" *)
+module in_fifo(usb_clk, r_rdy, r_en, r_data, w_data, w_en, w_rdy, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$627  = 0;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *)
   wire [9:0] \$10 ;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *)
@@ -41520,9 +49138,9 @@ module out_fifo(usb_clk, r_rdy, r_en, r_data, w_rdy, w_data, w_en, usb_rst);
   wire [7:0] storage_w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:144" *)
   wire storage_w_en;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
   input [7:0] w_data;
@@ -42076,7 +49694,7 @@ module out_fifo(usb_clk, r_rdy, r_en, r_data, w_rdy, w_data, w_en, usb_rst);
   always @(posedge usb_clk)
     produce <= \produce$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$508 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$627 ) begin end
     \consume$next  = consume;
     (* src = "/home/git/amaranth/amaranth/lib/fifo.py:164" *)
     casez (\$13 )
@@ -42091,7 +49709,7 @@ module out_fifo(usb_clk, r_rdy, r_en, r_data, w_rdy, w_data, w_en, usb_rst);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$508 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$627 ) begin end
     \level$next  = level;
     (* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" *)
     casez (\$24 )
@@ -42112,7 +49730,7 @@ module out_fifo(usb_clk, r_rdy, r_en, r_data, w_rdy, w_data, w_en, usb_rst);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$508 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$627 ) begin end
     \produce$next  = produce;
     (* src = "/home/git/amaranth/amaranth/lib/fifo.py:155" *)
     casez (\$8 )
@@ -42143,142 +49761,90 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo" *)
 (* generator = "Amaranth" *)
-module \out_fifo$7 (clk, usb_clk, rst, w_en, w_rdy, w_data, r_data, r_en, r_rdy, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$509  = 0;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:341" *)
-  wire [10:0] \$10 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:377" *)
-  wire \$12 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:378" *)
-  wire \$14 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:377" *)
-  wire \$16 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:379" *)
+module out_fifo(usb_clk, w_en, w_rdy, w_data, r_data, r_en, r_rdy, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$628  = 0;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *)
+  wire [9:0] \$10 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *)
+  wire [9:0] \$11 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:140" *)
+  wire \$13 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *)
+  wire [9:0] \$15 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *)
+  wire [9:0] \$16 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:141" *)
   wire \$18 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:335" *)
-  wire [10:0] \$2 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:377" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:134" *)
+  wire \$2 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" *)
   wire \$20 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:380" *)
-  wire \$22 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:383" *)
-  wire [10:0] \$24 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:383" *)
-  wire [10:0] \$25 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:384" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:140" *)
+  wire \$21 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" *)
+  wire \$24 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:168" *)
+  wire [10:0] \$26 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:168" *)
   wire [10:0] \$27 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:384" *)
-  wire [10:0] \$28 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:329" *)
-  wire \$3 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:329" *)
-  wire \$30 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:394" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:140" *)
+  wire \$29 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:169" *)
+  wire \$31 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:141" *)
   wire \$32 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:400" *)
-  wire \$34 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:335" *)
-  wire [10:0] \$5 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:341" *)
-  wire [10:0] \$7 ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:330" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:169" *)
+  wire \$35 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:170" *)
+  wire [10:0] \$37 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:170" *)
+  wire [10:0] \$38 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:135" *)
+  wire \$4 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:153" *)
+  wire \$6 ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:141" *)
   wire \$8 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:353" *)
-  reg [9:0] consume_cdc_consume_r_gry = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:353" *)
-  reg [9:0] \consume_cdc_consume_r_gry$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:354" *)
-  wire [9:0] consume_cdc_consume_w_gry;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:176" *)
-  wire [9:0] consume_dec_i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:177" *)
-  wire [9:0] consume_dec_o;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:149" *)
-  wire [9:0] consume_enc_i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:150" *)
-  wire [9:0] consume_enc_o;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:339" *)
-  reg [9:0] consume_r_bin = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:339" *)
-  reg [9:0] \consume_r_bin$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:340" *)
-  wire [9:0] consume_r_nxt;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:362" *)
-  reg [9:0] consume_w_bin = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:362" *)
-  reg [9:0] \consume_w_bin$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:345" *)
-  wire [9:0] produce_cdc_produce_r_gry;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:344" *)
-  reg [9:0] produce_cdc_produce_w_gry = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:344" *)
-  reg [9:0] \produce_cdc_produce_w_gry$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:176" *)
-  wire [9:0] produce_dec_i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:177" *)
-  wire [9:0] produce_dec_o;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:149" *)
-  wire [9:0] produce_enc_i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:150" *)
-  wire [9:0] produce_enc_o;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:368" *)
-  wire [9:0] produce_r_bin;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:333" *)
-  reg [9:0] produce_w_bin = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:333" *)
-  reg [9:0] \produce_w_bin$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:334" *)
-  wire [9:0] produce_w_nxt;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:148" *)
+  reg [8:0] consume = 9'h000;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:148" *)
+  reg [8:0] \consume$next ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:122" *)
+  reg [9:0] level = 10'h000;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:122" *)
+  reg [9:0] \level$next ;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:147" *)
+  reg [8:0] produce = 9'h000;
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:147" *)
+  reg [8:0] \produce$next ;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
   output [8:0] r_data;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:375" *)
-  reg r_empty;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
   input r_en;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:86" *)
   wire [9:0] r_level;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:84" *)
   output r_rdy;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:311" *)
-  reg r_rst = 1'h0;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:311" *)
-  reg \r_rst$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:415" *)
-  wire rst_cdc_r_rst;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:176" *)
-  wire [9:0] rst_dec_i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:177" *)
-  wire [9:0] rst_dec_o;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:388" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:145" *)
   wire [8:0] storage_r_addr;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:388" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:145" *)
   wire [8:0] storage_r_data;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:388" *)
-  wire storage_r_en;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:387" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:144" *)
   wire [8:0] storage_w_addr;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:387" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:144" *)
   wire [8:0] storage_w_data;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:387" *)
+  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:144" *)
   wire storage_w_en;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
   input [8:0] w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:80" *)
   input w_en;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:374" *)
-  wire w_full;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:81" *)
-  reg [9:0] w_level = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:81" *)
-  reg [9:0] \w_level$next ;
+  wire [9:0] w_level;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
   output w_rdy;
   reg [8:0] storage [511:0];
@@ -42800,279 +50366,412 @@ module \out_fifo$7 (clk, usb_clk, rst, w_en, w_rdy, w_data, r_data, r_en, r_rdy,
     if (storage_w_en)
       storage[storage_w_addr] <= storage_w_data;
   end
-  reg [8:0] _0_;
-  always @(posedge clk) begin
-    _0_ <= storage[storage_r_addr];
+  assign storage_r_data = storage[storage_r_addr];
+  assign \$11  = produce + (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *) 1'h1;
+  assign \$13  = r_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:140" *) r_en;
+  assign \$16  = consume + (* src = "/home/git/amaranth/amaranth/lib/fifo.py:91" *) 1'h1;
+  assign \$18  = w_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:141" *) w_en;
+  assign \$21  = r_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:140" *) r_en;
+  assign \$20  = ~ (* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" *) \$21 ;
+  assign \$24  = \$18  & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" *) \$20 ;
+  assign \$27  = level + (* src = "/home/git/amaranth/amaranth/lib/fifo.py:168" *) 1'h1;
+  assign \$2  = level != (* src = "/home/git/amaranth/amaranth/lib/fifo.py:134" *) 10'h200;
+  assign \$29  = r_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:140" *) r_en;
+  assign \$32  = w_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:141" *) w_en;
+  assign \$31  = ~ (* src = "/home/git/amaranth/amaranth/lib/fifo.py:169" *) \$32 ;
+  assign \$35  = \$29  & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:169" *) \$31 ;
+  assign \$38  = level - (* src = "/home/git/amaranth/amaranth/lib/fifo.py:170" *) 1'h1;
+  assign \$4  = | (* src = "/home/git/amaranth/amaranth/lib/fifo.py:135" *) level;
+  assign \$6  = w_en & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:153" *) w_rdy;
+  assign \$8  = w_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:141" *) w_en;
+  always @(posedge usb_clk)
+    level <= \level$next ;
+  always @(posedge usb_clk)
+    consume <= \consume$next ;
+  always @(posedge usb_clk)
+    produce <= \produce$next ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$628 ) begin end
+    \consume$next  = consume;
+    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:164" *)
+    casez (\$13 )
+      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:164" */
+      1'h1:
+          \consume$next  = \$16 [8:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \consume$next  = 9'h000;
+    endcase
   end
-  assign storage_r_data = _0_;
-  assign \$10  = consume_r_bin + (* src = "/home/git/amaranth/amaranth/lib/fifo.py:341" *) \$8 ;
-  assign \$12  = produce_cdc_produce_w_gry[9] != (* src = "/home/git/amaranth/amaranth/lib/fifo.py:377" *) consume_cdc_consume_w_gry[9];
-  assign \$14  = produce_cdc_produce_w_gry[8] != (* src = "/home/git/amaranth/amaranth/lib/fifo.py:378" *) consume_cdc_consume_w_gry[8];
-  assign \$16  = \$12  & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:377" *) \$14 ;
-  assign \$18  = produce_cdc_produce_w_gry[7:0] == (* src = "/home/git/amaranth/amaranth/lib/fifo.py:379" *) consume_cdc_consume_w_gry[7:0];
-  assign \$20  = \$16  & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:377" *) \$18 ;
-  assign \$22  = consume_cdc_consume_r_gry == (* src = "/home/git/amaranth/amaranth/lib/fifo.py:380" *) produce_cdc_produce_r_gry;
-  assign \$25  = produce_w_bin - (* src = "/home/git/amaranth/amaranth/lib/fifo.py:383" *) consume_w_bin;
-  assign \$28  = produce_r_bin - (* src = "/home/git/amaranth/amaranth/lib/fifo.py:384" *) consume_r_bin;
-  assign \$30  = w_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:329" *) w_en;
-  assign \$32  = ~ (* src = "/home/git/amaranth/amaranth/lib/fifo.py:394" *) w_full;
-  assign \$34  = ~ (* src = "/home/git/amaranth/amaranth/lib/fifo.py:400" *) r_empty;
-  assign \$3  = w_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:329" *) w_en;
-  assign \$5  = produce_w_bin + (* src = "/home/git/amaranth/amaranth/lib/fifo.py:335" *) \$3 ;
-  assign \$8  = r_rdy & (* src = "/home/git/amaranth/amaranth/lib/fifo.py:330" *) r_en;
-  always @(posedge clk)
-    r_rst <= \r_rst$next ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$628 ) begin end
+    \level$next  = level;
+    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" *)
+    casez (\$24 )
+      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:167" */
+      1'h1:
+          \level$next  = \$27 [9:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:169" *)
+    casez (\$35 )
+      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:169" */
+      1'h1:
+          \level$next  = \$38 [9:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \level$next  = 10'h000;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$628 ) begin end
+    \produce$next  = produce;
+    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:155" *)
+    casez (\$8 )
+      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:155" */
+      1'h1:
+          \produce$next  = \$11 [8:0];
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \produce$next  = 9'h000;
+    endcase
+  end
+  assign \$10  = \$11 ;
+  assign \$15  = \$16 ;
+  assign \$26  = \$27 ;
+  assign \$37  = \$38 ;
+  assign r_data = storage_r_data;
+  assign storage_r_addr = consume;
+  assign storage_w_en = \$6 ;
+  assign storage_w_data = w_data;
+  assign storage_w_addr = produce;
+  assign r_level = level;
+  assign w_level = level;
+  assign r_rdy = \$4 ;
+  assign w_rdy = \$2 ;
+endmodule
+
+(* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_receiver" *)
+(* generator = "Amaranth" *)
+module pdm_receiver(usb_clk, pdm_data_in, pdm_clock_out, pcm_strobe_out, pcm_data_out, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$629  = 0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:105" *)
+  wire \$1 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:112" *)
+  wire \$3 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:120" *)
+  wire \$5 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:120" *)
+  wire \$7 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:99" *)
+  wire base_clock;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:118" *)
+  reg base_clock_next = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:118" *)
+  reg \base_clock_next$next ;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:45" *)
+  reg [23:0] cic_signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:46" *)
+  wire [23:0] cic_signal_out;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:43" *)
+  wire cic_strobe_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:44" *)
+  wire cic_strobe_out;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:12" *)
+  wire clk_divider_clock_enable_in;
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
+  wire clk_divider_clock_out;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
+  wire fir_enable_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:26" *)
+  wire [23:0] fir_signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
+  wire [23:0] fir_signal_out;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
+  wire [23:0] hb1_signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
+  wire [23:0] hb1_signal_out;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:21" *)
+  wire hb1_strobe_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
+  wire hb1_strobe_out;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:23" *)
+  wire [23:0] hb2_signal_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:24" *)
+  wire [23:0] hb2_signal_out;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:21" *)
+  wire hb2_strobe_in;
+  (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
+  wire hb2_strobe_out;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:74" *)
+  output [23:0] pcm_data_out;
+  reg [23:0] pcm_data_out = 24'h000000;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:74" *)
+  reg [23:0] \pcm_data_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:73" *)
+  output pcm_strobe_out;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:70" *)
+  wire pdm_clock_in;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:69" *)
+  wire pdm_clock_in_en;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:97" *)
+  reg pdm_clock_in_sy0 = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:97" *)
+  reg \pdm_clock_in_sy0$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:98" *)
+  reg pdm_clock_in_sy1 = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:98" *)
+  reg \pdm_clock_in_sy1$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:71" *)
+  output pdm_clock_out;
+  reg pdm_clock_out = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:71" *)
+  reg \pdm_clock_out$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:72" *)
+  input pdm_data_in;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:152" *)
+  reg pdm_data_in_sy0 = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:152" *)
+  reg \pdm_data_in_sy0$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:153" *)
+  reg pdm_data_in_sy1 = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:153" *)
+  reg \pdm_data_in_sy1$next ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:100" *)
+  wire strobe_in;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:101" *)
+  wire strobe_out;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  assign \$5  = ~ (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:120" *) base_clock_next;
+  assign \$7  = base_clock & (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:120" *) \$5 ;
   always @(posedge usb_clk)
-    w_level <= \w_level$next ;
+    pcm_data_out <= \pcm_data_out$next ;
   always @(posedge usb_clk)
-    consume_w_bin <= \consume_w_bin$next ;
-  always @(posedge clk)
-    consume_cdc_consume_r_gry <= \consume_cdc_consume_r_gry$next ;
+    pdm_data_in_sy1 <= \pdm_data_in_sy1$next ;
   always @(posedge usb_clk)
-    produce_cdc_produce_w_gry <= \produce_cdc_produce_w_gry$next ;
-  always @(posedge clk)
-    consume_r_bin <= \consume_r_bin$next ;
+    pdm_data_in_sy0 <= \pdm_data_in_sy0$next ;
   always @(posedge usb_clk)
-    produce_w_bin <= \produce_w_bin$next ;
-  consume_cdc consume_cdc (
-    .consume_r_gry(consume_cdc_consume_r_gry),
-    .consume_w_gry(consume_cdc_consume_w_gry),
+    base_clock_next <= \base_clock_next$next ;
+  always @(posedge usb_clk)
+    pdm_clock_out <= \pdm_clock_out$next ;
+  always @(posedge usb_clk)
+    pdm_clock_in_sy1 <= \pdm_clock_in_sy1$next ;
+  always @(posedge usb_clk)
+    pdm_clock_in_sy0 <= \pdm_clock_in_sy0$next ;
+  cic cic (
+    .signal_in(cic_signal_in),
+    .signal_out(cic_signal_out),
+    .strobe_in(cic_strobe_in),
+    .strobe_out(cic_strobe_out),
     .usb_clk(usb_clk),
     .usb_rst(usb_rst)
   );
-  consume_dec consume_dec (
-    .i(consume_dec_i),
-    .o(consume_dec_o)
-  );
-  consume_enc consume_enc (
-    .i(consume_enc_i),
-    .o(consume_enc_o)
-  );
-  produce_cdc produce_cdc (
-    .clk(clk),
-    .produce_r_gry(produce_cdc_produce_r_gry),
-    .produce_w_gry(produce_cdc_produce_w_gry),
-    .rst(rst)
-  );
-  produce_dec produce_dec (
-    .i(produce_dec_i),
-    .o(produce_dec_o)
-  );
-  produce_enc produce_enc (
-    .i(produce_enc_i),
-    .o(produce_enc_o)
-  );
-  rst_cdc rst_cdc (
-    .clk(clk),
-    .r_rst(rst_cdc_r_rst),
+  clk_divider clk_divider (
+    .clock_enable_in(1'h1),
+    .clock_out(clk_divider_clock_out),
+    .usb_clk(usb_clk),
     .usb_rst(usb_rst)
   );
-  rst_dec rst_dec (
-    .i(rst_dec_i),
-    .o(rst_dec_o)
+  fir fir (
+    .enable_in(fir_enable_in),
+    .signal_in(fir_signal_in),
+    .signal_out(fir_signal_out),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
+  );
+  hb1 hb1 (
+    .signal_in(hb1_signal_in),
+    .signal_out(hb1_signal_out),
+    .strobe_in(hb1_strobe_in),
+    .strobe_out(hb1_strobe_out),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
+  );
+  hb2 hb2 (
+    .signal_in(hb2_signal_in),
+    .signal_out(hb2_signal_out),
+    .strobe_in(hb2_strobe_in),
+    .strobe_out(hb2_strobe_out),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    \produce_w_bin$next  = produce_w_nxt;
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \pdm_clock_in_sy0$next  = 1'h0;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
       1'h1:
-          \produce_w_bin$next  = 10'h000;
+          \pdm_clock_in_sy0$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    r_empty = \$22 ;
-    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" *)
-    casez (rst_cdc_r_rst)
-      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" */
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \pcm_data_out$next  = pcm_data_out;
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:176" *)
+    casez (strobe_out)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:176" */
       1'h1:
-          r_empty = 1'h1;
+          \pcm_data_out$next  = fir_signal_out;
     endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    \w_level$next  = \$25 [9:0];
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
       1'h1:
-          \w_level$next  = 10'h000;
+          \pcm_data_out$next  = 24'h000000;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \pdm_clock_in_sy1$next  = pdm_clock_in_sy0;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \pdm_clock_in_sy1$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \pdm_clock_out$next  = clk_divider_clock_out;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \pdm_clock_out$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \base_clock_next$next  = base_clock;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \base_clock_next$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \pdm_data_in_sy0$next  = pdm_data_in;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \pdm_data_in_sy0$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
+    \pdm_data_in_sy1$next  = pdm_data_in_sy0;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \pdm_data_in_sy1$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$629 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" *)
-    casez (rst_cdc_r_rst)
-      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" */
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:159" *)
+    casez (pdm_data_in_sy1)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:159" */
       1'h1:
-          \r_rst$next  = 1'h1;
-      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:431" */
+          cic_signal_in = 24'h000001;
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:161" */
       default:
-          \r_rst$next  = 1'h0;
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \r_rst$next  = 1'h0;
+          cic_signal_in = 24'hffffff;
     endcase
   end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    \consume_r_bin$next  = consume_r_nxt;
-    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" *)
-    casez (rst_cdc_r_rst)
-      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" */
-      1'h1:
-          \consume_r_bin$next  = rst_dec_o;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    \produce_cdc_produce_w_gry$next  = produce_enc_o;
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \produce_cdc_produce_w_gry$next  = 10'h000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    \consume_cdc_consume_r_gry$next  = consume_enc_o;
-    (* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" *)
-    casez (rst_cdc_r_rst)
-      /* src = "/home/git/amaranth/amaranth/lib/fifo.py:426" */
-      1'h1:
-          \consume_cdc_consume_r_gry$next  = produce_cdc_produce_r_gry;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$509 ) begin end
-    \consume_w_bin$next  = consume_dec_o;
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \consume_w_bin$next  = 10'h000;
-    endcase
-  end
-  assign \$2  = \$5 ;
-  assign \$7  = \$10 ;
-  assign \$24  = \$25 ;
-  assign \$27  = \$28 ;
-  assign rst_dec_i = produce_cdc_produce_r_gry;
-  assign r_rdy = \$34 ;
-  assign storage_r_en = 1'h1;
-  assign r_data = storage_r_data;
-  assign storage_r_addr = consume_r_nxt[8:0];
-  assign w_rdy = \$32 ;
-  assign storage_w_en = \$30 ;
-  assign storage_w_data = w_data;
-  assign storage_w_addr = produce_w_bin[8:0];
-  assign r_level = \$28 [9:0];
-  assign w_full = \$20 ;
-  assign produce_r_bin = produce_dec_o;
-  assign produce_dec_i = produce_cdc_produce_r_gry;
-  assign consume_dec_i = consume_cdc_consume_w_gry;
-  assign consume_enc_i = consume_r_nxt;
-  assign produce_enc_i = produce_w_nxt;
-  assign consume_r_nxt = \$10 [9:0];
-  assign produce_w_nxt = \$5 [9:0];
+  assign pdm_clock_in_en = 1'h0;
+  assign pdm_clock_in = 1'h0;
+  assign fir_signal_in = hb2_signal_out;
+  assign hb2_signal_in = hb1_signal_out;
+  assign hb1_signal_in = cic_signal_out;
+  assign pcm_strobe_out = strobe_out;
+  assign fir_enable_in = strobe_out;
+  assign strobe_out = hb2_strobe_out;
+  assign hb2_strobe_in = hb1_strobe_out;
+  assign hb1_strobe_in = cic_strobe_out;
+  assign cic_strobe_in = strobe_in;
+  assign strobe_in = \$7 ;
+  assign base_clock = \$3 ;
+  assign clk_divider_clock_enable_in = \$1 ;
+  assign \$1  = 1'h1;
+  assign \$3  = clk_divider_clock_out;
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.pdm_transmitter" *)
 (* generator = "Amaranth" *)
-module pdm_transmitter(rst, pdm_data_out, pdm_clock_out, pcm_strobe_in, pcm_data_in, clk);
-  reg \$auto$verilog_backend.cc:2082:dump_module$510  = 0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:98" *)
+module pdm_transmitter(usb_clk, pdm_data_out, pdm_clock_out, pcm_strobe_in, pcm_data_in, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$630  = 0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:97" *)
   wire \$1 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:118" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:125" *)
   wire [4:0] \$10 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:126" *)
   wire \$12 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$14 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:119" *)
-  wire \$16 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:122" *)
-  wire [3:0] \$18 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:122" *)
-  wire [3:0] \$19 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$21 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$23 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:123" *)
-  wire \$25 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:126" *)
-  wire [6:0] \$27 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:126" *)
-  wire [6:0] \$28 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:129" *)
+  wire [3:0] \$14 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:129" *)
+  wire [3:0] \$15 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:130" *)
+  wire \$17 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:133" *)
+  wire [6:0] \$19 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:133" *)
+  wire [6:0] \$20 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:136" *)
+  wire \$22 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:137" *)
+  wire \$24 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:138" *)
+  wire \$26 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:184" *)
+  wire [30:0] \$28 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:184" *)
+  wire [30:0] \$29 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:107" *)
   wire \$3 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$30 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$32 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$34 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$36 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:129" *)
-  wire \$38 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$40 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$42 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:130" *)
-  wire \$44 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$46 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
-  wire \$48 ;
-  (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:185" *)
+  wire [29:0] \$31 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:185" *)
+  wire [29:0] \$32 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:107" *)
   wire \$5 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:131" *)
-  wire \$50 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:177" *)
-  wire [30:0] \$52 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:177" *)
-  wire [30:0] \$53 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:178" *)
-  wire [29:0] \$55 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:178" *)
-  wire [29:0] \$56 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:115" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:122" *)
   wire \$7 ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:118" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:125" *)
   wire [4:0] \$9 ;
-  (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:100" *)
-  reg \$sample$s$clock_out$sync$1  = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:100" *)
-  wire \$sample$s$clock_out$sync$1$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:100" *)
+  wire base_clock;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:105" *)
+  reg base_clock_next = 1'h0;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:105" *)
+  reg \base_clock_next$next ;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:12" *)
   wire clk_divider_clock_enable_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:100" *)
+  (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
   wire clk_divider_clock_out;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:107" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:114" *)
   reg [3:0] count1 = 4'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:107" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:114" *)
   reg [3:0] \count1$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:108" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:115" *)
   reg [2:0] count1h = 3'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:108" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:115" *)
   reg [2:0] \count1h$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:109" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:116" *)
   reg [5:0] count2 = 6'h00;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:109" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:116" *)
   reg [5:0] \count2$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:27" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:27" *)
   wire [27:0] ds_signal_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:28" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:28" *)
   wire ds_signal_out;
-  (* src = "/home/kkojima/luna-uac2/pdm/dsordn.py:29" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsordn.py:29" *)
   wire ds_strobe_in;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:25" *)
   wire fir_enable_in;
@@ -43086,372 +50785,287 @@ module pdm_transmitter(rst, pdm_data_out, pdm_clock_out, pcm_strobe_in, pcm_data
   wire [27:0] hb1_signal_out;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:21" *)
   wire hb1_strobe_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:75" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:74" *)
   input [27:0] pcm_data_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:74" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:73" *)
   output pcm_strobe_in;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:72" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:71" *)
   output pdm_clock_out;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:73" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:72" *)
   output pdm_data_out;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:99" *)
+  wire strobe;
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:117" *)
   reg strobe0 = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:110" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:117" *)
   reg \strobe0$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:112" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:119" *)
   reg strobe1 = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:112" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:119" *)
   reg \strobe1$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:111" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:118" *)
   reg strobe1h = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:111" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:118" *)
   reg \strobe1h$next ;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:113" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:120" *)
   reg strobe2 = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:113" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:120" *)
   reg \strobe2$next ;
-  assign \$10  = count1 - (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:118" *) 1'h1;
-  assign \$12  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$14  = \$12  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$16  = ! (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:119" *) count1h;
-  assign \$1  = ~ (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:98" *) clk_divider_clock_out;
-  assign \$19  = count1h - (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:122" *) 1'h1;
-  assign \$21  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$23  = \$21  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$25  = ! (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:123" *) count2;
-  assign \$28  = count2 - (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:126" *) 1'h1;
-  assign \$30  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$32  = \$30  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$34  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$36  = \$34  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$38  = ! (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:129" *) count1h;
-  assign \$3  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$40  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$42  = \$40  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$44  = ! (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:130" *) count1;
-  assign \$46  = ~ (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) \$sample$s$clock_out$sync$1 ;
-  assign \$48  = \$46  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$50  = ! (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:131" *) count2;
-  assign \$53  = $signed(fir_signal_out) * (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:177" *) $signed(28'h0000004);
-  assign \$56  = $signed(hb1_signal_out) * (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:178" *) $signed(28'h0000002);
-  assign \$5  = \$3  & (* src = "/home/git/amaranth/amaranth/hdl/ast.py:1369" *) clk_divider_clock_out;
-  assign \$7  = ! (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:115" *) count1;
-  always @(posedge clk)
-    \$sample$s$clock_out$sync$1  <= clk_divider_clock_out;
-  always @(posedge clk)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_clk;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
+  input usb_rst;
+  assign \$10  = count1 - (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:125" *) 1'h1;
+  assign \$12  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:126" *) count1h;
+  assign \$15  = count1h - (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:129" *) 1'h1;
+  assign \$17  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:130" *) count2;
+  assign \$1  = ~ (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:97" *) clk_divider_clock_out;
+  assign \$20  = count2 - (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:133" *) 1'h1;
+  assign \$22  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:136" *) count1h;
+  assign \$24  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:137" *) count1;
+  assign \$26  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:138" *) count2;
+  assign \$29  = $signed(fir_signal_out) * (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:184" *) $signed(28'h0000004);
+  assign \$32  = $signed(hb1_signal_out) * (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:185" *) $signed(28'h0000002);
+  assign \$3  = ~ (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:107" *) base_clock_next;
+  assign \$5  = base_clock & (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:107" *) \$3 ;
+  assign \$7  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:122" *) count1;
+  always @(posedge usb_clk)
     strobe2 <= \strobe2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     strobe1 <= \strobe1$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     strobe1h <= \strobe1h$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     strobe0 <= \strobe0$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     count2 <= \count2$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     count1h <= \count1h$next ;
-  always @(posedge clk)
+  always @(posedge usb_clk)
     count1 <= \count1$next ;
-  clk_divider clk_divider (
-    .clk(clk),
+  always @(posedge usb_clk)
+    base_clock_next <= \base_clock_next$next ;
+  \clk_divider$1  clk_divider (
     .clock_enable_in(1'h1),
     .clock_out(clk_divider_clock_out),
-    .rst(rst)
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
   );
   ds ds (
-    .clk(clk),
-    .rst(rst),
     .signal_in(ds_signal_in),
     .signal_out(ds_signal_out),
-    .strobe_in(ds_strobe_in)
+    .strobe_in(ds_strobe_in),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
   );
-  fir fir (
-    .clk(clk),
+  \fir$2  fir (
     .enable_in(fir_enable_in),
-    .rst(rst),
     .signal_in(fir_signal_in),
-    .signal_out(fir_signal_out)
+    .signal_out(fir_signal_out),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
   );
-  hb1 hb1 (
-    .clk(clk),
-    .rst(rst),
+  \hb1$3  hb1 (
     .signal_in(hb1_signal_in),
     .signal_out(hb1_signal_out),
-    .strobe_in(hb1_strobe_in)
+    .strobe_in(hb1_strobe_in),
+    .usb_clk(usb_clk),
+    .usb_rst(usb_rst)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
-    hb1_signal_in = 28'h0000000;
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:176" *)
-    casez (strobe1)
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:176" */
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
+    (* full_case = 32'd1 *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
       1'h1:
-          hb1_signal_in = \$53 [27:0];
+          \strobe1$next  = \$24 ;
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:140" */
+      default:
+          \strobe1$next  = 1'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \strobe1$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
+    (* full_case = 32'd1 *)
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
+      1'h1:
+          \strobe2$next  = \$26 ;
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:140" */
+      default:
+          \strobe2$next  = 1'h0;
+    endcase
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \strobe2$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
+    fir_signal_in = 28'h0000000;
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:181" *)
+    casez (strobe2)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:181" */
+      1'h1:
+          fir_signal_in = pcm_data_in;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
+    hb1_signal_in = 28'h0000000;
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:183" *)
+    casez (strobe1)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:183" */
+      1'h1:
+          hb1_signal_in = \$29 [27:0];
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
+    \base_clock_next$next  = base_clock;
+    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
+    casez (usb_rst)
+      1'h1:
+          \base_clock_next$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
     \count1$next  = count1;
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$5 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:115" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:122" *)
           casez (\$7 )
-            /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:115" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:122" */
             1'h1:
                 \count1$next  = 4'hb;
-            /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:117" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:124" */
             default:
                 \count1$next  = \$10 [3:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \count1$next  = 4'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
     \count1h$next  = count1h;
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$14 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:119" *)
-          casez (\$16 )
-            /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:119" */
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:126" *)
+          casez (\$12 )
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:126" */
             1'h1:
                 \count1h$next  = 3'h5;
-            /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:121" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:128" */
             default:
-                \count1h$next  = \$19 [2:0];
+                \count1h$next  = \$15 [2:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \count1h$next  = 3'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
     \count2$next  = count2;
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$23 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:123" *)
-          casez (\$25 )
-            /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:123" */
+          (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:130" *)
+          casez (\$17 )
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:130" */
             1'h1:
                 \count2$next  = 6'h2f;
-            /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:125" */
+            /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:132" */
             default:
-                \count2$next  = \$28 [5:0];
+                \count2$next  = \$20 [5:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \count2$next  = 6'h00;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$32 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
       1'h1:
           \strobe0$next  = 1'h1;
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:133" */
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:140" */
       default:
           \strobe0$next  = 1'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \strobe0$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$630 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$36 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
+    (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" *)
+    casez (strobe)
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:121" */
       1'h1:
-          \strobe1h$next  = \$38 ;
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:133" */
+          \strobe1h$next  = \$22 ;
+      /* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:140" */
       default:
           \strobe1h$next  = 1'h0;
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (usb_rst)
       1'h1:
           \strobe1h$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$42 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
-      1'h1:
-          \strobe1$next  = \$44 ;
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:133" */
-      default:
-          \strobe1$next  = 1'h0;
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \strobe1$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
-    (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" *)
-    casez (\$48 )
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:114" */
-      1'h1:
-          \strobe2$next  = \$50 ;
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:133" */
-      default:
-          \strobe2$next  = 1'h0;
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \strobe2$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$510 ) begin end
-    fir_signal_in = 28'h0000000;
-    (* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:174" *)
-    casez (strobe2)
-      /* src = "/home/kkojima/luna-uac2/pdm/pcm2pdm.py:174" */
-      1'h1:
-          fir_signal_in = pcm_data_in;
     endcase
   end
   assign \$9  = \$10 ;
-  assign \$18  = \$19 ;
-  assign \$27  = \$28 ;
-  assign \$52  = \$53 ;
-  assign \$55  = \$56 ;
-  assign \$sample$s$clock_out$sync$1$next  = clk_divider_clock_out;
+  assign \$14  = \$15 ;
+  assign \$19  = \$20 ;
+  assign \$28  = \$29 ;
+  assign \$31  = \$32 ;
   assign pdm_data_out = ds_signal_out;
   assign ds_strobe_in = strobe0;
   assign hb1_strobe_in = strobe1h;
   assign fir_enable_in = strobe1;
   assign pcm_strobe_in = strobe2;
-  assign ds_signal_in = \$56 [27:0];
+  assign ds_signal_in = \$32 [27:0];
+  assign strobe = \$5 ;
+  assign base_clock = clk_divider_clock_out;
   assign pdm_clock_out = \$1 ;
   assign clk_divider_clock_enable_in = 1'h1;
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.produce_cdc" *)
-(* generator = "Amaranth" *)
-module produce_cdc(rst, produce_w_gry, produce_r_gry, clk);
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:345" *)
-  output [9:0] produce_r_gry;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:344" *)
-  input [9:0] produce_w_gry;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input rst;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  reg [9:0] stage0 = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  wire [9:0] \stage0$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  reg [9:0] stage1 = 10'h000;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
-  wire [9:0] \stage1$next ;
-  always @(posedge clk)
-    stage1 <= stage0;
-  always @(posedge clk)
-    stage0 <= produce_w_gry;
-  assign produce_r_gry = stage1;
-  assign \stage1$next  = stage0;
-  assign \stage0$next  = produce_w_gry;
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.produce_dec" *)
-(* generator = "Amaranth" *)
-module produce_dec(o, i);
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$1 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$11 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$13 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$15 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$17 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$3 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$5 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$7 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$9 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:176" *)
-  input [9:0] i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:177" *)
-  output [9:0] o;
-  assign \$9  = o[5] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[4];
-  assign \$11  = o[4] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[3];
-  assign \$13  = o[3] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[2];
-  assign \$15  = o[2] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[1];
-  assign \$17  = o[1] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[0];
-  assign \$1  = o[9] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[8];
-  assign \$3  = o[8] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[7];
-  assign \$5  = o[7] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[6];
-  assign \$7  = o[6] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[5];
-  assign o[0] = \$17 ;
-  assign o[1] = \$15 ;
-  assign o[2] = \$13 ;
-  assign o[3] = \$11 ;
-  assign o[4] = \$9 ;
-  assign o[5] = \$7 ;
-  assign o[6] = \$5 ;
-  assign o[7] = \$3 ;
-  assign o[8] = \$1 ;
-  assign o[9] = i[9];
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.produce_enc" *)
-(* generator = "Amaranth" *)
-module produce_enc(o, i);
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:154" *)
-  wire [9:0] \$1 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:149" *)
-  input [9:0] i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:150" *)
-  output [9:0] o;
-  assign \$1  = i ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:154" *) i[9:1];
-  assign o = \$1 ;
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.receiver" *)
 (* generator = "Amaranth" *)
 module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complete, crc_mismatch, ready_for_response, active_pid, rx_active, start, crc, \start$1 , tx_allowed, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$511  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$631  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:913" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:918" *)
@@ -43564,9 +51178,9 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
   reg \start$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:152" *)
   input tx_allowed;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   output valid;
@@ -43614,7 +51228,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
   always @(posedge usb_clk)
     packet_complete <= \packet_complete$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \packet_complete$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43656,7 +51270,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \crc_mismatch$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43702,7 +51316,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43734,7 +51348,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \packet_id$next  = packet_id;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43776,7 +51390,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \start$1  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43813,7 +51427,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     ready_for_response = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43849,7 +51463,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     next = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43881,7 +51495,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     start = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -43896,7 +51510,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -44003,7 +51617,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \active_pid$next  = active_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -44036,7 +51650,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \data_pipeline$next  = data_pipeline;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -44089,7 +51703,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \last_byte_crc$next  = last_byte_crc;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -44136,7 +51750,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     \last_word_crc$next  = last_word_crc;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -44178,7 +51792,7 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$511 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$631 ) begin end
     valid = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:899" *)
     casez (fsm_state)
@@ -44209,7 +51823,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.translator.register_window" *)
 (* generator = "Amaranth" *)
 module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_data_out, ulpi_stop, done, address, write_data, read_request, write_request, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$512  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$632  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:138" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:143" *)
@@ -44277,9 +51891,9 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
   reg ulpi_stop = 1'h0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:75" *)
   reg \ulpi_stop$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:85" *)
   input [7:0] write_data;
@@ -44312,7 +51926,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
   always @(posedge usb_clk)
     ulpi_out_req <= \ulpi_out_req$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \ulpi_out_req$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44406,7 +52020,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \ulpi_stop$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44462,7 +52076,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \done$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44519,7 +52133,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \ulpi_data_out$next  = ulpi_data_out;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44597,7 +52211,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \current_address$next  = current_address;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44613,7 +52227,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \current_write$next  = current_write;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44629,7 +52243,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44733,7 +52347,7 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$512 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$632 ) begin end
     \read_data$next  = read_data;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:101" *)
     casez (fsm_state)
@@ -44774,7 +52388,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
 , \type$6 , \request$7 , \value$8 , \length$9 , \received$10 , \data_requested$11 , \status_requested$12 , \ack$13 , \active_config$14 , \recipient$15 , \type$16 , \request$17 , \value$18 , \index$19 , \length$20 , \data_requested$21 , \status_requested$22 , \rx_ready_for_response$23 , \type$24 , \data_requested$25 , \status_requested$26 
 , \address_changed$27 , \new_address$28 , \config_changed$29 , \new_config$30 , \valid$31 , \tx_data_pid$32 , \valid$33 , \ack$34 , \ack$35 , \stall$36 , \stall$37 , \stall$38 , \payload$39 , \payload$40 , \first$41 , \first$42 , \last$43 , \last$44 , \ready$45 , \ready$46 , recipient
 );
-  reg \$auto$verilog_backend.cc:2082:dump_module$513  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$633  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:501" *)
   wire \$127 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:501" *)
@@ -45141,7 +52755,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
   assign \$127  = \ack$34  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:501" *) \ack$35 ;
   assign \$139  = \stall$36  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:503" *) \stall$37 ;
   assign \$141  = \$139  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:503" *) \stall$38 ;
-  \tx_mux$2  tx_mux (
+  \tx_mux$5  tx_mux (
     .first(tx_mux_first),
     .\first$6 (\first$41 ),
     .\first$7 (\first$42 ),
@@ -45160,7 +52774,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
     .\valid$3 (1'h0)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$513 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$633 ) begin end
     address_changed = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:433" *)
     casez ({ \address_changed$118 , \address_changed$117 , \address_changed$27  })
@@ -45176,7 +52790,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$513 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$633 ) begin end
     new_address = 7'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:433" *)
     casez ({ \address_changed$118 , \address_changed$117 , \address_changed$27  })
@@ -45192,7 +52806,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$513 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$633 ) begin end
     config_changed = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:433" *)
     casez ({ \config_changed$122 , \config_changed$121 , \config_changed$29  })
@@ -45208,7 +52822,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$513 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$633 ) begin end
     new_config = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:433" *)
     casez ({ \config_changed$122 , \config_changed$121 , \config_changed$29  })
@@ -45224,7 +52838,7 @@ module request_mux(\type , is_in_request, request, value, index, length, receive
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$513 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$633 ) begin end
     tx_data_pid = 1'h1;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:497" *)
     casez (\valid$31 )
@@ -45366,7 +52980,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.reset_sequencer" *)
 (* generator = "Amaranth" *)
 module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset, low_speed_only, full_speed_only, operating_mode, current_speed, termination_select, suspended, valid, data, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$514  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$634  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:32" *)
   wire [18:0] \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:261" *)
@@ -45587,9 +53201,9 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
   reg [17:0] timer = 18'h00000;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:146" *)
   reg [17:0] \timer$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   output valid;
@@ -45705,7 +53319,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
   always @(posedge usb_clk)
     timer <= \timer$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \timer$next  = \$2 [17:0];
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -45857,7 +53471,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \line_state_time$next  = \$37 [17:0];
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -45976,7 +53590,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     data = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46011,7 +53625,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \valid_pairs$next  = valid_pairs;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46086,7 +53700,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     suspended = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46153,7 +53767,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:169" *)
     casez ({ \$65 , \$63  })
@@ -46169,7 +53783,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \current_speed$next  = current_speed;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46252,7 +53866,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46499,7 +54113,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     bus_reset = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46603,7 +54217,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \was_hs_pre_suspend$next  = was_hs_pre_suspend;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46686,7 +54300,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \operating_mode$next  = operating_mode;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46755,7 +54369,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     \termination_select$next  = termination_select;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46824,7 +54438,7 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$514 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$634 ) begin end
     valid = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:183" *)
     casez (fsm_state)
@@ -46863,97 +54477,10 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
   assign \$169  = \$170 ;
 endmodule
 
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.rst_cdc" *)
-(* generator = "Amaranth" *)
-module rst_cdc(clk, r_rst, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$515  = 0;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:163" *)
-  wire async_ff_clk;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:163" *)
-  wire async_ff_rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
-  input clk;
-  (* src = "/home/git/amaranth/amaranth/lib/fifo.py:415" *)
-  output r_rst;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:164" *)
-  reg stage0 = 1'h1;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:164" *)
-  reg \stage0$next ;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:164" *)
-  reg stage1 = 1'h1;
-  (* src = "/home/git/amaranth/amaranth/lib/cdc.py:164" *)
-  reg \stage1$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
-  input usb_rst;
-  always @(posedge async_ff_clk, posedge async_ff_rst)
-    if (async_ff_rst) stage1 <= 1'h1;
-    else stage1 <= \stage1$next ;
-  always @(posedge async_ff_clk, posedge async_ff_rst)
-    if (async_ff_rst) stage0 <= 1'h1;
-    else stage0 <= \stage0$next ;
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$515 ) begin end
-    \stage0$next  = 1'h0;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$515 ) begin end
-    \stage1$next  = stage0;
-  end
-  assign r_rst = stage1;
-  assign async_ff_clk = clk;
-  assign async_ff_rst = usb_rst;
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.out_fifo.rst_dec" *)
-(* generator = "Amaranth" *)
-module rst_dec(o, i);
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$1 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$11 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$13 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$15 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$17 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$3 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$5 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$7 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *)
-  wire \$9 ;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:176" *)
-  input [9:0] i;
-  (* src = "/home/git/amaranth/amaranth/lib/coding.py:177" *)
-  output [9:0] o;
-  assign \$9  = o[5] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[4];
-  assign \$11  = o[4] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[3];
-  assign \$13  = o[3] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[2];
-  assign \$15  = o[2] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[1];
-  assign \$17  = o[1] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[0];
-  assign \$1  = o[9] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[8];
-  assign \$3  = o[8] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[7];
-  assign \$5  = o[7] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[6];
-  assign \$7  = o[6] ^ (* src = "/home/git/amaranth/amaranth/lib/coding.py:183" *) i[5];
-  assign o[0] = \$17 ;
-  assign o[1] = \$15 ;
-  assign o[2] = \$13 ;
-  assign o[3] = \$11 ;
-  assign o[4] = \$9 ;
-  assign o[5] = \$7 ;
-  assign o[6] = \$5 ;
-  assign o[7] = \$3 ;
-  assign o[8] = \$1 ;
-  assign o[9] = i[9];
-endmodule
-
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.translator.rxevent_decoder" *)
 (* generator = "Amaranth" *)
 module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, last_rx_command, ulpi__nxt__i, ulpi__data__i, line_state, vbus_valid, session_valid, session_end, rx_error, host_disconnect, id_digital, rx_stop, rx_start, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$516  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$635  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:481" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:495" *)
@@ -47035,15 +54562,15 @@ module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, la
   output session_end;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:459" *)
   output session_valid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:458" *)
   output vbus_valid;
@@ -47078,7 +54605,7 @@ module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, la
   always @(posedge usb_clk)
     direction_delayed <= \direction_delayed$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$516 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$635 ) begin end
     \direction_delayed$next  = ulpi__dir__i;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -47087,7 +54614,7 @@ module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, la
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$516 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$635 ) begin end
     \rx_start$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:490" *)
     casez (\$9 )
@@ -47107,7 +54634,7 @@ module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, la
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$516 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$635 ) begin end
     \rx_stop$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:490" *)
     casez (\$21 )
@@ -47127,7 +54654,7 @@ module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, la
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$516 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$635 ) begin end
     \last_rx_command$next  = last_rx_command;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:490" *)
     casez (\$33 )
@@ -47156,7 +54683,7 @@ endmodule
 (* generator = "Amaranth" *)
 module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new_token, speed, tx_allowed, \start$1 , recipient, \type , is_in_request, request, value, index, length, received, ack, usb_rst
 );
-  reg \$auto$verilog_backend.cc:2082:dump_module$517  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$636  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:240" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:240" *)
@@ -47271,9 +54798,9 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
   reg [1:0] \type  = 2'h0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   reg [1:0] \type$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   output [15:0] value;
@@ -47295,6 +54822,10 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
   assign \$6  = \$4  & (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:199" *) new_token;
   assign \$8  = data_handler_length == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:216" *) 4'h8;
   always @(posedge usb_clk)
+    length <= \length$next ;
+  always @(posedge usb_clk)
+    index <= \index$next ;
+  always @(posedge usb_clk)
     value <= \value$next ;
   always @(posedge usb_clk)
     request <= \request$next ;
@@ -47308,10 +54839,6 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     fsm_state <= \fsm_state$next ;
   always @(posedge usb_clk)
     received <= \received$next ;
-  always @(posedge usb_clk)
-    length <= \length$next ;
-  always @(posedge usb_clk)
-    index <= \index$next ;
   data_handler data_handler (
     .crc(data_handler_crc),
     .length(data_handler_length),
@@ -47332,7 +54859,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     .usb_rst(usb_rst)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \index$next  = index;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47362,7 +54889,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \length$next  = length;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47392,7 +54919,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     ack = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47431,7 +54958,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \received$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47461,7 +54988,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47526,7 +55053,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \recipient$next  = recipient;
     \type$next  = \type ;
     \is_in_request$next  = is_in_request;
@@ -47562,7 +55089,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \request$next  = request;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47592,7 +55119,7 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$517 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$636 ) begin end
     \value$next  = value;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:191" *)
     casez (fsm_state)
@@ -47629,7 +55156,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.token_detector.timer" *)
 (* generator = "Amaranth" *)
 module timer(usb_clk, speed, tx_allowed, start, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$518  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$637  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1913" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1924" *)
@@ -47686,9 +55213,9 @@ module timer(usb_clk, speed, tx_allowed, start, usb_rst);
   wire tx_timeout;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1898" *)
   reg tx_to_rx_timeout;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$10  = counter == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1924" *) 1'h1;
   assign \$12  = counter == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1930" *) 4'ha;
@@ -47710,7 +55237,7 @@ module timer(usb_clk, speed, tx_allowed, start, usb_rst);
   always @(posedge usb_clk)
     counter <= \counter$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$518 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$637 ) begin end
     \counter$next  = counter;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1911" *)
     casez ({ \$1 , start })
@@ -47728,7 +55255,7 @@ module timer(usb_clk, speed, tx_allowed, start, usb_rst);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$518 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$637 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
     casez ({ \$8 , \$6  })
@@ -47744,7 +55271,7 @@ module timer(usb_clk, speed, tx_allowed, start, usb_rst);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$518 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$637 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
     casez ({ \$18 , \$16  })
@@ -47760,7 +55287,7 @@ module timer(usb_clk, speed, tx_allowed, start, usb_rst);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$518 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$637 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
     casez ({ \$28 , \$26  })
@@ -47783,8 +55310,8 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.timer" *)
 (* generator = "Amaranth" *)
-module \timer$1 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , tx_timeout, rx_timeout, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$519  = 0;
+module \timer$4 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , tx_timeout, rx_timeout, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$638  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1928" *)
@@ -47851,9 +55378,9 @@ module \timer$1 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , t
   wire \tx_timeout$40 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1898" *)
   reg tx_to_rx_timeout;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$10  = ! (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *) speed;
   assign \$12  = speed == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1928" *) 1'h1;
@@ -47876,7 +55403,7 @@ module \timer$1 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , t
   always @(posedge usb_clk)
     counter <= \counter$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$519 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$638 ) begin end
     \counter$next  = counter;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1911" *)
     casez ({ \$5 , \$3  })
@@ -47894,7 +55421,7 @@ module \timer$1 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , t
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$519 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$638 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
     casez ({ \$12 , \$10  })
@@ -47910,7 +55437,7 @@ module \timer$1 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , t
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$519 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$638 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
     casez ({ \$22 , \$20  })
@@ -47926,7 +55453,7 @@ module \timer$1 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , t
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$519 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$638 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *)
     casez ({ \$32 , \$30  })
@@ -47953,7 +55480,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.token_detector" *)
 (* generator = "Amaranth" *)
 module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$1 , endpoint, new_token, ready_for_response, frame, new_frame, is_in, is_out, is_setup, is_ping, rx_active, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$520  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$639  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:421" *)
   wire \$10 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:360" *)
@@ -48220,9 +55747,9 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
   reg [10:0] token_data = 11'h000;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:317" *)
   reg [10:0] \token_data$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$100  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:360" *) rx_active;
   assign \$102  = rx_data[1:0] == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:364" *) 1'h1;
@@ -48349,7 +55876,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     .usb_rst(usb_rst)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \token_data$next  = token_data;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48398,7 +55925,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \frame$next  = frame;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48440,7 +55967,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \pid$next  = pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48495,7 +56022,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \address$1$next  = \address$1 ;
     \endpoint$next  = endpoint;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
@@ -48550,7 +56077,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     timer_start = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48596,7 +56123,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \new_frame$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48638,7 +56165,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \new_token$next  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48689,7 +56216,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48785,7 +56312,7 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$520 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$639 ) begin end
     \current_pid$next  = current_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:349" *)
     casez (fsm_state)
@@ -48829,7 +56356,7 @@ endmodule
 (* generator = "Amaranth" *)
 module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_data, tx_valid, tx_ready, dm_pulldown, dp_pulldown, op_mode, xcvr_select, term_select, ulpi__clk__o, ulpi__rst, ulpi__data__oe, ulpi__dir__i, ulpi__nxt__i, ulpi__data__i, ulpi__data__o
 , ulpi__stp, rx_active, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$521  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$640  = 0;
   (* src = "/home/git/amaranth/amaranth/hdl/rec.py:258" *)
   wire \$1 ;
   (* src = "/home/git/amaranth/amaranth/hdl/rec.py:258" *)
@@ -49006,27 +56533,27 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
   output tx_ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1127" *)
   input tx_valid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__clk__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output [7:0] ulpi__data__o;
   reg [7:0] ulpi__data__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__data__oe;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__stp;
   reg ulpi__stp;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1139" *)
   wire use_external_vbus_indicator;
@@ -49127,7 +56654,7 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
     .usb_rst(usb_rst)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$521 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$640 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1269" *)
     casez (transmit_translator_ulpi_out_req)
@@ -49140,7 +56667,7 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$521 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$640 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1269" *)
     casez (transmit_translator_ulpi_out_req)
@@ -49153,7 +56680,7 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$521 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$640 ) begin end
     \rx_active$next  = rx_active;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1303" *)
     casez ({ \$27 , \$19  })
@@ -49171,7 +56698,7 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$521 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$640 ) begin end
     \rx_data$next  = ulpi__data__i;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -49180,7 +56707,7 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$521 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$640 ) begin end
     \rx_valid$next  = \$29 ;
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (usb_rst)
@@ -49232,7 +56759,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.translator.transmit_translator" *)
 (* generator = "Amaranth" *)
 module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, tx_valid, tx_ready, ulpi_out_req, ulpi_data_out, ulpi_stp, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$522  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$641  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:874" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:919" *)
@@ -49295,9 +56822,9 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:862" *)
   output ulpi_stp;
   reg ulpi_stp;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$9  = op_mode == (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:869" *) 2'h2;
   assign \$11  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:919" *) tx_valid;
@@ -49319,7 +56846,7 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
   always @(posedge usb_clk)
     ulpi_out_req <= \ulpi_out_req$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$522 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$641 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:871" *)
     casez (fsm_state)
@@ -49342,7 +56869,7 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$522 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$641 ) begin end
     \ulpi_out_req$next  = ulpi_out_req;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:871" *)
@@ -49382,7 +56909,7 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$522 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$641 ) begin end
     ulpi_data_out = 8'h00;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:871" *)
@@ -49429,7 +56956,7 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$522 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$641 ) begin end
     tx_ready = 1'h0;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:871" *)
@@ -49459,7 +56986,7 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$522 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$641 ) begin end
     \fsm_state$next  = fsm_state;
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:871" *)
@@ -49501,7 +57028,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.transmitter" *)
 (* generator = "Amaranth" *)
 module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start, data, \valid$1 , \ready$2 , crc, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$523  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$642  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1485" *)
   wire \$11 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1485" *)
@@ -49553,9 +57080,9 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:76" *)
   output start;
   reg start;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   input valid;
@@ -49578,7 +57105,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
   always @(posedge usb_clk)
     current_data_pid <= \current_data_pid$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     ready = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49597,7 +57124,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     \current_data_pid$next  = current_data_pid;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49624,7 +57151,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     \is_zlp$next  = is_zlp;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49648,7 +57175,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49717,7 +57244,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     start = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49732,7 +57259,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     data = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49759,7 +57286,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     \valid$1  = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49786,7 +57313,7 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$523 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$642 ) begin end
     \remaining_crc$next  = remaining_crc;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1426" *)
     casez (fsm_state)
@@ -49817,8 +57344,8 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.StandardRequestHandler.transmitter" *)
 (* generator = "Amaranth" *)
-module \transmitter$4 (usb_clk, valid, first, last, payload, ready, datum_0, datum_1, max_length, start, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$524  = 0;
+module \transmitter$7 (usb_clk, valid, first, last, payload, ready, datum_0, datum_1, max_length, start, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$643  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:667" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:669" *)
@@ -49890,9 +57417,9 @@ module \transmitter$4 (usb_clk, valid, first, last, payload, ready, datum_0, dat
   input ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:644" *)
   input start;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -49921,7 +57448,7 @@ module \transmitter$4 (usb_clk, valid, first, last, payload, ready, datum_0, dat
   always @(posedge usb_clk)
     position_in_stream <= \position_in_stream$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$524 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$643 ) begin end
     \position_in_stream$next  = position_in_stream;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -49951,7 +57478,7 @@ module \transmitter$4 (usb_clk, valid, first, last, payload, ready, datum_0, dat
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$524 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$643 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -49994,7 +57521,7 @@ module \transmitter$4 (usb_clk, valid, first, last, payload, ready, datum_0, dat
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$524 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$643 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -50016,7 +57543,7 @@ module \transmitter$4 (usb_clk, valid, first, last, payload, ready, datum_0, dat
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$524 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$643 ) begin end
     done = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -50043,9 +57570,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.UAC2RequestHandlers.transmitter" *)
 (* generator = "Amaranth" *)
-module \transmitter$5 (usb_clk, valid, first, last, payload, ready, datum_0, datum_1, datum_2, datum_3, datum_4, datum_5, datum_6, datum_7, datum_8, datum_9, datum_10, datum_11, datum_12, datum_13, max_length
+module \transmitter$8 (usb_clk, valid, first, last, payload, ready, datum_0, datum_1, datum_2, datum_3, datum_4, datum_5, datum_6, datum_7, datum_8, datum_9, datum_10, datum_11, datum_12, datum_13, max_length
 , start, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$525  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$644  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:667" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:669" *)
@@ -50141,9 +57668,9 @@ module \transmitter$5 (usb_clk, valid, first, last, payload, ready, datum_0, dat
   input ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:644" *)
   input start;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -50173,7 +57700,7 @@ module \transmitter$5 (usb_clk, valid, first, last, payload, ready, datum_0, dat
   always @(posedge usb_clk)
     position_in_stream <= \position_in_stream$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$525 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$644 ) begin end
     \position_in_stream$next  = position_in_stream;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -50203,7 +57730,7 @@ module \transmitter$5 (usb_clk, valid, first, last, payload, ready, datum_0, dat
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$525 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$644 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -50246,7 +57773,7 @@ module \transmitter$5 (usb_clk, valid, first, last, payload, ready, datum_0, dat
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$525 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$644 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -50292,7 +57819,7 @@ module \transmitter$5 (usb_clk, valid, first, last, payload, ready, datum_0, dat
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$525 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$644 ) begin end
     done = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:682" *)
     casez (fsm_state)
@@ -50319,7 +57846,7 @@ endmodule
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.tx_multiplexer" *)
 (* generator = "Amaranth" *)
 module tx_multiplexer(valid, ready, \valid$1 , \data$2 , \data$3 , \valid$4 , \ready$5 , \valid$6 , \data$7 , \ready$8 , data);
-  reg \$auto$verilog_backend.cc:2082:dump_module$526  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$645  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *)
   wire \$11 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *)
@@ -50357,12 +57884,12 @@ module tx_multiplexer(valid, ready, \valid$1 , \data$2 , \data$3 , \valid$4 , \r
   input \valid$6 ;
   assign \$11  = \$9  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *) \valid$4 ;
   assign \$13  = \$11  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *) \valid$6 ;
-  \encoder$6  encoder (
+  \encoder$9  encoder (
     .i(encoder_i),
     .o(encoder_o)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$526 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$645 ) begin end
     data = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:112" *)
     casez (encoder_o)
@@ -50391,7 +57918,7 @@ endmodule
 (* generator = "Amaranth" *)
 module tx_mux(first, last, payload, ready, \valid$1 , \valid$2 , \valid$3 , \valid$4 , \payload$5 , \payload$6 , \payload$7 , \first$8 , \first$9 , \first$10 , \last$11 , \last$12 , \last$13 , \ready$14 , \ready$15 , \ready$16 , valid
 );
-  reg \$auto$verilog_backend.cc:2082:dump_module$527  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$646  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *)
   wire \$18 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *)
@@ -50483,7 +58010,7 @@ module tx_mux(first, last, payload, ready, \valid$1 , \valid$2 , \valid$3 , \val
     .o(encoder_o)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$527 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$646 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:112" *)
     casez (encoder_o)
@@ -50524,8 +58051,8 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.request_mux.tx_mux" *)
 (* generator = "Amaranth" *)
-module \tx_mux$2 (first, last, payload, ready, \valid$1 , \valid$2 , \valid$3 , \payload$4 , \payload$5 , \first$6 , \first$7 , \last$8 , \last$9 , \ready$10 , \ready$11 , valid);
-  reg \$auto$verilog_backend.cc:2082:dump_module$528  = 0;
+module \tx_mux$5 (first, last, payload, ready, \valid$1 , \valid$2 , \valid$3 , \payload$4 , \payload$5 , \first$6 , \first$7 , \last$8 , \last$9 , \ready$10 , \ready$11 , valid);
+  reg \$auto$verilog_backend.cc:2082:dump_module$647  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *)
   wire \$13 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *)
@@ -50593,12 +58120,12 @@ module \tx_mux$2 (first, last, payload, ready, \valid$1 , \valid$2 , \valid$3 , 
   assign \$17  = \$15  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *) \valid$3 ;
   assign \$21  = \$19  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *) \first$7 ;
   assign \$28  = \$26  | (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:133" *) \last$9 ;
-  \encoder$3  encoder (
+  \encoder$6  encoder (
     .i(encoder_i),
     .o(encoder_o)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$528 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$647 ) begin end
     payload = 8'h00;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/utils/bus.py:112" *)
     casez (encoder_o)
@@ -50634,9 +58161,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0" *)
 (* generator = "Amaranth" *)
-module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready, isochronous_endpoint1__first, isochronous_endpoint1__last, bytes_in_frame, \bytes_in_frame$1 , connect, full_speed_only, sof_detected, address, value, isochronous_endpoint1__payload, ulpi__clk__o, ulpi__rst, ulpi__data__oe, ulpi__dir__i, ulpi__nxt__i, ulpi__data__i, ulpi__data__o, ulpi__stp
-, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$529  = 0;
+module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready, isochronous_endpoint1__first, isochronous_endpoint1__last, bytes_in_frame, \bytes_in_frame$1 , connect, full_speed_only, sof_detected, address, value, isochronous_endpoint2__valid, isochronous_endpoint2__ready, isochronous_endpoint2__payload, isochronous_endpoint1__payload, ulpi__clk__o, ulpi__rst, ulpi__data__oe, ulpi__dir__i, ulpi__nxt__i
+, ulpi__data__i, ulpi__data__o, ulpi__stp, usb_rst);
+  reg \$auto$verilog_backend.cc:2082:dump_module$648  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:232" *)
   wire \$73 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ast.py:249" *)
@@ -50933,6 +58460,12 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
   input isochronous_endpoint1__ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output isochronous_endpoint1__valid;
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  input [7:0] isochronous_endpoint2__payload;
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  output isochronous_endpoint2__ready;
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  input isochronous_endpoint2__valid;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:135" *)
   wire low_speed_only;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:139" *)
@@ -51091,25 +58624,25 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
   wire tx_multiplexer_ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   wire tx_multiplexer_valid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__clk__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output [7:0] ulpi__data__o;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__data__oe;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__stp;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:75" *)
   input [7:0] value;
@@ -51196,6 +58729,9 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     .endpoint(\endpoint_mux_endpoint$43 ),
     .first(\endpoint_mux_first$66 ),
     .is_in(\endpoint_mux_is_in$46 ),
+    .isochronous_endpoint2__payload(isochronous_endpoint2__payload),
+    .isochronous_endpoint2__ready(isochronous_endpoint2__ready),
+    .isochronous_endpoint2__valid(isochronous_endpoint2__valid),
     .last(\endpoint_mux_last$69 ),
     .new_frame(\endpoint_mux_new_frame$45 ),
     .payload(\endpoint_mux_payload$63 ),
@@ -51406,7 +58942,7 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     .valid(reset_sequencer_valid),
     .vbus_connected(reset_sequencer_vbus_connected)
   );
-  \timer$1  timer (
+  \timer$4  timer (
     .rx_timeout(timer_rx_timeout),
     .speed(timer_speed),
     .start(\receiver_start$5 ),
@@ -51492,7 +59028,7 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     .\valid$6 (handshake_generator_valid)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$529 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$648 ) begin end
     \address$75$next  = \address$75 ;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:313" *)
     casez (endpoint_mux_address_changed)
@@ -51513,7 +59049,7 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$529 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$648 ) begin end
     \configuration$next  = configuration;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:315" *)
     casez (endpoint_mux_config_changed)
@@ -51534,7 +59070,7 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$529 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$648 ) begin end
     \frame_number$next  = frame_number;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:385" *)
     casez (token_detector_new_frame)
@@ -51549,7 +59085,7 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$529 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$648 ) begin end
     new_frame = 1'h0;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:385" *)
     casez (token_detector_new_frame)
@@ -51559,7 +59095,7 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$529 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$648 ) begin end
     \microframe_number$next  = microframe_number;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/device.py:385" *)
     casez (token_detector_new_frame)
@@ -51646,14 +59182,14 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
   assign reset_sequencer_vbus_connected = \$73 ;
   assign reset_sequencer_bus_busy = translator_busy;
   assign \$81  = 2'h0;
-  assign \$83  = 2'h0;
   assign \$85  = full_speed_only;
+  assign \$83  = 2'h0;
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb_reset" *)
 (* generator = "Amaranth" *)
 module usb_reset(phy_stop, clk, rst, phy_reset);
-  reg \$auto$verilog_backend.cc:2082:dump_module$530  = 0;
+  reg \$auto$verilog_backend.cc:2082:dump_module$649  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:64" *)
   wire \$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:79" *)
@@ -51684,7 +59220,7 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
   wire [22:0] \$7 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:77" *)
   wire [22:0] \$8 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
   input clk;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:57" *)
   reg [21:0] cycles_in_reset = 22'h000000;
@@ -51698,7 +59234,7 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
   output phy_reset;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:50" *)
   output phy_stop;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:451" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
   input rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:48" *)
   wire trigger;
@@ -51720,7 +59256,7 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
   always @(posedge clk)
     cycles_in_reset <= \cycles_in_reset$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$530 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$649 ) begin end
     \cycles_in_reset$next  = cycles_in_reset;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:60" *)
     casez (fsm_state)
@@ -51760,7 +59296,7 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$530 ) begin end
+    if (\$auto$verilog_backend.cc:2082:dump_module$649 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:60" *)
     casez (fsm_state)
@@ -51803,277 +59339,4 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
   assign trigger = 1'h0;
   assign phy_stop = \$3 ;
   assign phy_reset = \$1 ;
-endmodule
-
-(* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb_to_channel_stream" *)
-(* generator = "Amaranth" *)
-module usb_to_channel_stream(usb_clk, usb_rst);
-  reg \$auto$verilog_backend.cc:2082:dump_module$531  = 0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$1 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$11 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$13 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$15 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$17 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$19 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$3 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:192" *)
-  wire \$5 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-  wire \$7 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:193" *)
-  wire \$9 ;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg channel_stream__first = 1'h0;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg \channel_stream__first$next ;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg channel_stream__last = 1'h0;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg \channel_stream__last$next ;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg [15:0] channel_stream__payload = 16'h0000;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg [15:0] \channel_stream__payload$next ;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire channel_stream__ready;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg channel_stream__valid = 1'h0;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  reg \channel_stream__valid$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-  reg [1:0] fsm_state = 2'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-  reg [1:0] \fsm_state$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:156" *)
-  wire out_ready;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:152" *)
-  reg [7:0] out_sample = 8'h00;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:152" *)
-  reg [7:0] \out_sample$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
-  input usb_clk;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:154" *)
-  wire usb_first;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:155" *)
-  wire [7:0] usb_payload;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
-  input usb_rst;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire usb_stream__first;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire [7:0] usb_stream__payload;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire usb_stream__ready;
-  (* src = "/home/git/amlib/amlib/stream/__init__.py:59" *)
-  wire usb_stream__valid;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:153" *)
-  wire usb_valid;
-  always @(posedge usb_clk)
-    out_sample <= \out_sample$next ;
-  always @(posedge usb_clk)
-    fsm_state <= \fsm_state$next ;
-  always @(posedge usb_clk)
-    channel_stream__payload <= \channel_stream__payload$next ;
-  always @(posedge usb_clk)
-    channel_stream__last <= \channel_stream__last$next ;
-  always @(posedge usb_clk)
-    channel_stream__first <= \channel_stream__first$next ;
-  always @(posedge usb_clk)
-    channel_stream__valid <= \channel_stream__valid$next ;
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$531 ) begin end
-    \out_sample$next  = out_sample;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-    casez (\$15 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:172" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "B0/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:174" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "B1/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:183" */
-            2'h1:
-                \out_sample$next  = usb_payload;
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \out_sample$next  = 8'h00;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$531 ) begin end
-    \channel_stream__payload$next  = channel_stream__payload;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-    casez (\$17 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:172" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "B0/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:174" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "B1/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:183" */
-            2'h1:
-                /* empty */;
-            /* \amaranth.decoding  = "B2/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:187" */
-            2'h2:
-                \channel_stream__payload$next  = { usb_payload, out_sample };
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \channel_stream__payload$next  = 16'h0000;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$531 ) begin end
-    \channel_stream__valid$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-    casez (\$1 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:172" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "B0/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:174" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "B1/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:183" */
-            2'h1:
-                /* empty */;
-            /* \amaranth.decoding  = "B2/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:187" */
-            2'h2:
-                \channel_stream__valid$next  = 1'h1;
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \channel_stream__valid$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$531 ) begin end
-    \channel_stream__first$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-    casez (\$3 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:172" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "B0/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:174" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "B1/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:183" */
-            2'h1:
-                /* empty */;
-            /* \amaranth.decoding  = "B2/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:187" */
-            2'h2:
-                \channel_stream__first$next  = \$5 ;
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \channel_stream__first$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$531 ) begin end
-    \channel_stream__last$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-    casez (\$7 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:172" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "B0/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:174" */
-            2'h0:
-                /* empty */;
-            /* \amaranth.decoding  = "B1/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:183" */
-            2'h1:
-                /* empty */;
-            /* \amaranth.decoding  = "B2/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:187" */
-            2'h2:
-                \channel_stream__last$next  = \$9 ;
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \channel_stream__last$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2082:dump_module$531 ) begin end
-    \fsm_state$next  = fsm_state;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:172" *)
-    casez (\$13 )
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:172" */
-      1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:173" *)
-          casez (fsm_state)
-            /* \amaranth.decoding  = "B0/0" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:174" */
-            2'h0:
-                \fsm_state$next  = 2'h1;
-            /* \amaranth.decoding  = "B1/1" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:183" */
-            2'h1:
-                \fsm_state$next  = 2'h2;
-            /* \amaranth.decoding  = "B2/2" */
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:187" */
-            2'h2:
-                \fsm_state$next  = 2'h0;
-          endcase
-    endcase
-    (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
-    casez (usb_rst)
-      1'h1:
-          \fsm_state$next  = 2'h0;
-    endcase
-  end
-  assign usb_stream__first = 1'h0;
-  assign usb_stream__valid = 1'h0;
-  assign usb_stream__payload = 8'h00;
-  assign channel_stream__ready = 1'h0;
-  assign usb_stream__ready = out_ready;
-  assign out_ready = 1'h0;
-  assign usb_payload = 8'h00;
-  assign usb_valid = 1'h0;
-  assign usb_first = 1'h0;
-  assign \$1  = 1'h0;
-  assign \$3  = 1'h0;
-  assign \$5  = 1'h1;
-  assign \$7  = 1'h0;
-  assign \$9  = 1'h1;
-  assign \$11  = 1'h0;
-  assign \$15  = 1'h0;
-  assign \$13  = 1'h0;
-  assign \$17  = 1'h0;
-  assign \$19  = 1'h0;
 endmodule

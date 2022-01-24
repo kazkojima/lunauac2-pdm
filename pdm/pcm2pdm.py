@@ -5,7 +5,6 @@
 
 from amaranth import *
 from amaranth.lib.fifo import SyncFIFO
-from amaranth.hdl.ast import Rose, Fell
 from amaranth.cli import main
 
 from amlib.test import GatewareTestCase, sync_test_case
@@ -97,7 +96,15 @@ class PCM2PDM(Elaboratable):
             clk_divider.clock_enable_in.eq(1),
             self.pdm_clock_out.eq(~clk_divider.clock_out)
         ]
-        strobe = Rose(clk_divider.clock_out, domain="sync")
+        strobe = Signal()
+        base_clock = Signal()
+        m.d.comb += base_clock.eq(clk_divider.clock_out)
+
+        # Does Rose work with DomainRenamer?
+        #strobe = Rose(base_clock, domain="sync")
+        base_clock_next = Signal()
+        m.d.sync += base_clock_next.eq(base_clock)
+        m.d.comb += strobe.eq(base_clock & ~base_clock_next)
 
         bw = self.bitwidth
         fbw = self.fraction_width

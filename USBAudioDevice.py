@@ -8,7 +8,7 @@ from migen import *
 
 # Create a migen module to interface into a compiled nmigen module
 class USBAudioDevice(Module):
-    def __init__(self, platform, ulpi_pads, pdmout_pads):
+    def __init__(self, platform, ulpi_pads, pdmout_pads, pdmin_pads):
         ulpi_data = TSTriple(8)
 
         reset = Signal()
@@ -40,7 +40,8 @@ class USBAudioDevice(Module):
 
             o_pdmout__data__o = pdmout_pads.data,
             o_pdmout__clk__o = pdmout_pads.clk,
-            o_pdmout__cs__o = pdmout_pads.cs,
+            i_pdmin__data__i = pdmin_pads.data,
+            o_pdmin__clk__o = pdmin_pads.clk,
         )
 
         self.specials += Instance("LunaUSBAudioDevice",

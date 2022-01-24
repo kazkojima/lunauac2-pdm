@@ -7,12 +7,11 @@ import os
 
 from amaranth import *
 from amaranth.lib.cdc    import FFSynchronizer
+from amaranth.hdl.rec    import DIR_FANIN, DIR_FANOUT, DIR_NONE
+from amaranth.back       import verilog
+from amaranth.lib.fifo   import SyncFIFO
 
-from amaranth.hdl.rec import DIR_FANIN, DIR_FANOUT, DIR_NONE
-from amaranth.back import verilog
-
-from amaranth.lib.fifo  import SyncFIFO, AsyncFIFO
-from amlib.stream       import StreamInterface, connect_stream_to_fifo, connect_fifo_to_stream
+from amlib.stream        import StreamInterface, connect_stream_to_fifo, connect_fifo_to_stream
 from amlib.utils         import EdgeToPulse, Timer
 
 from luna.usb2           import USBDevice, USBIsochronousInMemoryEndpoint, USBIsochronousOutStreamEndpoint, USBIsochronousInStreamEndpoint
@@ -27,175 +26,12 @@ from luna.gateware.usb.usb2.device            import USBDevice
 from luna.gateware.usb.usb2.request           import USBRequestHandler, StallOnlyRequestHandler
 from luna.gateware.usb.stream                 import USBInStreamInterface
 from luna.gateware.stream.generator           import StreamSerializer
-#from luna.full_devices import USBAudioDevice as LunaDeviceACM
 from luna.gateware.architecture.car import PHYResetController
 
+from pdm.pdm2pcm import PDM2PCM
 from pdm.pcm2pdm import PCM2PDM
 
 from requesthandlers import UAC2RequestHandlers
-
-class ChannelsToUSBStream(Elaboratable):
-    def __init__(self, max_nr_channels=1, sample_width=16, max_packet_size=512):
-        assert sample_width in [16, 24, 32]
-
-        # parameters
-        self._max_nr_channels = max_nr_channels
-        self._channel_bits    = Shape.cast(range(max_nr_channels)).width
-        self._sample_width    = sample_width
-        self._max_packet_size = max_packet_size
-
-        # ports
-        self.usb_stream_out      = StreamInterface()
-        self.channel_stream_in   = StreamInterface(name="channels_stream_in", payload_width=self._sample_width, extra_fields=[("channel_no", self._channel_bits)])
-
-    def elaborate(self, platform):
-        m = Module()
-        m.submodules.out_fifo = out_fifo = SyncFIFO(width=8, depth=self._max_packet_size)
-
-        channel_stream  = self.channel_stream_in
-        channel_payload = Signal(self._sample_width)
-        channel_valid   = Signal()
-        channel_ready   = Signal()
-
-        m.d.comb += [
-            *connect_fifo_to_stream(out_fifo, self.usb_stream_out),
-            channel_payload.eq(channel_stream.payload),
-            channel_valid.eq(channel_stream.valid),
-            channel_stream.ready.eq(channel_ready),
-        ]
-
-        current_sample  = Signal(32 if self._sample_width > 16 else 16)
-        current_channel = Signal(self._channel_bits)
-        current_byte    = Signal(2 if self._sample_width > 16 else 1)
-
-        last_channel    = self._max_nr_channels - 1
-        num_bytes = 4
-        last_byte = num_bytes - 1
-
-        shift = 8 if self._sample_width == 24 else 0
-
-        with m.If(out_fifo.w_rdy):
-            with m.FSM() as fsm:
-                current_channel_next = (current_channel + 1)[:self._channel_bits]
-
-                with m.State("WAIT-FIRST"):
-                    # we have to accept data until we find a first channel sample
-                    m.d.comb += channel_ready.eq(1)
-                    with m.If(channel_valid & (channel_stream.channel_no == 0)):
-                        m.d.sync += [
-                            current_sample.eq(channel_payload << shift),
-                            current_channel.eq(0),
-                        ]
-                        m.next = "SEND"
-
-                with m.State("SEND"):
-                    m.d.comb += [
-                        out_fifo.w_data.eq(current_sample[0:8]),
-                        out_fifo.w_en.eq(1),
-                    ]
-                    m.d.sync += [
-                        current_byte.eq(current_byte + 1),
-                        current_sample.eq(current_sample >> 8),
-                    ]
-
-                    with m.If(current_byte == last_byte):
-                        with m.If(channel_valid):
-                            m.d.comb += channel_ready.eq(1)
-
-                            m.d.sync += current_channel.eq(current_channel_next)
-
-                            with m.If(current_channel_next == channel_stream.channel_no):
-                                m.d.sync += current_sample.eq(channel_payload << shift)
-                                m.next = "SEND"
-                            with m.Else():
-                                m.next = "FILL-ZEROS"
-
-                        with m.Else():
-                            m.next = "WAIT"
-
-                with m.State("WAIT"):
-                    with m.If(channel_valid):
-                        m.d.comb += channel_ready.eq(1)
-                        m.d.sync += [
-                            current_sample.eq(channel_payload << shift),
-                            current_channel.eq(current_channel_next),
-                        ]
-                        m.next = "SEND"
-
-                with m.State("FILL-ZEROS"):
-                    m.d.comb += [
-                        out_fifo.w_data.eq(0),
-                        out_fifo.w_en.eq(1),
-                    ]
-                    m.d.sync += current_byte.eq(current_byte + 1)
-
-                    with m.If(current_byte == last_byte):
-                        m.d.sync += current_channel.eq(current_channel + 1)
-                        with m.If(current_channel == last_channel):
-                            m.next = "WAIT-FIRST"
-        return m
-
-class USBStreamToChannels(Elaboratable):
-    def __init__(self, max_nr_channels=1):
-        # parameters
-        self._max_nr_channels = max_nr_channels
-        self._channel_bits    = 0#Shape.cast(range(max_nr_channels)).width
-
-        # ports
-        self.usb_stream_in       = StreamInterface(name="usb_stream")
-        self.channel_stream_out  = StreamInterface(name="channel_stream", payload_width=16, extra_fields=[("channel_no", self._channel_bits)])
-
-    def elaborate(self, platform):
-        m = Module()
-
-        out_channel_no   = Signal(self._channel_bits)
-        out_sample       = Signal(8)
-        usb_valid        = Signal()
-        usb_first        = Signal()
-        usb_payload      = Signal(8)
-        out_ready        = Signal()
-
-        m.d.comb += [
-            usb_first.eq(self.usb_stream_in.first),
-            usb_valid.eq(self.usb_stream_in.valid),
-            usb_payload.eq(self.usb_stream_in.payload),
-            out_ready.eq(self.channel_stream_out.ready),
-            self.usb_stream_in.ready.eq(out_ready),
-        ]
-
-        m.d.sync += [
-            self.channel_stream_out.valid.eq(0),
-            self.channel_stream_out.first.eq(0),
-            self.channel_stream_out.last.eq(0),
-        ]
-
-        with m.If(usb_valid & out_ready):
-            with m.FSM():
-                with m.State("B0"):
-                    #with m.If(usb_first):
-                    #    m.d.sync += out_channel_no.eq(0)
-                    #with m.Else():
-                    #    m.d.sync += out_channel_no.eq(out_channel_no + 1)
-                    m.d.sync += out_channel_no.eq(0)
-
-                    m.next = "B1"
-
-                with m.State("B1"):
-                    m.d.sync += out_sample.eq(usb_payload)
-                    m.next = "B2"
-
-                with m.State("B2"):
-                    m.d.sync += [
-                        self.channel_stream_out.payload.eq(Cat(out_sample, usb_payload)),
-                        self.channel_stream_out.valid.eq(1),
-                        self.channel_stream_out.channel_no.eq(out_channel_no),
-                        self.channel_stream_out.first.eq(out_channel_no == 0),
-                        self.channel_stream_out.last.eq(out_channel_no == (2**self._channel_bits - 1)),
-                    ]
-                    m.next = "B0"
-
-        return m
-
 
 class LunaUSBAudioDevice(Elaboratable):
     """ USB Audio Class v2 interface """
@@ -203,6 +39,8 @@ class LunaUSBAudioDevice(Elaboratable):
     MAX_PACKET_SIZE = 512 # NR_CHANNELS * 24 + 4
     USE_ILA = False
     ILA_MAX_PACKET_SIZE = 512
+    ENABLE_PDM_IN = True
+    ENABLE_PDM_OUT = True
 
     def create_descriptors(self):
         """ Creates the descriptors that describe our audio topology. """
@@ -385,7 +223,7 @@ class LunaUSBAudioDevice(Elaboratable):
 
         # AudioStreaming Interface Descriptor (Type I)
         typeIStreamingInterface  = uac2.TypeIFormatTypeDescriptorEmitter()
-        typeIStreamingInterface.bSubslotSize   = 4
+        typeIStreamingInterface.bSubslotSize   = 2
         typeIStreamingInterface.bBitResolution = 16 # we use all 16 bits
         c.add_subordinate_descriptor(typeIStreamingInterface)
 
@@ -413,8 +251,8 @@ class LunaUSBAudioDevice(Elaboratable):
         quietAudioStreamingInterface.bAlternateSetting = 0
         c.add_subordinate_descriptor(quietAudioStreamingInterface)
 
-        # Windows wants a stereo pair as default setting, so let's have it
-        self.create_input_streaming_interface(c, nr_channels=self.NR_CHANNELS, alt_setting_nr=1, channel_config=0x3)
+        # Front center
+        self.create_input_streaming_interface(c, nr_channels=self.NR_CHANNELS, alt_setting_nr=1, channel_config=0x4)
 
 
     def __init__(self):
@@ -429,11 +267,17 @@ class LunaUSBAudioDevice(Elaboratable):
             ]
         )
 
+        self.pdmin = Record(
+            [
+                ('data', [('i', 1, DIR_FANIN)]),
+                ('clk', [('o', 1, DIR_FANOUT)]),
+            ]
+        )
+
         self.pdmout = Record(
             [
                 ('data', [('o', 1, DIR_FANOUT)]),
                 ('clk', [('o', 1, DIR_FANOUT)]),
-                ('cs', [('o', 1, DIR_FANOUT)]),
             ]
         )
 
@@ -455,27 +299,33 @@ class LunaUSBAudioDevice(Elaboratable):
             ResetSignal("usb")  .eq(controller.phy_reset),
             self.usb_holdoff    .eq(controller.phy_stop)
         ]
-        
+
         # Attach Clock domains
         m.d.comb += [
             ClockSignal(domain="sync")     .eq(self.clk_sync),
             ClockSignal(domain="usb")      .eq(self.clk_usb),
             ResetSignal("sync").eq(self.rst_sync),
         ]
-        
-        m.submodules.pdm_transmitter = pdm_transmitter = PCM2PDM()
 
-        sout = Signal()
-        cout = Signal()
-        csout = Signal(reset=1)
-        m.d.comb += [
-            # wire up PDM transmitter
-            self.pdmout.data.eq(pdm_transmitter.pdm_data_out),
-            self.pdmout.clk.eq(pdm_transmitter.pdm_clock_out),
-            #self.pdmout.data.eq(sout),
-            #self.pdmout.clk.eq(cout),
-            #self.pdmout.cs.eq(csout),
-        ]
+        # Assume 48kHz sampling rate, 60MHz clk_usb and 48 OSR of PDM module.
+        # (60000000/48000)/48 = 26.0416...
+        if self.ENABLE_PDM_IN:
+            m.submodules.pdm_receiver = pdm_receiver = DomainRenamer("usb")(PDM2PCM(divisor=26))
+
+            m.d.comb += [
+                # wire up PDM receiver
+                pdm_receiver.pdm_data_in.eq(self.pdmin.data),
+                self.pdmin.clk.eq(pdm_receiver.pdm_clock_out),
+            ]
+
+        if self.ENABLE_PDM_OUT:
+            m.submodules.pdm_transmitter = pdm_transmitter = DomainRenamer("usb")(PCM2PDM(divisor=26))
+
+            m.d.comb += [
+                # wire up PDM transmitter
+                self.pdmout.data.eq(pdm_transmitter.pdm_data_out),
+                self.pdmout.clk.eq(pdm_transmitter.pdm_clock_out),
+            ]
 
         self.usb0 = usb = USBDevice(bus=self.ulpi)
 
@@ -517,7 +367,7 @@ class LunaUSBAudioDevice(Elaboratable):
         usb.add_endpoint(ep2_in)
 
         # calculate bytes in frame for audio in
-        audio_in_frame_bytes = Signal(range(self.MAX_PACKET_SIZE), reset=16 * self.NR_CHANNELS)
+        audio_in_frame_bytes = Signal(range(self.MAX_PACKET_SIZE), reset=12 * self.NR_CHANNELS)
         audio_in_frame_bytes_counting = Signal()
 
         with m.If(ep1_out.stream.valid & ep1_out.stream.ready):
@@ -535,7 +385,8 @@ class LunaUSBAudioDevice(Elaboratable):
         # Connect our device as a high speed device
         m.d.comb += [
             ep1_in.bytes_in_frame.eq(2),
-            ep2_in.bytes_in_frame.eq(audio_in_frame_bytes),
+            # 48000*2*0.125*10^-3 = 12
+            ep2_in.bytes_in_frame.eq(12),
             usb.connect          .eq(1),
             usb.full_speed_only  .eq(0),
         ]
@@ -585,91 +436,100 @@ class LunaUSBAudioDevice(Elaboratable):
             ep1_in.value.eq(0xff & (feedbackValue >> bitPos)),
         ]
 
-        m.submodules.usb_to_channel_stream = usb_to_channel_stream = \
-            DomainRenamer("usb")(USBStreamToChannels(self.NR_CHANNELS))
+        if self.ENABLE_PDM_IN:
+            m.submodules.in_fifo = in_fifo = \
+                DomainRenamer("usb")(SyncFIFO(width=8, depth=512))
 
-        m.submodules.channels_to_usb_stream = channels_to_usb_stream = \
-            DomainRenamer("usb")(ChannelsToUSBStream(self.NR_CHANNELS))
+            m.d.comb += connect_fifo_to_stream(in_fifo, ep2_in.stream)
 
-        m.submodules.out_fifo = out_fifo = \
-            AsyncFIFO(width=9, depth=512, r_domain="sync", w_domain="usb")
+            # Serializer
+            # Convert 16-bit numbers to bytes in the little endian way
+            # Assume 24-bit PDM2PCM
+            pcm24 = Signal(signed(24))
+            le16 = Signal(signed(16))
+            b8 = Signal(8)
+            with m.If(pdm_receiver.pcm_strobe_out):
+                m.d.usb += pcm24.eq(pdm_receiver.pcm_data_out)
+            m.d.comb += [
+                le16.eq(pcm24 >> 8),
+                in_fifo.w_data.eq(b8)
+            ]
+            m.d.usb += in_fifo.w_en.eq(0)
+            with m.FSM(reset="WAIT", domain="usb"):
+                with m.State("WAIT"):
+                    with m.If(pdm_receiver.pcm_strobe_out):
+                        m.next="LO"
+                with m.State("LO"):
+                    with m.If(in_fifo.w_rdy):
+                        m.d.usb += [
+                            b8.eq(le16[0:8]),
+                            in_fifo.w_en.eq(1)
+                        ]
+                        m.next="LOACK"
+                    with m.Else():
+                        m.next="WAIT"
+                with m.State("LOACK"):
+                    m.next="HI"
+                with m.State("HI"):
+                    with m.If(in_fifo.w_rdy):
+                        m.d.usb += [
+                            b8.eq(le16[8:16]),
+                            in_fifo.w_en.eq(1)
+                        ]
+                        m.next="HIACK"
+                    with m.Else():
+                        m.next="WAIT"
+                with m.State("HIACK"):
+                    m.next="WAIT"
 
-        m.d.comb += connect_stream_to_fifo(ep1_out.stream, out_fifo, firstBit=8)
-        se16 = Signal(signed(16))
-        sample = Signal(8)
-        fbit = Signal()
-        m.d.comb += [
-            sample.eq(out_fifo.r_data),
-            fbit.eq(out_fifo.r_data[8])
-        ]
-        m.d.sync += out_fifo.r_en.eq(0)
-        with m.FSM(reset="IDLE"):
-            with m.State("IDLE"):
-                with m.If(pdm_transmitter.pcm_strobe_in & out_fifo.r_rdy):
-                    m.d.sync += [
-                        se16[0:8].eq(sample),
-                        out_fifo.r_en.eq(1)
-                    ]
-                    m.next="B0ACK"
-            with m.State("B0ACK"):
-                m.next="B1"
-            with m.State("B1"):
-                with m.If(out_fifo.r_rdy):
-                    with m.If(fbit):
-                        # 1st byte again
-                        m.d.sync += [
+        if self.ENABLE_PDM_OUT:
+            m.submodules.out_fifo = out_fifo = \
+                DomainRenamer("usb")(SyncFIFO(width=9, depth=512))
+
+            m.d.comb += connect_stream_to_fifo(ep1_out.stream, out_fifo, firstBit=8)
+
+            # Deserializer
+            # Convert bytes to signed 16-bit numbers in the little endian way
+            se16 = Signal(signed(16))
+            sample = Signal(8)
+            fbit = Signal()
+            m.d.comb += [
+                sample.eq(out_fifo.r_data),
+                fbit.eq(out_fifo.r_data[8])
+            ]
+            m.d.usb += out_fifo.r_en.eq(0)
+            with m.FSM(reset="IDLE", domain="usb"):
+                with m.State("IDLE"):
+                    with m.If(pdm_transmitter.pcm_strobe_in & out_fifo.r_rdy):
+                        m.d.usb += [
                             se16[0:8].eq(sample),
                             out_fifo.r_en.eq(1)
                         ]
                         m.next="B0ACK"
-                    with m.Else():
-                        m.d.sync += [
-                            se16[8:16].eq(sample),
-                            out_fifo.r_en.eq(1)
-                        ]
-                        m.next="B1ACK"
-            with m.State("B1ACK"):
-                m.next="IDLE"
+                with m.State("B0ACK"):
+                    m.next="B1"
+                with m.State("B1"):
+                    with m.If(out_fifo.r_rdy):
+                        with m.If(fbit):
+                            # 1st byte again
+                            m.d.usb += [
+                                se16[0:8].eq(sample),
+                                out_fifo.r_en.eq(1)
+                            ]
+                            m.next="B0ACK"
+                        with m.Else():
+                            m.d.usb += [
+                                se16[8:16].eq(sample),
+                                out_fifo.r_en.eq(1)
+                            ]
+                            m.next="B1ACK"
+                with m.State("B1ACK"):
+                    m.next="IDLE"
 
-        m.d.comb += [
-            # wire USB to PDM transmitter via fifo
-            #usb_to_channel_stream.usb_stream_in.stream_eq(ep1_out.stream),
-            #connect_stream_to_fifo(usb_to_channel_stream.channel_stream_out,
-            #                       out_fifo),
-            #out_fifo.r_en.eq(pdm_transmitter.pcm_strobe_in),
-            pdm_transmitter.pcm_data_in.eq(se16 << (28-16-3)),
-        ]
-
-        spi = Signal(16)
-        scount = Signal(range(16))
-        bcount = Signal(range(16))
-        m.d.comb += sout.eq(spi[16-1])
-        with m.FSM(reset="SIDLE"):
-            with m.State("SIDLE"):
-                with m.If(pdm_transmitter.pcm_strobe_in):
-                    m.d.sync += [
-                        #pdm_transmitter.pcm_data_in.eq(se16 << (28-16-3)),
-                        #out_fifo.r_en.eq(1),
-                        spi.eq(se16),
-                        scount.eq(0),
-                        bcount.eq(0),
-                        cout.eq(0),
-                        csout.eq(0)
-                    ]
-                    m.next="SO"
-            with m.State("SO"):
-                with m.If(scount == 7):
-                    m.d.sync += cout.eq(1)
-                with m.If(scount == 15):
-                    m.d.sync += [
-                        cout.eq(0),
-                        spi.eq(spi << 1),
-                        bcount.eq(bcount+1)
-                    ]
-                    with m.If(bcount == 15):
-                        m.d.sync += csout.eq(1)
-                        m.next="SIDLE"
-                m.d.sync += scount.eq(scount+1)
+            m.d.comb += [
+                # wire USB to PDM transmitter. Assume 28-bit PCM2PDM
+                pdm_transmitter.pcm_data_in.eq(se16 << (28-16-3)),
+            ]
 
         return m
 
