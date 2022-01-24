@@ -592,12 +592,16 @@ class LunaUSBAudioDevice(Elaboratable):
             DomainRenamer("usb")(ChannelsToUSBStream(self.NR_CHANNELS))
 
         m.submodules.out_fifo = out_fifo = \
-            AsyncFIFO(width=8, depth=512, r_domain="sync", w_domain="usb")
+            AsyncFIFO(width=9, depth=512, r_domain="sync", w_domain="usb")
 
-        m.d.comb += connect_stream_to_fifo(ep1_out.stream, out_fifo)
+        m.d.comb += connect_stream_to_fifo(ep1_out.stream, out_fifo, firstBit=8)
         se16 = Signal(signed(16))
         sample = Signal(8)
-        m.d.comb += sample.eq(out_fifo.r_data)
+        fbit = Signal()
+        m.d.comb += [
+            sample.eq(out_fifo.r_data),
+            fbit.eq(out_fifo.r_data[8])
+        ]
         m.d.sync += out_fifo.r_en.eq(0)
         with m.FSM(reset="IDLE"):
             with m.State("IDLE"):
@@ -606,16 +610,24 @@ class LunaUSBAudioDevice(Elaboratable):
                         se16[0:8].eq(sample),
                         out_fifo.r_en.eq(1)
                     ]
-                    m.next="B0ACK" 
+                    m.next="B0ACK"
             with m.State("B0ACK"):
                 m.next="B1"
             with m.State("B1"):
                 with m.If(out_fifo.r_rdy):
-                    m.d.sync += [
-                        se16[8:16].eq(sample),
-                        out_fifo.r_en.eq(1)
-                    ]
-                    m.next="B1ACK"
+                    with m.If(fbit):
+                        # 1st byte again
+                        m.d.sync += [
+                            se16[0:8].eq(sample),
+                            out_fifo.r_en.eq(1)
+                        ]
+                        m.next="B0ACK"
+                    with m.Else():
+                        m.d.sync += [
+                            se16[8:16].eq(sample),
+                            out_fifo.r_en.eq(1)
+                        ]
+                        m.next="B1ACK"
             with m.State("B1ACK"):
                 m.next="IDLE"
 

@@ -35,50 +35,52 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   wire [31:0] \$31 ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *)
   wire [31:0] \$33 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *)
-  wire \$35 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *)
+  (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
+  wire [8:0] \$35 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
   wire \$37 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
   wire \$39 ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:525" *)
   wire [9:0] \$4 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:628" *)
-  wire [30:0] \$41 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:628" *)
-  wire [30:0] \$42 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-  wire \$45 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:654" *)
-  wire [16:0] \$47 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:654" *)
-  wire [16:0] \$48 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
+  wire \$41 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:640" *)
+  wire [30:0] \$43 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:640" *)
+  wire [30:0] \$44 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+  wire \$47 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:666" *)
+  wire [16:0] \$49 ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:525" *)
   wire [9:0] \$5 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:660" *)
-  wire [4:0] \$50 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:660" *)
-  wire [4:0] \$51 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-  wire \$53 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:655" *)
-  wire [4:0] \$55 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:655" *)
-  wire [4:0] \$56 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-  wire \$58 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:666" *)
+  wire [16:0] \$50 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:672" *)
+  wire [4:0] \$52 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:672" *)
+  wire [4:0] \$53 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+  wire \$55 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:667" *)
+  wire [4:0] \$57 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:667" *)
+  wire [4:0] \$58 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:661" *)
   wire \$60 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
   wire \$62 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:657" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
   wire \$64 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
   wire \$66 ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:657" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
   wire \$68 ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *)
   wire \$7 ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
+  wire \$70 ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:520" *)
   wire [11:0] \$9 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
@@ -109,9 +111,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   reg \audio_in_frame_bytes_counting$next ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_rst;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:633" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:645" *)
   reg [3:0] bcount = 4'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:633" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:645" *)
   reg [3:0] \bcount$next ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:545" *)
   wire [4:0] bitPos;
@@ -129,20 +131,22 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   reg csout = 1'h1;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:470" *)
   reg \csout$next ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:600" *)
+  wire fbit;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:544" *)
   reg [31:0] feedbackValue = 32'd393216;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:544" *)
   reg [31:0] \feedbackValue$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:602" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
   reg [1:0] fsm_state = 2'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-  reg \fsm_state$44  = 1'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-  reg \fsm_state$44$next ;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:602" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+  reg \fsm_state$46  = 1'h0;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+  reg \fsm_state$46$next ;
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
   reg [1:0] \fsm_state$next ;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
-  wire [7:0] out_fifo_r_data;
+  wire [8:0] out_fifo_r_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
   reg out_fifo_r_en = 1'h0;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
@@ -150,7 +154,7 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:84" *)
   wire out_fifo_r_rdy;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
-  wire [7:0] out_fifo_w_data;
+  wire [8:0] out_fifo_w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:80" *)
   wire out_fifo_w_en;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
@@ -175,9 +179,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   input rst_sync;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:599" *)
   wire [7:0] sample;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:632" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:644" *)
   reg [3:0] scount = 4'h0;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:632" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:644" *)
   reg [3:0] \scount$next ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:598" *)
   reg [15:0] se16 = 16'h0000;
@@ -189,9 +193,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   reg [4:0] \sof_counter$next ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:468" *)
   wire sout;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:631" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:643" *)
   reg [15:0] spi = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2/build_verilog.py:631" *)
+  (* src = "/home/kkojima/luna-uac2/build_verilog.py:643" *)
   reg [15:0] \spi$next ;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:421" *)
   output ulpi__clk__o;
@@ -253,23 +257,24 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   assign \$2  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *) usb0_isochronous_endpoint1__ready;
   assign \$31  = feedbackValue >>> (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *) bitPos;
   assign \$33  = 8'hff & (* src = "/home/kkojima/luna-uac2/build_verilog.py:585" *) \$31 ;
-  assign \$35  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *) out_fifo_r_rdy;
-  assign \$37  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *) out_fifo_r_rdy;
-  assign \$39  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *) out_fifo_r_rdy;
-  assign \$45  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *) 4'hf;
-  assign \$51  = scount + (* src = "/home/kkojima/luna-uac2/build_verilog.py:660" *) 1'h1;
-  assign \$53  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *) 4'hf;
-  assign \$56  = bcount + (* src = "/home/kkojima/luna-uac2/build_verilog.py:655" *) 1'h1;
-  assign \$58  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *) 3'h7;
+  assign \$35  = + (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *) usb0_isochronous_endpoint1__payload;
+  assign \$37  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *) out_fifo_r_rdy;
+  assign \$39  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *) out_fifo_r_rdy;
+  assign \$41  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *) out_fifo_r_rdy;
+  assign \$47  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
+  assign \$53  = scount + (* src = "/home/kkojima/luna-uac2/build_verilog.py:672" *) 1'h1;
+  assign \$55  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
+  assign \$58  = bcount + (* src = "/home/kkojima/luna-uac2/build_verilog.py:667" *) 1'h1;
   assign \$5  = audio_in_frame_bytes + (* src = "/home/kkojima/luna-uac2/build_verilog.py:525" *) 1'h1;
-  assign \$60  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *) 4'hf;
-  assign \$62  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *) 4'hf;
-  assign \$64  = bcount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:657" *) 4'hf;
-  assign \$66  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *) 4'hf;
-  assign \$68  = bcount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:657" *) 4'hf;
+  assign \$60  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:661" *) 3'h7;
+  assign \$62  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
+  assign \$64  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
+  assign \$66  = bcount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *) 4'hf;
+  assign \$68  = scount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *) 4'hf;
+  assign \$70  = bcount == (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *) 4'hf;
   assign \$7  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2/build_verilog.py:523" *) usb0_isochronous_endpoint1__ready;
   always @(posedge clk)
-    \fsm_state$44  <= \fsm_state$44$next ;
+    \fsm_state$46  <= \fsm_state$46$next ;
   always @(posedge usb_clk)
     feedbackValue <= \feedbackValue$next ;
   always @(posedge usb_clk)
@@ -452,29 +457,38 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \out_fifo_r_en$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:602" *)
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:603" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:607" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *)
-          casez (\$35 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:604" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
+          casez (\$37 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:608" */
             1'h1:
                 \out_fifo_r_en$next  = 1'h1;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:610" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:614" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:612" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:616" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:613" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:617" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:613" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:617" */
             1'h1:
-                \out_fifo_r_en$next  = 1'h1;
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/luna-uac2/build_verilog.py:618" *)
+                casez (fbit)
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:618" */
+                  1'h1:
+                      \out_fifo_r_en$next  = 1'h1;
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:625" */
+                  default:
+                      \out_fifo_r_en$next  = 1'h1;
+                endcase
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -486,29 +500,38 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \se16$next  = se16;
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:602" *)
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:603" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:607" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *)
-          casez (\$37 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:604" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
+          casez (\$39 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:608" */
             1'h1:
                 \se16$next [7:0] = sample;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:610" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:614" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:612" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:616" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:613" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:617" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:613" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:617" */
             1'h1:
-                \se16$next [15:8] = sample;
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/luna-uac2/build_verilog.py:618" *)
+                casez (fbit)
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:618" */
+                  1'h1:
+                      \se16$next [7:0] = sample;
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:625" */
+                  default:
+                      \se16$next [15:8] = sample;
+                endcase
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -521,32 +544,41 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \fsm_state$next  = fsm_state;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:602" *)
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:606" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:603" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:607" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:604" *)
-          casez (\$39 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:604" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:608" *)
+          casez (\$41 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:608" */
             1'h1:
                 \fsm_state$next  = 2'h1;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:610" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:614" */
       2'h1:
           \fsm_state$next  = 2'h2;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:612" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:616" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:613" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:617" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:613" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:617" */
             1'h1:
-                \fsm_state$next  = 2'h3;
+                (* full_case = 32'd1 *)
+                (* src = "/home/kkojima/luna-uac2/build_verilog.py:618" *)
+                casez (fbit)
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:618" */
+                  1'h1:
+                      \fsm_state$next  = 2'h1;
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:625" */
+                  default:
+                      \fsm_state$next  = 2'h3;
+                endcase
           endcase
       /* \amaranth.decoding  = "B1ACK/3" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:619" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:631" */
       2'h3:
           \fsm_state$next  = 2'h0;
     endcase
@@ -560,25 +592,25 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \spi$next  = spi;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-    casez (\fsm_state$44 )
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+    casez (\fsm_state$46 )
       /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:636" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
       1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:637" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
           casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:637" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
             1'h1:
                 \spi$next  = se16;
           endcase
       /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-          casez (\$45 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:651" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+          casez (\$47 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
             1'h1:
-                \spi$next  = \$48 [15:0];
+                \spi$next  = \$50 [15:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -591,21 +623,21 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \scount$next  = scount;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-    casez (\fsm_state$44 )
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+    casez (\fsm_state$46 )
       /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:636" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
       1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:637" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
           casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:637" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
             1'h1:
                 \scount$next  = 4'h0;
           endcase
       /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
       1'h1:
-          \scount$next  = \$51 [3:0];
+          \scount$next  = \$53 [3:0];
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
@@ -617,25 +649,25 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \bcount$next  = bcount;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-    casez (\fsm_state$44 )
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+    casez (\fsm_state$46 )
       /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:636" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
       1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:637" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
           casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:637" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
             1'h1:
                 \bcount$next  = 4'h0;
           endcase
       /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-          casez (\$53 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:651" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+          casez (\$55 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
             1'h1:
-                \bcount$next  = \$56 [3:0];
+                \bcount$next  = \$58 [3:0];
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
@@ -648,30 +680,30 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \cout$next  = cout;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-    casez (\fsm_state$44 )
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+    casez (\fsm_state$46 )
       /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:636" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
       1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:637" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
           casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:637" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
             1'h1:
                 \cout$next  = 1'h0;
           endcase
       /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
       1'h1:
         begin
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
-          casez (\$58 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:661" *)
+          casez (\$60 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:661" */
             1'h1:
                 \cout$next  = 1'h1;
           endcase
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-          casez (\$60 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:651" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+          casez (\$62 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
             1'h1:
                 \cout$next  = 1'h0;
           endcase
@@ -687,27 +719,27 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
     \csout$next  = csout;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-    casez (\fsm_state$44 )
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+    casez (\fsm_state$46 )
       /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:636" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
       1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:637" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
           casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:637" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
             1'h1:
                 \csout$next  = 1'h0;
           endcase
       /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-          casez (\$62 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:651" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+          casez (\$64 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
             1'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:657" *)
-                casez (\$64 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:657" */
+                (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
+                casez (\$66 )
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:669" */
                   1'h1:
                       \csout$next  = 1'h1;
                 endcase
@@ -721,38 +753,38 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$482 ) begin end
-    \fsm_state$44$next  = \fsm_state$44 ;
+    \fsm_state$46$next  = \fsm_state$46 ;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2/build_verilog.py:635" *)
-    casez (\fsm_state$44 )
+    (* src = "/home/kkojima/luna-uac2/build_verilog.py:647" *)
+    casez (\fsm_state$46 )
       /* \amaranth.decoding  = "SIDLE/0" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:636" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
       1'h0:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:637" *)
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:649" *)
           casez (pdm_transmitter_pcm_strobe_in)
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:637" */
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:649" */
             1'h1:
-                \fsm_state$44$next  = 1'h1;
+                \fsm_state$46$next  = 1'h1;
           endcase
       /* \amaranth.decoding  = "SO/1" */
-      /* src = "/home/kkojima/luna-uac2/build_verilog.py:648" */
+      /* src = "/home/kkojima/luna-uac2/build_verilog.py:660" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2/build_verilog.py:651" *)
-          casez (\$66 )
-            /* src = "/home/kkojima/luna-uac2/build_verilog.py:651" */
+          (* src = "/home/kkojima/luna-uac2/build_verilog.py:663" *)
+          casez (\$68 )
+            /* src = "/home/kkojima/luna-uac2/build_verilog.py:663" */
             1'h1:
-                (* src = "/home/kkojima/luna-uac2/build_verilog.py:657" *)
-                casez (\$68 )
-                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:657" */
+                (* src = "/home/kkojima/luna-uac2/build_verilog.py:669" *)
+                casez (\$70 )
+                  /* src = "/home/kkojima/luna-uac2/build_verilog.py:669" */
                   1'h1:
-                      \fsm_state$44$next  = 1'h0;
+                      \fsm_state$46$next  = 1'h0;
                 endcase
           endcase
     endcase
     (* src = "/home/git/amaranth/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
-          \fsm_state$44$next  = 1'h0;
+          \fsm_state$46$next  = 1'h0;
     endcase
   end
   always @* begin
@@ -811,14 +843,16 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   assign \$16  = \$17 ;
   assign \$27  = \$28 ;
   assign \$30  = \$33 ;
-  assign \$41  = \$42 ;
-  assign \$47  = \$48 ;
-  assign \$50  = \$51 ;
-  assign \$55  = \$56 ;
+  assign \$43  = \$44 ;
+  assign \$49  = \$50 ;
+  assign \$52  = \$53 ;
+  assign \$57  = \$58 ;
   assign sout = spi[15];
-  assign pdm_transmitter_pcm_data_in = \$42 [27:0];
-  assign sample = out_fifo_r_data;
-  assign out_fifo_w_data = usb0_isochronous_endpoint1__payload;
+  assign pdm_transmitter_pcm_data_in = \$44 [27:0];
+  assign fbit = out_fifo_r_data[8];
+  assign sample = out_fifo_r_data[7:0];
+  assign out_fifo_w_data[8] = usb0_isochronous_endpoint1__first;
+  assign out_fifo_w_data[7:0] = \$35 [7:0];
   assign usb0_isochronous_endpoint1__ready = out_fifo_w_rdy;
   assign out_fifo_w_en = usb0_isochronous_endpoint1__valid;
   assign usb0_value = \$33 [7:0];
@@ -836,8 +870,8 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   assign usb_rst = usb_reset_phy_reset;
   assign \$24  = { \$22 , 3'h0 };
   assign \$28  = { usb0_address, 3'h0 };
-  assign \$42  = { se16[15], se16[15], se16[15], se16[15], se16[15], se16[15], se16, 9'h000 };
-  assign \$48  = { spi, 1'h0 };
+  assign \$44  = { se16[15], se16[15], se16[15], se16[15], se16[15], se16[15], se16, 9'h000 };
+  assign \$50  = { spi, 1'h0 };
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.StallOnlyRequestHandler" *)
@@ -42198,7 +42232,7 @@ module \out_fifo$7 (clk, usb_clk, rst, w_en, w_rdy, w_data, r_data, r_en, r_rdy,
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:334" *)
   wire [9:0] produce_w_nxt;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
-  output [7:0] r_data;
+  output [8:0] r_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:375" *)
   reg r_empty;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:85" *)
@@ -42222,13 +42256,13 @@ module \out_fifo$7 (clk, usb_clk, rst, w_en, w_rdy, w_data, r_data, r_en, r_rdy,
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:388" *)
   wire [8:0] storage_r_addr;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:388" *)
-  wire [7:0] storage_r_data;
+  wire [8:0] storage_r_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:388" *)
   wire storage_r_en;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:387" *)
   wire [8:0] storage_w_addr;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:387" *)
-  wire [7:0] storage_w_data;
+  wire [8:0] storage_w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:387" *)
   wire storage_w_en;
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
@@ -42236,7 +42270,7 @@ module \out_fifo$7 (clk, usb_clk, rst, w_en, w_rdy, w_data, r_data, r_en, r_rdy,
   (* src = "/home/kkojima/luna-uac2/build_verilog.py:452" *)
   input usb_rst;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
-  input [7:0] w_data;
+  input [8:0] w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:80" *)
   input w_en;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:374" *)
@@ -42247,526 +42281,526 @@ module \out_fifo$7 (clk, usb_clk, rst, w_en, w_rdy, w_data, r_data, r_en, r_rdy,
   reg [9:0] \w_level$next ;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
   output w_rdy;
-  reg [7:0] storage [511:0];
+  reg [8:0] storage [511:0];
   initial begin
-    storage[0] = 8'h00;
-    storage[1] = 8'h00;
-    storage[2] = 8'h00;
-    storage[3] = 8'h00;
-    storage[4] = 8'h00;
-    storage[5] = 8'h00;
-    storage[6] = 8'h00;
-    storage[7] = 8'h00;
-    storage[8] = 8'h00;
-    storage[9] = 8'h00;
-    storage[10] = 8'h00;
-    storage[11] = 8'h00;
-    storage[12] = 8'h00;
-    storage[13] = 8'h00;
-    storage[14] = 8'h00;
-    storage[15] = 8'h00;
-    storage[16] = 8'h00;
-    storage[17] = 8'h00;
-    storage[18] = 8'h00;
-    storage[19] = 8'h00;
-    storage[20] = 8'h00;
-    storage[21] = 8'h00;
-    storage[22] = 8'h00;
-    storage[23] = 8'h00;
-    storage[24] = 8'h00;
-    storage[25] = 8'h00;
-    storage[26] = 8'h00;
-    storage[27] = 8'h00;
-    storage[28] = 8'h00;
-    storage[29] = 8'h00;
-    storage[30] = 8'h00;
-    storage[31] = 8'h00;
-    storage[32] = 8'h00;
-    storage[33] = 8'h00;
-    storage[34] = 8'h00;
-    storage[35] = 8'h00;
-    storage[36] = 8'h00;
-    storage[37] = 8'h00;
-    storage[38] = 8'h00;
-    storage[39] = 8'h00;
-    storage[40] = 8'h00;
-    storage[41] = 8'h00;
-    storage[42] = 8'h00;
-    storage[43] = 8'h00;
-    storage[44] = 8'h00;
-    storage[45] = 8'h00;
-    storage[46] = 8'h00;
-    storage[47] = 8'h00;
-    storage[48] = 8'h00;
-    storage[49] = 8'h00;
-    storage[50] = 8'h00;
-    storage[51] = 8'h00;
-    storage[52] = 8'h00;
-    storage[53] = 8'h00;
-    storage[54] = 8'h00;
-    storage[55] = 8'h00;
-    storage[56] = 8'h00;
-    storage[57] = 8'h00;
-    storage[58] = 8'h00;
-    storage[59] = 8'h00;
-    storage[60] = 8'h00;
-    storage[61] = 8'h00;
-    storage[62] = 8'h00;
-    storage[63] = 8'h00;
-    storage[64] = 8'h00;
-    storage[65] = 8'h00;
-    storage[66] = 8'h00;
-    storage[67] = 8'h00;
-    storage[68] = 8'h00;
-    storage[69] = 8'h00;
-    storage[70] = 8'h00;
-    storage[71] = 8'h00;
-    storage[72] = 8'h00;
-    storage[73] = 8'h00;
-    storage[74] = 8'h00;
-    storage[75] = 8'h00;
-    storage[76] = 8'h00;
-    storage[77] = 8'h00;
-    storage[78] = 8'h00;
-    storage[79] = 8'h00;
-    storage[80] = 8'h00;
-    storage[81] = 8'h00;
-    storage[82] = 8'h00;
-    storage[83] = 8'h00;
-    storage[84] = 8'h00;
-    storage[85] = 8'h00;
-    storage[86] = 8'h00;
-    storage[87] = 8'h00;
-    storage[88] = 8'h00;
-    storage[89] = 8'h00;
-    storage[90] = 8'h00;
-    storage[91] = 8'h00;
-    storage[92] = 8'h00;
-    storage[93] = 8'h00;
-    storage[94] = 8'h00;
-    storage[95] = 8'h00;
-    storage[96] = 8'h00;
-    storage[97] = 8'h00;
-    storage[98] = 8'h00;
-    storage[99] = 8'h00;
-    storage[100] = 8'h00;
-    storage[101] = 8'h00;
-    storage[102] = 8'h00;
-    storage[103] = 8'h00;
-    storage[104] = 8'h00;
-    storage[105] = 8'h00;
-    storage[106] = 8'h00;
-    storage[107] = 8'h00;
-    storage[108] = 8'h00;
-    storage[109] = 8'h00;
-    storage[110] = 8'h00;
-    storage[111] = 8'h00;
-    storage[112] = 8'h00;
-    storage[113] = 8'h00;
-    storage[114] = 8'h00;
-    storage[115] = 8'h00;
-    storage[116] = 8'h00;
-    storage[117] = 8'h00;
-    storage[118] = 8'h00;
-    storage[119] = 8'h00;
-    storage[120] = 8'h00;
-    storage[121] = 8'h00;
-    storage[122] = 8'h00;
-    storage[123] = 8'h00;
-    storage[124] = 8'h00;
-    storage[125] = 8'h00;
-    storage[126] = 8'h00;
-    storage[127] = 8'h00;
-    storage[128] = 8'h00;
-    storage[129] = 8'h00;
-    storage[130] = 8'h00;
-    storage[131] = 8'h00;
-    storage[132] = 8'h00;
-    storage[133] = 8'h00;
-    storage[134] = 8'h00;
-    storage[135] = 8'h00;
-    storage[136] = 8'h00;
-    storage[137] = 8'h00;
-    storage[138] = 8'h00;
-    storage[139] = 8'h00;
-    storage[140] = 8'h00;
-    storage[141] = 8'h00;
-    storage[142] = 8'h00;
-    storage[143] = 8'h00;
-    storage[144] = 8'h00;
-    storage[145] = 8'h00;
-    storage[146] = 8'h00;
-    storage[147] = 8'h00;
-    storage[148] = 8'h00;
-    storage[149] = 8'h00;
-    storage[150] = 8'h00;
-    storage[151] = 8'h00;
-    storage[152] = 8'h00;
-    storage[153] = 8'h00;
-    storage[154] = 8'h00;
-    storage[155] = 8'h00;
-    storage[156] = 8'h00;
-    storage[157] = 8'h00;
-    storage[158] = 8'h00;
-    storage[159] = 8'h00;
-    storage[160] = 8'h00;
-    storage[161] = 8'h00;
-    storage[162] = 8'h00;
-    storage[163] = 8'h00;
-    storage[164] = 8'h00;
-    storage[165] = 8'h00;
-    storage[166] = 8'h00;
-    storage[167] = 8'h00;
-    storage[168] = 8'h00;
-    storage[169] = 8'h00;
-    storage[170] = 8'h00;
-    storage[171] = 8'h00;
-    storage[172] = 8'h00;
-    storage[173] = 8'h00;
-    storage[174] = 8'h00;
-    storage[175] = 8'h00;
-    storage[176] = 8'h00;
-    storage[177] = 8'h00;
-    storage[178] = 8'h00;
-    storage[179] = 8'h00;
-    storage[180] = 8'h00;
-    storage[181] = 8'h00;
-    storage[182] = 8'h00;
-    storage[183] = 8'h00;
-    storage[184] = 8'h00;
-    storage[185] = 8'h00;
-    storage[186] = 8'h00;
-    storage[187] = 8'h00;
-    storage[188] = 8'h00;
-    storage[189] = 8'h00;
-    storage[190] = 8'h00;
-    storage[191] = 8'h00;
-    storage[192] = 8'h00;
-    storage[193] = 8'h00;
-    storage[194] = 8'h00;
-    storage[195] = 8'h00;
-    storage[196] = 8'h00;
-    storage[197] = 8'h00;
-    storage[198] = 8'h00;
-    storage[199] = 8'h00;
-    storage[200] = 8'h00;
-    storage[201] = 8'h00;
-    storage[202] = 8'h00;
-    storage[203] = 8'h00;
-    storage[204] = 8'h00;
-    storage[205] = 8'h00;
-    storage[206] = 8'h00;
-    storage[207] = 8'h00;
-    storage[208] = 8'h00;
-    storage[209] = 8'h00;
-    storage[210] = 8'h00;
-    storage[211] = 8'h00;
-    storage[212] = 8'h00;
-    storage[213] = 8'h00;
-    storage[214] = 8'h00;
-    storage[215] = 8'h00;
-    storage[216] = 8'h00;
-    storage[217] = 8'h00;
-    storage[218] = 8'h00;
-    storage[219] = 8'h00;
-    storage[220] = 8'h00;
-    storage[221] = 8'h00;
-    storage[222] = 8'h00;
-    storage[223] = 8'h00;
-    storage[224] = 8'h00;
-    storage[225] = 8'h00;
-    storage[226] = 8'h00;
-    storage[227] = 8'h00;
-    storage[228] = 8'h00;
-    storage[229] = 8'h00;
-    storage[230] = 8'h00;
-    storage[231] = 8'h00;
-    storage[232] = 8'h00;
-    storage[233] = 8'h00;
-    storage[234] = 8'h00;
-    storage[235] = 8'h00;
-    storage[236] = 8'h00;
-    storage[237] = 8'h00;
-    storage[238] = 8'h00;
-    storage[239] = 8'h00;
-    storage[240] = 8'h00;
-    storage[241] = 8'h00;
-    storage[242] = 8'h00;
-    storage[243] = 8'h00;
-    storage[244] = 8'h00;
-    storage[245] = 8'h00;
-    storage[246] = 8'h00;
-    storage[247] = 8'h00;
-    storage[248] = 8'h00;
-    storage[249] = 8'h00;
-    storage[250] = 8'h00;
-    storage[251] = 8'h00;
-    storage[252] = 8'h00;
-    storage[253] = 8'h00;
-    storage[254] = 8'h00;
-    storage[255] = 8'h00;
-    storage[256] = 8'h00;
-    storage[257] = 8'h00;
-    storage[258] = 8'h00;
-    storage[259] = 8'h00;
-    storage[260] = 8'h00;
-    storage[261] = 8'h00;
-    storage[262] = 8'h00;
-    storage[263] = 8'h00;
-    storage[264] = 8'h00;
-    storage[265] = 8'h00;
-    storage[266] = 8'h00;
-    storage[267] = 8'h00;
-    storage[268] = 8'h00;
-    storage[269] = 8'h00;
-    storage[270] = 8'h00;
-    storage[271] = 8'h00;
-    storage[272] = 8'h00;
-    storage[273] = 8'h00;
-    storage[274] = 8'h00;
-    storage[275] = 8'h00;
-    storage[276] = 8'h00;
-    storage[277] = 8'h00;
-    storage[278] = 8'h00;
-    storage[279] = 8'h00;
-    storage[280] = 8'h00;
-    storage[281] = 8'h00;
-    storage[282] = 8'h00;
-    storage[283] = 8'h00;
-    storage[284] = 8'h00;
-    storage[285] = 8'h00;
-    storage[286] = 8'h00;
-    storage[287] = 8'h00;
-    storage[288] = 8'h00;
-    storage[289] = 8'h00;
-    storage[290] = 8'h00;
-    storage[291] = 8'h00;
-    storage[292] = 8'h00;
-    storage[293] = 8'h00;
-    storage[294] = 8'h00;
-    storage[295] = 8'h00;
-    storage[296] = 8'h00;
-    storage[297] = 8'h00;
-    storage[298] = 8'h00;
-    storage[299] = 8'h00;
-    storage[300] = 8'h00;
-    storage[301] = 8'h00;
-    storage[302] = 8'h00;
-    storage[303] = 8'h00;
-    storage[304] = 8'h00;
-    storage[305] = 8'h00;
-    storage[306] = 8'h00;
-    storage[307] = 8'h00;
-    storage[308] = 8'h00;
-    storage[309] = 8'h00;
-    storage[310] = 8'h00;
-    storage[311] = 8'h00;
-    storage[312] = 8'h00;
-    storage[313] = 8'h00;
-    storage[314] = 8'h00;
-    storage[315] = 8'h00;
-    storage[316] = 8'h00;
-    storage[317] = 8'h00;
-    storage[318] = 8'h00;
-    storage[319] = 8'h00;
-    storage[320] = 8'h00;
-    storage[321] = 8'h00;
-    storage[322] = 8'h00;
-    storage[323] = 8'h00;
-    storage[324] = 8'h00;
-    storage[325] = 8'h00;
-    storage[326] = 8'h00;
-    storage[327] = 8'h00;
-    storage[328] = 8'h00;
-    storage[329] = 8'h00;
-    storage[330] = 8'h00;
-    storage[331] = 8'h00;
-    storage[332] = 8'h00;
-    storage[333] = 8'h00;
-    storage[334] = 8'h00;
-    storage[335] = 8'h00;
-    storage[336] = 8'h00;
-    storage[337] = 8'h00;
-    storage[338] = 8'h00;
-    storage[339] = 8'h00;
-    storage[340] = 8'h00;
-    storage[341] = 8'h00;
-    storage[342] = 8'h00;
-    storage[343] = 8'h00;
-    storage[344] = 8'h00;
-    storage[345] = 8'h00;
-    storage[346] = 8'h00;
-    storage[347] = 8'h00;
-    storage[348] = 8'h00;
-    storage[349] = 8'h00;
-    storage[350] = 8'h00;
-    storage[351] = 8'h00;
-    storage[352] = 8'h00;
-    storage[353] = 8'h00;
-    storage[354] = 8'h00;
-    storage[355] = 8'h00;
-    storage[356] = 8'h00;
-    storage[357] = 8'h00;
-    storage[358] = 8'h00;
-    storage[359] = 8'h00;
-    storage[360] = 8'h00;
-    storage[361] = 8'h00;
-    storage[362] = 8'h00;
-    storage[363] = 8'h00;
-    storage[364] = 8'h00;
-    storage[365] = 8'h00;
-    storage[366] = 8'h00;
-    storage[367] = 8'h00;
-    storage[368] = 8'h00;
-    storage[369] = 8'h00;
-    storage[370] = 8'h00;
-    storage[371] = 8'h00;
-    storage[372] = 8'h00;
-    storage[373] = 8'h00;
-    storage[374] = 8'h00;
-    storage[375] = 8'h00;
-    storage[376] = 8'h00;
-    storage[377] = 8'h00;
-    storage[378] = 8'h00;
-    storage[379] = 8'h00;
-    storage[380] = 8'h00;
-    storage[381] = 8'h00;
-    storage[382] = 8'h00;
-    storage[383] = 8'h00;
-    storage[384] = 8'h00;
-    storage[385] = 8'h00;
-    storage[386] = 8'h00;
-    storage[387] = 8'h00;
-    storage[388] = 8'h00;
-    storage[389] = 8'h00;
-    storage[390] = 8'h00;
-    storage[391] = 8'h00;
-    storage[392] = 8'h00;
-    storage[393] = 8'h00;
-    storage[394] = 8'h00;
-    storage[395] = 8'h00;
-    storage[396] = 8'h00;
-    storage[397] = 8'h00;
-    storage[398] = 8'h00;
-    storage[399] = 8'h00;
-    storage[400] = 8'h00;
-    storage[401] = 8'h00;
-    storage[402] = 8'h00;
-    storage[403] = 8'h00;
-    storage[404] = 8'h00;
-    storage[405] = 8'h00;
-    storage[406] = 8'h00;
-    storage[407] = 8'h00;
-    storage[408] = 8'h00;
-    storage[409] = 8'h00;
-    storage[410] = 8'h00;
-    storage[411] = 8'h00;
-    storage[412] = 8'h00;
-    storage[413] = 8'h00;
-    storage[414] = 8'h00;
-    storage[415] = 8'h00;
-    storage[416] = 8'h00;
-    storage[417] = 8'h00;
-    storage[418] = 8'h00;
-    storage[419] = 8'h00;
-    storage[420] = 8'h00;
-    storage[421] = 8'h00;
-    storage[422] = 8'h00;
-    storage[423] = 8'h00;
-    storage[424] = 8'h00;
-    storage[425] = 8'h00;
-    storage[426] = 8'h00;
-    storage[427] = 8'h00;
-    storage[428] = 8'h00;
-    storage[429] = 8'h00;
-    storage[430] = 8'h00;
-    storage[431] = 8'h00;
-    storage[432] = 8'h00;
-    storage[433] = 8'h00;
-    storage[434] = 8'h00;
-    storage[435] = 8'h00;
-    storage[436] = 8'h00;
-    storage[437] = 8'h00;
-    storage[438] = 8'h00;
-    storage[439] = 8'h00;
-    storage[440] = 8'h00;
-    storage[441] = 8'h00;
-    storage[442] = 8'h00;
-    storage[443] = 8'h00;
-    storage[444] = 8'h00;
-    storage[445] = 8'h00;
-    storage[446] = 8'h00;
-    storage[447] = 8'h00;
-    storage[448] = 8'h00;
-    storage[449] = 8'h00;
-    storage[450] = 8'h00;
-    storage[451] = 8'h00;
-    storage[452] = 8'h00;
-    storage[453] = 8'h00;
-    storage[454] = 8'h00;
-    storage[455] = 8'h00;
-    storage[456] = 8'h00;
-    storage[457] = 8'h00;
-    storage[458] = 8'h00;
-    storage[459] = 8'h00;
-    storage[460] = 8'h00;
-    storage[461] = 8'h00;
-    storage[462] = 8'h00;
-    storage[463] = 8'h00;
-    storage[464] = 8'h00;
-    storage[465] = 8'h00;
-    storage[466] = 8'h00;
-    storage[467] = 8'h00;
-    storage[468] = 8'h00;
-    storage[469] = 8'h00;
-    storage[470] = 8'h00;
-    storage[471] = 8'h00;
-    storage[472] = 8'h00;
-    storage[473] = 8'h00;
-    storage[474] = 8'h00;
-    storage[475] = 8'h00;
-    storage[476] = 8'h00;
-    storage[477] = 8'h00;
-    storage[478] = 8'h00;
-    storage[479] = 8'h00;
-    storage[480] = 8'h00;
-    storage[481] = 8'h00;
-    storage[482] = 8'h00;
-    storage[483] = 8'h00;
-    storage[484] = 8'h00;
-    storage[485] = 8'h00;
-    storage[486] = 8'h00;
-    storage[487] = 8'h00;
-    storage[488] = 8'h00;
-    storage[489] = 8'h00;
-    storage[490] = 8'h00;
-    storage[491] = 8'h00;
-    storage[492] = 8'h00;
-    storage[493] = 8'h00;
-    storage[494] = 8'h00;
-    storage[495] = 8'h00;
-    storage[496] = 8'h00;
-    storage[497] = 8'h00;
-    storage[498] = 8'h00;
-    storage[499] = 8'h00;
-    storage[500] = 8'h00;
-    storage[501] = 8'h00;
-    storage[502] = 8'h00;
-    storage[503] = 8'h00;
-    storage[504] = 8'h00;
-    storage[505] = 8'h00;
-    storage[506] = 8'h00;
-    storage[507] = 8'h00;
-    storage[508] = 8'h00;
-    storage[509] = 8'h00;
-    storage[510] = 8'h00;
-    storage[511] = 8'h00;
+    storage[0] = 9'h000;
+    storage[1] = 9'h000;
+    storage[2] = 9'h000;
+    storage[3] = 9'h000;
+    storage[4] = 9'h000;
+    storage[5] = 9'h000;
+    storage[6] = 9'h000;
+    storage[7] = 9'h000;
+    storage[8] = 9'h000;
+    storage[9] = 9'h000;
+    storage[10] = 9'h000;
+    storage[11] = 9'h000;
+    storage[12] = 9'h000;
+    storage[13] = 9'h000;
+    storage[14] = 9'h000;
+    storage[15] = 9'h000;
+    storage[16] = 9'h000;
+    storage[17] = 9'h000;
+    storage[18] = 9'h000;
+    storage[19] = 9'h000;
+    storage[20] = 9'h000;
+    storage[21] = 9'h000;
+    storage[22] = 9'h000;
+    storage[23] = 9'h000;
+    storage[24] = 9'h000;
+    storage[25] = 9'h000;
+    storage[26] = 9'h000;
+    storage[27] = 9'h000;
+    storage[28] = 9'h000;
+    storage[29] = 9'h000;
+    storage[30] = 9'h000;
+    storage[31] = 9'h000;
+    storage[32] = 9'h000;
+    storage[33] = 9'h000;
+    storage[34] = 9'h000;
+    storage[35] = 9'h000;
+    storage[36] = 9'h000;
+    storage[37] = 9'h000;
+    storage[38] = 9'h000;
+    storage[39] = 9'h000;
+    storage[40] = 9'h000;
+    storage[41] = 9'h000;
+    storage[42] = 9'h000;
+    storage[43] = 9'h000;
+    storage[44] = 9'h000;
+    storage[45] = 9'h000;
+    storage[46] = 9'h000;
+    storage[47] = 9'h000;
+    storage[48] = 9'h000;
+    storage[49] = 9'h000;
+    storage[50] = 9'h000;
+    storage[51] = 9'h000;
+    storage[52] = 9'h000;
+    storage[53] = 9'h000;
+    storage[54] = 9'h000;
+    storage[55] = 9'h000;
+    storage[56] = 9'h000;
+    storage[57] = 9'h000;
+    storage[58] = 9'h000;
+    storage[59] = 9'h000;
+    storage[60] = 9'h000;
+    storage[61] = 9'h000;
+    storage[62] = 9'h000;
+    storage[63] = 9'h000;
+    storage[64] = 9'h000;
+    storage[65] = 9'h000;
+    storage[66] = 9'h000;
+    storage[67] = 9'h000;
+    storage[68] = 9'h000;
+    storage[69] = 9'h000;
+    storage[70] = 9'h000;
+    storage[71] = 9'h000;
+    storage[72] = 9'h000;
+    storage[73] = 9'h000;
+    storage[74] = 9'h000;
+    storage[75] = 9'h000;
+    storage[76] = 9'h000;
+    storage[77] = 9'h000;
+    storage[78] = 9'h000;
+    storage[79] = 9'h000;
+    storage[80] = 9'h000;
+    storage[81] = 9'h000;
+    storage[82] = 9'h000;
+    storage[83] = 9'h000;
+    storage[84] = 9'h000;
+    storage[85] = 9'h000;
+    storage[86] = 9'h000;
+    storage[87] = 9'h000;
+    storage[88] = 9'h000;
+    storage[89] = 9'h000;
+    storage[90] = 9'h000;
+    storage[91] = 9'h000;
+    storage[92] = 9'h000;
+    storage[93] = 9'h000;
+    storage[94] = 9'h000;
+    storage[95] = 9'h000;
+    storage[96] = 9'h000;
+    storage[97] = 9'h000;
+    storage[98] = 9'h000;
+    storage[99] = 9'h000;
+    storage[100] = 9'h000;
+    storage[101] = 9'h000;
+    storage[102] = 9'h000;
+    storage[103] = 9'h000;
+    storage[104] = 9'h000;
+    storage[105] = 9'h000;
+    storage[106] = 9'h000;
+    storage[107] = 9'h000;
+    storage[108] = 9'h000;
+    storage[109] = 9'h000;
+    storage[110] = 9'h000;
+    storage[111] = 9'h000;
+    storage[112] = 9'h000;
+    storage[113] = 9'h000;
+    storage[114] = 9'h000;
+    storage[115] = 9'h000;
+    storage[116] = 9'h000;
+    storage[117] = 9'h000;
+    storage[118] = 9'h000;
+    storage[119] = 9'h000;
+    storage[120] = 9'h000;
+    storage[121] = 9'h000;
+    storage[122] = 9'h000;
+    storage[123] = 9'h000;
+    storage[124] = 9'h000;
+    storage[125] = 9'h000;
+    storage[126] = 9'h000;
+    storage[127] = 9'h000;
+    storage[128] = 9'h000;
+    storage[129] = 9'h000;
+    storage[130] = 9'h000;
+    storage[131] = 9'h000;
+    storage[132] = 9'h000;
+    storage[133] = 9'h000;
+    storage[134] = 9'h000;
+    storage[135] = 9'h000;
+    storage[136] = 9'h000;
+    storage[137] = 9'h000;
+    storage[138] = 9'h000;
+    storage[139] = 9'h000;
+    storage[140] = 9'h000;
+    storage[141] = 9'h000;
+    storage[142] = 9'h000;
+    storage[143] = 9'h000;
+    storage[144] = 9'h000;
+    storage[145] = 9'h000;
+    storage[146] = 9'h000;
+    storage[147] = 9'h000;
+    storage[148] = 9'h000;
+    storage[149] = 9'h000;
+    storage[150] = 9'h000;
+    storage[151] = 9'h000;
+    storage[152] = 9'h000;
+    storage[153] = 9'h000;
+    storage[154] = 9'h000;
+    storage[155] = 9'h000;
+    storage[156] = 9'h000;
+    storage[157] = 9'h000;
+    storage[158] = 9'h000;
+    storage[159] = 9'h000;
+    storage[160] = 9'h000;
+    storage[161] = 9'h000;
+    storage[162] = 9'h000;
+    storage[163] = 9'h000;
+    storage[164] = 9'h000;
+    storage[165] = 9'h000;
+    storage[166] = 9'h000;
+    storage[167] = 9'h000;
+    storage[168] = 9'h000;
+    storage[169] = 9'h000;
+    storage[170] = 9'h000;
+    storage[171] = 9'h000;
+    storage[172] = 9'h000;
+    storage[173] = 9'h000;
+    storage[174] = 9'h000;
+    storage[175] = 9'h000;
+    storage[176] = 9'h000;
+    storage[177] = 9'h000;
+    storage[178] = 9'h000;
+    storage[179] = 9'h000;
+    storage[180] = 9'h000;
+    storage[181] = 9'h000;
+    storage[182] = 9'h000;
+    storage[183] = 9'h000;
+    storage[184] = 9'h000;
+    storage[185] = 9'h000;
+    storage[186] = 9'h000;
+    storage[187] = 9'h000;
+    storage[188] = 9'h000;
+    storage[189] = 9'h000;
+    storage[190] = 9'h000;
+    storage[191] = 9'h000;
+    storage[192] = 9'h000;
+    storage[193] = 9'h000;
+    storage[194] = 9'h000;
+    storage[195] = 9'h000;
+    storage[196] = 9'h000;
+    storage[197] = 9'h000;
+    storage[198] = 9'h000;
+    storage[199] = 9'h000;
+    storage[200] = 9'h000;
+    storage[201] = 9'h000;
+    storage[202] = 9'h000;
+    storage[203] = 9'h000;
+    storage[204] = 9'h000;
+    storage[205] = 9'h000;
+    storage[206] = 9'h000;
+    storage[207] = 9'h000;
+    storage[208] = 9'h000;
+    storage[209] = 9'h000;
+    storage[210] = 9'h000;
+    storage[211] = 9'h000;
+    storage[212] = 9'h000;
+    storage[213] = 9'h000;
+    storage[214] = 9'h000;
+    storage[215] = 9'h000;
+    storage[216] = 9'h000;
+    storage[217] = 9'h000;
+    storage[218] = 9'h000;
+    storage[219] = 9'h000;
+    storage[220] = 9'h000;
+    storage[221] = 9'h000;
+    storage[222] = 9'h000;
+    storage[223] = 9'h000;
+    storage[224] = 9'h000;
+    storage[225] = 9'h000;
+    storage[226] = 9'h000;
+    storage[227] = 9'h000;
+    storage[228] = 9'h000;
+    storage[229] = 9'h000;
+    storage[230] = 9'h000;
+    storage[231] = 9'h000;
+    storage[232] = 9'h000;
+    storage[233] = 9'h000;
+    storage[234] = 9'h000;
+    storage[235] = 9'h000;
+    storage[236] = 9'h000;
+    storage[237] = 9'h000;
+    storage[238] = 9'h000;
+    storage[239] = 9'h000;
+    storage[240] = 9'h000;
+    storage[241] = 9'h000;
+    storage[242] = 9'h000;
+    storage[243] = 9'h000;
+    storage[244] = 9'h000;
+    storage[245] = 9'h000;
+    storage[246] = 9'h000;
+    storage[247] = 9'h000;
+    storage[248] = 9'h000;
+    storage[249] = 9'h000;
+    storage[250] = 9'h000;
+    storage[251] = 9'h000;
+    storage[252] = 9'h000;
+    storage[253] = 9'h000;
+    storage[254] = 9'h000;
+    storage[255] = 9'h000;
+    storage[256] = 9'h000;
+    storage[257] = 9'h000;
+    storage[258] = 9'h000;
+    storage[259] = 9'h000;
+    storage[260] = 9'h000;
+    storage[261] = 9'h000;
+    storage[262] = 9'h000;
+    storage[263] = 9'h000;
+    storage[264] = 9'h000;
+    storage[265] = 9'h000;
+    storage[266] = 9'h000;
+    storage[267] = 9'h000;
+    storage[268] = 9'h000;
+    storage[269] = 9'h000;
+    storage[270] = 9'h000;
+    storage[271] = 9'h000;
+    storage[272] = 9'h000;
+    storage[273] = 9'h000;
+    storage[274] = 9'h000;
+    storage[275] = 9'h000;
+    storage[276] = 9'h000;
+    storage[277] = 9'h000;
+    storage[278] = 9'h000;
+    storage[279] = 9'h000;
+    storage[280] = 9'h000;
+    storage[281] = 9'h000;
+    storage[282] = 9'h000;
+    storage[283] = 9'h000;
+    storage[284] = 9'h000;
+    storage[285] = 9'h000;
+    storage[286] = 9'h000;
+    storage[287] = 9'h000;
+    storage[288] = 9'h000;
+    storage[289] = 9'h000;
+    storage[290] = 9'h000;
+    storage[291] = 9'h000;
+    storage[292] = 9'h000;
+    storage[293] = 9'h000;
+    storage[294] = 9'h000;
+    storage[295] = 9'h000;
+    storage[296] = 9'h000;
+    storage[297] = 9'h000;
+    storage[298] = 9'h000;
+    storage[299] = 9'h000;
+    storage[300] = 9'h000;
+    storage[301] = 9'h000;
+    storage[302] = 9'h000;
+    storage[303] = 9'h000;
+    storage[304] = 9'h000;
+    storage[305] = 9'h000;
+    storage[306] = 9'h000;
+    storage[307] = 9'h000;
+    storage[308] = 9'h000;
+    storage[309] = 9'h000;
+    storage[310] = 9'h000;
+    storage[311] = 9'h000;
+    storage[312] = 9'h000;
+    storage[313] = 9'h000;
+    storage[314] = 9'h000;
+    storage[315] = 9'h000;
+    storage[316] = 9'h000;
+    storage[317] = 9'h000;
+    storage[318] = 9'h000;
+    storage[319] = 9'h000;
+    storage[320] = 9'h000;
+    storage[321] = 9'h000;
+    storage[322] = 9'h000;
+    storage[323] = 9'h000;
+    storage[324] = 9'h000;
+    storage[325] = 9'h000;
+    storage[326] = 9'h000;
+    storage[327] = 9'h000;
+    storage[328] = 9'h000;
+    storage[329] = 9'h000;
+    storage[330] = 9'h000;
+    storage[331] = 9'h000;
+    storage[332] = 9'h000;
+    storage[333] = 9'h000;
+    storage[334] = 9'h000;
+    storage[335] = 9'h000;
+    storage[336] = 9'h000;
+    storage[337] = 9'h000;
+    storage[338] = 9'h000;
+    storage[339] = 9'h000;
+    storage[340] = 9'h000;
+    storage[341] = 9'h000;
+    storage[342] = 9'h000;
+    storage[343] = 9'h000;
+    storage[344] = 9'h000;
+    storage[345] = 9'h000;
+    storage[346] = 9'h000;
+    storage[347] = 9'h000;
+    storage[348] = 9'h000;
+    storage[349] = 9'h000;
+    storage[350] = 9'h000;
+    storage[351] = 9'h000;
+    storage[352] = 9'h000;
+    storage[353] = 9'h000;
+    storage[354] = 9'h000;
+    storage[355] = 9'h000;
+    storage[356] = 9'h000;
+    storage[357] = 9'h000;
+    storage[358] = 9'h000;
+    storage[359] = 9'h000;
+    storage[360] = 9'h000;
+    storage[361] = 9'h000;
+    storage[362] = 9'h000;
+    storage[363] = 9'h000;
+    storage[364] = 9'h000;
+    storage[365] = 9'h000;
+    storage[366] = 9'h000;
+    storage[367] = 9'h000;
+    storage[368] = 9'h000;
+    storage[369] = 9'h000;
+    storage[370] = 9'h000;
+    storage[371] = 9'h000;
+    storage[372] = 9'h000;
+    storage[373] = 9'h000;
+    storage[374] = 9'h000;
+    storage[375] = 9'h000;
+    storage[376] = 9'h000;
+    storage[377] = 9'h000;
+    storage[378] = 9'h000;
+    storage[379] = 9'h000;
+    storage[380] = 9'h000;
+    storage[381] = 9'h000;
+    storage[382] = 9'h000;
+    storage[383] = 9'h000;
+    storage[384] = 9'h000;
+    storage[385] = 9'h000;
+    storage[386] = 9'h000;
+    storage[387] = 9'h000;
+    storage[388] = 9'h000;
+    storage[389] = 9'h000;
+    storage[390] = 9'h000;
+    storage[391] = 9'h000;
+    storage[392] = 9'h000;
+    storage[393] = 9'h000;
+    storage[394] = 9'h000;
+    storage[395] = 9'h000;
+    storage[396] = 9'h000;
+    storage[397] = 9'h000;
+    storage[398] = 9'h000;
+    storage[399] = 9'h000;
+    storage[400] = 9'h000;
+    storage[401] = 9'h000;
+    storage[402] = 9'h000;
+    storage[403] = 9'h000;
+    storage[404] = 9'h000;
+    storage[405] = 9'h000;
+    storage[406] = 9'h000;
+    storage[407] = 9'h000;
+    storage[408] = 9'h000;
+    storage[409] = 9'h000;
+    storage[410] = 9'h000;
+    storage[411] = 9'h000;
+    storage[412] = 9'h000;
+    storage[413] = 9'h000;
+    storage[414] = 9'h000;
+    storage[415] = 9'h000;
+    storage[416] = 9'h000;
+    storage[417] = 9'h000;
+    storage[418] = 9'h000;
+    storage[419] = 9'h000;
+    storage[420] = 9'h000;
+    storage[421] = 9'h000;
+    storage[422] = 9'h000;
+    storage[423] = 9'h000;
+    storage[424] = 9'h000;
+    storage[425] = 9'h000;
+    storage[426] = 9'h000;
+    storage[427] = 9'h000;
+    storage[428] = 9'h000;
+    storage[429] = 9'h000;
+    storage[430] = 9'h000;
+    storage[431] = 9'h000;
+    storage[432] = 9'h000;
+    storage[433] = 9'h000;
+    storage[434] = 9'h000;
+    storage[435] = 9'h000;
+    storage[436] = 9'h000;
+    storage[437] = 9'h000;
+    storage[438] = 9'h000;
+    storage[439] = 9'h000;
+    storage[440] = 9'h000;
+    storage[441] = 9'h000;
+    storage[442] = 9'h000;
+    storage[443] = 9'h000;
+    storage[444] = 9'h000;
+    storage[445] = 9'h000;
+    storage[446] = 9'h000;
+    storage[447] = 9'h000;
+    storage[448] = 9'h000;
+    storage[449] = 9'h000;
+    storage[450] = 9'h000;
+    storage[451] = 9'h000;
+    storage[452] = 9'h000;
+    storage[453] = 9'h000;
+    storage[454] = 9'h000;
+    storage[455] = 9'h000;
+    storage[456] = 9'h000;
+    storage[457] = 9'h000;
+    storage[458] = 9'h000;
+    storage[459] = 9'h000;
+    storage[460] = 9'h000;
+    storage[461] = 9'h000;
+    storage[462] = 9'h000;
+    storage[463] = 9'h000;
+    storage[464] = 9'h000;
+    storage[465] = 9'h000;
+    storage[466] = 9'h000;
+    storage[467] = 9'h000;
+    storage[468] = 9'h000;
+    storage[469] = 9'h000;
+    storage[470] = 9'h000;
+    storage[471] = 9'h000;
+    storage[472] = 9'h000;
+    storage[473] = 9'h000;
+    storage[474] = 9'h000;
+    storage[475] = 9'h000;
+    storage[476] = 9'h000;
+    storage[477] = 9'h000;
+    storage[478] = 9'h000;
+    storage[479] = 9'h000;
+    storage[480] = 9'h000;
+    storage[481] = 9'h000;
+    storage[482] = 9'h000;
+    storage[483] = 9'h000;
+    storage[484] = 9'h000;
+    storage[485] = 9'h000;
+    storage[486] = 9'h000;
+    storage[487] = 9'h000;
+    storage[488] = 9'h000;
+    storage[489] = 9'h000;
+    storage[490] = 9'h000;
+    storage[491] = 9'h000;
+    storage[492] = 9'h000;
+    storage[493] = 9'h000;
+    storage[494] = 9'h000;
+    storage[495] = 9'h000;
+    storage[496] = 9'h000;
+    storage[497] = 9'h000;
+    storage[498] = 9'h000;
+    storage[499] = 9'h000;
+    storage[500] = 9'h000;
+    storage[501] = 9'h000;
+    storage[502] = 9'h000;
+    storage[503] = 9'h000;
+    storage[504] = 9'h000;
+    storage[505] = 9'h000;
+    storage[506] = 9'h000;
+    storage[507] = 9'h000;
+    storage[508] = 9'h000;
+    storage[509] = 9'h000;
+    storage[510] = 9'h000;
+    storage[511] = 9'h000;
   end
   always @(posedge usb_clk) begin
     if (storage_w_en)
       storage[storage_w_addr] <= storage_w_data;
   end
-  reg [7:0] _0_;
+  reg [8:0] _0_;
   always @(posedge clk) begin
     _0_ <= storage[storage_r_addr];
   end
