@@ -11,8 +11,8 @@ from amlib.test import GatewareTestCase, sync_test_case
 from amlib.utils import SimpleClockDivider
 from amlib.dsp import FixedPointFIRFilter, FixedPointHBFilter
 
-from pdm.dsord1 import FixedPointDeltaSigmaModulatorOrd1
-from pdm.dsordn import FixedPointDeltaSigmaModulator
+from pdm.dsmod1 import FixedPointDeltaSigmaModulatorOrd1
+from pdm.dsmodn import FixedPointDeltaSigmaModulator
 
 import numpy as np
 from math import sin, pi

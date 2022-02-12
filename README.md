@@ -27,3 +27,6 @@ Only support monoral 48kHz sampling rate signals. Also assume 60MHz usb clock.
 *[PCM2PDM](https://github.com/kazkojima/pcm2pdm-example)
 
 *[PDM2PCM](https://github.com/kazkojima/pdmmic-example)
+
+* Shanthi Pavan, Richard Schreier, Gabor C. Temes,
+Understanding Delta-Sigma Data Converters, 2nd Edition, ISBN: 978-1-119-25827-8, Wiley-IEEE Press, Jan. 2017
