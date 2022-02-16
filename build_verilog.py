@@ -528,7 +528,10 @@ class LunaUSBAudioDevice(Elaboratable):
 
             m.d.comb += [
                 # wire USB to PDM transmitter. Assume 28-bit PCM2PDM
-                pdm_transmitter.pcm_data_in.eq(se16 << (28-16-3)),
+                # scale for bit width without overflow
+                # theoritically 1/4 of 28-bit is enough, but computational
+                # errors can make unexpected overflow. 3/16 will be ok
+                pdm_transmitter.pcm_data_in.eq((se16 + (se16 << 1)) << (28-16-4)),
             ]
 
         return m

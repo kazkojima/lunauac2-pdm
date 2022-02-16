@@ -5,67 +5,71 @@
 (* generator = "Amaranth" *)
 module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp, ulpi__nxt__i, ulpi__dir__i, ulpi__rst, pdmin__data__i, pdmin__clk__o, pdmout__data__o, pdmout__clk__o, clk_sync, clk_usb, rst_sync, usb_holdoff, audio_clk, audio_rst, ulpi__data__i);
   reg \$auto$verilog_backend.cc:2082:dump_module$597  = 0;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:416" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:416" *)
   wire [16:0] \$10 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
   wire \$12 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:419" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:419" *)
   wire [5:0] \$14 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:419" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:419" *)
   wire [5:0] \$15 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
   wire \$17 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:430" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *)
   wire [31:0] \$19 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
   wire \$2 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:430" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *)
   wire [16:0] \$20 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:430" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *)
   wire [19:0] \$22 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:435" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:435" *)
   wire [14:0] \$25 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:435" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:435" *)
   wire [14:0] \$26 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:436" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *)
   wire [31:0] \$28 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:436" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *)
   wire [31:0] \$29 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:436" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *)
   wire [31:0] \$31 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:454" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:454" *)
   wire [23:0] \$33 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:454" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:454" *)
   wire [23:0] \$34 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   wire [8:0] \$36 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
   wire \$39 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:375" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:375" *)
   wire [9:0] \$4 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
   wire \$41 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
   wire \$43 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:531" *)
-  wire [30:0] \$45 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:531" *)
-  wire [30:0] \$46 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:375" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:534" *)
+  wire [32:0] \$45 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:534" *)
+  wire [16:0] \$46 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:534" *)
+  wire [17:0] \$48 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:375" *)
   wire [9:0] \$5 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:534" *)
+  wire [32:0] \$50 ;
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
   wire \$7 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:416" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:416" *)
   wire [16:0] \$9 ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:403" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:403" *)
   reg [15:0] audio_clock_counter = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:403" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:403" *)
   reg [15:0] \audio_clock_counter$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:409" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:409" *)
   reg audio_clock_tick = 1'h0;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:409" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:409" *)
   reg \audio_clock_tick$next ;
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:16" *)
   reg audio_clock_usb_pulse_edge_in = 1'h0;
@@ -73,41 +77,41 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   reg \audio_clock_usb_pulse_edge_in$next ;
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:17" *)
   wire audio_clock_usb_pulse_pulse_out;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:406" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:406" *)
   wire audio_clock_usb_sync_audio_clock_usb;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:370" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:370" *)
   reg [8:0] audio_in_frame_bytes = 9'h00c;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:370" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:370" *)
   reg [8:0] \audio_in_frame_bytes$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:371" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:371" *)
   reg audio_in_frame_bytes_counting = 1'h0;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:371" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:371" *)
   reg \audio_in_frame_bytes_counting$next ;
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_rst;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:450" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:450" *)
   reg [7:0] b8 = 8'h00;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:450" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:450" *)
   reg [7:0] \b8$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:396" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:396" *)
   wire [4:0] bitPos;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:284" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:284" *)
   input clk_sync;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:285" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:285" *)
   input clk_usb;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:495" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:495" *)
   wire fbit;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:395" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:395" *)
   reg [31:0] feedbackValue = 32'd393216;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:395" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:395" *)
   reg [31:0] \feedbackValue$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:458" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
   reg [2:0] fsm_state = 3'h0;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:501" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
   reg [1:0] \fsm_state$38  = 2'h0;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:501" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
   reg [1:0] \fsm_state$38$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:458" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
   reg [2:0] \fsm_state$next ;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
   wire [7:0] in_fifo_r_data;
@@ -123,7 +127,7 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   reg \in_fifo_w_en$next ;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
   wire in_fifo_w_rdy;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:449" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:449" *)
   wire [15:0] le16;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:83" *)
   wire [8:0] out_fifo_r_data;
@@ -139,9 +143,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   wire out_fifo_w_en;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:79" *)
   wire out_fifo_w_rdy;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:448" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:448" *)
   reg [23:0] pcm24 = 24'h000000;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:448" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:448" *)
   reg [23:0] \pcm24$next ;
   (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:74" *)
   wire [23:0] pdm_receiver_pcm_data_out;
@@ -159,41 +163,41 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   wire pdm_transmitter_pdm_clock_out;
   (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:72" *)
   wire pdm_transmitter_pdm_data_out;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:270" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:270" *)
   output pdmin__clk__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:270" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:270" *)
   input pdmin__data__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:277" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:277" *)
   output pdmout__clk__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:277" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:277" *)
   output pdmout__data__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:286" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:286" *)
   input rst_sync;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:494" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:494" *)
   wire [7:0] sample;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:493" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:493" *)
   reg [15:0] se16 = 16'h0000;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:493" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:493" *)
   reg [15:0] \se16$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:404" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:404" *)
   reg [4:0] sof_counter = 5'h00;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:404" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:404" *)
   reg [4:0] \sof_counter$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__clk__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output [7:0] ulpi__data__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__data__oe;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__rst;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__stp;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:73" *)
   wire [11:0] usb0_address;
@@ -225,35 +229,36 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   wire usb0_sof_detected;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:75" *)
   wire [7:0] usb0_value;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   wire usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:288" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:288" *)
   output usb_holdoff;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:295" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
   wire usb_reset_clk;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:49" *)
   wire usb_reset_phy_reset;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:50" *)
   wire usb_reset_phy_stop;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:295" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
   wire usb_reset_rst;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   wire usb_rst;
-  assign \$10  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:416" *) 1'h1;
-  assign \$12  = ! (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" *) sof_counter;
-  assign \$15  = sof_counter + (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:419" *) 1'h1;
-  assign \$17  = ! (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" *) sof_counter;
-  assign \$20  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:430" *) 1'h1;
-  assign \$19  = + (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:430" *) \$22 ;
-  assign \$2  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" *) usb0_isochronous_endpoint1__ready;
-  assign \$29  = feedbackValue >>> (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:436" *) bitPos;
-  assign \$31  = 8'hff & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:436" *) \$29 ;
+  assign \$10  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:416" *) 1'h1;
+  assign \$12  = ! (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *) sof_counter;
+  assign \$15  = sof_counter + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:419" *) 1'h1;
+  assign \$17  = ! (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *) sof_counter;
+  assign \$20  = audio_clock_counter + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *) 1'h1;
+  assign \$19  = + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:430" *) \$22 ;
+  assign \$2  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *) usb0_isochronous_endpoint1__ready;
+  assign \$29  = feedbackValue >>> (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *) bitPos;
+  assign \$31  = 8'hff & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:436" *) \$29 ;
   assign \$36  = + (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *) usb0_isochronous_endpoint1__payload;
-  assign \$39  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *) out_fifo_r_rdy;
-  assign \$41  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *) out_fifo_r_rdy;
-  assign \$43  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *) out_fifo_r_rdy;
-  assign \$5  = audio_in_frame_bytes + (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:375" *) 1'h1;
-  assign \$7  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" *) usb0_isochronous_endpoint1__ready;
+  assign \$39  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *) out_fifo_r_rdy;
+  assign \$41  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *) out_fifo_r_rdy;
+  assign \$43  = pdm_transmitter_pcm_strobe_in & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *) out_fifo_r_rdy;
+  assign \$48  = $signed(se16) + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:534" *) $signed(\$46 );
+  assign \$5  = audio_in_frame_bytes + (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:375" *) 1'h1;
+  assign \$7  = usb0_isochronous_endpoint1__valid & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *) usb0_isochronous_endpoint1__ready;
   always @(posedge usb_clk)
     \fsm_state$38  <= \fsm_state$38$next ;
   always @(posedge usb_clk)
@@ -366,16 +371,16 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_in_frame_bytes_counting$next  = audio_in_frame_bytes_counting;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
     casez (\$7 )
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:377" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" *)
           casez ({ usb0_isochronous_endpoint1__last, usb0_isochronous_endpoint1__first })
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:377" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" */
             2'b?1:
                 \audio_in_frame_bytes_counting$next  = 1'h1;
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:382" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:382" */
             2'b1?:
                 \audio_in_frame_bytes_counting$next  = 1'h0;
           endcase
@@ -407,19 +412,19 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_clock_counter$next  = audio_clock_counter;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:415" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:415" *)
     casez (audio_clock_tick)
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:415" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:415" */
       1'h1:
           \audio_clock_counter$next  = \$10 [15:0];
     endcase
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:418" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" *)
     casez (usb0_sof_detected)
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:418" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
           casez (\$12 )
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" */
             1'h1:
                 \audio_clock_counter$next  = 16'h0000;
           endcase
@@ -433,9 +438,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \sof_counter$next  = sof_counter;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:418" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" *)
     casez (usb0_sof_detected)
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:418" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" */
       1'h1:
           \sof_counter$next  = \$15 [4:0];
     endcase
@@ -448,13 +453,13 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \feedbackValue$next  = feedbackValue;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:418" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" *)
     casez (usb0_sof_detected)
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:418" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:418" */
       1'h1:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" *)
           casez (\$17 )
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:428" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:428" */
             1'h1:
                 \feedbackValue$next  = \$19 ;
           endcase
@@ -468,9 +473,9 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \pcm24$next  = pcm24;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:451" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:451" *)
     casez (pdm_receiver_pcm_strobe_out)
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:451" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:451" */
       1'h1:
           \pcm24$next  = pdm_receiver_pcm_data_out;
     endcase
@@ -483,31 +488,31 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \in_fifo_w_en$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:458" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "WAIT/0" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:459" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:459" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "LO/1" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:462" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:462" */
       3'h1:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:463" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" *)
           casez (in_fifo_w_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:463" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" */
             1'h1:
                 \in_fifo_w_en$next  = 1'h1;
           endcase
       /* \amaranth.decoding  = "LOACK/2" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:471" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:471" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "HI/3" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:473" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:473" */
       3'h3:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:474" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" *)
           casez (in_fifo_w_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:474" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" */
             1'h1:
                 \in_fifo_w_en$next  = 1'h1;
           endcase
@@ -521,49 +526,49 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \fsm_state$next  = fsm_state;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:458" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "WAIT/0" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:459" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:459" */
       3'h0:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:460" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:460" *)
           casez (pdm_receiver_pcm_strobe_out)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:460" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:460" */
             1'h1:
                 \fsm_state$next  = 3'h1;
           endcase
       /* \amaranth.decoding  = "LO/1" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:462" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:462" */
       3'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:463" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" *)
           casez (in_fifo_w_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:463" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" */
             1'h1:
                 \fsm_state$next  = 3'h2;
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:469" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:469" */
             default:
                 \fsm_state$next  = 3'h0;
           endcase
       /* \amaranth.decoding  = "LOACK/2" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:471" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:471" */
       3'h2:
           \fsm_state$next  = 3'h3;
       /* \amaranth.decoding  = "HI/3" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:473" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:473" */
       3'h3:
           (* full_case = 32'd1 *)
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:474" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" *)
           casez (in_fifo_w_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:474" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" */
             1'h1:
                 \fsm_state$next  = 3'h4;
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:480" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:480" */
             default:
                 \fsm_state$next  = 3'h0;
           endcase
       /* \amaranth.decoding  = "HIACK/4" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:482" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:482" */
       3'h4:
           \fsm_state$next  = 3'h0;
     endcase
@@ -576,31 +581,31 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \b8$next  = b8;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:458" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:458" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "WAIT/0" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:459" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:459" */
       3'h0:
           /* empty */;
       /* \amaranth.decoding  = "LO/1" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:462" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:462" */
       3'h1:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:463" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" *)
           casez (in_fifo_w_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:463" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:463" */
             1'h1:
                 \b8$next  = le16[7:0];
           endcase
       /* \amaranth.decoding  = "LOACK/2" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:471" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:471" */
       3'h2:
           /* empty */;
       /* \amaranth.decoding  = "HI/3" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:473" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:473" */
       3'h3:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:474" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" *)
           casez (in_fifo_w_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:474" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:474" */
             1'h1:
                 \b8$next  = le16[15:8];
           endcase
@@ -614,35 +619,35 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \out_fifo_r_en$next  = 1'h0;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:501" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
     casez (\fsm_state$38 )
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:502" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:502" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
           casez (\$39 )
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" */
             1'h1:
                 \out_fifo_r_en$next  = 1'h1;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:509" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:509" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:511" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:511" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:512" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:512" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:513" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" *)
                 casez (fbit)
-                  /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:513" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" */
                   1'h1:
                       \out_fifo_r_en$next  = 1'h1;
-                  /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:520" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:520" */
                   default:
                       \out_fifo_r_en$next  = 1'h1;
                 endcase
@@ -657,35 +662,35 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \se16$next  = se16;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:501" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
     casez (\fsm_state$38 )
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:502" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:502" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
           casez (\$41 )
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" */
             1'h1:
                 \se16$next [7:0] = sample;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:509" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:509" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:511" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:511" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:512" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:512" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:513" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" *)
                 casez (fbit)
-                  /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:513" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" */
                   1'h1:
                       \se16$next [7:0] = sample;
-                  /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:520" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:520" */
                   default:
                       \se16$next [15:8] = sample;
                 endcase
@@ -701,41 +706,41 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \fsm_state$38$next  = \fsm_state$38 ;
     (* full_case = 32'd1 *)
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:501" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:501" *)
     casez (\fsm_state$38 )
       /* \amaranth.decoding  = "IDLE/0" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:502" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:502" */
       2'h0:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" *)
           casez (\$43 )
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:503" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:503" */
             1'h1:
                 \fsm_state$38$next  = 2'h1;
           endcase
       /* \amaranth.decoding  = "B0ACK/1" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:509" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:509" */
       2'h1:
           \fsm_state$38$next  = 2'h2;
       /* \amaranth.decoding  = "B1/2" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:511" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:511" */
       2'h2:
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:512" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" *)
           casez (out_fifo_r_rdy)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:512" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:512" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:513" *)
+                (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" *)
                 casez (fbit)
-                  /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:513" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:513" */
                   1'h1:
                       \fsm_state$38$next  = 2'h1;
-                  /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:520" */
+                  /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:520" */
                   default:
                       \fsm_state$38$next  = 2'h3;
                 endcase
           endcase
       /* \amaranth.decoding  = "B1ACK/3" */
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:526" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:526" */
       2'h3:
           \fsm_state$38$next  = 2'h0;
     endcase
@@ -748,20 +753,20 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$597 ) begin end
     \audio_in_frame_bytes$next  = audio_in_frame_bytes;
-    (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" *)
+    (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" *)
     casez (\$2 )
-      /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:373" */
+      /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:373" */
       1'h1:
         begin
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:374" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:374" *)
           casez (audio_in_frame_bytes_counting)
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:374" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:374" */
             1'h1:
                 \audio_in_frame_bytes$next  = \$5 [8:0];
           endcase
-          (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:377" *)
+          (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" *)
           casez ({ usb0_isochronous_endpoint1__last, usb0_isochronous_endpoint1__first })
-            /* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:377" */
+            /* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:377" */
             2'b?1:
                 \audio_in_frame_bytes$next  = 9'h001;
           endcase
@@ -779,8 +784,8 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   assign \$25  = \$26 ;
   assign \$28  = \$31 ;
   assign \$33  = \$34 ;
-  assign \$45  = \$46 ;
-  assign pdm_transmitter_pcm_data_in = \$46 [27:0];
+  assign \$45  = \$50 ;
+  assign pdm_transmitter_pcm_data_in = \$50 [27:0];
   assign fbit = out_fifo_r_data[8];
   assign sample = out_fifo_r_data[7:0];
   assign out_fifo_w_data[8] = usb0_isochronous_endpoint1__first;
@@ -810,7 +815,8 @@ module LunaUSBAudioDevice(ulpi__data__o, ulpi__data__oe, ulpi__clk__o, ulpi__stp
   assign \$22  = { \$20 , 3'h0 };
   assign \$26  = { usb0_address, 3'h0 };
   assign \$34  = { pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23], pcm24[23:8] };
-  assign \$46  = { se16[15], se16[15], se16[15], se16[15], se16[15], se16[15], se16, 9'h000 };
+  assign \$46  = { se16, 1'h0 };
+  assign \$50  = { \$48 [17], \$48 [17], \$48 [17], \$48 [17], \$48 [17], \$48 [17], \$48 [17], \$48 , 8'h00 };
 endmodule
 
 (* \amaranth.hierarchy  = "LunaUSBAudioDevice.usb0.USBControlEndpoint.StallOnlyRequestHandler" *)
@@ -819,11 +825,11 @@ module StallOnlyRequestHandler(data_requested, status_requested, stall, \type );
   reg \$auto$verilog_backend.cc:2082:dump_module$598  = 0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:541" *)
   wire \$1 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:350" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *)
   wire \$3 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:351" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:351" *)
   wire \$5 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:350" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *)
   wire \$7 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:66" *)
   input data_requested;
@@ -835,9 +841,9 @@ module StallOnlyRequestHandler(data_requested, status_requested, stall, \type );
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [1:0] \type ;
   assign \$1  = data_requested | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/request.py:541" *) status_requested;
-  assign \$3  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:350" *) 2'h2;
-  assign \$5  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:351" *) 2'h3;
-  assign \$7  = \$3  | (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:350" *) \$5 ;
+  assign \$3  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *) 2'h2;
+  assign \$5  = \type  == (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:351" *) 2'h3;
+  assign \$7  = \$3  | (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:350" *) \$5 ;
   always @* begin
     if (\$auto$verilog_backend.cc:2082:dump_module$598 ) begin end
     stall = 1'h0;
@@ -868,13 +874,13 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
   wire \$15 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:168" *)
   wire \$17 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:339" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *)
   wire \$18 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *)
   wire \$2 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:340" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:340" *)
   wire \$20 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:339" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *)
   wire \$22 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:167" *)
   wire \$24 ;
@@ -1026,9 +1032,9 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
   reg \tx_data_pid$next ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [1:0] \type ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -1039,9 +1045,9 @@ module StandardRequestHandler(usb_clk, \type , request, value, length, received,
   assign \$11  = ack & (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:223" *) expecting_ack;
   assign \$13  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:236" *) tx_data_pid;
   assign \$15  = ! (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *) \type ;
-  assign \$18  = ! (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:339" *) \type ;
-  assign \$20  = request == (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:340" *) 4'hb;
-  assign \$22  = \$18  & (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:339" *) \$20 ;
+  assign \$18  = ! (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *) \type ;
+  assign \$20  = request == (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:340" *) 4'hb;
+  assign \$22  = \$18  & (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:339" *) \$20 ;
   assign \$17  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:168" *) \$24 ;
   assign \$27  = data_requested | (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:258" *) status_requested;
   assign \$2  = ! (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/standard.py:149" *) \type ;
@@ -2185,9 +2191,9 @@ module UAC2RequestHandlers(usb_clk, recipient, \type , request, value, index, le
   wire transmitter_valid;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   input [1:0] \type ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -3073,9 +3079,9 @@ module USBControlEndpoint(usb_clk, rx_data, rx_valid, rx_active, crc, tx_allowed
   input tx_timeout;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:152" *)
   wire \tx_timeout$63 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -3687,9 +3693,9 @@ module USBIsochronousInMemoryEndpoint(usb_clk, bytes_in_frame, address, value, e
   input ready_for_response;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:101" *)
   output [1:0] tx_pid_toggle;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -4163,9 +4169,9 @@ module USBIsochronousInStreamEndpoint(usb_clk, bytes_in_frame, isochronous_endpo
   input ready_for_response;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:101" *)
   output [1:0] tx_pid_toggle;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -4687,9 +4693,9 @@ module USBIsochronousOutStreamEndpoint(usb_clk, isochronous_endpoint1__valid, is
   input rx_complete;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoint.py:97" *)
   input rx_invalid;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -4789,9 +4795,9 @@ module audio_clock_usb_pulse(usb_clk, edge_in, pulse_out, usb_rst);
   (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:17" *)
   output pulse_out;
   reg pulse_out;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$1  = ~ (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *) edge_last;
   assign \$3  = edge_in & (* src = "/home/git/amlib/amlib/utils/edgetopulse.py:25" *) \$1 ;
@@ -4826,7 +4832,7 @@ endmodule
 module audio_clock_usb_sync(usb_clk, audio_clock_usb, audio_clk, usb_rst);
   (* src = "/home/git/amaranth/amaranth/hdl/ir.py:527" *)
   input audio_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:406" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:406" *)
   output audio_clock_usb;
   (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
   reg stage0 = 1'h0;
@@ -4836,9 +4842,9 @@ module audio_clock_usb_sync(usb_clk, audio_clock_usb, audio_clk, usb_rst);
   reg stage1 = 1'h0;
   (* src = "/home/git/amaranth/amaranth/lib/cdc.py:89" *)
   wire \stage1$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   always @(posedge usb_clk)
     stage1 <= stage0;
@@ -4941,9 +4947,9 @@ module boundary_detector(usb_clk, valid, next, payload, complete_in, invalid_in,
   reg [7:0] \payload$1  = 8'h00;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   reg [7:0] \payload$1$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -5454,9 +5460,9 @@ module cic(usb_clk, signal_in, strobe_in, strobe_out, signal_out, usb_rst);
   reg strobe_out = 1'h0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:44" *)
   reg \strobe_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointcicfilter.py:69" *)
   reg [26:0] x0 = 27'h0000000;
@@ -6018,9 +6024,9 @@ module clk_divider(usb_clk, clock_enable_in, clock_out, usb_rst);
   reg clock_out = 1'h0;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
   reg \clock_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$1  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hc;
   assign \$3  = ~ (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *) clock_out;
@@ -6100,9 +6106,9 @@ module \clk_divider$1 (usb_clk, clock_enable_in, clock_out, usb_rst);
   reg clock_out = 1'h0;
   (* src = "/home/git/amlib/amlib/utils/clockdivider.py:13" *)
   reg \clock_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$1  = clock_counter >= (* src = "/home/git/amlib/amlib/utils/clockdivider.py:20" *) 4'hc;
   assign \$3  = ~ (* src = "/home/git/amlib/amlib/utils/clockdivider.py:22" *) clock_out;
@@ -6243,9 +6249,9 @@ module control_translator(usb_clk, busy, \busy$1 , bus_idle, xcvr_select, term_s
   input suspend;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:627" *)
   input term_select;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:641" *)
   input use_external_vbus_indicator;
@@ -6763,9 +6769,9 @@ module data_crc(usb_clk, rx_data, rx_valid, tx_valid, tx_data, start, crc, \star
   input [7:0] tx_data;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:702" *)
   input tx_valid;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$100  = \$96  ^ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:737" *) \$98 ;
   assign \$102  = rx_data[0] ^ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:726" *) rx_data[1];
@@ -7168,9 +7174,9 @@ module data_handler(usb_clk, rx_data, rx_valid, rx_active, start, crc, new_packe
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:76" *)
   output start;
   reg start;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$9  = rx_data[3:0] == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1239" *) \$7 ;
   assign \$100  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1277" *) rx_active;
@@ -8183,9 +8189,9 @@ module ds(usb_clk, signal_in, strobe_in, signal_out, usb_rst);
   output signal_out;
   (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsmodn.py:29" *)
   input strobe_in;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/kkojima/luna-uac2-pdm/pdm/dsmodn.py:79" *)
   reg [27:0] v;
@@ -9718,9 +9724,9 @@ module endpoint_mux(usb_clk, pid, address, endpoint, new_token, ready_for_respon
   wire \tx_timeout$81 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:152" *)
   output \tx_timeout$9 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   input valid;
@@ -10146,9 +10152,9 @@ module fifo(usb_clk, write_data, write_en, space_available, write_commit, write_
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:104" *)
   output [10:0] space_available;
   reg [10:0] space_available;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/memory.py:100" *)
   input write_commit;
@@ -11625,9 +11631,9 @@ module fir(usb_clk, enable_in, signal_in, signal_out, usb_rst);
   reg [23:0] signal_out = 24'h000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
   reg [23:0] \signal_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [47:0] x0 = 48'h000000000000;
@@ -13997,9 +14003,9 @@ module \fir$2 (usb_clk, signal_in, signal_out, enable_in, usb_rst);
   reg [27:0] signal_out = 28'h0000000;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:27" *)
   reg [27:0] \signal_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointfirfilter.py:83" *)
   reg [55:0] x0 = 56'h00000000000000;
@@ -19250,9 +19256,9 @@ module get_descriptor(usb_clk, value, length, start_position, valid, first, last
   input [10:0] start_position;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/descriptor.py:357" *)
   wire [7:0] type_number;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -19988,9 +19994,9 @@ module handshake_detector(usb_clk, rx_data, rx_valid, ack, nak, stall, nyet, rx_
   reg stall = 1'h0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:55" *)
   reg \stall$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$9  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:610" *) rx_active;
   assign \$11  = active_pid == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:614" *) 4'he;
@@ -20256,9 +20262,9 @@ module handshake_generator(usb_clk, issue_ack, issue_nak, issue_stall, valid, da
   input issue_stall;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   input ready;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   output valid;
@@ -21000,9 +21006,9 @@ module hb1(usb_clk, strobe_in, strobe_out, signal_in, signal_out, usb_rst);
   reg strobe_out = 1'h0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
   reg \strobe_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
   reg [47:0] x0 = 48'h000000000000;
@@ -32896,9 +32902,9 @@ module \hb1$3 (usb_clk, signal_in, signal_out, strobe_in, usb_rst);
   reg strobe_out = 1'h0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
   reg \strobe_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
   reg [55:0] x0 = 56'h00000000000000;
@@ -46761,9 +46767,9 @@ module hb2(usb_clk, strobe_in, strobe_out, signal_in, signal_out, usb_rst);
   reg strobe_out = 1'h0;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:22" *)
   reg \strobe_out$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amlib/amlib/dsp/fixedpointhbfilter.py:72" *)
   reg [47:0] x0 = 48'h000000000000;
@@ -49138,9 +49144,9 @@ module in_fifo(usb_clk, r_rdy, r_en, r_data, w_data, w_en, w_rdy, usb_rst);
   wire [7:0] storage_w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:144" *)
   wire storage_w_en;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
   input [7:0] w_data;
@@ -49835,9 +49841,9 @@ module out_fifo(usb_clk, w_en, w_rdy, w_data, r_data, r_en, r_rdy, usb_rst);
   wire [8:0] storage_w_data;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:144" *)
   wire storage_w_en;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/amaranth/amaranth/lib/fifo.py:78" *)
   input [8:0] w_data;
@@ -50546,9 +50552,9 @@ module pdm_receiver(usb_clk, pdm_data_in, pdm_clock_out, pcm_strobe_out, pcm_dat
   wire strobe_in;
   (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:101" *)
   wire strobe_out;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$5  = ~ (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:120" *) base_clock_next;
   assign \$7  = base_clock & (* src = "/home/kkojima/luna-uac2-pdm/pdm/pdm2pcm.py:120" *) \$5 ;
@@ -50811,9 +50817,9 @@ module pdm_transmitter(usb_clk, pdm_data_out, pdm_clock_out, pcm_strobe_in, pcm_
   reg strobe2 = 1'h0;
   (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:120" *)
   reg \strobe2$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$10  = count1 - (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:125" *) 1'h1;
   assign \$12  = ! (* src = "/home/kkojima/luna-uac2-pdm/pdm/pcm2pdm.py:126" *) count1h;
@@ -51178,9 +51184,9 @@ module receiver(usb_clk, rx_data, rx_valid, valid, next, payload, packet_complet
   reg \start$1 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:152" *)
   input tx_allowed;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/stream.py:72" *)
   output valid;
@@ -51891,9 +51897,9 @@ module register_window(usb_clk, busy, ulpi_data_in, ulpi_dir, ulpi_next, ulpi_da
   reg ulpi_stop = 1'h0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:75" *)
   reg \ulpi_stop$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:85" *)
   input [7:0] write_data;
@@ -53201,9 +53207,9 @@ module reset_sequencer(usb_clk, bus_busy, vbus_connected, line_state, bus_reset,
   reg [17:0] timer = 18'h00000;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/reset.py:146" *)
   reg [17:0] \timer$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   output valid;
@@ -54562,15 +54568,15 @@ module rxevent_decoder(usb_clk, ulpi__dir__i, register_operation_in_progress, la
   output session_end;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:459" *)
   output session_valid;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:458" *)
   output vbus_valid;
@@ -54798,9 +54804,9 @@ module setup_decoder(usb_clk, rx_data, rx_valid, rx_active, start, crc, pid, new
   reg [1:0] \type  = 2'h0;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   reg [1:0] \type$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/request/interface.py:30" *)
   output [15:0] value;
@@ -55213,9 +55219,9 @@ module timer(usb_clk, speed, tx_allowed, start, usb_rst);
   wire tx_timeout;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1898" *)
   reg tx_to_rx_timeout;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$10  = counter == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1924" *) 1'h1;
   assign \$12  = counter == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1930" *) 4'ha;
@@ -55378,9 +55384,9 @@ module \timer$4 (usb_clk, speed, start, tx_allowed, \start$1 , \tx_allowed$2 , t
   wire \tx_timeout$40 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1898" *)
   reg tx_to_rx_timeout;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$10  = ! (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1921" *) speed;
   assign \$12  = speed == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:1928" *) 1'h1;
@@ -55747,9 +55753,9 @@ module token_detector(usb_clk, address, rx_data, rx_valid, speed, pid, \address$
   reg [10:0] token_data = 11'h000;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:317" *)
   reg [10:0] \token_data$next ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$100  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:360" *) rx_active;
   assign \$102  = rx_data[1:0] == (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:364" *) 1'h1;
@@ -56533,27 +56539,27 @@ module translator(usb_clk, busy, session_end, line_state, rx_data, rx_valid, tx_
   output tx_ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1127" *)
   input tx_valid;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__clk__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output [7:0] ulpi__data__o;
   reg [7:0] ulpi__data__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__data__oe;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__rst;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__stp;
   reg ulpi__stp;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1139" *)
   wire use_external_vbus_indicator;
@@ -56822,9 +56828,9 @@ module transmit_translator(usb_clk, busy, ulpi_nxt, op_mode, bus_idle, tx_data, 
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:862" *)
   output ulpi_stp;
   reg ulpi_stp;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   assign \$9  = op_mode == (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:869" *) 2'h2;
   assign \$11  = ~ (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:919" *) tx_valid;
@@ -57080,9 +57086,9 @@ module transmitter(usb_clk, valid, first, last, payload, ready, data_pid, start,
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/packet.py:76" *)
   output start;
   reg start;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   input valid;
@@ -57417,9 +57423,9 @@ module \transmitter$7 (usb_clk, valid, first, last, payload, ready, datum_0, dat
   input ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:644" *)
   input start;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -57668,9 +57674,9 @@ module \transmitter$8 (usb_clk, valid, first, last, payload, ready, datum_0, dat
   input ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/generator.py:644" *)
   input start;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/stream/__init__.py:58" *)
   output valid;
@@ -58624,25 +58630,25 @@ module usb0(usb_clk, isochronous_endpoint1__valid, isochronous_endpoint1__ready,
   wire tx_multiplexer_ready;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/utmi.py:54" *)
   wire tx_multiplexer_valid;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__clk__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input [7:0] ulpi__data__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output [7:0] ulpi__data__o;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__data__oe;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/interface/ulpi.py:1299" *)
   input ulpi__dir__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   input ulpi__nxt__i;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__rst;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:259" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:259" *)
   output ulpi__stp;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_clk;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:296" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:296" *)
   input usb_rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/usb/usb2/endpoints/isochronous.py:75" *)
   input [7:0] value;
@@ -59220,7 +59226,7 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
   wire [22:0] \$7 ;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:77" *)
   wire [22:0] \$8 ;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:295" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
   input clk;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:57" *)
   reg [21:0] cycles_in_reset = 22'h000000;
@@ -59234,7 +59240,7 @@ module usb_reset(phy_stop, clk, rst, phy_reset);
   output phy_reset;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:50" *)
   output phy_stop;
-  (* src = "/home/kkojima/luna-uac2-pdm/./build_verilog.py:295" *)
+  (* src = "/home/kkojima/luna-uac2-pdm/build_verilog.py:295" *)
   input rst;
   (* src = "/home/git/usb2-highspeed-core/luna/gateware/architecture/car.py:48" *)
   wire trigger;
